@@ -1,0 +1,1791 @@
+{
+  "AgeProof": [
+    {
+      "DOC_ID": "2012010001",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "BC",
+      "MPPROOF_DESC": "Baptism Certificate"
+    },
+    {
+      "DOC_ID": "2012010002",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "DI",
+      "MPPROOF_DESC": "Defense ID Card"
+    },
+    {
+      "DOC_ID": "2012010003",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "DC",
+      "MPPROOF_DESC": "Domicile Certificate"
+    },
+    {
+      "DOC_ID": "2012010004",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "DL",
+      "MPPROOF_DESC": "Driving License"
+    },
+    {
+      "DOC_ID": "2012010005",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "MC",
+      "MPPROOF_DESC": "Marriage Certificate"
+    },
+    {
+      "DOC_ID": "2012010006",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "MB",
+      "MPPROOF_DESC": "Municipal Birth Certificate"
+    },
+    {
+      "DOC_ID": "2012010007",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "PC",
+      "MPPROOF_DESC": "PAN Card"
+    },
+    {
+      "DOC_ID": "2012010008",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "PP",
+      "MPPROOF_DESC": "Passport"
+    },
+    {
+      "DOC_ID": "2012010009",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "PF",
+      "MPPROOF_DESC": "PF Statement"
+    },
+    {
+      "DOC_ID": "2012010010",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "SP",
+      "MPPROOF_DESC": "School, College Proofs"
+    },
+    {
+      "DOC_ID": "2012010011",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "SE",
+      "MPPROOF_DESC": "Service Extract"
+    },
+    {
+      "DOC_ID": "2012010012",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "EI",
+      "MPPROOF_DESC": "Employee ID"
+    },
+    {
+      "DOC_ID": "2012010013",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "HD",
+      "MPPROOF_DESC": "Hospital Discharge  Card less than age 5 years"
+    },
+    {
+      "DOC_ID": "2012010014",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "IC",
+      "MPPROOF_DESC": "IRDA agent license"
+    },
+    {
+      "DOC_ID": "2012010016",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "LI",
+      "MPPROOF_DESC": "LIC Policies, Reciepts"
+    },
+    {
+      "DOC_ID": "2012010017",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "SC",
+      "MPPROOF_DESC": "School, college Certificate"
+    },
+    {
+      "DOC_ID": "2012010018",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "SA",
+      "MPPROOF_DESC": "School, college admit cards"
+    },
+    {
+      "DOC_ID": "1012010019",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "BC",
+      "MPPROOF_DESC": "Baptism Certificate"
+    },
+    {
+      "DOC_ID": "1012010020",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "DI",
+      "MPPROOF_DESC": "Defense ID Card"
+    },
+    {
+      "DOC_ID": "1012010021",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "DC",
+      "MPPROOF_DESC": "Domicile Certificate"
+    },
+    {
+      "DOC_ID": "1012010022",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "DL",
+      "MPPROOF_DESC": "Driving License"
+    },
+    {
+      "DOC_ID": "1012010023",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "MC",
+      "MPPROOF_DESC": "Marriage Certificate"
+    },
+    {
+      "DOC_ID": "1012010024",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "MB",
+      "MPPROOF_DESC": "Municipal Birth Certificate"
+    },
+    {
+      "DOC_ID": "1012010025",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "PC",
+      "MPPROOF_DESC": "PAN Card"
+    },
+    {
+      "DOC_ID": "1012010026",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "PP",
+      "MPPROOF_DESC": "Passport"
+    },
+    {
+      "DOC_ID": "1012010027",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "PF",
+      "MPPROOF_DESC": "PF Statement"
+    },
+    {
+      "DOC_ID": "1012010028",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "SP",
+      "MPPROOF_DESC": "School, College Proofs"
+    },
+    {
+      "DOC_ID": "1012010029",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "SE",
+      "MPPROOF_DESC": "Service Extract"
+    },
+    {
+      "DOC_ID": "1012010030",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "EI",
+      "MPPROOF_DESC": "Employee ID"
+    },
+    {
+      "DOC_ID": "1012010031",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "HD",
+      "MPPROOF_DESC": "Hospital Discharge  Card less than age 5 years"
+    },
+    {
+      "DOC_ID": "1012010032",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "IC",
+      "MPPROOF_DESC": "IRDA agent license"
+    },
+    {
+      "DOC_ID": "1012010033",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "MW",
+      "MPPROOF_DESC": "Municipal Birth Certificate less than age 5yrs"
+    },
+    {
+      "DOC_ID": "1012010034",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "LI",
+      "MPPROOF_DESC": "LIC Policies, Reciepts"
+    },
+    {
+      "DOC_ID": "1012010035",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "SC",
+      "MPPROOF_DESC": "School, college Certificate"
+    },
+    {
+      "DOC_ID": "1012010036",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "SA",
+      "MPPROOF_DESC": "School, college admit cards"
+    },
+    {
+      "DOC_ID": "2012010015",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "MW",
+      "MPPROOF_DESC": "Municipal Birth Certificate less than age 5yrs"
+    },
+    {
+      "DOC_ID": "2012010544",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "AD",
+      "MPPROOF_DESC": "Aadhar ID Card - Standard"
+    },
+    {
+      "DOC_ID": "1012010545",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "AP",
+      "MPDOC_DESCRIPTION": "Age Proof",
+      "MPPROOF_CODE": "AD",
+      "MPPROOF_DESC": "Aadhar ID Card - Standard"
+    }
+  ],
+  "IdentityProof": [
+    {
+      "DOC_ID": "2018010057",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "DI",
+      "MPPROOF_DESC": "Armed Force or Defense ID"
+    },
+    {
+      "DOC_ID": "2018010058",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "DC",
+      "MPPROOF_DESC": "Debit Card with Photo"
+    },
+    {
+      "DOC_ID": "2018010059",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "DL",
+      "MPPROOF_DESC": "Driving License"
+    },
+    {
+      "DOC_ID": "2018010060",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "IC",
+      "MPPROOF_DESC": "IRDA card"
+    },
+    {
+      "DOC_ID": "2018010061",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "PC",
+      "MPPROOF_DESC": "PAN Card"
+    },
+    {
+      "DOC_ID": "2018010062",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "PP",
+      "MPPROOF_DESC": "Passport"
+    },
+    {
+      "DOC_ID": "2018010063",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "RC",
+      "MPPROOF_DESC": "Ration Card with Photo"
+    },
+    {
+      "DOC_ID": "2018010064",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "EI",
+      "MPPROOF_DESC": "Valid Employee ID"
+    },
+    {
+      "DOC_ID": "2018010065",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "VI",
+      "MPPROOF_DESC": "Voter ID Card"
+    },
+    {
+      "DOC_ID": "2018010066",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "AC",
+      "MPPROOF_DESC": "Aadhar card, UID"
+    },
+    {
+      "DOC_ID": "2018010067",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "SC",
+      "MPPROOF_DESC": "School, college Certificate"
+    },
+    {
+      "DOC_ID": "2018010068",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "BP",
+      "MPPROOF_DESC": "Bank passbook with photo"
+    },
+    {
+      "DOC_ID": "2018010069",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "CD",
+      "MPPROOF_DESC": "Declaration from Bank"
+    },
+    {
+      "DOC_ID": "2018010070",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "ME",
+      "MPPROOF_DESC": "Employee State Ins MEDl Card"
+    },
+    {
+      "DOC_ID": "2018010071",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "PO",
+      "MPPROOF_DESC": "PO Saving and PPF Account - with photo"
+    },
+    {
+      "DOC_ID": "2018010072",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "CL",
+      "MPPROOF_DESC": "Declaration - Letter Head of Co. < 30 days"
+    },
+    {
+      "DOC_ID": "1018010074",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "DC",
+      "MPPROOF_DESC": "Debit Card with Photo"
+    },
+    {
+      "DOC_ID": "1018010075",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "DL",
+      "MPPROOF_DESC": "Driving License"
+    },
+    {
+      "DOC_ID": "1018010076",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "IC",
+      "MPPROOF_DESC": "IRDA card"
+    },
+    {
+      "DOC_ID": "1018010077",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "PC",
+      "MPPROOF_DESC": "PAN Card"
+    },
+    {
+      "DOC_ID": "1018010078",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "PP",
+      "MPPROOF_DESC": "Passport"
+    },
+    {
+      "DOC_ID": "1018010079",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "RC",
+      "MPPROOF_DESC": "Ration Card with Photo"
+    },
+    {
+      "DOC_ID": "1018010080",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "EI",
+      "MPPROOF_DESC": "Valid Employee ID"
+    },
+    {
+      "DOC_ID": "1018010081",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "VI",
+      "MPPROOF_DESC": "Voter ID Card"
+    },
+    {
+      "DOC_ID": "1018010082",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "AC",
+      "MPPROOF_DESC": "Aadhar card, UID"
+    },
+    {
+      "DOC_ID": "1018010083",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "SC",
+      "MPPROOF_DESC": "School, college Certificate"
+    },
+    {
+      "DOC_ID": "1018010084",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "BP",
+      "MPPROOF_DESC": "Bank passbook with photo"
+    },
+    {
+      "DOC_ID": "1018010085",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "CD",
+      "MPPROOF_DESC": "Declaration from Bank"
+    },
+    {
+      "DOC_ID": "1018010086",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "ME",
+      "MPPROOF_DESC": "Employee State Ins MEDl Card"
+    },
+    {
+      "DOC_ID": "1018010087",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "PO",
+      "MPPROOF_DESC": "PO Saving and PPF Account - with photo"
+    },
+    {
+      "DOC_ID": "1018010088",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "CL",
+      "MPPROOF_DESC": "Declaration - Letter Head of Co. < 30 days"
+    },
+    {
+      "DOC_ID": "1018010073",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "IP",
+      "MPDOC_DESCRIPTION": "Identity Proof",
+      "MPPROOF_CODE": "DI",
+      "MPPROOF_DESC": "Armed Force or Defense ID"
+    }
+  ],
+  "PermAddressProof": [
+    {
+      "DOC_ID": "2023010093",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "TB",
+      "MPPROOF_DESC": "Any Telephone Bill of less than 6 months"
+    },
+    {
+      "DOC_ID": "2023010094",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "AF",
+      "MPPROOF_DESC": "Armed Force or Defense ID card"
+    },
+    {
+      "DOC_ID": "2023010095",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "BS",
+      "MPPROOF_DESC": "Bank Statement of Last 6 months"
+    },
+    {
+      "DOC_ID": "2023010096",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "CC",
+      "MPPROOF_DESC": "Credit Card Statement of less than 6 months"
+    },
+    {
+      "DOC_ID": "2023010097",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "CL",
+      "MPPROOF_DESC": "Declaration-Letter Head of Co. less than 30 days"
+    },
+    {
+      "DOC_ID": "2023010098",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "DC",
+      "MPPROOF_DESC": "Domicile Certificate"
+    },
+    {
+      "DOC_ID": "2023010099",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "MF",
+      "MPPROOF_DESC": "Mutual Fund, Demat Acc Stmt less than 6 months"
+    },
+    {
+      "DOC_ID": "2023010100",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "RC",
+      "MPPROOF_DESC": "Ration Card"
+    },
+    {
+      "DOC_ID": "2023010101",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "SD",
+      "MPPROOF_DESC": "Shares,Debentures,Rights,Bonus,Dividend Statements"
+    },
+    {
+      "DOC_ID": "2023010102",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "SC",
+      "MPPROOF_DESC": "Society Charges Payment Rcpt less than 12 months"
+    },
+    {
+      "DOC_ID": "2023010103",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "UB",
+      "MPPROOF_DESC": "Utility Bills(Electricity, Water, Gas)"
+    },
+    {
+      "DOC_ID": "2023010104",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "DL",
+      "MPPROOF_DESC": "Driving License"
+    },
+    {
+      "DOC_ID": "2023010105",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "PP",
+      "MPPROOF_DESC": "Passport"
+    },
+    {
+      "DOC_ID": "2023010106",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "RA",
+      "MPPROOF_DESC": "Rent Agreement"
+    },
+    {
+      "DOC_ID": "2023010107",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "VI",
+      "MPPROOF_DESC": "Voter ID Card"
+    },
+    {
+      "DOC_ID": "2023010108",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "IC",
+      "MPPROOF_DESC": "TALIC Agent IRDA License"
+    },
+    {
+      "DOC_ID": "2023010109",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "AC",
+      "MPPROOF_DESC": "Aadhar card, UID"
+    },
+    {
+      "DOC_ID": "2023010110",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "PH",
+      "MPPROOF_DESC": "Latest Personal or Home loan Statements"
+    },
+    {
+      "DOC_ID": "2023010111",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "IT",
+      "MPPROOF_DESC": "Income Tax Return of Current,last Assessment year"
+    },
+    {
+      "DOC_ID": "2023010112",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "RB",
+      "MPPROOF_DESC": "RC Book Copy"
+    },
+    {
+      "DOC_ID": "2023010113",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "BC",
+      "MPPROOF_DESC": "Bank Certificate from Bank"
+    },
+    {
+      "DOC_ID": "2023010114",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "PR",
+      "MPPROOF_DESC": "Property Registration Deed"
+    },
+    {
+      "DOC_ID": "2023010115",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "PO",
+      "MPPROOF_DESC": "Post Office Saving or PPF Account - with photo"
+    },
+    {
+      "DOC_ID": "2023010116",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "PT",
+      "MPPROOF_DESC": "Property Tax Document"
+    },
+    {
+      "DOC_ID": "1023010117",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "TB",
+      "MPPROOF_DESC": "Any Telephone Bill of less than 6 months"
+    },
+    {
+      "DOC_ID": "1023010118",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "AF",
+      "MPPROOF_DESC": "Armed Force or Defense ID card"
+    },
+    {
+      "DOC_ID": "1023010119",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "BS",
+      "MPPROOF_DESC": "Bank Statement of Last 6 months"
+    },
+    {
+      "DOC_ID": "1023010120",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "CC",
+      "MPPROOF_DESC": "Credit Card Statement of less than 6 months"
+    },
+    {
+      "DOC_ID": "1023010121",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "CL",
+      "MPPROOF_DESC": "Declaration-Letter Head of Co. less than 30 days"
+    },
+    {
+      "DOC_ID": "1023010122",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "DC",
+      "MPPROOF_DESC": "Domicile Certificate"
+    },
+    {
+      "DOC_ID": "1023010123",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "MF",
+      "MPPROOF_DESC": "Mutual Fund, Demat Acc Stmt less than 6 months"
+    },
+    {
+      "DOC_ID": "1023010124",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "RC",
+      "MPPROOF_DESC": "Ration Card"
+    },
+    {
+      "DOC_ID": "1023010125",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "SD",
+      "MPPROOF_DESC": "Shares,Debentures,Rights,Bonus,Dividend Statements"
+    },
+    {
+      "DOC_ID": "1023010126",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "SC",
+      "MPPROOF_DESC": "Society Charges Payment Rcpt less than 12 months"
+    },
+    {
+      "DOC_ID": "1023010127",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "UB",
+      "MPPROOF_DESC": "Utility Bills(Electricity, Water, Gas)"
+    },
+    {
+      "DOC_ID": "1023010128",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "DL",
+      "MPPROOF_DESC": "Driving License"
+    },
+    {
+      "DOC_ID": "1023010129",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "PP",
+      "MPPROOF_DESC": "Passport"
+    },
+    {
+      "DOC_ID": "1023010130",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "RA",
+      "MPPROOF_DESC": "Rent Agreement"
+    },
+    {
+      "DOC_ID": "1023010131",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "VI",
+      "MPPROOF_DESC": "Voter ID Card"
+    },
+    {
+      "DOC_ID": "1023010132",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "IC",
+      "MPPROOF_DESC": "TALIC Agent IRDA License"
+    },
+    {
+      "DOC_ID": "1023010133",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "AC",
+      "MPPROOF_DESC": "Aadhar card, UID"
+    },
+    {
+      "DOC_ID": "1023010134",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "PH",
+      "MPPROOF_DESC": "Latest Personal or Home loan Statements"
+    },
+    {
+      "DOC_ID": "1023010135",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "IT",
+      "MPPROOF_DESC": "Income Tax Return of Current,last Assessment year"
+    },
+    {
+      "DOC_ID": "1023010136",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "RB",
+      "MPPROOF_DESC": "RC Book Copy"
+    },
+    {
+      "DOC_ID": "1023010137",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "BC",
+      "MPPROOF_DESC": "Bank Certificate from Bank"
+    },
+    {
+      "DOC_ID": "1023010138",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "PR",
+      "MPPROOF_DESC": "Property Registration Deed"
+    },
+    {
+      "DOC_ID": "1023010139",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "PO",
+      "MPPROOF_DESC": "Post Office Saving or PPF Account - with photo"
+    },
+    {
+      "DOC_ID": "1023010140",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "PP",
+      "MPDOC_DESCRIPTION": "Permanent Address Proof",
+      "MPPROOF_CODE": "PT",
+      "MPPROOF_DESC": "Property Tax Document"
+    }
+  ],
+  "ResAddressProof": [
+    {
+      "DOC_ID": "1026010174",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "MF",
+      "MPPROOF_DESC": "Mutual Fund, Demat Acc Stmt less than 6 months"
+    },
+    {
+      "DOC_ID": "1026010175",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "RC",
+      "MPPROOF_DESC": "Ration Card"
+    },
+    {
+      "DOC_ID": "1026010176",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "SD",
+      "MPPROOF_DESC": "Shares,Debentures,Rights,Bonus,Dividend Statements"
+    },
+    {
+      "DOC_ID": "1026010177",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "SC",
+      "MPPROOF_DESC": "Society Charges Payment Rcpt less than 12 months"
+    },
+    {
+      "DOC_ID": "1026010178",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "UB",
+      "MPPROOF_DESC": "Utility Bills(Electricity, Water, Gas)"
+    },
+    {
+      "DOC_ID": "1026010179",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "DL",
+      "MPPROOF_DESC": "Driving License"
+    },
+    {
+      "DOC_ID": "1026010180",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "PP",
+      "MPPROOF_DESC": "Passport"
+    },
+    {
+      "DOC_ID": "1026010181",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "RA",
+      "MPPROOF_DESC": "Rent Agreement"
+    },
+    {
+      "DOC_ID": "1026010182",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "VI",
+      "MPPROOF_DESC": "Voter ID Card"
+    },
+    {
+      "DOC_ID": "1026010183",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "IC",
+      "MPPROOF_DESC": "TALIC Agent IRDA License"
+    },
+    {
+      "DOC_ID": "1026010184",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "AC",
+      "MPPROOF_DESC": "Aadhar card, UID"
+    },
+    {
+      "DOC_ID": "1026010185",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "PH",
+      "MPPROOF_DESC": "Latest Personal or Home loan Statements"
+    },
+    {
+      "DOC_ID": "1026010186",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "IT",
+      "MPPROOF_DESC": "Income Tax Return of Current,last Assessment year"
+    },
+    {
+      "DOC_ID": "1026010187",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "RB",
+      "MPPROOF_DESC": "RC Book Copy"
+    },
+    {
+      "DOC_ID": "1026010188",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "BC",
+      "MPPROOF_DESC": "Bank Certificate from Bank"
+    },
+    {
+      "DOC_ID": "1026010189",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "PR",
+      "MPPROOF_DESC": "Property Registration Deed"
+    },
+    {
+      "DOC_ID": "1026010190",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "PO",
+      "MPPROOF_DESC": "Post Office Saving or PPF Account - with photo"
+    },
+    {
+      "DOC_ID": "1026010191",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "PT",
+      "MPPROOF_DESC": "Property Tax Document"
+    },
+    {
+      "DOC_ID": "2026010161",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "PH",
+      "MPPROOF_DESC": "Latest Personal or Home loan Statements"
+    },
+    {
+      "DOC_ID": "2026010162",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "IT",
+      "MPPROOF_DESC": "Income Tax Return of Current,last Assessment year"
+    },
+    {
+      "DOC_ID": "2026010163",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "RB",
+      "MPPROOF_DESC": "RC Book Copy"
+    },
+    {
+      "DOC_ID": "2026010164",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "BC",
+      "MPPROOF_DESC": "Bank Certificate from Bank"
+    },
+    {
+      "DOC_ID": "2026010165",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "PR",
+      "MPPROOF_DESC": "Property Registration Deed"
+    },
+    {
+      "DOC_ID": "2026010166",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "PO",
+      "MPPROOF_DESC": "Post Office Saving or PPF Account - with photo"
+    },
+    {
+      "DOC_ID": "2026010167",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "PT",
+      "MPPROOF_DESC": "Property Tax Document"
+    },
+    {
+      "DOC_ID": "1026010168",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "TB",
+      "MPPROOF_DESC": "Any Telephone Bill of less than 6 months"
+    },
+    {
+      "DOC_ID": "1026010169",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "AF",
+      "MPPROOF_DESC": "Armed Force or Defense ID card"
+    },
+    {
+      "DOC_ID": "1026010170",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "BS",
+      "MPPROOF_DESC": "Bank Statement of Last 6 months"
+    },
+    {
+      "DOC_ID": "1026010171",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "CC",
+      "MPPROOF_DESC": "Credit Card Statement of less than 6 months"
+    },
+    {
+      "DOC_ID": "1026010172",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "CL",
+      "MPPROOF_DESC": "Declaration-Letter Head of Co. less than 30 days"
+    },
+    {
+      "DOC_ID": "1026010173",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "DC",
+      "MPPROOF_DESC": "Domicile Certificate"
+    },
+    {
+      "DOC_ID": "2026010144",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "TB",
+      "MPPROOF_DESC": "Any Telephone Bill of less than 6 months"
+    },
+    {
+      "DOC_ID": "2026010145",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "AF",
+      "MPPROOF_DESC": "Armed Force or Defense ID card"
+    },
+    {
+      "DOC_ID": "2026010146",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "BS",
+      "MPPROOF_DESC": "Bank Statement of Last 6 months"
+    },
+    {
+      "DOC_ID": "2026010147",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "CC",
+      "MPPROOF_DESC": "Credit Card Statement of less than 6 months"
+    },
+    {
+      "DOC_ID": "2026010148",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "CL",
+      "MPPROOF_DESC": "Declaration-Letter Head of Co. less than 30 days"
+    },
+    {
+      "DOC_ID": "2026010149",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "DC",
+      "MPPROOF_DESC": "Domicile Certificate"
+    },
+    {
+      "DOC_ID": "2026010150",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "MF",
+      "MPPROOF_DESC": "Mutual Fund, Demat Acc Stmt less than 6 months"
+    },
+    {
+      "DOC_ID": "2026010151",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "RC",
+      "MPPROOF_DESC": "Ration Card"
+    },
+    {
+      "DOC_ID": "2026010152",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "SD",
+      "MPPROOF_DESC": "Shares,Debentures,Rights,Bonus,Dividend Statements"
+    },
+    {
+      "DOC_ID": "2026010153",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "SC",
+      "MPPROOF_DESC": "Society Charges Payment Rcpt less than 12 months"
+    },
+    {
+      "DOC_ID": "2026010154",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "UB",
+      "MPPROOF_DESC": "Utility Bills(Electricity, Water, Gas)"
+    },
+    {
+      "DOC_ID": "2026010155",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "DL",
+      "MPPROOF_DESC": "Driving License"
+    },
+    {
+      "DOC_ID": "2026010156",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "PP",
+      "MPPROOF_DESC": "Passport"
+    },
+    {
+      "DOC_ID": "2026010157",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "RA",
+      "MPPROOF_DESC": "Rent Agreement"
+    },
+    {
+      "DOC_ID": "2026010158",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "VI",
+      "MPPROOF_DESC": "Voter ID Card"
+    },
+    {
+      "DOC_ID": "2026010159",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "IC",
+      "MPPROOF_DESC": "TALIC Agent IRDA License"
+    },
+    {
+      "DOC_ID": "2026010160",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "RP",
+      "MPDOC_DESCRIPTION": "Residential Address Proof",
+      "MPPROOF_CODE": "AC",
+      "MPPROOF_DESC": "Aadhar card, UID"
+    }
+  ],
+  "IncomeProof": [
+    {
+      "DOC_ID": "2016010038",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "SC",
+      "MPPROOF_DESC": "Salary certificate of Current financial year"
+    },
+    {
+      "DOC_ID": "2016010040",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "FC",
+      "MPPROOF_DESC": "Form 16 Current or last Assessment year"
+    },
+    {
+      "DOC_ID": "2016010041",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "IT",
+      "MPPROOF_DESC": "Income Tax Return of Current,last Assessment year"
+    },
+    {
+      "DOC_ID": "2016010046",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "LA",
+      "MPPROOF_DESC": "Latest Appointment, Contract Letter(Reputed Co.)"
+    },
+    {
+      "DOC_ID": "1016010048",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "SC",
+      "MPPROOF_DESC": "Salary certificate of Current financial year"
+    },
+    {
+      "DOC_ID": "1016010049",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "FA",
+      "MPPROOF_DESC": "Form 16 A Current or last Assessment year"
+    },
+    {
+      "DOC_ID": "1016010050",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "FC",
+      "MPPROOF_DESC": "Form 16 Current or last Assessment year"
+    },
+    {
+      "DOC_ID": "1016010051",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "IT",
+      "MPPROOF_DESC": "Income Tax Return of Current,last Assessment year"
+    },
+    {
+      "DOC_ID": "1016010052",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "SS",
+      "MPPROOF_DESC": "Salary Slip of Last three months"
+    },
+    {
+      "DOC_ID": "1016010056",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "LA",
+      "MPPROOF_DESC": "Latest Appointment, Contract Letter(Reputed Co.)"
+    },
+    {
+      "DOC_ID": "1016010473",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "I2",
+      "MPPROOF_DESC": "Income Tax Return with Business Accounts"
+    },
+    {
+      "DOC_ID": "2016010042",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "SS",
+      "MPPROOF_DESC": "Salary Slip of Last three months"
+    },
+    {
+      "DOC_ID": "1016010471",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "SR",
+      "MPPROOF_DESC": "Latest salary revision letter"
+    },
+    {
+      "DOC_ID": "1016010472",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "I1",
+      "MPPROOF_DESC": "Income Tax Return with COI"
+    },
+    {
+      "DOC_ID": "2016010039",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "FA",
+      "MPPROOF_DESC": "Form 16 A Current or last Assessment year"
+    },
+    {
+      "DOC_ID": "2016010421",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "EC",
+      "MPPROOF_DESC": "Latest Employment Contract"
+    },
+    {
+      "DOC_ID": "1016010432",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "EC",
+      "MPPROOF_DESC": "Latest Employment Contract"
+    },
+    {
+      "DOC_ID": "2016010422",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "FS",
+      "MPPROOF_DESC": "Form 26 AS"
+    },
+    {
+      "DOC_ID": "2016010423",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "BS",
+      "MPPROOF_DESC": "Audited Balance Sheet and Profit and Loss Account"
+    },
+    {
+      "DOC_ID": "2016010424",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "GC",
+      "MPPROOF_DESC": "Government Contract Letter / Government Work Order"
+    },
+    {
+      "DOC_ID": "2016010425",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "PO",
+      "MPPROOF_DESC": "Pension Order"
+    },
+    {
+      "DOC_ID": "2016010430",
+      "CUSTOMER_CATEGORY": "PR",
+      "CATEGORY_DESCRIPTION": "Proposer",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "BS",
+      "MPPROOF_DESC": "Bank Statements with Salary Credits"
+    },
+    {
+      "DOC_ID": "1016010433",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "FS",
+      "MPPROOF_DESC": "Form 26 AS"
+    },
+    {
+      "DOC_ID": "1016010434",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "BS",
+      "MPPROOF_DESC": "Audited Balance Sheet and Profit and Loss  Account"
+    },
+    {
+      "DOC_ID": "1016010435",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "GC",
+      "MPPROOF_DESC": "Government Contract Letter / Government Work Order"
+    },
+    {
+      "DOC_ID": "1016010436",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "PO",
+      "MPPROOF_DESC": "Pension Order"
+    },
+    {
+      "DOC_ID": "1016010441",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "FP",
+      "MPDOC_DESCRIPTION": "Income Proof",
+      "MPPROOF_CODE": "BS",
+      "MPPROOF_DESC": "Bank Statements with Salary Credits"
+    }
+  ],
+  "Nationality":[
+    {
+      "DOC_ID": "1031010420",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "NP",
+      "MPDOC_DESCRIPTION": "NRI Proof",
+      "MPPROOF_CODE": "FATCA",
+      "MPPROOF_DESC": "FATCA form"
+    
+  },
+   {
+      "DOC_ID": "1045010765",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "NP",
+      "MPDOC_DESCRIPTION": "NRI Proof",
+      "MPPROOF_CODE": "VC",
+      "MPPROOF_DESC": "Visa Copy"
+    
+  },
+   {
+      "DOC_ID": "1036010758",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "NP",
+      "MPDOC_DESCRIPTION": "NRI Proof",
+      "MPPROOF_CODE": "PC",
+      "MPPROOF_DESC": "Passport Copy"
+    
+  },
+   {
+      "DOC_ID": "1046010773",
+      "CUSTOMER_CATEGORY": "IN",
+      "CATEGORY_DESCRIPTION": "Insured",
+      "MPDOC_CODE": "NP",
+      "MPDOC_DESCRIPTION": "NRI Proof",
+      "MPPROOF_CODE": "PE",
+      "MPPROOF_DESC": "Proof of Employment"
+    
+  }
+  ]
+}

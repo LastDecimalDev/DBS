@@ -1,0 +1,26 @@
+[
+ {
+     "name": "Afghanistan",
+     "code": "AF",
+     "dialing": "+93"
+
+ },
+ {
+     "name": "Albania",
+     "code": "AL",
+     "dialing": "+355"
+
+ },
+ {
+     "name": "Algeria",
+     "code": "DZ",
+     "dialing":"+213"
+
+ },
+ {
+     "name": "American Samoa",
+     "code": "AS",
+     "dialing": "+1-684"
+
+ }
+]

@@ -1,0 +1,274 @@
+<div>
+  <div class="rootCus">
+    <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+    <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="menu">
+      <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+      <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+      <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+      <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+    </ul>  
+  
+  </div> 
+<div id="dbs">
+<div class="zerogrid">
+<div class="contentmain">
+<div class="profilemain1">
+  <span class="ibspan"><img src="../../../assets/images/Regular_Income_ICON.svg"></span><span><strong style="font-size: 20px;"> Policy For Me > Life > Regular Income</strong></span>
+<div class="oneplan2">
+<div class="onetext2" style="font-size: 16px;"><strong>Help us identify the plans relevant for your need: <i>(All Fields are Mandatory)</i></strong>
+</div>
+</div>
+</div>
+
+ <form id="health-buy-form" class="form-horizontal" #regular = "ngForm" autocomplete="off" novalidate >
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2">Enter the pincode
+<div class="policybox"><span class="formmin4">
+    <input type="tel" name="Pincode" id="pincoderugular" (blur)="getValidPinCode($event)" [(ngModel)]="inputSave.pincode" class="inpute_text" placeholder="6 digits only" pattern="^[0-9]{6}$" inputmode="numeric" minlength="6" maxlength="6"  required>
+</span><span id="errorCall" class="has-error">{{errMessage}}</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1">
+<div class="oneplan2" [ngClass]="{'has-error':brithID.invalid && !brithID.pristine ||brithID.touched}">
+<div class="onetext2">Enter the Date of Birth:
+<div class="policybox"><span class="formmin4">
+  <input type="date" data-date-inline-picker="true" [(ngModel)]="inputSave.dob" class="inpute_text" name="brith" (change)="ageCount()" id="brithID" #brithID="ngModel" required/>
+  <!--<ng-datepicker [(ngModel)]="inputSave.dob"></ng-datepicker>-->
+</span>
+<span id="errorCall" class="has-error">{{errorMessageforage}}</span>
+<span id="errorCall2" class="has-error">{{errorMessageforagemonth}}</span>
+<span id="errorCall3" class="has-error">{{errorMessageforfuture}}</span>
+<span id="errorCall4" class="has-error">{{errorMessageforFutureDate}}</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2" >Insured Gender
+<div class="policybox"><span class="formmin4">
+<input type="radio" value="M" name="gender" id="genderM" [(ngModel)]="inputSave.gender" class="css-radio11"/> <label for="genderM" class="css-labelMale"> </label> Male  
+<input type="radio" value="F" name="gender" id="genderF" [(ngModel)]="inputSave.gender" class="css-radio12" /> <label for="genderF" class="css-labelGen" style="margin:0 0% 1% 6%"> </label> Female</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2">How would you like to pay your premium?
+<div class="policybox"><span class="formmin4">
+<input type="radio" value="annually" name="premium" id="annual" (change)="annualPrepay=true"  class="css-radio1"/> <label for="annual" class="css-labelTick"> </label> Annually 
+<input type="radio" value="onetime" name="premium" id="onetime" (change)="annualPrepay= false" [(ngModel)]="inputSave.premiumPay" class="css-radio1" /> <label for="onetime" class="css-labelTick" style="margin:0 0% 1% 5%"> </label> One Time</span>
+
+<!--<span class="plmsgspan">
+   Your profile indicates a different payment mode. Your consent is required to continue.
+	<input type="checkbox" id="cb3" class="tickmark" name="tickMark">
+</span>-->
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1">
+<div class="oneplan2" [ngClass]="{'has-error':sumInsured.invalid && !sumInsured.pristine ||sumInsured.touched}">
+<div class="onetext2">What is the amount you would want to 
+    <div class="onetext2">invest Annually or as a Lumpsum?
+    <div class="policybox">
+    <input type="tel" class="inpute_text" name="sumInsured" (input)="incomeWarning($event)" [(ngModel)]="inputSave.sa" #sumInsured="ngModel" (input)="getValidSum($event)" id="sumInsured" value=""  min="0" maxlength="8"onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" required/>
+    <span id="words" *ngIf="inputSave.sa">{{inputSave.sa | numberToWords}} rupees</span>
+  </div>
+</div>
+</div>
+<div id="errorCall" class="has-error">{{errMessage2}}</div>
+<div id="errorCall3" class="has-error">{{errMessage3}}</div>
+</div>
+</div>
+<span *ngIf="ConcernMessage1 == true && errorCall==false">
+    <span id="ConcernMessage2"  style="margin-left: 481px;float: right;border: 1px solid #ccc; background: #DDD;color: #000">Investment amount exceeds 50% of annual disposable income. Your consent is required to continue.  
+        <span>
+            <input type="checkbox" id="consentcb" class="css-checkbox" name="consentcb" (change)="isChecked($event)" >
+            <label for="consentcb" class="css-label"></label>
+          <br>
+        </span>
+    </span>
+  </span>
+
+
+
+<!--<div class="profilemain1" *ngIf="annualPrepay == true">
+    <div class="oneplan2">
+    <div class="onetext2" >How long do you want to pay premiums?
+    <div class="policybox">
+    <input type="radio" value="5"  name="payPremium" id="fiveNine" [(ngModel)]="inputSave.minPT" (input)="minPT($event)" class="css-radio1"/> <label for="fiveNine" class="css-labelTick"> </label> 5 - 9 years<br>
+    <input type="radio" value="10" name="payPremium" id="tenfour" [(ngModel)]="inputSave.minPT" (input)="minPT($event)" class="css-radio1" /> <label for="tenfour" class="css-labelTick"> </label> 10 - 14 years<br>
+    <input type="radio" value="15" name="payPremium" id="fifteenNine" [(ngModel)]="inputSave.minPT" (input)="minPT($event)" class="css-radio1" /> <label for="fifteenNine" class="css-labelTick"> </label> 15 - 19 years<br>
+    <input type="radio" value="20" name="payPremium" id="twenty" [(ngModel)]="inputSave.minPT" (input)="minPT($event)" class="css-radio1" /> <label for="twenty" class="css-labelTick"> </label> 20 years or more
+    
+    </div>
+    </div>
+    </div>
+    </div>-->
+
+    <div class="profilemain1"  *ngIf="annualPrepay == true">
+      <div class="oneplan2">
+      <div class="onetext2" >How long do you want to pay premiums?
+      <div class="policybox">
+      <input type="radio"  name="payPremium"  id="fiveNine" (change)="maxMin('five')" class="css-radio1" /> <label for="fiveNine" class="css-labelTick"> </label> 5 - 9 years<br>
+      <input type="radio"  name="payPremium"  id="tenfour" (change)="maxMin('ten')" class="css-radio1" checked/> <label for="tenfour" class="css-labelTick"> </label> 10 - 14 years<br>
+      <input type="radio"  name="payPremium"  id="fifteenNine" (change)="maxMin('fifteen')" class="css-radio1" /> <label for="fifteenNine" class="css-labelTick"> </label> 15 - 19 years<br>
+      <input type="radio"  name="payPremium"  id="twenty" (change)="maxMin('twenty')" class="css-radio1" /> <label for="twenty" class="css-labelTick"> </label> 20 years or more
+      
+      </div>
+      </div>
+      </div>
+      </div>  
+
+    <span *ngIf="ConcernMessage == true">
+      <span id="ConcernMessage1"  style="margin-left: 481px;float: right;border: 1px solid #ccc; background: #DDD;color: #000">Premium Payment Term exceeds 60 years of age. Your Consent is required to continue.
+          <span>
+              <input type="checkbox" id="consentcb" class="css-checkbox">
+              <label for="consentcb" class="css-label"></label>
+            <br>
+          </span>
+      </span>
+  </span>
+
+    
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2" >Payout Type
+<div class="policybox">
+<input type="radio" value="guarantee" name="Payout" id="guarantee" [(ngModel)]="inputSave.payoutType" class="css-radio1"/> <label for="guarantee" class="css-labelTick"> </label> Guaranteed-100%<br>
+<input type="radio" value="nonguarantee" name="Payout" id="nonguarantee" [(ngModel)]="inputSave.payoutType" class="css-radio1" /> <label for="nonguarantee" class="css-labelTick"> </label> Non-Guaranteed<br>
+<input type="radio" value="both" name="Payout" id="both"  class="css-radio1" checked /> <label for="both" class="css-labelTick" > </label> Both
+
+</div>
+</div>
+</div>
+</div>
+
+<!--<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2" >Does the Insured smoke/chew tobacco? 
+<div class="policybox"><span class="formmin4">
+<input type="radio" value="Yes" name="smoker" id="yesSmoker" [(ngModel)]="inputSave.smoker" class="css-radio1" required/> <label for="yesSmoker" class="css-labelTick"> </label> Yes  
+<input type="radio" value="No" name="smoker" id="noSomker" [(ngModel)]="inputSave.smoker" class="css-radio1" required/> <label for="noSomker" class="css-labelTick" style="margin:0 0% 1% 15%"> </label> No</span>
+</div>
+</div>
+</div>
+</div>-->
+
+  <div class="col-md-3 col-sm-3 col-xs-12" style="padding-top:2%;">
+      <button id="regularincome" (click)="regular.valid && submitForm()"class="btn btn-primary call-back btn-default" [disabled]="regular.invalid || errorCall2 || errorCall3 || errorCall4 ||errorCall || (!consent && ConcernMessage1)" style="background-color: #ce0707;margin-left: 417px;">COMPARE POLICIES</button>
+  </div>
+ </form>
+</div>
+</div>
+</div>
+<div id="footermain">
+  <div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} &nbsp;
+    
+ </div>
+  <div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
+  
+  <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+</div>
+ <!-- Modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #changePwdForm = "ngForm">
+        <div class="form-group">
+          <label for="Old-Password" class="col-form-label" >Old Password:</label>
+          <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+        </div>
+         <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+        <div class="form-group">
+          <label for="New-Password" class="col-form-label" >New Password:</label>
+          <input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+          <input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
+        </div>
+         <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+               <div *ngIf = "userPassword.invalid; else nomatch">
+                New Password and Confirm Password should match
+                              </div>
+                  <ng-template #nomatch >
+                    New Password and Confirm Password should match
+                  </ng-template>
+              </div>
+       </div> 
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Success or failure modal -->
+<div id="resultModal" class="modal" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-body">
+      <p id="messageTouser"></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- ends here-->
+      <!--Report Issue modal starts here-->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="reportIssueModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel11">Report An Issue</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #reportAnIssue = "ngForm" >
+        <div class="form-group">
+          <label for="cngm-Password" class="col-form-label" style="margin-left: 63px;">Description of the issue:</label>
+          <textarea rows="3" cols="60" type="text" value="" name="issue" id="issueReport" ngModel required style="margin: 0 0 0 -61px;"></textarea>
+        </div>
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="reportIssue(reportAnIssue)" data-dismiss="modal" [disabled]="!reportAnIssue.form.valid" class="btn btn-primary">Report</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+<!--Report Issue modal ends here-->
+</div>

@@ -1,0 +1,106 @@
+.textboxline {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline:none;
+    box-shadow:none;
+    width: 100%;
+  }
+  .square {
+    width: 236px;
+    height: 100px;
+    border: 1px solid black;
+    position: relative;
+    top: 0px;
+    height: 154px;
+    left: 42px;
+  }
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) 
+  and (orientation : portrait)
+  and (-webkit-min-device-pixel-ratio: 2) 
+  { 
+  .square
+  {
+    display:none;
+  }
+  
+  }
+  @media (max-width : 1024px) and (min-width : 768px) and (orientation: portrait) {
+    #dbs1 {
+        width: 68% !important;
+        float: left;
+        height: auto;
+    }
+  }
+  @media (max-width : 1024px) and (min-width : 768px) and (orientation: landscape) {
+    #dbs1 {
+        width: 100% !important;
+        float: left;
+        height: auto;
+    }
+  }
+  
+  .textboxmargin{
+  margin-bottom: 2px !important;
+  }
+  label.control-label::after {
+    content: none;
+  }
+  
+  /*START CHECKBOX*/
+  checkbox {
+    display: block !important;
+  }
+  .phototext
+  {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 53px;
+  }
+  
+  input[type=checkbox] {
+    display: block;
+  }
+  .textbar{
+    overflow: hidden;
+    background-color:#7c7c7c;
+    color: white;
+    font-size: 13px;
+    height: 18px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    height: 25px;
+  }
+  .header1 {
+    overflow: hidden;
+    background-color:#7c7c7c;
+    padding: 11px 10px;
+    color: white;
+    font-size: 17px;
+    height: 50px;
+  
+  }
+  
+  div label{
+    font-weight: normal;
+  }
+  .valuePadding input {
+  
+    padding:0px;
+    outline: none;
+  }
+  .row.no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+      background-color: none !important;
+      opacity: 1;
+  }
+  
+  
+  

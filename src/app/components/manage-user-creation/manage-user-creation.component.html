@@ -1,0 +1,349 @@
+<div>
+
+  <div class="rootCus">
+    <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+    <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="menu">
+      <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+      <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+      <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+      <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+    </ul>  
+  
+  </div>
+<div id="dbs">
+    <div class="select_menu">
+<div class="container">
+    <br>
+  <div class="well" style="background-color: #ffffff; padding: 10px;">
+      <form class="form-horizontal">
+          <div class="form-group form-group-lg">&nbsp; &nbsp;<span style=" color: black;font-size: 18px;"><img src="../../../assets/images/ManageUser.png" alt=""> &nbsp;&nbsp;Add Relationship Manager
+          </span></div> 
+        </form>
+        </div>
+</div>
+<div class="container">
+    <div class="well" style="background-color: #ffffff;padding: 10px;">
+        <form class="form-horizontal" id="saveCustomer" #createNewUsr="ngForm">           
+            <div class="form-group form-group-md">
+              <label class="col-sm-3 col-md-2 control-label" for="lg">Create new user:</label>
+              <div class="col-sm-5 col-md-5">
+                <input class="form-control" name="newUserEmailId" placeholder="Enter valid Email Id" (input)="newUserEmailIdEvent($event)" value="" type="email" id="newUserEmailId" size="5" maxlength="50" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required ngModel>
+              </div>
+              <button type="submit" (click)="register()" [disabled]="createNewUsr.invalid" data-toggle="modal" data-target="#manageSettingModal" id="rmCreationId" class="btn btn-primary btn-md"  id="registerButton"  style="background-color: red; border-color: white">Register</button>
+            </div>
+          </form>
+          </div>
+  </div>
+ 
+<div class="container">
+  <br>
+    <div class="well" style="background-color: #ffffff;padding: 10px;">
+        <form class="form-horizontal">
+            <div class="form-group form-group-md">
+              <label class="col-sm-3 col-md-2" style="color:#644f4f;" for="search">Search for User:</label>
+              <div class="col-sm-5 col-md-5">
+                <input class="form-control" [(ngModel)]="queryString" #search type="search" value="" size="5" maxlength="220" name="search" id="search">
+              </div>
+            </div>
+            
+          </form>
+          </div>
+  </div>
+</div>
+</div>
+<div class="folder" style=" margin: 24% 0 1% 0; background-color: #f5f5f5;">
+
+  <div class="contentmain1">
+      <div class="" style="background-color: #ffffff;">
+          <form class="form-horizontal">
+              <table class="table" style="color : black;">
+                  <tbody>
+                    <tr *ngFor="let data of data | searchFilter :search.value">
+                      <td>
+                          <div style="float:left;width:50%;color: brown;">{{data.rmId}}</div>
+                          <div  class="text-right">
+                              <button type="submit" (click)="resetPassword(data)" data-toggle="modal" data-target="#resetPasswordModal" class="btn btn-primary btn-md"  style="background-color: red; border-color: white">Reset Password</button>
+                              <button *ngIf="data.accountStatus=='1'" type="submit" (click)="deactivateRM(data)" data-toggle="modal" data-target="#deleteUserModal" class="btn btn-primary btn-md"   style="background-color: red; border-color: white; width: 12%;">Deactivate RM</button>
+                              <button *ngIf="data.accountStatus=='0'" type="submit" (click)="activateRM(data)" data-toggle="modal" data-target="#activateRMModal" class="btn btn-primary btn-md"   style="background-color: red; border-color: white;width: 12%;">Activate RM</button>
+                            </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              
+            </form>
+            </div>
+            <div id="loader4"></div>
+
+    </div>
+    </div>
+
+<!--Manage Settings modal starts here-->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="manageSettingModal" tabindex="-1" role="dialog" aria-labelledby="mangeSetting" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width: 70%;" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mangeSetting">RM Id Creation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form #manageUser = "ngForm" >
+              <div class="row" style="margin-left: 93px;">
+                  <div class="col-xs-6">
+                      <label for="rmName" class="">Email Id</label>
+                      <input type="email" value="" name="MangeEmail" class="form-control" id="MangeEmail" placeholder="Your Email Id" readonly ngModel>
+                    </div>
+                    <div class="col-xs-6">
+                        <label for="rmName" class="">Designation</label>
+                        <input type="text" value="" name="{{designation}}" class="form-control" id="designation" placeholder="TRM" ngModel readonly>
+                      </div> 
+                    </div>
+                    <div class="row" style="margin-left: 93px;">
+                        <div class="col-xs-6">
+                            <label for="rmName" class="">RM Name</label>
+                            <input type="text" name="rmName" class="form-control" #rmName="ngModel" id="rmName" value="" size="5" maxlength="50" required placeholder="Your RM Name"  ngModel>
+                          </div>
+                          <div class="col-xs-6">
+                              <label for="rmName" class="">UH Name</label>
+                              <input type="text" name="uhName" class="form-control" #uhName="ngModel" id="uhName" value="" size="5" maxlength="50" required placeholder="Your UH Name"  ngModel>
+
+                            </div> 
+                          </div>
+                          <div class="row" style="margin-left: 93px;">
+                              <div class="col-xs-6">
+                                  <label for="rmName" class="">DBS Location</label>
+                                  <br>
+                                  <select class="inpute_text03"  [(ngModel)]="dbsLocation" name="dbsLocation" style="width: 70%;background: #ffffff;">
+                                    <option value="" disabled>--Select--</option> 
+                                      <option value="Bangalore">Bangalore</option>
+                                      <option value="Chennai">Chennai</option>
+                                      <option value="Kolkata">Kolkata</option>
+                                      <option value="Mumbai">Mumbai</option>
+                                      <option value="Nashik">Nashik</option>
+                                      <option value="New Delhi">Delhi</option>
+                                      <option value="Pune">Pune</option>
+                                      <option value="Salem">Salem</option>
+                                      <option value="Surat">Surat</option>
+                                      <option value="Moradabad">Moradabad</option>
+                                      <option value="Kolhapur">Kolhapur</option>
+                                      <option value="Cuddalore">Cuddalore</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6">
+                                    <label for="rmName" class="">City Head</label>
+                                    <input type="text" name="cityHead" class="form-control" #cityHead="ngModel" id="cityHead" value="" size="5" maxlength="50" required placeholder="Your City Head"  ngModel>
+                                  </div>             
+                                </div>
+                                <div class="row" style="margin-left: 93px;">
+                                    <div class="col-xs-6">
+                                        <label for="rmName" class="">License code</label>
+                                        <input type="text"  name="licenseCode" class="form-control" #licenseCode="ngModel" id="licenseCode" value="" size="5"  required placeholder="Enter License Code"  ngModel>
+                                      </div>
+                                      <div class="col-xs-6">
+                                          <label for="rmName" class="">License Expiry Date</label>
+                                          <div [ngClass]="{'has-error':licenseExpDate.invalid && licenseExpDate.pristine ||licenseExpDate.touched}">
+                                              <input type="date" name="licenseExpDate" class="form-control" (input)="getToday()" #licenseExpDate="ngModel" id="licenseExpDate" value="" size="5"  required placeholder="Enter License Expiry Date"  ngModel>
+                                            </div>
+                                          <div id="errorCall2" style="color: red;font-size: 17px;">{{errMessage3}}</div>
+                                        </div>
+                                      </div>
+                                      <br>
+                                      <div class="row" style="margin-left: 93px;">
+                                        <div class="col-xs-12 col-centered">
+                                            <label for="licenseType" class="">License Type</label>
+                                            <br>
+                                            <select class="inpute_text03" id="licenseType" [(ngModel)]="licenseType" name="licenseType" style="width: 70%;background: #ffffff;">
+                                              <option value="" disabled>Select</option>
+                                              <option value="Life">Life</option>
+                                                <option value="Composite">Composite</option>
+                                              </select>
+                                          </div>
+                                          </div>
+                                      
+                                      <br>
+                                      <br> 
+                                                                             
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" (click)="rmCreation(manageUser)" [disabled]="!manageUser.form.valid || errMessage3" data-dismiss="modal" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+      </div>
+      </div>
+      </div>
+    </div>
+  <!--Manage Settings modal ends here-->
+  <!-- Manage User error Message modal -->
+<div *ngIf="rmError" data-backdrop="static" data-keyboard="false" class="modal fade" id="rmCreationError" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>{{rmError}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!--  Manage User error ends here-->
+  
+
+  <!-- Reset password Message modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="resetPasswordModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Password has been successfully sent to the authorized Email ID.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Reset password Message ends here-->
+
+   <!-- Deactivate RM Message modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p style="text-align: center">RM has been Deactivated for the particular user.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Deactivate RM Message ends here-->
+
+   <!-- Activate RM Message modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="activateRMModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p style="text-align: center">RM has been Activated for the particular user.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Activate RM Message ends here-->
+    
+<!--footer starts-->
+<div id="footermain">
+  <div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} &nbsp;
+    
+ </div>
+  <div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
+  
+  <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+</div>
+ <!-- Modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #changePwdForm = "ngForm">
+        <div class="form-group">
+          <label for="Old-Password" class="col-form-label" >Old Password:</label>
+          <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+        </div>
+         <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+        <div class="form-group">
+          <label for="New-Password" class="col-form-label" >New Password:</label>
+          <input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+          <input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
+        </div>
+         <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+               <div *ngIf = "userPassword.invalid; else nomatch">
+                New Password and Confirm Password should match
+                              </div>
+                  <ng-template #nomatch >
+                    New Password and Confirm Password should match
+                  </ng-template>
+              </div>
+       </div> 
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Success or failure modal -->
+<div id="resultModal" class="modal" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-body">
+      <p id="messageTouser"></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- ends here-->
+      <!--Report Issue modal starts here-->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="reportIssueModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel11">Report An Issue</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #reportAnIssue = "ngForm" >
+        <div class="form-group">
+          <label for="cngm-Password" class="col-form-label" style="margin-left: 63px;">Description of the issue:</label>
+          <textarea rows="3" cols="60" type="text" value="" name="issue" id="issueReport" ngModel required style="margin: 0 0 0 -61px;"></textarea>
+        </div>
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="reportIssue(reportAnIssue)" data-dismiss="modal" [disabled]="!reportAnIssue.form.valid" class="btn btn-primary">Report</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+<!--Report Issue modal ends here-->
+</div>
+<!--footer ends-->
+
+
+
+
+  
+  
+  
+
+  

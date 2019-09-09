@@ -1,0 +1,1723 @@
+<div>
+  <div class="rootCus">
+    <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+    <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="menu">
+      <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+      <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+      <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+      <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+    </ul>  
+  
+  </div>
+<div id="dbs">
+  <div class="zerogrid" style="width: 100%;" *ngIf="!loading">
+      <div class="content searchheaderpanel proposal_form" id="sPanel">
+          <div class="col-xs-12  cf-title clearfix">
+             <!-- <div class="back-to-results" (click)="history.go(-1)" ><span class = "glyphicon glyphicon-menu-left"></span>Back to results</div>-->
+                <div class="proposal_heading">
+                  <span>Health Insurance for {{proposalInput.policy.numAdults}} Adult(s)</span>
+                  <span *ngIf ="proposalInput.policy.numChildren >0"> and {{proposalInput.policy.numChildren}} Children</span>
+                  <span *ngIf ="proposalInput.policy.floater == 'Y'">on Floater Basis</span>
+                  <span *ngIf ="proposalInput.policy.floater == 'N'">on Individual Basis</span>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-3 pnone">
+                <div class="insurer-img">
+                  <img class="img-responsive" src = "{{imagePath}}/image/ilogo/i{{proposalInput.insurerId}}.png">
+                  
+                </div>
+              </div>
+              <div class="col-xs-8 col-sm-9 pnone" style="border-left:1px solid #eaeaea;">
+                  <div class="pol-name">{{proposalInput.insurerName}}  {{proposalInput.productName}}</div>
+                  <div class="pol-val">
+                    <span>Sum Insured</span>
+                    <span class="value">{{proposalInput.policy.sumInsured | currency: 'INR':true}}</span>
+                    <br class="visible-xs visible-sm">
+                    <span>ANNUAL PREMIUM</span>
+                    <span class="value">{{proposalInput.policy.premiumPayable | currency: 'INR':true}}</span>
+                    <span class="val-typ" style="font-size: 12px;">(Includes 18.0% Goods and Services Tax)*</span>
+                  </div>
+              </div>
+      </div>
+     
+      <div id="stage_data" *ngIf="!loading">
+        <ul class="nav nav-pills nav-wizard extraSpace" id="tabs">
+            <li class="active"><a href="#panel1" data-toggle="tab">Policy<span *ngIf="tabStatus.firstComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+            <li id="SecondTab" class="tabdisable"><a href="#panel2" data-toggle="tab">Insured<span *ngIf="tabStatus.secondComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+            <li id="thirdTab" class="tabdisable"><a href="#panel3" data-toggle="tab">Medical History<span *ngIf="tabStatus.thirdComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+            <li id="forthTab" class="tabdisable"><a href="#panel4" data-toggle="tab">LifeStyle<span *ngIf="tabStatus.fourthComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+            <li id="fifthTab" class="tabdisable"><a href="#panel5" data-toggle="tab">Proposer<span *ngIf="tabStatus.fifthComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+            <li id="sixthTab" class="tabdisable"><a href="#panel6" data-toggle="tab">Nominee<span *ngIf="tabStatus.sixthComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+            <li id="seventhTab" class="tabdisable"><a href="#panel7" data-toggle="tab">Contact Info<span *ngIf="tabStatus.seventhComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+            <li id="eighthTab" class="tabdisable"><a href="#panel8" data-toggle="tab">Summary</a></li>
+        </ul>
+        </div>
+  <div class="tab-content">
+   <div class="tab-pane fade in active content searchheaderpanel" id="panel1">
+      <form id="royalS-policy-form" class="form-horizontal" #policyform = "ngForm" autocomplete="off" novalidate >
+      <div class="form-panel ">     
+          <div class="heads">Policy</div>
+             <div class = "clear"></div>
+             <div class="body">
+                <div class="main-section">
+                  <div class="proposer-process">
+                    <div class="define">
+                      <img src="../../../../../assets/images/info.png">
+                      <span>About Your Policy</span>
+                    </div>
+                    <div class="row mnone">
+                      <div class="col-sm-10" style="margin-bottom:10px;">
+                        
+                          <div class="col-sm-4">
+                            <div class="form-group required">
+                              <label class="control-label">Policy Start Date</label>
+                              <span class="input-group">
+                                  <input type="date" class="form-control datePick" [(ngModel)]="proposalInput.policy.policyStartdate" min="{{policyStartDateOptions.minDate | date: 'yyyy-MM-dd'}}" max="{{policyStartDateOptions.maxDate | date: 'yyyy-MM-dd'}}" (change)="getPolicyEndDate(proposalInput.policy.policyStartdate)" disabled  name="startDate"  required>
+                                  <span class="validity"></span>
+                                  <span class="input-group-btn">
+                                    <button type="button" class="btn btn-primary btn_prim " (click)="open('policyStartDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                   </span>
+                            </span>
+                            <span class="has-error">{{policyStartDateError}}</span>
+                            </div>
+                             </div>
+                             <div class="col-sm-4">
+                            <div class="form-group policyDate required">
+                              <label class="control-label">Policy End Date</label>
+                              <span class="input-group">
+                              <input type="date" class="form-control datePick" [(ngModel)]="proposalInput.policy.policyEnddate" name="endDate" disabled required>
+                              <span class="input-group-btn">
+                                  <button type="button" class="btn btn-primary btn_prim " (click)="open('policyEndDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                 </span>
+                              </span>   
+                            </div>
+                             </div>
+                             <div class = "clear"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class = "clear"></div>   
+              <div class="foot">
+                  <div class="clearfix">
+                    <div class="cf-pull-right">
+                      <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="policyform.invalid" (click)="nextSection('1')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                    </div>
+                  </div>
+              </div>     
+      </div>
+  </form>    
+</div> 
+
+<!--Policy ends here-->
+
+<div class="tab-pane fade content searchheaderpanel" id="panel2">
+<form id="royalS-insured-form" class="form-horizontal" #insuredform = "ngForm" autocomplete="off" novalidate >
+    <div class="form-panel ">     
+        <div class="heads">Insured Members</div>
+           <div class = "clear"></div>
+           <div class="body">
+              <div class="main-section">
+                <div class="proposer-process">
+                  <div class="define">
+                    <img src="../../../../../assets/images/info.png">
+                    <span>Who do you want to Insure?</span>
+                  </div>
+                  
+                  <div  class="row mnone insured_mnone" *ngFor="let insured of proposalInput.insured; let i=index">
+                      <div class="">Insured Person's Details for <span *ngIf="insured.type=='A'">Adult </span><span *ngIf="insured.type=='C'">Child </span>DOB: {{insured.dob  |date:'yyyy-MM-dd'}} </div>
+                      <div class="col-sm-12 col-md-12" style="margin-bottom:10px;">
+                        
+                        <div class="col-sm-4">
+                          <div class="form-group required">
+                           <label class="col-sm-4 control-label">Title</label>
+                           <div class="col-sm-12 padd0" *ngIf="insured.gender=='M'"  >
+                          <select class="form-control" [(ngModel)]="insured.title" name="nameTitle" required>
+                            <option value="" disabled>Select</option>
+                              <option value="DR">Dr</option>
+                              <option value="MASTER">Master</option>
+                              <option value="MR">Mr</option>
+                              <option value="MRS">Mrs</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-12 padd0" *ngIf="insured.gender=='F'">
+										
+                            <select class="form-control"  [(ngModel)]="insured.title" name="femaleTitle" required>
+                              <option value="" disabled>Select</option>
+                                <option value="DR">Dr</option>
+                                <option value="MS">Ms</option>
+                                <option value="MISS">Miss</option>
+                                <option value="BABY">Baby Girl</option>
+                                
+                            </select>
+                          </div>
+                        </div>
+                        </div>
+                       
+                        <div class="col-sm-4">
+                            <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':InsFirstName.invalid && !InsFirstName.pristine}">
+                             <label class="control-label required">First Name</label>
+                             <input type="text" class="form-control" name="InsFirstName{{i}}" #InsFirstName="ngModel" minlength="3" maxlength="40" pattern="^[a-zA-Z ]*$" [(ngModel)]="insured.firstName" required>
+                            </div>
+                          </div>
+                        
+                         
+                          <div class="col-sm-4">
+                              <div class="form-group dateInsuSpace  required"  [ngClass]="{'has-error':InsLastName.invalid && !InsLastName.pristine}">
+                               <label class="control-label">Last Name</label>
+                               <input type="text" class="form-control" id="lastName{{i}}" #InsLastName="ngModel" name="InsLastName{{i}}"  minlength="3" maxlength="40" pattern="^[a-zA-Z ]*$"  [(ngModel)]="insured.lastName" required>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="form-group dateInsuSpace required">
+                               <label class="control-label"> Date of Birth</label>
+                               <input type="date" class="form-control" id="insdob{{i}}" name="insdob{{i}}" [(ngModel)]="insured.dob" readonly>
+                              </div>
+                            </div>
+                            
+                            <div class="col-sm-4">
+                              <div class="form-group dateInsuSpace required">
+                               <label class="control-label">Gender</label><br>
+                               <div class="btn-group">
+                              <button class="btn btn-primary btn_prim"   value="M" name ="insugender{{i}}" [(ngModel)]="insured.gender" (click)="insured.gender='M'" [ngClass]="{'active': insured.gender =='M'}" id="insuM{{i}}" required ngDefaultControl disabled>Male</button>
+                              <button class="btn btn-primary btn_prim"  value="F" name ="insugender{{i}}" [(ngModel)]="insured.gender" (click)="insured.gender='F'" [ngClass]="{'active': insured.gender=='F'}" id="insuF{{i}}" required ngDefaultControl disabled>Female</button>
+                            </div>
+                          </div>
+                            </div>
+                          
+                           <div class="col-sm-4" >
+                                <div class="form-group dateInsuSpace required">
+                                 <label class="control-label">Relationship with Proposer</label>
+                                 <select class=" form-control" name="relaInsured{{i}}" [(ngModel)]="insured.relationshipId"  (change) = "checkRelationShip()" required>
+                                  <option value="" disabled>Select</option>
+                                  <option value="{{relationship.id}}"  *ngFor="let relationship of insurerMaster.Relationship">{{relationship.value}}</option>
+                                </select>
+                       
+                            </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-group dateInsuSpace required">
+                                 <label class="control-label">Marital Status</label>
+                                 <select class="form-control" [(ngModel)]="insured.maritalStatus" name="status{{i}}" required>
+                                  <option value="">Select</option>
+                                  <option value="Single">Single</option>
+                                  <option value="Married">Married</option>
+                                </select>
+                              </div>
+                              </div>
+                              
+                              
+                              <div class="col-sm-4">
+                                <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':height.invalid && !height.pristine}">
+                                <label class="control-label">Height in cm</label>
+                                <input type="text" name="height{{i}}"  #height="ngModel" class="form-control"  minlength="2" [(ngModel)]="insured.height"  maxlength="3" (input)="calculateHeight($event,i)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" required>
+                                
+                              </div>
+                              </div>
+                              
+                              
+                              <div class="col-sm-4">
+                                 <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':weight.invalid && !weight.pristine}">
+                                 <label class="control-label"> Weight in kg</label>
+                                 <input type="text" name ="weight{{i}}" #weight="ngModel"  class="form-control"  maxlength="3" [(ngModel)]="insured.weight" (input)="calculateWeight($event,i)" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" required>
+                                 
+                                </div>
+                              </div>  
+
+                            <div class="col-sm-4 list-item-proposer">
+                                  <div class="form-group dateInsuSpace required">
+                                  <label class="control-label">Occupation</label>
+                                  <select class="form-control" [(ngModel)]="insured.occupationType" name="occupation{{i}}" (change)="validateOcupation()" required>
+                                    <option value="{{occupation.id}}" *ngFor="let occupation of insurerMaster.Occupation">{{occupation.value}}</option>
+                                  </select>
+                                  <span class="has-error">{{ocupationError}}</span>
+                                </div>
+                              </div>
+                              <div class="col-sm-4 list-item-proposer" *ngIf="insured.occupationType=='SALARIED' || insured.occupationType=='OTHERS'">
+                                <div class="form-group dateInsuSpace required" >
+                                  <label class="control-label">Designation</label>
+                                  <input type="text" class="form-control field" name="designation{{i}}" minlength="1" maxlength="40" pattern="^[a-zA-Z ]*$" [(ngModel)]="insured.designation" [disabled]="proposalInput.proposer.isPrimaryInsured=='Y'&& indexA==0" required>
+                                </div>
+                              </div>
+                              <div class="col-sm-4 list-item-proposer" *ngIf="insured.occupationType=='SELF EMPLOYED'">
+                                <div class="form-group dateInsuSpace required" >
+                                  <label class="control-label">Business</label>
+                                  <input type="text" name= "business{{i}}" class="form-control" [(ngModel)]="insured.business" minlength="1" pattern="^[a-zA-Z ]*$" [disabled]="proposalInput.proposer.isPrimaryInsured=='Y'&& indexA==0" maxlength="35">
+                                 </div>
+                              </div>
+
+
+                        </div>
+                        </div>
+                        
+                </div>
+              </div>
+            </div>
+            <div class = "clear"></div>
+            
+         <div class="foot">
+	   			<div class="clearfix">
+	   				<div class="cf-pull-right">
+                <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('2')">
+                  <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+            </button>
+	   					<button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="insuredform.invalid" (click)="nextSection('2')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+	   				</div>
+	   			</div>
+	   		</div>
+    </div>
+   </form> 
+</div>
+<!--Insured ends here-->
+
+<div class="tab-pane fade content searchheaderpanel" id="panel3">
+    <form id="royalS-history-form" class="form-horizontal" #mhistoryform = "ngForm" autocomplete="off" novalidate >
+      <div class="form-panel ">     
+            <div class="heads">Medical History</div>
+               <div class = "clear"></div>
+               <div class="body">
+                  <div class="main-section">
+                    <div class="proposer-process">
+                      <div class="define">
+                        <img src="../../../../../assets/images/info.png">
+                        <span>Have any of the person proposed to be insured ever suffered from/ are currently suffering from any of the following?</span>
+                      </div> 
+
+                      <div class="row mnone conditional-question" *ngFor="let question of medicalQuestions; let i=index">
+                          <div class="col-sm-10 pnone">
+                          <div class="quest-pad">
+                            <span class="q-point">Q</span>
+                           <span class="">{{question.questiontext}}</span><br>
+                          </div>
+                        </div>
+                       
+
+                       <div classs="col-sm-4 pnone">
+                      <div class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-primary btn_prim" name="medicalD{{i}}" [(ngModel)]="question.exists" [ngClass]="{'active': question.exists=='Y'}" value="Y" id="medicalY{{i}}" (click)="question.exists='Y';addmedicalDetails(question.id,i,medicalDetails)" required ngDefaultControl>Yes</label>
+                      <label class="btn btn-primary btn_prim" name="medicalD{{i}}" [(ngModel)]="question.exists" [ngClass]="{'active': question.exists=='N'}" value="N" id="medicalN{{i}}" (click)="question.exists='N'" required ngDefaultControl>No</label>
+                      </div>
+                     </div><br>
+                     <div *ngIf = "question.exists == 'Y' && question.details.length > 0" class="col-sm-12" id="medicalCondtnDetails">
+                      <div class="table table-responsive">
+                        <div>
+                          <span>Details of Medical Conditions</span>
+                         </div>
+                        <br>
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Insured Name</th>
+                              <th>Illness</th>
+                              <th>Treatment - Year/Month</th>
+                              <th>Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let illness of question.details; let j=index">
+                              <td>{{illness.insuredName}}</td>
+                              <td>{{illness.nameOfIllness}}</td>
+                              <td> {{illness.yearOfDiagnosis}} - {{illness.monthOfDiagnosis}}</td>
+                              <td>{{illness.treatmentOutCome}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div> 
+                     </div><br>  
+                      </div>
+                      </div>
+                      </div>
+                      <div class = "clear"></div>
+            
+                      <div class="foot">
+                        <div class="clearfix">
+                          <div class="cf-pull-right">
+                             <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('3')">
+                               <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+                         </button>
+                            <button class="btn cf-btn btn-lg btn-default btn-grn"  (click)="nextSection('3')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                          </div>
+                        </div>
+                      </div>      
+                      </div>
+      
+    
+    
+    
+    </form>
+</div>      
+<!-- Medical History ends here-->
+<div class="tab-pane fade content searchheaderpanel" id="panel4">
+    <form id="royalS-style-form" class="form-horizontal" #lifeStyleform = "ngForm" autocomplete="off" novalidate >
+      <div class="form-panel ">     
+        <div class="heads">Life Style</div>
+           <div class = "clear"></div>
+           <div class="body">
+              <div class="main-section">
+                <div class="proposer-process">
+                  <div class="define">
+                    <img src="../../../../../assets/images/info.png">
+                    <span>Have any of the person proposed to be insured ever:</span>
+                  </div>
+
+                  <div class="row mnone conditional-question" *ngFor="let question of lifeStyleQuestions; let i=index">
+                    <div class="col-sm-8 pnone">
+                      <div class="quest-pad" ng-init="">
+                        <span class="q-point">Q</span>
+                        <span class="">{{question.q}}</span><br>
+                        
+                      </div>
+                    </div>
+                    <div classs="col-sm-4 pnone">
+                      <label class="btn btn-primary btn_prim" name="lifeStyleD{{i}}" value="Y" [(ngModel)]="question.exists"  [ngClass]="{'active': question.exists=='Y'}" id="lifeY{{i}}" (click)="question.exists = 'Y';lifeStyleDetails(question.id,'Add',i,LifeStyleform)" required ngDefaultControl>Yes</label>
+                   <label class="btn btn-primary btn_prim"  name="lifeStyleD{{i}}" value="N" [(ngModel)]="question.exists" [ngClass]="{'active': question.exists=='N'}" id="lifeN{{i}}" (click)="question.exists = 'N'"required ngDefaultControl>No</label>
+                   <div class="clear"></div>
+                     </div><br>
+                  
+                     <div *ngIf = "question.exists == 'Y' && question.details.length > 0" class="col-sm-12">
+                      <div class="table table-responsive">
+                        <div>
+                          <span>LifeStyle Details</span>
+                          </div>
+                        <br>
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Insured Name</th>
+                              <th>Quantity</th>
+                              <th>Years of Consumption</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let ls of question.details">
+                              <td>{{ls.insuredName}}</td>
+                              <td>{{ls.quantity}}</td>
+                              <td> {{ls.noOfYears}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  </div>
+                  </div>
+                 
+                 </div> 
+                 <div class = "clear"></div>
+            
+                      <div class="foot">
+                        <div class="clearfix">
+                          <div class="cf-pull-right">
+                             <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('4')">
+                               <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+                         </button>
+                            <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="lifeStyleform.invalid" (click)="nextSection('4')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                          </div>
+                        </div>
+                      </div> 
+                 </div>
+    
+    </form>
+</div>
+<!--Life Style ends here-->
+<div class="tab-pane fade content searchheaderpanel" id="panel5">
+    <form id="royalS-proposer-form" class="form-horizontal" #proposerform = "ngForm" autocomplete="off" novalidate >
+      <div class="form-panel ">     
+        <div class="heads">Proposer</div>
+           <div class = "clear"></div>
+           <div class="body">
+              <div class="main-section">
+                <div class="proposer-process">
+                  <div class="define">
+                    <img src="../../../../../assets/images/info.png">
+                    <span>The person who is paying for the policy</span>
+                  </div>
+                  <div class="row mnone">
+                    <div class="col-sm-11" style="margin-bottom:10px;">
+                      
+                      <div class="col-sm-4 list-item-proposer" >
+                        <div class="form-group dateInsuSpace required">
+                          <label class="control-label">Title </label>
+                          <div class="" >
+                           <select class="form-control" [(ngModel)]="proposalInput.proposer.title" [disabled]="isProposerInsured" name="title"  required  >
+                             <option value="" disabled>Select</option>
+                             <option value="DR">Dr</option>
+                             <option value="MR">Mr</option>
+                             <option value="MRS">Mrs</option>
+                             <option value="MS">Ms</option>
+                           </select>
+                         </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-sm-4 list-item-proposer">
+                        <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':GivName.invalid && !GivName.pristine}">
+                        <label class="control-label">First Name </label>
+                        <input type="text" name="GivName" #GivName="ngModel" pattern="^[a-zA-Z ]*$" minlength="3"  class="form-control" [(ngModel)]="proposalInput.proposer.firstName"   [disabled] = "isProposerInsured" required  >
+                       </div>
+                      </div>
+                      
+                      <div class="col-sm-4 list-item-proposer">
+                        <div class="form-group dateInsuSpace policyDate">
+                        <label class="control-label optional-label">Middle Name</label>
+                        <input type="text" name= "mName"   class="form-control"  [(ngModel)]="proposalInput.proposer.middleName"  [disabled] = "isProposerInsured">
+                        </div>
+                      </div>
+                      <div class=" clear"  ></div>
+                      <div class="col-sm-4 list-item-proposer">
+                        <div class="form-group dateInsuSpace required"  [ngClass]="{'has-error':SurName.invalid && !SurName.pristine}">
+                        <label class="control-label">Last Name </label>
+                        <input type="text" name="SurName" #SurName="ngModel" pattern="^[a-zA-Z ]*$" minlength="3"  class="form-control"  [(ngModel)]="proposalInput.proposer.lastName"  [disabled]="isProposerInsured"  required>
+                       </div>
+                      </div>
+                      
+                      <div class="col-sm-4 list-item-proposer">
+                        <div class="form-group dateInsuSpace required">
+                        <label class="control-label">Date of Birth</label>
+                        <div class="input-group">
+                              <input type="date" class="form-control" [disabled]="isProposerInsured" [(ngModel)]="proposalInput.proposer.proposerDob" min="{{adultDobOptions.minDate | date: 'yyyy-MM-dd'}}" max="{{adultDobOptions.maxDate | date: 'yyyy-MM-dd'}}" name="dob" required />
+                              <span class="input-group-btn">
+                                 <button type="button" class="btn btn-primary" (click)="open('proposerDob')"><i class="glyphicon glyphicon-calendar"></i></button>
+                               </span>
+                     </div>
+                     </div>
+                      </div>
+                      
+                      <div class="col-sm-4 list-item-proposer">
+                        <div class="form-group dateInsuSpace policyDate">
+                         <label class="control-label">Gender</label>
+                         <div class="clear"></div>
+                         <div class="btn-group">
+                           <button  class="btn btn-primary btn_prim" (click)="proposalInput.proposer.gender='M'"  [ngClass]="{'active':proposalInput.proposer.gender=='M' }" [(ngModel)]="proposalInput.proposer.gender"  [disabled]="proposalInput.proposer.isPrimaryInsured=='Y' || isProposerInsured"  id="Mprop" name="genderprop" required ngDefaultControl>Male</button>
+                           <button  class="btn btn-primary btn_prim" (click)="proposalInput.proposer.gender='F'"  [ngClass]="{'active': proposalInput.proposer.gender=='F'}" [(ngModel)]="proposalInput.proposer.gender" [disabled]="proposalInput.proposer.isPrimaryInsured=='Y' || isProposerInsured"  id="Fprop" name="genderprop" required ngDefaultControl>Female</button>
+                           
+                         </div>
+                       </div>
+                      </div>
+                      <div class=" clear" ></div>
+                      <div class="col-sm-4 list-item-proposer">
+                        <div class="form-group dateInsuSpace required">
+                        <label class="control-label">Marital Status</label>
+                        <select class="form-control" [(ngModel)]="proposalInput.proposer.maritalStatus" name="status" [disabled] = "isProposerInsured" required>
+                            <option value="" disabled>Select</option>
+                            <option value="Single">Single</option>
+                         <option value="Married">Married</option>
+                       </select>
+                       </div>
+                      </div>
+                      
+                      <div class="col-sm-4 list-item-proposer">
+                        <div class="form-group dateInsuSpace required">
+                        <label class="control-label">Occupation</label>
+                        <select class="form-control" [(ngModel)]="proposalInput.proposer.occupationType" name="occupation" [disabled] = "isProposerInsured" (change)="validateOcupation()" required>
+                            <option value="" disabled>Select</option>
+                            <option value="{{occupation.id}}" *ngFor="let occupation of insurerMaster.Occupation">{{occupation.value}}</option>
+                       </select>
+                         <span class="has-error">{{ocupationError}}</span>
+                       </div>
+                       
+                      </div>
+                      <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.occupationType=='SALARIED'||proposalInput.proposer.occupationType=='OTHERS'">
+                        <div class="form-group dateInsuSpace required" >
+                        <label class="control-label">Designation</label>
+                        <input type="text" class="form-control field" name="designation"  [disabled] = "isProposerInsured" minlength="1" maxlength="40" pattern="^[a-zA-Z ]*$" [(ngModel)]="proposalInput.proposer.designation" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.occupationType=='SELF EMPLOYED'">
+                        <div class="form-group dateInsuSpace required" >
+                        <label class="control-label">Business</label>
+                        <input type="text" name="business" class="form-control" [disabled] = "isProposerInsured" [(ngModel)]="proposalInput.proposer.business" pattern="^[a-zA-Z ]*$" required>
+                         
+                       </div>
+                      </div>
+                      
+                      <div class="col-sm-4 list-item-proposer">
+                       <div class="form-group dateInsuSpace required">
+                         <label class="control-label">Nationality</label>
+                         <select class="form-control" [(ngModel)]="proposalInput.proposer.nationality" name="nationality" required>
+                            <option value="" disabled>Select</option>
+                            <option value="{{nationality.id}}" *ngFor="let nationality of insurerMaster.Nationality">{{nationality.value}}</option>
+                         </select>
+                       </div>
+                      </div>
+                      
+                      <div class="col-sm-4 list-item-proposer">
+                        <div class="form-group dateInsuSpace required">
+                         <label class="control-label">Qualification</label>
+                         <select class="form-control" [(ngModel)]="proposalInput.proposer.educationQualification" name="qualification" required>
+                            <option value="" disabled>Select</option>
+                            <option value="{{qualification.id}}" *ngFor="let qualification of insurerMaster.Qualification">{{qualification.value}}</option>
+                         </select>
+                       </div>
+                      </div>
+                      
+                     <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.nationality!='Expat working in India' && proposalInput.policy.premiumPayable<=50000">
+                        <div class="form-group dateInsuSpace" [ngClass]="{'has-error':panNumberPropL.invalid && !panNumberPropL.pristine}">
+                        <label class="control-label label-block">PAN Number</label>
+                        <input type="text" name="panNumberPropL" class="form-control" #panNumberPropL="ngModel" [(ngModel)]="proposalInput.proposer.pan" pattern="^[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}$" required maxlength="10"> 
+                        <!--<span class="has-error" >Invalid PAN Number.</span>	-->
+                        </div>
+                      </div>
+
+                      <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.nationality=='Expat working in India' || proposalInput.policy.premiumPayable>50000">
+                        <div class="form-group dateInsuSpace" [ngClass]="{'has-error':panNumberPropG.invalid && !panNumberPropG.pristine}">
+                        <label class="control-label label-block">PAN Number</label>
+                        <input type="text" name="panNumberPropG" class="form-control" #panNumberPropG="ngModel" [(ngModel)]="proposalInput.proposer.pan" pattern="^[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}$" required maxlength="10"> 
+                        <!--<span class="has-error" >Invalid PAN Number.</span>	-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div class = "clear"></div>
+            
+                      <div class="foot">
+                        <div class="clearfix">
+                          <div class="cf-pull-right">
+                             <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('5')">
+                               <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+                         </button>
+                            <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="proposerform.invalid" (click)="nextSection('5')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                          </div>
+                        </div>
+                      </div> 
+                  </div>
+    
+    
+    
+    
+    </form>
+</div>
+<!--Proposer ends here-->
+<div class="tab-pane fade content searchheaderpanel" id="panel6">
+    <form id="royalS-nominee-form" class="form-horizontal" #nomineeform = "ngForm" autocomplete="off" novalidate >
+      <div class="form-panel ">     
+        <div class="heads">Nominee</div>
+           <div class = "clear"></div>
+           <div class="body">
+              <div class="main-section">
+                <div class="proposer-process">
+                  <div class="define">
+                    <img src="../../../../../assets/images/info.png">
+                    <span>In the event of the death of an Insured Person any payment due under the Policy shall become payable to the nominee as per the Policy terms and conditions. The nominee must be an immediate relative of the Proposer. Nominee for any of the persons proposed to be insured shall be the Proposer.</span>
+                  </div>
+                  <div class="row mnone">
+                    <h3>Nominee</h3>
+                    <div class="col-sm-10">
+                        <div class="col-sm-4 list-item-proposer">
+                            <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':nomineefName.invalid && !nomineefName.pristine}">
+                            <label class="control-label">First Name </label>
+                            <input type="text" name="nomineefName" #nomineefName="ngModel" pattern="^[a-zA-Z ]*$" minlength="3"  class="form-control" [(ngModel)]="proposalInput.proposer.nomineeFirstName"required  >
+                           </div>
+                          </div>
+                          <div class="col-sm-4 list-item-proposer">
+                              <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':nomineelName.invalid && !nomineelName.pristine}">
+                              <label class="control-label">Last Name </label>
+                              <input type="text" name="nomineelName" #nomineelName="ngModel" pattern="^[a-zA-Z ]*$" minlength="3"  class="form-control" [(ngModel)]="proposalInput.proposer.nomineeLastName"required  >
+                             </div>
+                            </div>
+                          
+                      <div class="col-sm-4">
+                       <div class="form-group dateInsuSpace required">
+                        <label class="control-label">Gender</label>
+                          <div class="clear"></div>
+                          <div class="btn-group" data-toggle="buttons">
+                       <label class="btn btn-primary btn_prim" name="nomineeGender" (click)="proposalInput.proposer.nomineeGender='M'" [ngClass]="{'active': proposalInput.proposer.nomineeGender=='M'}" [(ngModel)]="proposalInput.proposer.nomineeGender" id="Mnominee" required  ngDefaultControl>Male</label>
+                       <label class="btn btn-primary btn_prim" name="nomineeGender" (click)="proposalInput.proposer.nomineeGender='F'" [ngClass]="{'active': proposalInput.proposer.nomineeGender=='F'}" [(ngModel)]="proposalInput.proposer.nomineeGender" id="Fnomimee" required  ngDefaultControl>Female</label>
+                     </div>
+                     <div class="has-error">{{nomineeGenderError}}</div>
+                     </div>
+                      </div>
+                      <div class="col-sm-4">
+                      <div class="form-group dateInsuSpace required">
+                        <label class="control-label">DOB</label>
+                          <span class="input-group">
+                        <input type="date" class="form-control" name="nomineeDob" [(ngModel)]="proposalInput.proposer.nomineeDob" min="{{nomineeDobOptions.minDate | date: 'yyyy-MM-dd'}}" max="{{nomineeDobOptions.maxDate | date: 'yyyy-MM-dd'}}" (change)="calculateAge(proposalInput.proposer.nomineeDob)" required/>
+                        <span class="validity"></span>
+                        <span class="input-group-btn">
+                                 <button type="button" class="btn btn-primary btn_prim " (click)="open('nomineeDOB')"><i class="glyphicon glyphicon-calendar"></i></button>
+                             </span>
+                      </span>
+                   </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-group dateInsuSpace required" >
+                         <label class="control-label">Relationship With Proposer</label>
+                         <select class="form-control field" [(ngModel)]="proposalInput.proposer.nomineeRel" name="withProp" required>
+                           <option value="{{relationship.id}}" *ngFor="let relationship of insurerMaster.Relationship">{{relationship.value}}</option>
+                         </select>
+                       </div>	
+                      </div>
+                      
+                      <div class="col-sm-4">
+                          <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':proMobile.invalid && !proMobile.pristine}">
+                            <label class="control-label label-block">Mobile Number</label>
+                            <span class="input-group">
+                              <span class="input-group-addon">+91</span>
+                              <input type="tel" name="proMobile" #proMobile="ngModel" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" pattern="^[0-9]{10}$" minlength="10"  class="form-control" [(ngModel)]="proposalInput.proposer.nomineeMobile" maxlength='10' required>
+                            </span>
+                          </div>
+                        </div>
+                       
+                          <div class="col-xs-12">
+                              <div class="form-group dateInsuSpace" [ngClass]="{'has-error':addrone.invalid && !addrone.pristine}">
+                                  <label class="control-label">Flat/House No</label>
+                                  <input type="text" name="addrone" #addrone="ngModel" [(ngModel)]="proposalInput.proposer.nomineeAddress1" minlength="5" maxlength="50" class="form-control">
+                              </div>			
+                            </div>
+                           
+                            <div class="col-xs-12">
+                                <div class="form-group dateInsuSpace" [ngClass]="{'has-error':addrtwo.invalid && !addrtwo.pristine}">
+                                  <label class="control-label label-block" >Building/Street Name</label>
+                                  <input type="text" name="addrtwo" #addrtwo="ngModel" [(ngModel)]="proposalInput.proposer.nomineeAddress2" minlength="5" maxlength="50" class="form-control">
+                                </div>			
+                              </div>
+                            
+                        
+                        <div class="col-sm-6">
+                        <div class="form-group dateInsuSpace required">
+                          <label class="control-label">State</label>
+                          <select class="form-control field" [(ngModel)]="nomineeState" name="nomState" (change)="getCity(nomineeState,'nomadd')" required>
+                            <option value="" disabled>--Select--</option>   
+                            <option *ngFor="let state of insurerMaster.State" [ngValue]="state.id">{{state.value}}</option>
+                          </select>
+                       </div>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                        <div class="form-group dateInsuSpace required">
+                          <label class="control-label">City</label>
+                          <select class="form-control field" [(ngModel)]="proposalInput.proposer.nomineeCity" name="nomCity" (change)="changeCity(proposalInput.proposer.nomineeCity, 'nomadd')">
+                               <option value="{{city.id}}" *ngFor="let city of nomCities" >{{city.value}}</option>
+                                 <!--<div ng-bind-html="polCity.value | highlight: $select.search"> </div>-->
+                              
+                          </select>
+                             </div>
+                        </div>
+                        <div class="clear"></div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':pincode.invalid && !pincode.pristine}">
+                              <label class="control-label label-block">Pincode</label>
+                              <input type="text" name="pincode" #pincode="ngModel" [(ngModel)]="proposalInput.proposer.nomineePincode" (blur)="getPincode($event)" class="form-control" pattern="^[1-9][0-9]{5}$" maxlength="6" required>
+                              <span id="errorCall" class="has-error">{{errMessage}}</span>
+                            </div>
+                          </div>
+
+
+                        
+                        <!--<div class="col-sm-6">
+                          <div class="form-group dateInsuSpace required" >
+                            <label class="control-label">Pincode</label>
+                            <input type="text" name = "pincode" class="form-control field" [(ngModel)]="proposalInput.proposer.nomineePincode" pattern="/^[1-9]{1}[0-9]{5}$/" minlength="6"  maxlength="6" required>
+                          </div>
+                        </div>-->
+
+
+
+
+                      <div class="clear"></div>
+                      <div *ngIf="proposalInput.proposer.nomineeAge<18">
+                       <div class="col-sm-4" >
+                         <div class="form-group dateInsuSpace required" >
+                         <label class="control-label">Guardian First Name </label>
+                         <input type="text" class="form-control field" name="AppFName" minlength="3" maxlength="40" [(ngModel)]="proposalInput.proposer.appointeeName" required>
+                         </div>
+                       </div>
+                       
+                       <div class="col-sm-4">
+                         <div class="form-group dateInsuSpace required">
+                         <label class="control-label">Guardian Last Name </label>
+                         <input type="text" class="form-control field" name="AppLName" minlength="3" maxlength="40" [(ngModel)]="proposalInput.proposer.appointeeLastName" required>
+                         </div>
+                       </div>
+                        <div class="col-sm-4" >
+                          <div class="form-group dateInsuSpace required" >
+                          <label class="control-label">Guardian Relation </label>
+                         <select class="form-control field" [(ngModel)]="proposalInput.proposer.appointeeRel" name="gardianRel" required>
+                           <option value="{{relationship.id}}" *ngFor="let relationship of insurerMaster.AppointeeRel">{{relationship.value}}</option>
+                         </select>
+                         </div>
+                        </div>
+                         <div class="col-sm-6">
+                         <div class="form-group dateInsuSpace required">
+                           <label class="control-label">Guardian DOB</label>
+                            <span class="input-group">
+                            <input type="date" class="form-control" name="appointeeDob"  [(ngModel)]="proposalInput.proposer.appointeeDob" is-open="opened.appointeeDob" />
+                            <span class="validity"></span>
+                            <span class="input-group-btn">
+                              <button type="button" class="btn btn-primary btn_prim " (click)="open('appointeeDob')"><i class="glyphicon glyphicon-calendar"></i></button>
+                          </span> 
+                          </span>
+                       </div>
+                         </div>		    							
+                      </div>
+                    </div>
+                  </div>
+    
+    
+                </div>
+              </div>
+              </div>
+              <div class="foot">
+                <div class="clearfix">
+                  <div class="cf-pull-right">
+                     <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('6')">
+                       <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+                 </button>
+                    <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="nomineeform.invalid" (click)="nextSection('6')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                  </div>
+                </div>
+              </div> 
+              </div>
+              
+    </form>
+</div>
+<!--Nominee panel ends here-->
+<div class="tab-pane fade content searchheaderpanel" id="panel7">
+    <form id="royalS-contact-form" class="form-horizontal" #contactform = "ngForm" autocomplete="off" novalidate >
+      <div class="form-panel ">     
+        <div class="heads">Life Style</div>
+           <div class = "clear"></div>
+           <div class="body">
+              <div class="main-section">
+                <div class="proposer-process">
+                  <div class="define">
+                    <img src="../../../../../assets/images/info.png">
+                    <span>Where do we send the policy copy?</span>
+                  </div>
+                  
+                  <div class="row mnone">
+                    <div class="col-sm-6 add-borde"> 
+                      <h3><img src="../../../../../assets/images/mail.png">&nbsp;&nbsp;Mailing Address</h3>
+                      
+
+                      <div class="col-sm-12">
+                          <div class="form-group dateInsuSpace" [ngClass]="{'has-error':addrone.invalid && !addrone.pristine}">
+                              <label class="control-label">Flat/House No</label>
+                              <input type="text" name="addrone" #addrone="ngModel" [(ngModel)]="proposalInput.proposer.address[0].addressLine1" minlength="5" maxlength="50" class="form-control">
+                          </div>			
+                        </div>
+                       
+                        <div class="col-sm-12">
+                            <div class="form-group dateInsuSpace" [ngClass]="{'has-error':addrtwo.invalid && !addrtwo.pristine}">
+                              <label class="control-label label-block" >Building/Street Name</label>
+                              <input type="text" name="addrtwo" #addrtwo="ngModel" [(ngModel)]="proposalInput.proposer.address[0].addressLine2" minlength="5" maxlength="50" placeholder="5-30 Characters" class="form-control">
+                            </div>			
+                          </div>
+                      
+
+                      <div class="col-sm-12">
+                      <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':addrthree.invalid && !addrthree.pristine}">
+                        <label class="control-label">Area/Locality</label>
+                        <input type="text" name="addrthree" #addrthree="ngModel" [(ngModel)]="proposalInput.proposer.address[0].addressLine3" minlength="5" maxlength="50" placeholder="5-30 Characters" class="form-control">
+
+                   </div>
+                      </div>
+                      <div class="col-sm-12 padd0" style="margin: 0 0 0 -18px;">
+                        
+                        <div class="col-sm-6">
+                        <div class="form-group dateInsuSpace required">
+                          <label class="control-label">State</label>
+                          <select class="form-control field" [(ngModel)]="state" name="polState1" (change)="getCity(state,'policy')" required>
+                               <option  *ngFor="let state of insurerMaster.State" [ngValue]="state.id">{{state.value}}</option>
+                               
+                           </select>
+                       </div>
+                        </div>
+                       
+                        <div class="col-sm-6">
+                          <div class="form-group dateInsuSpace required">
+                            <label class="control-label">City</label>
+                            <select class="form-control field" [(ngModel)]="proposalInput.proposer.address[0].city" (change)="changeCity(proposalInput.proposer.address[0].city, 'policy')" name="polCity">
+                                 <option value="{{city.id}}" *ngFor="let city of polCities" >{{city.value}}</option>
+                                   <!--<div ng-bind-html="polCity.value | highlight: $select.search"> </div>-->
+                                
+                            </select>
+                               </div>
+                          </div>
+                          
+                        <div class="clear"></div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':pincode.invalid && !pincode.pristine}">
+                              <label class="control-label label-block">Pincode</label>
+                              <input type="text" name="pincode" #pincode="ngModel" [(ngModel)]="proposalInput.proposer.address[0].pincode" (blur)="getPincode($event)" class="form-control" pattern="^[1-9][0-9]{5}$" maxlength="6" required>
+                              <span id="errorCall" class="has-error">{{errMessage}}</span>
+                            </div>
+                          </div>
+
+
+                      </div>
+                    </div>
+
+                    
+                    <div class="col-sm-6">
+                      <h3><img src="../../../../../assets/images/phone.png">&nbsp;&nbsp;Contact details</h3>
+                      
+                      <div class="row">
+                      <div class="col-sm-6" >
+                          <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':proEmail.invalid && !proEmail.pristine}">
+                            <div class="col-sm-12 padd0">
+                              <label class="control-label label-block">Email ID</label>
+                              <input type="email" name="proEmail" #proEmail="ngModel" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control" [(ngModel)]="proposalInput.proposer.contacts[1].contactText" style="width: 109%;" required>
+                            </div>
+                          </div>
+                        </div>
+
+                      <div class="col-sm-6">
+                          <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':proMobile.invalid && !proMobile.pristine}">
+                            <label class="control-label label-block">Mobile Number</label>
+                            <span class="input-group">
+                              <span class="input-group-addon">+91</span>
+                              <input type="tel" name="proMobile" #proMobile="ngModel" pattern="^[0-9]{10}$" minlength="10"  class="form-control" [(ngModel)]="proposalInput.proposer.contacts[0].contactText" maxlength='10'onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" required>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="clear"></div>
+                      <div class="row mnone" style="margin: 0 0 0 0;">
+                       <div class="col-sm-4 form-group dateInsuSpace" >
+                         <label class="control-label">Landline</label>
+                         <input type="tel" class="form-control field" name="stdcode" minlength="3" maxlength="5"    [(ngModel)]="proposalInput.proposer.stdCode" pattern="^[0-9]{2,5}$" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57">
+                         <span class="small">e.g. "022"</span> 
+                       </div>
+
+                       
+                      <div class="col-sm-8 form-group dateInsuSpace">
+                          <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':phone.invalid && !phone.pristine}">
+                              <label class="control-label" ></label>
+                              <input type="tel" name="phone" #phone="ngModel" pattern="^[0-9]{8}$" minlength="8"  class="form-control" [(ngModel)]="proposalInput.proposer.landLine" maxlength='8' onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" required>
+                          </div>
+                        </div>   
+                      </div>
+                      
+                    </div>
+                    <div class="clear"></div>
+                    <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;" ></p>
+                  </div>
+
+
+    
+    
+                </div>
+              </div>
+              </div>
+              <div class="foot">
+                <div class="clearfix">
+                  <div class="cf-pull-right">
+                     <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('7')">
+                       <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+                 </button>
+                    <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="contactform.invalid" (click)="nextSection('7')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                  </div>
+                </div>
+              </div> 
+              </div>
+    </form>
+</div>
+<!--Contact Info panel ends here-->
+<div class="tab-pane fade content searchheaderpanel" id="panel8">
+    <form id="royalS-summary-form" class="form-horizontal" #summaryform = "ngForm" autocomplete="off" novalidate >
+      <div class="form-panel ">     
+        <div class="heads">Summary</div>
+           <div class = "clear"></div>
+           <div class="body">
+              <div class="main-section">
+                <div class="buy-process">
+                  <div class="define">
+                    <img src="../../../../../assets/images/info.png">
+                    <span>Please Review the Information below for correctness and completeness</span>
+                  </div>
+                 <div class="summary-stage">
+                    <div class="title">
+                      <h4>Policy </h4>
+                        <span class="btn btn-primary" (click)="editFields('1', '8')">Edit</span>
+                    </div>
+                    <div class="stage-body">
+                      <div class="col-sm-10" style="margin-bottom:10px;">
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Policy Start Date:</label>
+                       <span>{{proposalInput.policy.policyStartdate| date : "dd MMM yyyy"}}</span>
+                     </div>
+                       <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Policy End Date:</label>
+                       <span>{{proposalInput.policy.policyEnddate| date : "dd MMM yyyy"}}</span>
+                     </div>
+                     </div>
+                    </div>
+                  </div>
+
+                <div class="summary-stage">
+                    <div class="title">
+                      <h4>Proposer </h4>
+                        <span class="btn btn-primary" (click)="editFields('5', '8')">Edit</span>
+                    </div>
+                    <div class="stage-body">
+                      <div class="col-sm-10" style="margin-bottom:10px;">
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Name:</label>
+                       <span>{{proposalInput.proposer.title}} </span>
+                       <span>{{proposalInput.proposer.firstName}} </span>
+                       <span>{{proposalInput.proposer.middleName}} </span>
+                       <span>{{proposalInput.proposer.lastName}} </span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Date of Birth:</label>
+                       <span>{{proposalInput.proposer.proposerDob| date : "dd MMM yyyy"}}</span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Gender:</label>
+                       <span *ngIf = "proposalInput.proposer.gender=='M'">Male</span>
+                       <span *ngIf = "proposalInput.proposer.gender=='F'">Female</span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Martital Status:</label>
+                       <span>{{proposalInput.proposer.maritalStatus}} </span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Occupation:</label>
+                       <span>{{proposalInput.proposer.occupationType}} </span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Designation:</label>
+                       <span *ngIf="proposalInput.proposer.designation==''">NA</span>
+                       <span *ngIf="proposalInput.proposer.designation!=''">{{proposalInput.proposer.designation}}</span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Business:</label>
+                       <span>{{proposalInput.proposer.business}}</span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Nationality:</label>
+                       <span>{{proposalInput.proposer.nationality}} </span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Qualification:</label>
+                       <span>{{proposalInput.proposer.educationQualification}} </span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">PAN:</label>
+                       <span>{{proposalInput.proposer.pan}}</span>
+                     </div>
+                     
+                     <div class="clear"></div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Nominee Name:</label>
+                       <span>{{proposalInput.proposer.nomineeFirstName}} </span>
+                       <span>{{proposalInput.proposer.nomineeLastName}} </span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Nominee Date of Birth:</label>
+                       <span>{{proposalInput.proposer.nomineeDob| date : "dd MMM yyyy"}}</span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Nominee Gender:</label>
+                       <span *ngIf = "proposalInput.proposer.nomineeGender=='M'">Male</span>
+                       <span *ngIf = "proposalInput.proposer.nomineeGender=='F'">Female</span>
+                     </div>
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Nominee Relationship:</label>
+                       <span>{{proposalInput.proposer.nomineeRel}} </span>
+                     </div>
+                     
+                     <div class="col-sm-6 list-item-proposer">
+                       <label class="control-label label-highlight">Nominee Mobile:</label>
+                       <span>{{proposalInput.proposer.nomineeMobile}}</span>
+                     </div>
+                     
+                     <div *ngIf ="proposalInput.proposer.nomineeAge < 18">
+                       
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Appointee Name:</label>
+                         <span>{{proposalInput.proposer.appointeeFirstName}} </span>
+                         <span>{{proposalInput.proposer.appointeeLastName}} </span>
+                       </div>
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Appointee Date of Birth:</label>
+                         <span>{{proposalInput.proposer.appointeeDob| date : "dd MMM yyyy"}}</span>
+                       </div>
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Appointee Relationship:</label>
+                         <span>{{proposalInput.proposer.appointeeRel}} </span>
+                       </div>
+                     </div>
+                     </div>
+                    </div>
+                  </div>
+                  
+                  <div class="summary-stage">
+                    <div class="title">
+                      <h4>Insured Member(s)</h4>
+                        <span class="btn btn-primary" (click)="editFields('2', '8')">Edit</span>
+                    </div>
+                    <div class = "clear"></div>
+                    <div class="stage-body">
+                     <div class="row mnone" *ngFor="let member of proposalInput.insured">
+                       <div class="col-sm-12" style="margin-bottom:10px;">
+                         <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Name:</label>
+                         <span>{{member.title}} </span>
+                         <span>{{member.firstName}} </span>
+                         <span>{{member.middleName}} </span>
+                         <span>{{member.lastName}} </span>
+                       </div>
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Date of Birth:</label>
+                         <span>{{member.dob| date : "dd MMM yyyy"}}</span>
+                       </div>
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Gender:</label>
+                         <span *ngIf = "member.gender=='M'">Male</span>
+                         <span *ngIf = "member.gender=='F'">Female</span>
+                       </div>
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Martital Status:</label>
+                         <span>{{member.maritalStatus}} </span>
+                       </div>
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Relationship with proposer:</label>
+                         <span>{{member.relationshipId}} </span>
+                       </div>
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Occupation:</label>
+                         <span>{{member.occupationType}} </span>
+                       </div>
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Height:</label>
+                         <span>{{member.height}} cms </span>
+                       </div>
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Weight:</label>
+                         <span>{{member.weight}} kgs </span>
+                       </div>
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label optional-label">Designation:</label>
+                         <span>{{member.designation}}</span>
+                       </div>
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label optional-label">Business:</label>
+                         <span>{{member.business}}</span>
+                       </div>
+                       </div>
+                     </div>
+                     <div class = "clear"></div>
+                     <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;border-top:1px dashed #dadada;" ></p>
+                    </div>
+                  </div>
+
+                  <div class="summary-stage">
+                    <div class="title">
+                      <h4>Contact Info. </h4>
+                        <span class="btn btn-primary" (click)="editFields('7', '8')">Edit</span>
+                    </div>
+                    <div class = "clear"></div>
+                    <div class="stage-body">
+                   <div class="row mnone">
+                     <div class="col-sm-12 add-borde"> 
+                         <h3><img src="../../../../../assets/images/mail.png">&nbsp;&nbsp;Contact Details</h3>
+                         
+                         <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Mailing Address:</label><br>
+                         <span>{{proposalInput.proposer.address[0].addressLine1}}</span><br>
+                         <span>{{proposalInput.proposer.address[0].addressLine2}} </span><br>
+                         <span>{{proposalInput.proposer.address[0].addressLine3}} </span><br>
+                         <span>{{proposalInput.proposer.address[0].city}} </span><br>
+                         <span>{{getMasterValue('State', proposalInput.proposer.address[0].stateCode)}} </span><br>
+                         <span>{{proposalInput.proposer.address[0].pincode}} </span><br>
+                       </div>
+                       
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">Nominee Address:</label><br>
+                         <span>{{proposalInput.proposer.nomineeAddress1}}</span><br>
+                         <span>{{proposalInput.proposer.nomineeAddress12}} </span><br>
+                         <span>{{proposalInput.proposer.nomineeCity}} </span><br>
+                         <span>{{getMasterValue('State', proposalInput.proposer.nomineeStateCode)}}  </span><br>
+                         <span>{{proposalInput.proposer.nomineePincode}} </span><br>
+                       </div>
+                       
+                       <div class="col-sm-6 list-item-proposer">
+                         <label class="control-label label-highlight">E-mail:</label>
+                         <span>{{proposalInput.proposer.contacts[1].contactText}}</span><br>
+                         <label class="control-label label-highlight">Mobile:</label>
+                         <span>{{proposalInput.proposer.contacts[0].contactText}}</span><br>
+                         <label class="control-label label-highlight">Landline:</label>
+                         <span>{{proposalInput.proposer.stdCode}}-{{proposalInput.proposer.landLine}}</span>
+                       </div>
+                                             
+                       <div class="col-sm-6 list-item-proposer">
+                         
+                       </div>
+                       </div>
+                     </div>
+                    </div>
+                  </div>
+                 <div class="summary-stage">
+                    <div class = "clear"></div>
+                    <div class="title">
+                      <h4>Medical History </h4>
+                        <span class="btn btn-primary" (click)="editFields('3', '8')">Edit</span>
+                    </div>
+                    <div class = "clear"></div>
+                    <div class="stage-body">
+                      <div class = "clear"></div>
+                      <div class="row mnone">
+                        <div class="define">
+                         <img src="../../../../../assets/images/info.png">
+                         <span>Have any of the person proposed to be insured ever suffered from/ are currently suffering from any of the following</span>
+                       </div>
+                        <div class="col-sm-12 row mnone conditional-question" *ngFor="let question of medicalQuestions; let i=index">
+                         <div class="col-sm-8 pnone">
+                           <span>{{i+1}}.&nbsp;</span>
+                           <span>{{question.questiontext}}</span>
+                         </div>
+                         <div class="col-sm-2 pnone">&nbsp;</div>
+                         <div class="col-sm-2 pnone">
+                           <div *ngIf="question.exists=='Y'">Yes</div>
+                         <div *ngIf="question.exists=='N'">No</div>
+                         </div>
+                         <div class="clear"></div>
+                     </div>
+                     <div class="clear"></div>
+                    <div *ngIf="question.exists=='Y'">
+                       <div class="clear"></div>
+                       <div class="table table-responsive">
+                         <div>
+                           <span>Details of Medical Conditions</span>
+                         </div>
+                         <div class="clear"></div>
+                         <table class="table table-bordered">
+                           <thead>
+                             <tr>
+                               <th>Insured Name</th>
+                               <th>Illness</th>
+                               <th>Treatment - Year/Month</th>
+                               <th>Status</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr *ngFor="let illness of question.details">
+                               <td>{{illness.insuredName}}</td>
+                               <td>{{illness.nameOfIllness}}</td>
+                               <td> {{illness.yearOfDiagnosis}} - {{illness.monthOfDiagnosis}}</td>
+                               <td>{{illness.treatmentOutCome}}</td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                       <div class="clear"></div>
+                     </div>
+                       <div class = "clear"></div>
+                     </div>		
+                    </div>
+                  </div>
+                  
+                  <div class = "clear"></div>
+                  <div class="summary-stage">
+                    <div class = "clear"></div>
+                    <div class="title">
+                      <h4>Life Style </h4>
+                        <span class="btn btn-primary" (click)="editFields('4', '8')">Edit</span>
+                    </div>
+                    <div class = "clear"></div>
+                    <div class="stage-body">
+                      <div class = "clear"></div>
+                      <div class="row mnone">
+                        <div class="define">
+                         <img src="../../../../../assets/images/info.png">
+                         <span>Have any of the person proposed to be insured ever:</span>
+                       </div>
+                        <div class="col-sm-12 row mnone conditional-question" *ngFor="let question of lifeStyleQuestions; let i=index">
+                         <div class="col-sm-8 pnone">
+                           <span>{{i+1}}.&nbsp;</span>
+                           <span>{{question.q}}</span>
+                         </div>
+                         <div class="col-sm-2 pnone">&nbsp;</div>
+                         <div class="col-sm-2 pnone">
+                           <div *ngIf="question.exists=='Y'">Yes</div>
+                         <div *ngIf="question.exists=='N'">No</div>
+                         </div>
+                         <div class="clear"></div>
+                     </div>
+                     <div class="clear"></div>
+                     <div *ngIf = "question.exists == 'Y'" class="col-sm-12">
+                       <div class="table table-responsive">
+                         <div>
+                           <span>LifeStyle Details</span>
+                         </div>
+                         <br>
+                         <table class="table table-bordered">
+                           <thead>
+                             <tr>
+                               <th>Insured Name</th>
+                               <th>Quantity</th>
+                               <th>Years of Consumption</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr *ngFor="let ls of question.details">
+                               <td>{{ls.insuredName}}</td>
+                               <td>{{ls.quantity}}</td>
+                               <td> {{ls.noOfYears}}</td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div> 
+                       <div class = "clear"></div>
+                     </div>		
+                    </div>
+                  </div>
+                  <div class= "clear"></div>
+                  <div class="summary-stage">
+                    <div class="title">
+                      <h4>DECLARATION</h4>
+                    </div>
+                    <div class = "clear"></div>
+                    <div class="agree-field">            
+                                  <label id="chkSiDetailsL" class="control-label label-block" style="padding-top: 0px;">&nbsp;Please read the <a data-toggle="modal" data-target="#termsCondModal">Terms &amp; Conditions</a> &nbsp;<span> and provide your consent</span></label>           
+                               </div>
+                               <div class = "clear"></div>
+                  </div>
+                  <div class = "clear"></div>
+                  <div class="summary-stage">
+                    <div class="title">
+                      <h4>SECTION 41 INSURANCE ACT (PROHIBITION OF REBATES)</h4>
+                    </div>
+                    <div class="stage-body">
+                      <p>1) No person shall allow or offer to allow, either directly or indirectly, as an inducement to any person to take or renew or continue an insurance in respect of any kind of risk relating to lives or property in India, any rebate of the whole or part of the commission payable or any rebate of premium shown on the policy, nor shall any person taking out or renewing or continuing a policy accept any rebate, except such rebate as may be allowed in accordance with the prospectus or tables of the insurers.</p>
+                      <p>2) Any person making default in complying with the provisions of this section shall be punishable with fine which may extend to five hundred rupees.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mnone" style="position:relative">
+                                              
+                  <div class="summary-stage">
+                  <div class="col-sm-12">
+            <div class="agree-box">
+                        <div class="item">        
+                          <div class="agree-field">            
+                            <span style="color:red">{{proposalError.key}}
+                              <ol>
+                                <li style="color:red;" *ngFor="let errorPirnts of proposalError.errorPirnt">{{errorPirnts}}</li>
+                              </ol>
+                            </span>
+                          </div>            
+                         </div>              
+                     </div>    
+                    </div>
+                </div>
+              </div>
+              </div>
+              </div>
+              <div class="foot">
+                <div class="clearfix">
+                  <div class="cf-pull-right">
+                     <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('8')">
+                       <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+                 </button>
+                    <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="!tcAgree" (click)="makePayment()">Make Payment <img src="../../../../../assets/images/arrow-right.png"> </button>
+                  </div>
+                </div>
+              </div> 
+              </div>
+    </form>
+</div>
+<!--Summary panel ends here-->
+</div>
+<!--Tab content ends here-->
+ </div>
+ </div>
+ <div  *ngIf="loading" class="loading col-sm-10 col-md-10 col-lg-10">
+  <div class="ctralign"><img src = "../../../../../assets/images/loading.gif"></div>
+</div> 
+
+
+  <div data-backdrop="static" data-keyboard="false" id="medicalQnsDetails" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Add Medical Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        <div class="modal-body">
+         
+                <form class="form-horizontal form_horizontal"  name="medicalDetails" #medicalDetails = "ngForm" novalidate autocomplete="off">
+          
+                      <div class="form-row">
+                        <div class="col-sm-6 col-xs-6 col-md-6">
+                          <div class="form-group required">
+                            <label class="control-label label-block">Insured</label>
+                            <select class="form-control" [(ngModel)]="qnsInsuredId" (change) ="getInsuredName(qnsInsuredId)" name="minsuredName" id="minsuredName" required>
+                              <option value="" disabled>Select</option>
+                              <option *ngFor = "let insured of proposalInput.insured" [ngValue]="insured">{{insured.firstName}} {{insured.lastName}}</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-md-6">
+
+                        <div class="form-group required">
+                          <label class="control-label label-block">Illness/Injury</label>
+                          <input type="text" class="form-control" id="shortname" name="shortname" [(ngModel)]="question.nameOfIllness" required>
+                        </div>
+                      
+                      </div>
+                      </div>
+                      
+                        <div class="form-row">
+                          <div class="col-sm-6 col-xs-6 col-md-6">
+                            <div class=" ibspan form-group required">
+                              <label class="control-label label-block">Year/Month Of Treatment</label>
+                              
+                              <span class="input-group" style="width: 50%;">
+                                    <input type="date" class="form-control"  name="DOTreatment" [(ngModel)]="question.DOTreatment" (input)="ageCount()" id="DOTreatment" required>
+                                          <div class="input-group-btn">
+                                            <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-calendar" ></i></button>
+                                          </div>
+                                  </span>
+                                  <span id="errorCall5" class="has-error">{{errorMessageforage }}</span>
+  
+                            </div>				
+                          </div>
+                          <td class="col-sm-6 col-xs-6 col-md-6">
+                            <div class="form-group required">
+                              <label class="control-label label-block">Treatment Status</label>
+                              <select class="form-control" [(ngModel)]="question.medicationDetail" name="treatStatus"  required>
+                                  <option value="" disabled>Select</option>
+                                <option value="Received">Received Treatment</option>
+                                <option value="Receiving">Receiving Treatment</option>
+                              </select>
+                            </div>				
+                          </td>
+
+                        </div>
+                         
+                         <div class="form-row">
+                          <td class="col-sm-6 col-xs-6 col-md-6">
+                            <div class="form-group required">
+                              <label class="control-label label-block">Treatment Outcome</label>
+                              <select class="form-control" [(ngModel)]="question.treatmentOutCome" name="treatOutcome" required>
+                                  <option value="" disabled>Select</option>
+
+                                <option value="fully cured">Fully cured</option>
+                                <option value="partially cured">Partially cured</option>
+                                <option value="ongoing">Ongoing</option>
+                              </select>
+                            </div>				
+                          </td>
+                         </div> 
+                          
+                     
+        <div class="modal-footer">
+          <div class="col-sm-4" style="width: 68%;">
+              <button type="button" class=" btn btn-secondory btn_prim" role="button" data-dismiss="modal" aria-hidden="true" (click)="medicalDetailscancel()"><span class="">Cancel</span></button>
+          <button type="button" class="btn btn-primary btn_prim" role="button" [disabled]="medicalDetails.form.invalid || errorMessageforage" (click)="submitMedicalQnsForm(question,medicalDetails)"><span class="">Submit</span></button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+      </div>
+    </div>
+  </div> 
+<!--Medical Details Modal ends here-->
+  <div  data-backdrop="static" data-keyboard="false" id="lifeStyleModal" class="modal" tabindex="-1" role="dialog" style="overflow:auto!important">
+    <div class="modal-dialog extra-large mandate" role="document" >
+     
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Add Life Style Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        <div class="modal-body">
+            <form class="form-horizontal form_horizontal"  name="LifeStyleform" #LifeStyleform = "ngForm" novalidate autocomplete="off">
+        
+            <div class ="">
+                <div class="col-sm-12 col-xs-12 col-md-6">
+                  <div class="form-group required" style="margin: 0 0 0 0;">
+                      <label class="control-label label-block">Insured</label>
+                      <select class="form-control" [(ngModel)]="qnsInsuredId" (change)="getInsuredName(qnsInsuredId)" name="linsuredName" id="linsuredName" required>
+                        <option value="" disabled>Select</option>
+                        <option *ngFor = "let insured of proposalInput.insured" [ngValue]="insured">{{insured.firstName}} {{insured.lastName}}</option>
+                      </select>
+                  </div>
+                </div>
+            
+                <div class="clear"></div>		
+                <div class="col-sm-12 padd0">
+                  <div class="col-sm-6 list-item-proposer ">
+                    <div class="form-group required">
+                       <label class="control-label">quantity</label>
+                       <div >
+                          <input type="tel" class="form-control" min="1" maxlength="3" [(ngModel)]="lifestylemandate.quantity" id="quantityName" name="quantityName" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"  required>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 list-item-proposer ">
+                    <div class="form-group required">
+                       <label class="control-label">No of years Consumed</label>
+                       <div >
+                          <input type="tel" class="form-control" min="1" maxlength="2"  onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" [(ngModel)]="lifestylemandate.noOfYears" name="numYears" required>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <br>
+              </div>
+              <br>
+              <br>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <div class="col-sm-4" style="width: 62%;">
+                <button type="button" class=" btn btn-secondory btn_prim" role="button" data-dismiss="modal" aria-hidden="true" (click)="cancelevent1()"><span class="">Cancel</span></button>
+            <button type="button" class="btn btn-primary btn_prim" role="button" [disabled]="LifeStyleform.form.invalid "  (click)="lifeDetSubmit(lifestylemandate)"><span class="">Submit</span></button>
+            </div>
+              </div>
+      </div>
+    </div>
+  </div>
+<!-- Life Style Modal ends here-->
+
+<div id="newPremiumModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Your Premium has changed</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      <div class="modal-body">
+          <form class="form-horizontal">
+              <div class="modal-body hom_modal_body">
+                <div class="form-group">	
+                  <div class="col-sm-12">
+                    <div class="col-sm-12 padd0">
+                      Old premium:{{items.premiumPassed  | currency :'INR': true}}
+                    </div>	
+                    <div class="col-sm-12 padd0">
+                      New premium:{{items.premiumPayable | currency :'INR': true}}
+                    </div>
+                    <!-- <div class="col-sm-12">
+                      Do you to want to continue.
+                    </div> -->
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <div class="col-sm-8" style="text-align:left;">Do you to want to continue.</div>
+                <div class="col-sm-4">
+                <button type="button" class="btn btn-primary btn_prim" role="button" (click)="submitNewPrem()"><span class="">Yes</span></button>
+                <button type="button" class=" btn btn-primary btn_prim" role="button" data-dismiss="modal" aria-hidden="true"><span class="">No</span></button>
+                </div>
+              </div>
+              </form>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--New Primium modal ends here-->
+ <!-- TC  modal -->
+ <div data-backdrop="static" data-keyboard="false" id="termsCondModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Declaration/ Terms and Conditions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      <div class="modal-body">
+          <h4>Declaration & Authorization*:</h4>
+          <ul>
+            
+            <li>I/We hereby declare, on my behalf and on behalf of all persons proposed to be insured, that the above statements, answers and/ or particulars given by me are true and complete in all respects to the best of my knowledge and that I/We am/are authorized to propose on behalf of these other persons.
+        
+            </li><li>I understand that the information provided by me will form the basis of the insurance policy, is subject to the Board approved underwriting policy of the insurance company and that the policy will come into force only after full receipt of the premium chargeable.
+        
+            </li><li>I/We further declare that I/We will notify in writing any change occurring in the occupation or general health of the life to be insured/proposer after the proposal has been submitted but before communication of the risk acceptance by the company
+        
+            </li><li>I/We declare and consent to the company seeking medical information from any doctor or from a hospital who at anytime has attended on the life to be insured/proposer or from any past or present employer concerning anything which affects the physical or mental health of the life to be assured/proposer and seeking information from any insurance company to which an application for insurance on the life to be assured/proposer has been made for the purpose of underwriting the proposal and/or claim settlement.
+        
+            </li><li>I/We authorize the company to share information pertaining to my proposal including the medical records for the sole purpose of proposal underwriting and/or claims settlement and with any Government and/or Regulatory authority.</li>
+          </ul>
+          <h4>Declaration:</h4>
+          <p>I hereby confirm that all premiums have been/will be paid from genuine sources and no premiums have been/will be paid out of proceeds of crime related to any of the scheduled offences listed in Prevention of Money Laundering Act, 2002. I understand that the Company has the right to call for documents to establish sources of funds. The insurance company has right to cancel the insurance contract in case I am/ have been found guilty by any competent court of law under any of the statutes, directly or indirectly governing the prevention of money laundering in India.</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="disagree(disagree)" data-dismiss="modal">I Disagree</button>
+        <button type="button" class="btn btn-primary" (click)="agreeTC('Y')" data-dismiss="modal">I Agree</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- ends here-->
+ <!-- OTP  modal -->
+ <div data-backdrop="static" data-keyboard="false" id="otpModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">OTP</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      <div class="modal-body">
+        <form class="form-horizontal form_horizontal" name="tc">
+          <div class="modal-body">
+            <div *ngIf="successStatus==true"> <p style="text-align: center; color: green;">The OTP has been sent to your mobile number!</p><br>
+            </div>
+            <div *ngIf="ressuccessStatus==true"> <p style="text-align: center; color: green;">The OTP has been sent to your mobile number!</p><br>
+            </div>
+            <div><span> OTP for Quote ID: </span> <span>{{otpInput.appNo}}</span><br><br></div>
+            <div class = "clear"></div>
+            <div class="col-sm-4">
+              <div class="form-group required" >
+                <label class="control-label">OTP</label>
+                <input type="text" name="proMobile" class="form-control field" [(ngModel)]="otpInput.otp" maxlength="10" minlength="6" pattern="/^[0-9]{6}$/" required>
+                <button *ngIf="otpRetires<3" class="btn btn-primary btn_default" (click)="resend()" >ReSend OTP</button>
+          
+              </div>
+            </div>
+            <div class="clear"></div>
+            <div class="row">
+              <div class="col-sm-12">
+                <span>OTP is required for all online purchase as per IRDAI Directive.</span>
+              </div>
+            </div>
+            <div class="clear"></div>
+            <div class="row">
+              <div class="col-sm-12">
+                <span *ngIf="otpError" class="has-error" id="insuredError" style="color:red">OTP is incorrect or invalid</span>
+              </div>
+            </div>
+            <div class = "clear"></div>
+          </div>
+          <!-- </div> -->
+        </form>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="checkOTP(otpInput.otp)" data-dismiss="modal">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- ends here-->
+ <div id="footermain">
+  <div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} &nbsp;
+    
+ </div>
+  <div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
+  
+  <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+</div>
+ <!-- Modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #changePwdForm = "ngForm">
+        <div class="form-group">
+          <label for="Old-Password" class="col-form-label" >Old Password:</label>
+          <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+        </div>
+         <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+        <div class="form-group">
+          <label for="New-Password" class="col-form-label" >New Password:</label>
+          <input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+          <input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
+        </div>
+         <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+               <div *ngIf = "userPassword.invalid; else nomatch">
+                New Password and Confirm Password should match
+                              </div>
+                  <ng-template #nomatch >
+                    New Password and Confirm Password should match
+                  </ng-template>
+              </div>
+       </div> 
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Success or failure modal -->
+<div id="resultModal" class="modal" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-body">
+      <p id="messageTouser"></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- ends here-->
+      <!--Report Issue modal starts here-->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="reportIssueModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel11">Report An Issue</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #reportAnIssue = "ngForm" >
+        <div class="form-group">
+          <label for="cngm-Password" class="col-form-label" style="margin-left: 63px;">Description of the issue:</label>
+          <textarea rows="3" cols="60" type="text" value="" name="issue" id="issueReport" ngModel required style="margin: 0 0 0 -61px;"></textarea>
+        </div>
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="reportIssue(reportAnIssue)" data-dismiss="modal" [disabled]="!reportAnIssue.form.valid" class="btn btn-primary">Report</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+<!--Report Issue modal ends here-->
+</div>      

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+
+  <title>DBS Bank</title>
+  
+</head>
+<body>
+    <div class="headr"><h2 style="text-align: center; ">SelectAssure</h2></div>
+        
+        <p>You can View the Ilustration and Appication Form Pdf and then confirm the request.</p>
+        <p *ngIf="errorStatus" style="color: red;">We are unable to retrieve the information for the application number {{appNo}}</p>
+        <p *ngIf="failedStatus" style="color: red;" >Failed to receive the response</p>
+        <div *ngIf="showReview">
+        <a (click)="openIllustration()">Benefit Illustration</a>
+        <br><br>
+        <a (click)="openFormUrl()">Application Form Pdf</a>
+        <br><br>
+        <div style="align-items: center;">
+        <button class="confirmBtn" (click)="generateOTP()">Confirm</button>
+        </div>
+      </div>
+      <div id="loader"></div>
+      <div id="successOTPSent" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <p style="text-align: center; color: green;">The OTP has been sent to your mobile number!</p><br>
+              </div>
+              <div class="modal-footer" style="text-align: center;">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+</body>
+</html>

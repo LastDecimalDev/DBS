@@ -1,0 +1,291 @@
+<div>
+  <div class="rootCus">
+    <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+    <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+    <ul id="menu">
+      <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+      <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+      <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+      <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+    </ul>  
+
+  </div>
+  <div id="dbs">
+<div class="zerogrid">
+<div class="contentmain">
+<div class="profilemain1">
+  <span class="ibspan"><img src="../../../assets/images/Car_Insurance_ICON_og.svg"></span><span><strong style="font-size: 20px;"> Policy For Me > Motor > Car Insurance</strong></span>
+<div class="oneplan2">
+<div class="onetext2"><strong>Help us identify the plans relevant for your need: <i>(All Fields are Mandatory)</i></strong>
+</div>
+</div>
+</div>
+
+<form id="health-buy-form" class="form-horizontal" #carInsu = "ngForm" autocomplete="off" novalidate >
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="insurancebox">
+          <div id="radio5" class="formmin4">
+          <input type="radio" name="policyType" class="css-radio1"  [(ngModel)]="carInput.policyType" (click)="carInput.policyType='Rollover'; getYoms()" value="Rollover" id="policyType1"  required/><label for="policyType1" class="css-labelTick"></label>Renew my policy
+          <input type="radio" name="policyType" class="css-radio1"  [(ngModel)]="carInput.policyType" (click)="carInput.policyType='New Business';getYoms()" value="New Business"  id="policyType2"  required/><label for="policyType2" class="css-labelTick"></label>New policy
+           
+        </div>
+      </div>
+     
+    </div>  
+
+<div class="profilemain1">
+<div class="oneplan2" [ngClass]="{'has-error':pincodecarInsu.invalid && !pincodecarInsu.pristine}">
+<div class="onetext2">Enter the pincode
+<div class="policybox"><span class="formmin4">
+    <input type="tel" name="Pincode" id="pincodecarInsu" #pincodecarInsu (keypress)="keyPress($event)" (blur)="getValidPinCode($event)" class="inpute_text03" placeholder="6 digits only" pattern="^[0-9]{6}$" inputmode="numeric" minlength="6" maxlength="6"  required>
+</span><span id="errorCall" class="has-error">{{errMessage}}</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2">Choose the make/model/variant of your vehicle
+<div class="policybox">
+  <span>Car Make<br>
+<select class="inpute_text03" name="insureAmount" (change)="getModel()" id="carMakes" required>
+        <option value="">Select here</option>
+        <option *ngFor="let make of makes" value="{{make.id}}">{{make.name}}</option>
+    </select>
+  </span><br>
+  <span>Car Model <br>
+<select class="inpute_text03" name="insureAmount" (change)="getVariant()" id="carModel" required>
+        <option value="">Select here</option>
+        <option *ngFor="let model of model" value="{{model.id}}">{{model.name}}</option>
+    </select>
+  </span><br>
+ <span>Car Variant <br> 
+<select class="inpute_text03" name="insureAmount" [(ngModel)]="carInput.variant" (change)="storeVariant(carInput.variant)" id="carVariant" required>
+        <option value="">Select here</option>
+        <option *ngFor="let variant1 of variants" [ngValue]="variant1">{{variant1.variantName}}--{{variant1.vehicleAttr}}</option>
+    </select>        
+ </span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2">Select year of manufacture of the car
+<div class="policybox">
+<select class="inpute_text03" name="insureAmount" [(ngModel)]="carInput.yrOfManu" (change)="yomChange(carInput.yrOfManu)" id="dateofRegYr" required>
+        <option value="" disabled>--Select here--</option>
+        <option *ngFor="let DateOfRegYear of yoms" value="{{DateOfRegYear}}">{{DateOfRegYear}}</option>
+    </select>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="profilemain1">
+<div class="oneplan2" [ngClass]="{'has-error':adultchild.invalid && !adultchild.pristine ||adultchild.touched}">
+<div class="onetext2">Enter date of car registration
+<div class="policybox">
+  <span class="">
+  <input type="date" (change)="carRegDate(carInput.vehicledoReg)" [(ngModel)]="carInput.vehicledoReg" class="inpute_text03" name="adultchild" id="carRegDate" #adultchild="ngModel" required/>
+</span>
+<span id="errorCall2" class="has-error">{{errorforMinRegdate}}</span>
+</div>
+</div>
+</div>
+</div>
+
+<div *ngIf="carInput.policyType =='Rollover'">
+<div class="profilemain1">
+<div class="oneplan2"  [ngClass]="{'has-error':policyExpiry.invalid && !policyExpiry.pristine ||policyExpiry.touched}">
+<div class="onetext2">Current Policy Expiry Date
+<div class="policybox">
+  <span class="">
+  <input type="date"  class="inpute_text03" (input)="policyStartDate(carInput.prevPolicy)" [(ngModel)]="carInput.prevPolicy" name="policyExpiry" #policyExpiry="ngModel" id="policyDate" required/>
+</span>
+<span id="errorCall3" class="has-error">{{errorforMaxRegdate}}</span>
+
+</div>
+</div>
+</div>
+</div>
+
+<!--<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2">Ex showroom price of model:
+<div class="policybox"><span class="formmin4">
+    <input type="text" name="Pincode" id="exShowRoomcarInsu" class="ins_text" placeholder="" required>
+</span>
+</div>
+</div>
+</div>
+</div>-->
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2">Existing Policy NCB
+<div class="policybox"><span class="formmin4">
+<select class="inpute_text03" name="ncbcarInsu" [(ngModel)]="carInput.currNcb" id="ncbcarInsu" required>
+        <option value="" disabled>Select here</option>
+        <option *ngFor="let ncbs of currNcbs" [ngValue]="ncbs.value">{{ncbs.percn}}</option>
+    </select>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2" >Did you make any claims on existing policy in the current year?
+<div class="policybox"><span class="formmin4">
+<input type="radio" value="Yes" name="claims" id="ClaimsYes" class="css-radio1"/> <label for="ClaimsYes" class="css-labelTick"> </label> Yes  
+<input type="radio" value="No" name="claims" id="ClaimsNo"  class="css-radio1" checked/> <label for="ClaimsNo" class="css-labelTick" style="margin:0 0% 2% 15%"> </label> No</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<!--<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2">Select RTO the car is registered at
+<div class="policybox">
+<select class="inpute_text03" name="rtoNmae" (input)="getRto()" [(ngModel)]="carInput.RTO" id="rtoNmae1" required>
+        <option value="" disabled>Select here</option>
+        <option *ngFor="let rtos of rto" [ngValue]="rtos.rto">{{rtos.name}} -- {{rtos.rto}}</option>
+    </select>
+</div>
+</div>
+</div>
+</div>-->
+
+<div class="profilemain1">
+  <div class="oneplan2">
+  <div class="onetext2">Select RTO the car is registered
+  <div class="policybox"><span class="formmin4">
+  <select class="inpute_text03" name="rtoNmae1w" [(ngModel)]="carInput.RTO.rto" id="rtoNmae1" required>
+          <option value="">Select here</option>
+          <option *ngFor="let rtos1 of rto" [ngValue]="rtos1.rto">{{rtos1.name}} -- {{rtos1.rto}}</option>
+      </select>
+  </span>
+  </div>
+  </div>
+  </div>
+  </div>
+<div class="col-md-12 col-sm-12 col-xs-12 padd0">
+			<span class="has-error" id="insuredError" style="color:red">{{carErrorText}}</span>
+		</div>
+ <div class="col-md-3 col-sm-3 col-xs-12" style="padding-top:2%;">
+            <button id="seePoly" (click)="submitForm(carInsu)"class="btn btn-primary call-back btn-default" [disabled]="errorCall || carInsu.invalid || errorCall2 || errorCall3" style="background-color: #ce0707;margin-left: 417px;">COMPARE POLICIES</button>
+  </div>
+
+</form>
+
+
+
+
+</div>
+</div>
+</div> 
+<div id="footermain">
+  <div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} &nbsp;
+    
+ </div>
+  <div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
+  
+  <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+</div>
+ <!-- Modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #changePwdForm = "ngForm">
+        <div class="form-group">
+          <label for="Old-Password" class="col-form-label" >Old Password:</label>
+          <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+        </div>
+         <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+        <div class="form-group">
+          <label for="New-Password" class="col-form-label" >New Password:</label>
+          <input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+          <input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
+        </div>
+         <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+               <div *ngIf = "userPassword.invalid; else nomatch">
+                New Password and Confirm Password should match
+                              </div>
+                  <ng-template #nomatch >
+                    New Password and Confirm Password should match
+                  </ng-template>
+              </div>
+       </div> 
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Success or failure modal -->
+<div id="resultModal" class="modal" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-body">
+      <p id="messageTouser"></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- ends here-->
+      <!--Report Issue modal starts here-->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="reportIssueModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel11">Report An Issue</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #reportAnIssue = "ngForm" >
+        <div class="form-group">
+          <label for="cngm-Password" class="col-form-label" style="margin-left: 63px;">Description of the issue:</label>
+          <textarea rows="3" cols="60" type="text" value="" name="issue" id="issueReport" ngModel required style="margin: 0 0 0 -61px;"></textarea>
+        </div>
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="reportIssue(reportAnIssue)" data-dismiss="modal" [disabled]="!reportAnIssue.form.valid" class="btn btn-primary">Report</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+<!--Report Issue modal ends here-->
+</div>  

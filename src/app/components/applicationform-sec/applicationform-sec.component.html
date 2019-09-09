@@ -1,0 +1,1917 @@
+<div id="dbs1" style="margin-bottom: 8px">
+<div id="dbs">
+    <div  class="zerogrid" style="width: 100%;" *ngIf="!loading">
+         
+           <div >
+              <img class="" style="width: 100%;" src = "../assets/images/application_logo.png">
+            </div>
+          <!--  <div>
+                <img class="" style="width: 100%;" src = "../assets/images/application_form1.png">
+            </div>-->
+<form class="form-horizontal">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="blank"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+           <div class=""><h4 style="font-weight: bold">JOINT-LIFE ADDENDUM FORM</h4>
+         </div>
+       </div>
+       <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6" >
+           <div class="">
+              <label for="appno" class="col-lg-6 col-md-6 col-sm-6" style="font-weight: bold;">Common Application / Retirement Solution Form No.</label>
+              
+              <div class="col-lg-6 col-md-6 col-sm-6">
+               <input readonly type="text" class="form-control" id="appno" value="{{proposalInput.policy.applicationNumber}}" >
+              </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+      <div class="col-lg-9 col-md-9 col-sm-12">
+          <div class=""><p style="padding-left:0px;">All details as mentioned in the common application / retirement solution form , not mentioned herein, will be applicable to this joint-life addendum form and will be used to process  this form and subsequent transactions related to the contract issued on basis of this form unless any change to the same is duly registered by ABSLI on request received from the proposer / primary life insured. Further, this joint-life addendum form is to be read in conjunction with the common application / retirement solution form no. as cited above.</p>
+     </div>
+    </div>
+     
+   
+  <div class="col-lg-3 col-md-2 col-sm-12 col-xs-6" >
+      <div class="blank"></div>
+    <div class="square">
+      <p class="phototext">Please affix <br/>recent passport photo </p>
+
+    </div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+      <div class="blank"></div>
+    <strong>APPLICATION FOR INSURANCE ON OWN LIFE / ANOTHER LIFE AGE 18 years & ABOVE</strong> 
+    <p style="text-align:justify">a) This form to be filled in BLOCK LETTERS. b) Any cancellation/alteration in this form to be authenticated by the proposer and all documents submitted with this Proposal Form must be self attested by the Proposer. c) Insurance contract is based upon utmost good faith between Insurer and the Insured which requires the Proposer and Life to be Insured to disclose all material facts. d) Please attach an extra sheet, where any additional information needs to be given. </p>
+    
+    </div>
+  
+        
+           
+         
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+           <div class="textbar">
+          <div>1 &nbsp;SECONDARY LIFE to be INSURED / ANNUITANT</div>
+          </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+          <div class="">
+              <label for="existingpolicy" class="col-lg-8 col-md-8 col-sm-8">Do you have an existing policy with ABSLI or</label>
+              <div class="col-lg-4 col-md-4 col-sm-4 form-check">
+                  <div class="checkbox" >
+                      <label><input type="checkbox" onclick="return false" [checked]="proposalInput.secInsured.isExistingPolicyHolder=='Y'"  value="">Yes</label>
+                      <label><input type="checkbox" onclick="return false"  [checked]="proposalInput.secInsured.isExistingPolicyHolder=='N'" value="">No</label>
+                   
+                    </div>
+               </div>
+            </div>
+            <div class="">
+                <label for="inp" class="col-lg-8 col-md-8 col-sm-8">have currently applied simultaneously</label>
+             </div>
+             <div class="">
+                <label for="clientId" class="col-lg-7 col-md-7 col-sm-8">If yes, please quote Policy/Proposal Number/Client ID</label>
+                <div class="col-lg-4 col-md-5 col-sm-4">
+                 <input readonly type="text" class="form-control textboxmargin" id="clientId" >
+                </div>
+              </div>
+              <div class="">
+                  <label for="aadharId" class="col-lg-7 col-md-12 col-sm-12" style="font-weight: bold;" > UID / Aadhaar Card Number</label>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                   <input readonly type="text" class="form-control textboxmargin" id="aadharId" value="{{proposalInput.secInsured.uid}}" >
+                  </div>
+                </div>
+                <div class="">
+                    <label for="actnumber" class="col-lg-7 col-md-7 col-sm-12"> Permanent Account Number (PAN)</label>
+                    <div class="col-lg-4 col-md-5 col-sm-12">
+                     <input readonly type="text" class="form-control textboxmargin" id="actnumber" value="{{proposalInput.secInsured.pan}}">
+                    </div>
+                  </div>
+                  <div class="">
+                      <label for="mobilenumber" class="col-lg-7 col-md-4 col-sm-5"> Mobile Number</label>
+                      <div class="col-lg-4 col-md-8 col-sm-7">
+                       <input readonly type="text" class="form-control textboxmargin" id="mobilenumber" value="{{proposalInput.secInsured.mobile}}">
+                      </div>
+                    </div>
+                    <div class="">
+                        <label for="kycnum" class="col-lg-7 col-md-4 col-sm-5"> CKYC Number</label>
+                        <div class="col-lg-4 col-md-8 col-sm-7">
+                         <input readonly type="text" class="form-control textboxmargin" id="kycnum" value="{{proposalInput.secInsured.CkycID}}">
+                        </div>
+                      </div>
+                      <div class="">
+                          <label for="existingpolicy" class="col-lg-7 col-md-4 col-sm-5">Title</label>
+                          <div class="col-lg-4 col-md-8 col-sm-7 form-check">
+                              <div class="checkbox" >
+                                <label><input type="checkbox"   onclick="return false" [checked]="proposalInput.secInsured.title=='MR'"value="MR">Mr.</label>
+                                <label><input type="checkbox"   onclick="return false" [checked]="proposalInput.secInsured.title=='MRS'">Mrs.</label>
+                                <label><input type="checkbox"   onclick="return false" [checked]="proposalInput.secInsured.title=='MS'" value="">Ms.</label>
+                                <label><input type="checkbox"   onclick="return false"  [checked]="proposalInput.secInsured.title=='DR'">Dr.</label>
+                             
+                               
+                                </div>
+                           </div>
+                        </div>
+                        <div class="">
+                            <label for="firstnameofInsured" class="col-lg-7 col-md-4 col-sm-5">First Name</label>
+                            <div class="col-lg-4 col-md-8 col-sm-7">
+                              <input id="firstnameofInsured" readonly type="text" value="{{proposalInput.secInsured.firstName}}" class="form-control textboxmargin" id="middlename" >
+                             </div>
+                          </div>
+                          <div class="">
+                              <label for="middlenameofInsured" class="col-lg-7 col-md-4 col-sm-5">Middle Name</label>
+                              <div class="col-lg-4 col-md-8 col-sm-7">
+                               <input id="middlenameofInsured" readonly type="text" value="{{proposalInput.secInsured.middleName}}" class="form-control textboxmargin" id="middlename" >
+                              
+                              </div>
+                            </div>
+                            <div class="">
+                                <label for="lastnameofInsured" class="col-lg-7 col-md-4 col-sm-5">Last Name</label>
+                                <div class="col-lg-4 col-md-8 col-sm-7">
+                                 <input id="lastnameofInsured" readonly type="text" value="{{proposalInput.secInsured.lastName}}" class="form-control textboxmargin" id="lastname" >
+                                </div>
+                              </div>
+                              <div class="">
+                                  <label for="birthdate" class="col-lg-7 col-md-4 col-sm-5">Date of birth</label>
+                                  <div class="col-lg-4 col-md-8 col-sm-7">
+                                   <input readonly type="text" class="form-control textboxmargin" id="birthdate" value="{{proposalInput.secInsured.dob | date : 'dd/MM/yyyy'}}">
+                                  </div>
+                                </div>
+                                <div class="">
+                                    <label for="placebirth" class="col-lg-12 col-md-12 col-sm-12">Place of birth</label>
+                                    <label for="country" class="col-lg-1 col-md-2 col-sm-2">City</label>
+                                     
+                                    <div class="col-lg-5 col-md-10 col-sm-10">
+                                     <input readonly type="text" class="textboxmargin textboxline"  value="{{proposalInput.secInsured.birthCity}}" >
+                                    </div>
+                                    <br/>
+                                    <label for="state" class="col-lg-1 col-md-2 col-sm-2">State</label>
+                                   
+                                    <div class="col-lg-5 col-md-10 col-sm-10">
+                                     <input readonly type="text" class="textboxmargin textboxline" value="{{getMasterValue('State', proposalInput.secInsured.birthState)}}" id="state" >
+                                    </div>
+                                   
+                                  </div>
+                                  <div class="">
+                                      <label for="fmname" class="col-lg-4 col-md-5 col-sm-7">Father's / Mother's Name</label>
+                                      <div class="col-lg-8 col-md-7 col-sm-5">
+                                       <input readonly type="text" class="textboxmargin textboxline" value="{{proposalInput.secInsured.fatherSpouseFirstName}} {{proposalInput.secInsured.fatherSpouseLastName}}" id="fmname" >
+                                      </div>
+                                    </div>
+                                      <div class="">
+                                            <label for="state" class="col-lg-4 col-md-4 col-sm-5">Mother's Name</label>
+                                         
+                                          <div class="col-lg-8 col-md-8 col-sm-7">
+                                           <input readonly type="text" class="textboxmargin textboxline" id="state" value="{{proposalInput.secInsured.motherName}}">
+                                          </div>
+                                        </div>
+                                        <div class="">
+                                          <label for="country" class="col-lg-4 col-md-4 col-sm-4">Maiden Name</label>
+                                         
+                                          <div class="col-lg-8 col-md-8 col-sm-8">
+                                           <input readonly type="text" class="textboxmargin textboxline" value="{{proposalInput.secInsured.maidenName}} "  id="country" >
+                                          </div>
+                                        </div>
+                                        <div class="">
+                                            <label for="gender" class="col-lg-4 col-md-4 col-sm-4">Gender</label>
+                                            <div class="col-lg-8 col-md-8 col-sm-8 form-check">
+                                                <div class="checkbox" >
+                                                    <label ><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.gender=='M'">Male</label>
+                                                    <label ><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.gender=='F'">Female</label>
+                                                    <label><input type="checkbox"  onclick="return false">Transgender</label>
+                                                 
+                                                 </div>
+                                             </div>
+                                          </div>
+                                         
+                                          <div class="">
+                                              <label for="merital status" class="col-lg-4 col-md-4 col-sm-4">Marital Status</label>
+                                              <div class="col-lg-7 col-md-7 col-sm-7 form-check">
+                                                  <div class="checkbox" >
+                                                      <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.maritalStatus=='S'" value="">Single</label>
+                                                      <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.maritalStatus=='M'" value="">Married </label>
+                                                      <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.maritalStatus=='W'" value="">Widowed </label>
+                                                      <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.maritalStatus=='D'" value="">Divorced </label>
+                                                   
+                                                   
+                                                    </div>
+                                               </div>
+                                            </div>
+                                            <div class="">
+                                                <label for="nationality" class="col-lg-4 col-md-4 col-sm-4">Nationality</label>
+                                                <div class="col-lg-6 col-md-6 col-sm-7 form-check">
+                                                    <div class="checkbox" >
+                                                        <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.nationality=='IND'" value="">Indian</label>
+                                                        <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.nationality=='NRI'" value="">NRI </label>
+                                                        <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.nationality=='PIO'" value="">PIO </label>
+                                                        <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.nationality=='FNIO'" value="">FNIO </label>
+                                                        <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.nationality=='OTH'" value="">Others </label>
+                                                       
+                                                      </div>
+                                                 </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                              <div class="">
+                                                  <label for="gender" class="col-lg-7 col-md-7 col-sm-7">Are you holding citizenship of any other country?*</label>
+                                                  <div class="col-lg-5 col-md-5 col-sm-5 form-check">
+                                                      <div class="checkbox" >
+                                                          <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.isOtherCitizenship=='Y'" value="">Yes</label>
+                                                          <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.isOtherCitizenship=='N'" value="">No</label>
+                                                     </div>
+                                                   </div>
+                                                </div>
+                                                <div  class="">
+                                                    <label for="fmname" class="col-lg-7 col-md-7 col-sm-6">If yes please provide country name </label>
+                                                    <div class="col-lg-5 col-md-5 col-sm-6">
+                                                     <input readonly type="text" value="{{getMasterValue('Country', proposalInput.secInsured.otherCitizenshipCountry)}}"class="textboxmargin textboxline" id="couname" >
+                                                    </div>
+                                                    </div>
+                                                    <div class="">
+                                                        <label for="taxres" class="col-lg-7 col-md-7 col-sm-7">Are you a tax resident of any other country?*</label>
+                                                        <div class="col-lg-5 col-md-5 col-sm-5 form-check">
+                                                            <div class="checkbox" >
+                                                                <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.isOtherCountryTaxResi=='Y'" value="">Yes</label>
+                                                                <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.isOtherCountryTaxResi=='N'" value="">No</label>
+                                                           </div>
+                                                         </div>
+                                                      </div>
+                                                      <div *ngIf="proposalInput.secInsured.isOtherCountryTaxResi=='Y'"class="">
+                                                          <label for="fmname" class="col-lg-7 col-md-7 col-sm-7">If yes, please provide unique tax identification number </label>
+                                                          <div class="col-lg-5 col-md-5 col-sm-5">
+                                                           <input readonly type="text" class="textboxmargin textboxline" id="couname" value="{{proposalInput.secInsured.otherCountryTaxNo}}" >
+                                                          </div>
+                                                            </div>
+                                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                            <p style="font-size: 12px;">*If the response to any of the above questions is yes a detailed NRI questionnaire will have to be provided.</p>
+                                                            </div>
+                                                        <div class="">
+                                                            <label for="taxres" class="col-lg-4 col-md-4 col-sm-5">Qualification</label>
+                                                            <div class="col-lg-8 col-md-8 col-sm-7 form-check">
+                                                                <div class="checkbox" >
+                                                                    <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.qualification=='H'" value="">HSC</label>
+                                                                    <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.qualification=='S'" value="">SSC</label>
+                                                                    <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.qualification=='G'" value="">Graduate</label>
+                                                                    <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.qualification=='O'" value="">Postgraduate</label>
+                                                                    <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.qualification=='P'" value=" ">Professional</label>
+                                                                    <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.qualification=='T'" value="">Others</label>
+                                                               
+                                                               <div *ngIf="proposalInput.secInsured.employmentDetails.qualification=='T'" class="col-lg-8 col-md-12 col-sm-12 form-check">
+                                                                 <input readonly type="text" class="textboxmargin textboxline" placeholder="Please specify" id="country" value="{{proposalInput.secInsured.employmentDetails.OtherQualification}}" >
+                                                              </div>
+                                                               </div>
+                                                             </div>
+                                                          </div>
+                                                          <div class="">
+                                                              <label for="occupation" class="col-lg-4 col-md-4 col-sm-5">Occupation</label>
+                                                              <div class="col-lg-8 col-md-8 col-sm-7 form-check">
+                                                                  <div class="checkbox" >
+                                                                      <label><input type="checkbox" onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.occupation==97">Service</label>
+                                                                      <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.occupation==54">Professional </label>
+                                                                      <label><input type="checkbox"  onclick="return false"  [checked]="proposalInput.secInsured.employmentDetails.occupation==92">Business </label>
+                                                                      <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.occupation==96">Police</label>
+                                                                      <label><input type="checkbox"  onclick="return false"  [checked]="proposalInput.secInsured.employmentDetails.occupation==93">driver</label>
+                                                                      <label><input type="checkbox"  onclick="return false"  [checked]="proposalInput.secInsured.employmentDetails.occupation==88">Retired </label>
+                                                                      <label><input type="checkbox"  onclick="return false"  [checked]="proposalInput.secInsured.employmentDetails.occupation==94">Housewife </label>
+                                                                      <label><input type="checkbox"  onclick="return false"  [checked]="proposalInput.secInsured.employmentDetails.occupation==98">Student </label>
+                                                                      <label><input type="checkbox"  onclick="return false"  [checked]="proposalInput.secInsured.employmentDetails.occupation==90||proposalInput.secInsured.employmentDetails.occupation=='CRAFTSMAN'||proposalInput.secInsured.employmentDetails.occupation==95||proposalInput.secInsured.employmentDetails.occupation==91||proposalInput.secInsured.employmentDetails.occupation==89||proposalInput.secInsured.employmentDetails.occupation==99">Others</label>
+                                                                                 
+                                                                     
+                                                                 </div>
+                                                               </div>
+                                                               <div *ngIf="proposalInput.secInsured.employmentDetails.occupation==95"class="col-lg-12 col-md-12 col-sm-12 form-check">
+                                                                <input readonly type="text" class="textboxmargin textboxline" placeholder="For e.g. Builder, Jewelers, Scrap Dealers, etc." id="occupy" value="{{proposalInput.proposer.employmentDetails.otherOccupation}}">
+                                                          </div>
+                                                          <div *ngIf="proposalInput.secInsured.employmentDetails.occupation==90||proposalInput.secInsured.employmentDetails.occupation=='CRAFTSMAN'||proposalInput.secInsured.employmentDetails.occupation==89||proposalInput.secInsured.employmentDetails.occupation==91||proposalInput.secInsured.employmentDetails.occupation==99"class="col-lg-12 col-md-12 col-sm-12 form-check">
+                                                             <input readonly type="text" class="textboxmargin textboxline" placeholder="For e.g. Builder, Jewelers, Scrap Dealers, etc." id="occupy" value="{{getMasterValue('Occupation', proposalInput.proposer.employmentDetails.occupation)}}">
+                                                         </div>
+                                                            </div>
+                                                            <div class="">
+                                                                <label for="empname" class="col-lg-4 col-md-12 col-sm-12">Name of Employer/Business</label>
+                                                                <div class="col-lg-8 col-md-12 col-sm-12">
+                                                                 <input readonly type="text" class="textboxmargin textboxline" id="empname" value="{{proposalInput.secInsured.employmentDetails.employerName}}">
+                                                                </div>
+                                                                </div>
+                                                                <div class="">
+                                                                    <label for="occupation" class="col-lg-4 col-md-4 col-sm-12">Type of Organization</label>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-12 form-check">
+                                                                        <div class="checkbox" >
+                                                                            <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.organizationType=='G'" value="">Govt.</label>
+                                                                            <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.organizationType=='PUL'" value="">Public Ltd. </label>
+                                                                            <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.organizationType=='PRL'" value="">Private Ltd. </label>
+                                                                            <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.organizationType=='PAR'" value="">Partnership </label>
+                                                                            <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.organizationType=='PRO'" value="">Proprietorship </label>
+                                                                            <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.organizationType=='HUF'" value="">HUF</label>
+                                                                            <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.organizationType=='TRU'" value="">Trust </label>
+                                                                            <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.organizationType=='S'"   value="">Society  </label>
+                                                                            <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.organizationType=='CHR'" value="">Charity</label>
+                                                                            <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.employmentDetails.organizationType=='NGO'" value="">Non Government</label>
+                                                                       </div>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div class="">
+                                                                      <label for="bdnature" class="col-lg-4 col-md-12 col-sm-12">Nature of Business/Duties</label>
+                                                                   
+                                                                    <div class="col-lg-8 col-md-12 col-sm-12">
+                                                                     <input readonly type="text" class="textboxmargin textboxline" value="{{proposalInput.secInsured.employmentDetails.businessNature}}" id="bdnature" >
+                                                                    </div>
+                                                                </div>
+                                                                <div class="">
+                                                                    <label for="designation" class="col-lg-4 col-md-12 col-sm-4">Designation </label>
+                                                                   
+                                                                    <div class="col-lg-8 col-md-12 col-sm-8">
+                                                                     <input readonly type="text" class="textboxmargin textboxline" id="designation" value="{{proposalInput.secInsured.employmentDetails.designation}}" >
+                                                                    </div>
+                                                                  </div>
+                                                                  <div class="">
+                                                                      <label for="gstlaw" class="col-lg-7 col-md-7 col-sm-7"> Are you registered person under GST Law?</label>
+                                                                      <div class="col-lg-5 col-md-5 col-sm-5 form-check">
+                                                                          <div class="checkbox" >
+                                                                              <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.IsGstReg=='Y'" value="">Yes</label>
+                                                                              <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.IsGstReg=='N'" value="">No</label>
+                                                                         </div>
+                                                                       </div>
+                                                                    </div>
+                                                                    <div *ngIf="proposalInput.secInsured.IsGstReg=='Y'" class="">
+                                                                        <label for="gstnumber" class="col-lg-7 col-md-7 col-sm-7">If yes provide your GST registration number</label>
+                                                                        <div class="col-lg-5 col-md-5 col-sm-5">
+                                                                         <input readonly type="text" class="textboxmargin textboxline" id="gstnumber" value="{{proposalInput.secInsured.GstRegNo}}" >
+                                                                        </div>
+                                                                        </div>
+                                                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                                                           
+                                                                       <p style="font-size: 12px;"> (Please share the copy of GST registration certificate) </p>
+                                                                       </div>
+                                                                       <div class="">
+                                                                            <label for="annualIncome" class="col-lg-5 col-md-5 col-sm-5">*Annual Income </label>
+                                                                            <div class="col-lg-7 col-md-7 col-sm-7">
+                                                                             <input readonly type="text" class="textboxmargin textboxline" value="{{proposalInput.secInsured.employmentDetails.annualIncome}}" id="annualIncome" >
+                                                                            </div>
+                                                                            </div>
+                                                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                                                <p style="font-size: 12px;">*Proof is mandatory only where annual premium across all policies held in ABSLI by Single individual is > `2,00,000</p>
+                                                                              </div>
+                                                                            <div *ngIf="proposalInput.secInsured.employmentDetails.earning=='N'">
+                                                                              <div class="">
+                                                                                <label for="Spouse" class="col-lg-8 col-md-8 col-sm-8">If not earning, state Parent's / Spouse's  Annual Income</label>
+                                                                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                                                                 <input readonly type="text" class="textboxmargin textboxline" value="{{proposalInput.secInsured.employmentDetails.parentSpouseAnnualIncome}}" id="Spouse" >
+                                                                                </div>
+                                                                                </div>
+                                                                                <div class="">
+                                                                                    <label for="stud" class="col-lg-9 col-md-9 col-sm-8">For Student /Non earning (Single), state Parents Insurance cover </label>
+                                                                                    <div class="col-lg-3 col-md-3 col-sm-4">
+                                                                                     <input readonly type="text" class="textboxmargin textboxline" placeholder="sum Assured" id="stud"value="{{proposalInput.secInsured.employmentDetails.parentSpouseInsuranceCover}}" >
+                                                                                    </div>
+                                                                                    </div>
+                                                                                    <div class="">
+                                                                                        <label for="housewife" class="col-lg-7 col-md-7 col-sm-8">For House wife, state Spouse Insurance cover </label>
+                                                                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                                                                         <input readonly type="text" class="textboxmargin textboxline" placeholder="sum Assured" id="housewife" value="{{proposalInput.secInsured.employmentDetails.forHousewifeOccInsuranceCover}}" >
+                                                                                        </div>
+                                                                                        </div>
+                                                                  </div>                                                              
+                                              
+
+                                
+          </div>
+          
+              <div class="blank"></div>
+              <div class="blank"></div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+              <div class="header1">
+                 
+                      <div class="col-lg-8 col-md-8 col-sm-7 col-xs-6">
+                          <label for="kycnum" class="col-lg-3 col-md-3 col-sm-5">Application No.
+                          </label>
+                         <!-- <div class="col-lg-1 col-md-1 col-sm-2">
+                          <img class="" style="width:75%;" src = "../assets/images/Applicationicon.png">
+                          </div>-->
+                          <div class="col-lg-5 col-md-5 col-sm-5">
+                                  <input readonly type="text" class="form-control textboxmargin" id="kycnum" value="{{proposalInput.policy.applicationNumber}}">
+                          </div>
+                        </div>  
+                        <div class="col-lg-4 col-md-4 col-sm-5 col-xs-6">
+                          <label for="kycnum" class="col-lg-3 col-md-4 col-sm-5">Form Id:
+                          </label>
+                         
+                          <div class="col-lg-5 col-md-5 col-sm-7">
+                                  <input readonly type="text" class="form-control textboxmargin" id="kycnum" value="111199">
+                          </div>
+                        </div>           
+              </div>
+              </div>
+              <div class="blank"></div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                  <div class="textbar">
+                      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" >
+                      <div>2&nbsp;PREMIUM PAYMENT DETAILS</div>
+                      </div>
+                </div>
+                </div>   
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+
+                   <label for="paymethod" class="col-lg-2 col-md-2 col-sm-2">Payment Method</label>
+                                                                
+                   <div class="col-lg-7 col-md-7 col-sm-6 form-check">
+                       <div class="checkbox" >
+                           <label><input type="checkbox"  onclick="return false"  value="">Direct Bill</label>
+                           <label><input type="checkbox"  onclick="return false" value="">NACH / Direct Debit</label>
+                           <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.payment.paymentMethod=='CC'" value="">Credit Card/Debit Card</label>
+                           <label><input type="checkbox"  onclick="return false" value="">Salary Deduction</label>
+                           <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.payment.paymentMethod=='PP'"  value="">Cheque</label>
+                           <label><input type="checkbox"  onclick="return false" value="">Others</label>
+         
+                         
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 form-check">
+                      <input readonly type="text" class="textboxmargin textboxline" id="paym" >
+                     
+                      </div>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 form-check">
+                      <label for="paymethod" class="col-lg-2 col-md-2 col-sm-2">Payment Mode</label>
+                                                                
+                   <div class="col-lg-7 col-md-7 col-sm-6 form-check">
+                        <input readonly type="text" class="textboxmargin textboxline" id="inpaym" value="{{proposalInput.policy.modeTitle}}">
+                   </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 form-check">
+                      <input readonly type="text" class="textboxmargin textboxline" id="paym" >
+                     
+                      </div>
+                  </div>    
+                  <div class="col-lg-12 col-md-12 col-sm-12 form-check">
+                     <label for="paymethod" class="col-lg-2 col-md-2 col-sm-2">Initial Premium</label>
+                     <div class="col-lg-2 col-md-2 col-sm-2 form-check">
+                        <input readonly type="text" class="textboxmargin textboxline" id="inpaym" value="{{proposalInput.payment.initialPremium| currency: 'INR' : 'symbol'}}" >
+                       
+                        </div>
+                        <label for="paymethod" class="col-lg-4 col-md-4 col-sm-4"> In case of NACH / Direct Debit, Preferred Draw Date</label> 
+                
+                  <div class="col-lg-4 col-md-4 col-sm-4 form-check">
+                      <div class="checkbox" >
+                          <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.payment.prefferedDrawDate=='1st'"value="">1st</label>
+                          <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.payment.prefferedDrawDate=='8th'" value="">8th</label>
+                          <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.payment.prefferedDrawDate=='15th'" value="">15th</label>
+                          <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.payment.prefferedDrawDate=='22nd'" value="">22nd</label>
+                         
+                     </div>
+                   </div>
+                 </div> 
+                 <div class="col-lg-12 col-md-12 col-sm-12 form-check">
+                     <label for="paymethod" class="col-lg-2 col-md-2 col-sm-2">Top Up Premium</label>
+                     <div class="col-lg-2 col-md-2 col-sm-3 form-check">
+                        <input readonly type="text" class="textboxmargin textboxline" id="inpaym" value="{{proposalInput.payment.topUpPremium}}" >
+                       
+                        </div>
+                       <label>(Incase date is not chosen, policy issuance date will be considered as draw date)</label> 
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 form-check">
+                     <label for="paymethod" class="col-lg-2 col-md-2 col-sm-2">Total Amount paid</label>
+                     <div class="col-lg-2 col-md-2 col-sm-3 form-check">
+                         
+                        <input readonly type="text" class="textboxmargin textboxline" id="inpaym" value="{{proposalInput.payment.totalAmtPaid | currency: 'INR' : 'symbol'}}">
+                       
+                        </div>
+                      
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 form-check">
+                  <p style="font-size: 12px"class="col-lg-12 col-md-12 col-sm-12">(Cheque / DD should be drawn on a local branch of a bank made payable to "ADITYA BIRLA SUN LIFE INSURANCE COMPANY LTD APP NO _________")</p>
+                  <div class="col-lg-3 col-md-3 col-sm-3 form-check">
+                     <div class="checkbox">
+                         <label><input type="checkbox"  onclick="return false" value="">Cash (upto &#8377;50,000)</label>
+                         <label><input type="radio"  onclick="return false" [checked]="proposalInput.payment.paymentMethod=='PP'">Cheque</label>
+                         <label><input type="radio"  onclick="return false" value="">DD</label>
+                         <br/>
+                       </div>
+                  </div>
+                  <label for="no" class="col-lg-1 col-md-1 col-sm-1">Cheque No.</label>
+                    
+                  <div class="col-lg-3 col-md-3 col-sm-3 form-check">
+                    <input readonly type="text" class="form-control textboxmargin" id="no" value="{{proposalInput.payment.instrumentNumber}}" >
+                   </div>
+                   <label for="issuebnk" class="col-lg-2 col-md-2 col-sm-2">Issuing Bank</label>
+                    
+                   <div class="col-lg-3 col-md-3 col-sm-3 form-check">
+                     <input readonly type="text" class="textboxmargin textboxline" value="{{proposalInput.payment.ChequeDDIssBank}}" id="issuebnk" >
+                    </div>
+                     </div>
+                     <div class="col-lg-12 col-md-12 col-sm-12 form-check">
+                    <div class="col-lg-3 col-md-3 col-sm-3 form-check">
+                      
+                    </div>
+                    
+                    <label class="col-lg-1 col-md-1 col-sm-1" for="paydate">Date</label>
+               
+                      
+                    <div class="col-lg-3 col-md-3 col-sm-3 form-check">
+                      <input readonly type="text" class="form-control textboxmargin" value="{{proposalInput.payment.instrumentDate|date : 'dd/MM/yyyy'}}" id="paydate" >
+                     </div>
+                     <label for="paybrc" class="col-lg-2 col-md-2 col-sm-2">Payable at (Branch)</label>
+                    
+                   <div class="col-lg-3 col-md-3 col-sm-3 form-check">
+                     <input readonly type="text" class="textboxmargin textboxline" value="{{proposalInput.payment.ChequeDDPayBranch}}" id="paybrc" >
+                    </div>
+                    <p style="font-size: 12px"class="col-lg-12 col-md-12 col-sm-12">You are requested to pay cash premium only at ABSLI branches or at authorised collection points and not to the advisor or employee. The company will not
+                       be responsible for any loss in this regard.</p>
+                       <label for="srcfund" class="col-lg-2 col-md-2 col-sm-2">Source of Funds</label>
+                                                                
+                       <div class="col-lg-4 col-md-4 col-sm-6 form-check">
+                           <div class="checkbox" >
+                               <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.insured.sourceOfFund=='S'"  value="">Salary</label>
+                               <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.insured.sourceOfFund=='B'" value="">Business Income</label>
+                            
+                               <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.insured.sourceOfFund=='O'" value="">Others</label>
+             
+                             
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 form-check">
+                          <input readonly type="text" class="textboxmargin textboxline" placeholder="please specify" id="paym" >
+                         
+                          </div>
+                 </div>
+
+                 <div class="blank"></div>
+                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                     <div class="textbar">
+                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" >
+                         <div>3&nbsp;POLICY PAYOUT DETAILS</div>
+                         </div>
+                   </div>
+                   </div>  
+                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                      <label for="payout" class="col-lg-2 col-md-2 col-sm-2">Payout Mode</label>
+                           <div class="col-lg-1 col-md-1 col-sm-3 form-check">
+                               <div class="checkbox" >
+                                   <label><input type="checkbox"  onclick="return false" value="">NEFT</label>
+                              </div>
+                              </div>
+                              <label class="col-lg-9 col-md-9 col-sm-9 form-check"><p>ABSLI will make payout(s) to the Proposer, in accordance and subject to the terms and conditions of the policy.</p></label>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                              <label for="bkname" class="col-lg-2 col-md-2 col-sm-2">Bank Name</label>
+                    
+                              <div class="col-lg-4 col-md-10 col-sm-10 form-check">
+                                <input readonly type="text" class="textboxmargin textboxline" value="{{proposalInput.payment.payoutBankName}}" id="bkname" >
+                               </div>
+                               <label for="bkadress" class="col-lg-2 col-md-2 col-sm-2">Bank Address</label>
+                    
+                               <div class="col-lg-4 col-md-10 col-sm-10 form-check">
+                                 <input readonly type="text" class="textboxmargin textboxline" id="bkadress" value="{{proposalInput.payment.payoutBankBranch}}" >
+                                </div>
+                               
+
+                               
+                                   <label for="ahname" class="col-lg-2 col-md-2 col-sm-2">Account Holder's Name</label>
+                         
+                                   <div class="col-lg-4 col-md-10 col-sm-10 form-check">
+                                     <input readonly type="text" class="textboxmargin textboxline" id="ahname" value="{{proposalInput.payment.accountHolderName}}">
+                                    </div>
+                                  
+                         </div>
+                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+
+                             <label for="paymethod" class="col-lg-2 col-md-2 col-sm-2">Account Type</label>
+                                                                          
+                             <div class="col-lg-4 col-md-4 col-sm-4 form-check">
+                                 <div class="checkbox" >
+                                     <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.payment.payoutAccType=='SAV'">Savings</label>
+                                    <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.payment.payoutAccType=='CUR'" value="">Current</label>
+                            </div>
+                              </div>
+                              <label for="actnu" class="col-lg-2 col-md-2 col-sm-2">Account No</label>
+                              <div class="col-lg-4 col-md-4 col-sm-4 form-check">
+                                <input readonly type="text" class="form-control textboxmargin" id="actnu" value="{{proposalInput.payment.payoutAccNo}}" >
+                               </div>
+
+                               <label for="micrcode" class="col-lg-2 col-md-2 col-sm-2">9 digit MICR code No.</label>
+                               <div class="col-lg-4 col-md-4 col-sm-4 form-check">
+                                  <input readonly type="text" class="form-control textboxmargin" id="micrcode" value="{{proposalInput.payment.micrCode}}" >
+                                 </div>                                        
+                               
+                                <label for="ifsccod" class="col-lg-2 col-md-2 col-sm-2">IFSC Code*</label>
+                                <div class="col-lg-4 col-md-4 col-sm-4 form-check">
+                                  <input readonly type="text" class="form-control textboxmargin"  value="{{proposalInput.payment.payoutIFSCCode}}" id="ifsccod">
+         
+                                 </div>
+                                 <p class="col-lg-12 col-md-12 col-sm-12" style="font-size: 12px">Please provide a cancelled blank cheque leaf. In case the cheque does not bear the pre printed name of the account holder /bank account number,we will need
+                                     photocopy of the bank statement showing account holder’s name, address and account number. The bank statement has to be self attested by customer & attested
+                                     by ABSLI authorized personnel. In case of any changes in the above bank details in future , please fill up the payout option form available separately along with copy of
+                                     cancelled cheque and submit the same at your nearest branch.</p>   
+                           </div>
+      
+              
+                      
+
+                            <div class="blank"></div>
+                             
+                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                              <div class="textbar">
+                                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" >
+                                  <div>4&nbsp;INSURANCE HISTORY OF THE LIFE to be INSURED</div>
+                                  </div>
+                            </div>
+                            </div>
+                            <div class="blank"></div>
+                            <div>
+                              <div *ngFor="let question of proposalInput.secInsured.personalQuestions| slice:5:6;let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                              
+                                <label for="paymethod" class="col-lg-10 col-md-10 col-sm-10">  <span style="font-weight: bold">A&nbsp;</span>Is there any concurrent application and/or any existing insurance on your life for Life/Health/Accident/Critical Illness or other
+                                riders in effect with ABSLI or any other insurer in India or abroad? If Yes, give details.</label>
+                                                                             
+                                <div *ngIf ="question.id=='IsAnyConcurrentInsurance'"  class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                    <div class="checkbox" >
+                                        <label><input type="checkbox"  onclick="return false" [checked]="question.isYesNo=='Y'"  value="">Yes</label>
+                                       <label><input type="checkbox"  onclick="return false" [checked]="question.isYesNo=='N'" value="">No</label>
+                                   </div>
+                                 </div>
+                                 <div *ngIf ="question.isYesNo=='Y' && question.id=='IsAnyConcurrentInsurance'"  >
+                                 <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Name of the Insurer</th>
+                                        <th>Sum Assured(in &#x20B9;)</th>
+                                     </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr *ngFor="let details of question.details; let j=index">
+                                        <td>{{details.insurerName}}</td>
+                                        <td>{{details.sumAssured}}</td>
+                                       </tr>
+                                      
+                                       </tbody>
+                                       </table>
+
+                                       </div>
+                                    </div>
+                                </div>
+                                    <div *ngFor="let question of proposalInput.secInsured.personalQuestions| slice:4:5;let i=index" class="col-lg-12 col-md-12 col-sm-12 form-check">
+
+                                 <label for="paymethod" class="col-lg-10 col-md-10 col-sm-10">  <span style="font-weight: bold">B&nbsp;</span>Has any of your new proposal/application for revival/reinstatement for life, accident, medical, health related insurance or riders
+                                  or critical illness been refused, withdrawn, declined, postponed or offered with restricted benefits or with an increased premium
+                                  or made any claim under any such policy of insurance with ABSLI or any other insurer in India or abroad? If Yes, give details.</label>
+                                                                               
+                                  <div *ngIf ="question.id=='IsAnyDeclinedInsurance'"  class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                      <div class="checkbox" >
+                                          <label><input type="checkbox"  onclick="return false" [checked]="question.isYesNo=='Y'"  value="">Yes</label>
+                                         <label><input type="checkbox" onclick="return false" [checked]="question.isYesNo=='N'"  value="">No</label>
+                                     </div>
+                                   </div>
+
+                                   <table  *ngFor="let details of question.details; let j=index"  class="table table-bordered">
+                                      <thead>
+                                        <tr>
+                                          <th>Name of the Insurer</th>
+                                          <th>Sum Assured(in &#x20B9;)</th>
+                                          <th>Reasons</th>
+                                       </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>{{details.insurerName}}</td>
+                                          <td>{{details.sumAssured}}</td>
+                                          <td>{{details.Reasons}}</td>
+                                         </tr>
+                                       
+                                         </tbody>
+                                         </table>
+                                 
+                                   </div>
+                                   <div class="blank"></div>
+                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                     <div class="textbar">
+                                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" >
+                                         <div>5 &nbsp;AGE PROOF (Please self-attest)</div>
+                                         </div>
+                                   </div>
+                                   </div>
+                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                       
+                                       <div class="col-lg-9 col-md-8 col-sm-12 form-check">
+                                           <div class="checkbox" >
+                                               <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.ageProofType=='1'" value="">AadharCard</label>
+                                               <label><input type="checkbox"  onclick="return false"  [checked]="proposalInput.secInsured.ageProofType=='107'" value="">Passport </label>
+                                               <label><input type="checkbox"  onclick="return false"  [checked]="proposalInput.secInsured.ageProofType=='108'" value="">Pan Card </label>
+                                               <label><input type="checkbox"  onclick="return false"  [checked]="proposalInput.secInsured.ageProofType=='109'" value="">Driving License</label>
+                                               <label><input type="checkbox"  onclick="return false"  [checked]="proposalInput.secInsured.ageProofType=='2'"  value="">Municipal Birth Certificate</label>
+                                               <label><input type="checkbox"  onclick="return false"  [checked]="proposalInput.secInsured.ageProofType=='86'" value="">School / College Certificate</label>
+                                              
+                                               <label><input type="checkbox" [checked]="proposalInput.secInsured.ageProofType=='115'||proposalInput.secInsured.ageProofType=='110'||proposalInput.secInsured.ageProofType=='116'" onclick="return false"  value="">Others</label>
+                             
+                                             
+                                          </div>
+                                        </div>
+                                        <div *ngIf="proposalInput.secInsured.ageProofType=='115'||proposalInput.secInsured.ageProofType=='110'||proposalInput.secInsured.ageProofType=='116'" class="col-lg-3 col-md-4 col-sm-7 form-check">
+                                          <input readonly type="text" class="textboxmargin textboxline" placeholder="Please Specify" id="specif" value="{{getMasterValue('AGEPROOF', proposalInput.secInsured.ageProofType)}}">
+                                         
+                                          </div>
+                                     </div>
+                                     <div class="blank"></div>
+                                     <div class="blank"></div>
+                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                         <div class="textbar">
+                                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" >
+                                             <div>6&nbsp;PERSONAL, LIFESTYLE AND MEDICAL DETAILS OF THE LIFE to be INSURED</div>
+                                             </div>
+                                       </div>
+                                       </div>
+                                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                       <h6 style="border-bottom: 1px solid black;font-weight: bold;">i APPLICABLE FOR ALL LIFE INSURANCE PLANS</h6>
+                                       </div>
+                                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                          <h6 style="font-weight: bold;">A &nbsp;PERSONAL DETAILS</h6>
+                                          <div class="">
+                                           
+                                              <span class="col-lg-1 col-md-1 col-sm-1">i&nbsp;&nbsp;(a)&nbsp;</span>
+                                              <label for="exampleInputEmail1" class="col-lg-1 col-md-1 col-sm-2">Height</label>
+                                              <div class="col-lg-4 col-md-4 col-sm-3">
+                                                     
+                                                 <span class="valuePadding"><input type="text" class=" textboxmargin textboxline" style="width:50%" value ="{{proposalInput.secInsured.personalInfo.height}}" id="height"> cms</span>
+                                                 
+                                                </div>
+                                                <label for="exampleInputEmail1" class="col-lg-1 col-md-1 col-sm-2">Weight</label>
+                                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                                   <span class="valuePadding"><input type="text" class=" textboxmargin textboxline" style="width:50%" id="exampleInputEmail1" value="{{proposalInput.secInsured.personalInfo.weight}}"> kgs</span>
+                                                   
+                                                  </div>
+                                          </div>
+                                          </div>
+                                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                           
+                                              <span class="col-lg-1 col-md-1 col-sm-1">&nbsp;&nbsp;(b)&nbsp;</span>
+                                              <label for="paymethod" class="col-lg-7 col-md-7 col-sm-7">Is there any weight change during the past one year over 5 kg?</label>
+                                                                 
+                                              <div class="col-lg-4 col-md-4 col-sm-4 form-check">
+                                                  <div class="checkbox" >
+                                                      <label><input type="checkbox"  onclick="return false"[checked]="proposalInput.secInsured.personalInfo.isWeightChange=='G'||proposalInput.secInsured.personalInfo.isWeightChange=='L'">Yes</label>
+                                                     <label><input type="checkbox"  onclick="return false" [checked]="proposalInput.secInsured.personalInfo.isWeightChange=='N'" >No</label>
+                                                 </div>
+                                               </div>
+                                              
+                                          
+                                          </div>
+                                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                           
+                                              <span class="col-lg-1 col-md-1 col-sm-1">&nbsp;&nbsp;(c)&nbsp;</span>
+                                              <label *ngIf="proposalInput.secInsured.personalInfo.isWeightChange=='L'||proposalInput.secInsured.personalInfo.isWeightChange=='G'" for="paymethod" class="col-lg-3 col-md-3 col-sm-4">Increase / Decrease Reason :</label>
+                                              <div class="col-lg-8 col-md-11 col-sm-11">
+                                             <input readonly type="text" class=" textboxmargin textboxline" value="{{proposalInput.secInsured.personalInfo.weightChangeDetail}}" style="width:50%" id="exampleInputEmail1"> 
+                                               </div>
+                                          </div>
+                                             <h6 style="font-weight: bold;"class="col-lg-12 col-md-12 col-sm-12 col-xs-12">B &nbsp;LIFE STYLE INFORMATION & FAMILY MEDICAL HISTORY</h6>
+                                             <div *ngFor="let question of proposalInput.secInsured.personalQuestions| slice:0:1;let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                           
+                                             <span class="col-lg-1 col-md-1 col-sm-1">i&nbsp;&nbsp;</span>
+                                              <label *ngIf = "question.id=='IsOutsideIndiaVacc180days'" for="paymethod" class="col-lg-9 col-md-9 col-sm-9">Do you intend to live or travel outside India for a period of more than 180days ? If Yes, submit appropriate questionnaire.</label>
+                                                                 
+                                              <div class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                  <div class="checkbox" >
+                                                      <label><input type="checkbox"  onclick="return false" [checked]="question.isYesNo=='Y'">Yes</label>
+                                                     <label><input type="checkbox"  onclick="return false"  [checked]="question.isYesNo=='N'" >No</label>
+                                                 </div>
+                                               </div>
+                                              <!-- <div *ngIf = "question.id=='IsOutsideIndiaVacc180days'&& question.isYesNo=='Y'" class="col-lg-10 col-md-10 col-sm-10">
+                                               <input readonly type="text" style="margin-left: 110px;" class="textboxmargin textboxline"  value="{{question.details}}" id="exampleInputEmail1"> 
+                                              </div>-->
+                                               
+                                               </div>
+                                               <div *ngFor="let question of proposalInput.secInsured.personalQuestions| slice:1:2;let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                                
+                                               <span   class="col-lg-1 col-md-1 col-sm-1">ii&nbsp;&nbsp;</span>
+                                               <label  class="col-lg-9 col-md-9 col-sm-9">Are you involved or do you intend to involve in any hazardous occupation or avocation?(for e.g. flying other than a fare-paying passenger, diving, mountaineering, working at heights, underground or offshore, using explosives or any other dangerous activity) If Yes, submit appropriate questionnaire.</label>
+                                                                  
+                                               <div   *ngIf ="question.id=='IsOccupationHazardous'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                   <div class="checkbox" >
+                                                       <label><input type="checkbox"  onclick="return false" [checked]="question.isYesNo=='Y'">Yes</label>
+                                                      <label><input type="checkbox"  onclick="return false" [checked]="question.isYesNo=='N'" >No</label>
+                                                  </div>
+                                                </div>
+                                                <!--<div *ngIf = "question.id=='IsOccupationHazardous'&& question.isYesNo=='Y'" class="col-lg-10 col-md-10 col-sm-10">
+                                                  <input readonly type="text" style="margin-left: 110px;" class="textboxmargin textboxline"  value="{{question.details}}" id="exampleInputEmail1"> 
+                                                 </div>-->
+                                                
+                                                </div>
+                                                <div *ngFor="let question of proposalInput.secInsured.personalQuestions| slice:2:3;let i=index" class="col-lg-12 col-md-12 col-sm-12 form-check">
+                                                <span class="col-lg-1 col-md-1 col-sm-1">iii&nbsp;&nbsp;</span>
+                                               <label  class="col-lg-9 col-md-9 col-sm-9">Do you consume or have you ever consumed any narcotic substance? If Yes, give details.</label>
+                                                             
+                                               <div *ngIf ="question.id=='IsNarcotic'"  class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                   <div class="checkbox" >
+                                                       <label><input type="checkbox"  onclick="return false" [checked]="question.isYesNo=='Y'">Yes</label>
+                                                      <label><input type="checkbox"  onclick="return false"  [checked]="question.isYesNo=='N'">No</label>
+                                                  </div>
+                                                </div>
+                                                <div *ngIf ="question.isYesNo=='Y'" class="col-lg-12 col-md-12 col-sm-12">
+                                                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                                                    <div class="col-lg-9 col-md-9 col-sm-9">
+                                                    <input readonly type="text" class=" textboxmargin textboxline"  value={{question.details}} id="exampleInputEmail1"> 
+                                                    </div>
+                                                   </div>   
+                                                </div>
+                                                <div *ngFor="let question of proposalInput.secInsured.personalQuestions| slice:6:7;let i=index" class="col-lg-12 col-md-12 col-sm-12 form-check">
+                                              
+                                                <span class="col-lg-1 col-md-1 col-sm-1">iv&nbsp;&nbsp;</span>
+                                               <label  for="paymethod" class="col-lg-9 col-md-9 col-sm-9">Do you consume alcohol ? If Yes, give details.</label>
+                                                                  
+                                               <div *ngIf ="question.id=='IsAlcoholic'"  class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                   <div class="checkbox" >
+                                                       <label><input type="checkbox"  onclick="return false" [checked]="question.isYesNo=='Y'">Yes</label>
+                                                      <label><input type="checkbox"  onclick="return false" [checked]="question.isYesNo=='N'">No</label>
+                                                  </div>
+                                                </div>
+                                                <div  *ngIf ="question.id=='IsAlcoholic'&& question.isYesNo=='Y'" >
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Substance</th>
+                                                        <th>In the form of</th>
+                                                        <th>Quantity per<br/>day | week | month</th>
+                                                        <th>Have you ever been advised to stop consumption of the<br/>substance by a Physician. If Yes, specify the reason.</th>
+                                                     </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr *ngFor="let details of question.details; let j=index" >
+                                                        <td>Alcohol</td>
+                                                        <td>{{details.alcoholType}}</td>
+                                                        <td>{{details.frequency}}</td>
+                                                        <td><span *ngIf="details.isDoctorAdvised=='Y'">Yes</span><span *ngIf="details.isDoctorAdvised=='N'">No</span><br/>{{details.doctorAdviseDetails}}</td>
+                                                       </tr>
+                                                      
+                                                       </tbody>
+                                                       </table>
+                                          </div>
+                                          </div>
+                                          </div>
+                                          
+                                          <div *ngFor="let question of proposalInput.secInsured.personalQuestions| slice:7:8;let i=index"  class="col-lg-12 col-md-12 col-sm-12 form-check">
+                                              <span class="col-lg-1 col-md-1 col-sm-1">v&nbsp;&nbsp;</span>
+                                             
+                                             <label  *ngIf = "question.id=='IsTobaccoConsumed'" for="paymethod" class="col-lg-9 col-md-9 col-sm-9">Do you consume cigarettes/bidis/cigars or used any other tobacco/nicotine products in any form? If Yes, when was it last consumed.</label>
+                                                                
+                                             <div class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                 <div class="checkbox" >
+                                                     <label><input type="checkbox"  onclick="return false" 
+                                                      [checked]="question.isYesNo=='Y'">Yes</label>
+                                                    <label><input type="checkbox"  onclick="return false" 
+                                                      [checked]="question.isYesNo=='N'" >No</label>
+                                                </div>
+                                              </div>
+                                              
+                                             
+                                              <div class="col-lg-12 col-md-12 col-sm-12 form-check">
+                                                      <span _ngcontent-c2="" class="col-lg-1 col-md-1 col-sm-1">&nbsp;&nbsp;</span>
+                                                  <div class="checkbox" >
+                                                      <label><input type="checkbox">Last 12 months</label>
+                                                     <label><input type="checkbox"  onclick="return false" >During 13 to 60 months</label>
+                                                     <label><input type="checkbox"  onclick="return false" >Before 60 months</label>
+                                                 </div>
+                                               </div>
+                                               <div *ngIf ="question.id=='IsTobaccoConsumed'&& question.isYesNo=='Y'">
+                                               <div  class="col-lg-12 col-md-12 col-sm-12 form-check">
+                     
+                                              <table class="table table-bordered">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>Substance</th>
+                                                      <th>In the form of</th>
+                                                      <th>Quantity per day</th>
+                                                      <th>No. of years</th>
+                                                      <th>Have you ever been advised to stop consumption of the<br/>substance by a Physician. If Yes, specify the reason.</th>
+                                                   </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr *ngFor="let details of question.details; let j=index">
+                                                      <td>Tobacco</td>
+                                                      <td>{{details.tobaccoType}}</td>
+                                                      <td>{{details.frequency}}</td>
+                                                      <td>{{details.years}}</td>
+                                                      <td><span *ngIf="details.isDoctorAdvised=='Y'">Yes</span><span *ngIf="details.isDoctorAdvised=='N'">No</span><br/>{{details.doctorAdviseDetails}}</td>
+                                                     </tr>
+                                                    
+                                                     </tbody>
+                                                     </table>
+                                        </div> 
+                                        </div>
+                                      </div>
+                                        <div *ngFor="let question of proposalInput.secInsured.personalQuestions| slice:3:4;let i=index" class="col-lg-12 col-md-12 col-sm-12 form-check">
+                                            <span class="col-lg-1 col-md-1 col-sm-1">vi&nbsp;&nbsp;</span>
+                                           
+                                           <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">Has any of your parents, brothers or sisters been diagnosed with / suffering from / have died due to any hereditary or chronic
+                                              disorder, heart ailment, stroke, high blood pressure/Hypertension, Diabetes, mellitus/High blood sugar, cancer, kidney disease,
+                                              paralysis, other disease not stated above prior to age 60? If Yes, specify details</label>
+                                                              
+                                           <div  *ngIf = "question.id=='IsFamilyMemDiagnosedBefore60'"  class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                               <div class="checkbox" >
+                                                   <label><input type="checkbox"  onclick="return false" 
+                                                      [checked]="question.isYesNo=='Y'">Yes</label>
+                                                  <label><input type="checkbox"  onclick="return false" 
+                                                      [checked]="question.isYesNo=='N'">No</label>
+                                              </div>
+                                            </div>
+                                            <div  *ngIf ="question.id=='IsFamilyMemDiagnosedBefore60'&& question.isYesNo=='Y'" >
+                                            <div  class="col-lg-12 col-md-12 col-sm-12 form-check">
+                                
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                  <tr>
+                                                    <th></th>
+                                                    <th>Age (if living)</th>
+                                                    <th>State of Health</th>
+                                                    <th>If deceased, age at death</th>
+                                                    <th>Cause of Death</th>
+                                                 </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr  *ngFor="let details of question.details; let j=index">
+                                                    <td>{{details.member}}</td>
+                                                    <td>{{details.age}}</td>
+                                                    <td>{{details.healthStateTitle}}</td>
+                                                    <td>{{details.deathAge}}</td>
+                                                    <td>{{details.deathCauseTitle}}</td>
+                                                   </tr>
+                                                  
+                                                  
+                                                  
+                                                   </tbody>
+                                                   </table>
+                                      </div>
+                                  </div>
+                              </div>  
+
+                              <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:0:1; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                <h6 style="font-weight: bold;">C &nbsp;MEDICAL HISTORY</h6>
+                                <span class="col-lg-1 col-md-1 col-sm-1">i)&nbsp;&nbsp;</span>
+                                <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">Have you remained absent from place of work on grounds of health for a continuous period of more than 10 days for reasons other
+                                    than pregnancy, minor fracture, cold or flu?.</label>
+                                                   
+                                <div *ngIf = "question.id=='IsSickatWorkfor10Days'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                    <div class="checkbox" >
+                                        <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                       <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                   </div>
+                                 </div>
+                                 <div  *ngIf ="question.id=='IsSickatWorkfor10Days'&& question.isYesNo=='Y'" >
+                                        <div *ngFor="let details of question.details; let j=index">
+                                         <table class="table table-bordered">
+                                              <thead >
+                                                <tr>
+                                                  <th rowspan="2">Question Exact Diagnosis and
+                                                      No.</th>
+                                                  <th rowspan="2">Exact Diagnosis and
+                                                      details of current symptoms</th>
+                                                  <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                      List of medication being consumed currently
+                                                      </th>
+                                                  <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                  
+                                                </tr>
+                                                <tr>
+                                                    <th>Date of Diagnosis</th>
+                                                    <th>Date of last Consultation</th>
+                                                  
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>1.</td>
+                                                  <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                  <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                  <td>{{details.dODiagnosis|date : 'dd/MM/yyyy'}}</td>
+                                                  <td>{{details.dOLastConsult|date : 'dd/MM/yyyy'}}</td>
+                                                 
+                                                </tr>
+                                               
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                          </div>
+                                 
+                                 </div>
+                                 <div class="blank"></div>
+                                 <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:1:2; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                 <span class="col-lg-1 col-md-1 col-sm-1">ii)&nbsp;&nbsp;</span>
+                                 <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">In the past five years, have you ever undergone any surgical operation at a hospital or clinic or undergone any investigations with other
+                                    than normal or negative results (including X-rays, ECG, blood tests, biopsies etc.)?</label>
+                                                    
+                                 <div *ngIf = "question.id=='IsUdergoneSurgeryPast5yrs'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                     <div class="checkbox" >
+                                         <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                        <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                    </div>
+                                  </div>
+                                  <div  *ngIf ="question.id=='IsUdergoneSurgeryPast5yrs'&& question.isYesNo=='Y'" >
+                                        <div *ngFor="let details of question.details; let j=index">
+                                         <table class="table table-bordered">
+                                              <thead >
+                                                <tr>
+                                                  <th rowspan="2">Question Exact Diagnosis and
+                                                      No.</th>
+                                                  <th rowspan="2">Exact Diagnosis and
+                                                      details of current symptoms</th>
+                                                  <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                      List of medication being consumed currently
+                                                      </th>
+                                                  <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                  
+                                                </tr>
+                                                <tr>
+                                                    <th>Date of Diagnosis</th>
+                                                    <th>Date of last Consultation</th>
+                                                  
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>1.</td>
+                                                  <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                  <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                  <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                  <td>{{details.dOLastConsult |date : 'dd/MM/yyyy'}}</td>
+                                                 
+                                                </tr>
+                                               
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                          </div>
+                                 
+                                  </div>
+                                  <div class="blank"></div>
+                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+
+                                  <span class="col-lg-1 col-md-1 col-sm-1">iii)&nbsp;&nbsp;</span>
+                                  <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">Have you ever sought advice or suffered from any of the following?</label>
+                                  </div>
+
+                                  <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:6:7; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                   <span class="col-lg-1 col-md-1 col-sm-1"></span>
+                                   <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">(a)Chest pain, low or high blood pressure, high cholesterol, heart attack, heart murmur or other heart disorders?</label>
+                                          
+                                    <div *ngIf ="question.id=='IsHavingHeartDisorders'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                        <div class="checkbox" >
+                                            <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                           <label><input  [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                       </div>
+                                     </div>
+                                 
+                                     <div  *ngIf ="question.id=='IsHavingHeartDisorders'&& question.isYesNo=='Y'" >
+                                            <div *ngFor="let details of question.details; let j=index">
+                                             <table class="table table-bordered">
+                                                  <thead >
+                                                    <tr>
+                                                      <th rowspan="2">Question Exact Diagnosis and
+                                                          No.</th>
+                                                      <th rowspan="2">Exact Diagnosis and
+                                                          details of current symptoms</th>
+                                                      <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                          List of medication being consumed currently
+                                                          </th>
+                                                      <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                      
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Date of Diagnosis</th>
+                                                        <th>Date of last Consultation</th>
+                                                      
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <td>1.</td>
+                                                      <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                      <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                      <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                      <td>{{details.dOLastConsult |date : 'dd/MM/yyyy'}}</td>
+                                                     
+                                                    </tr>
+                                                   
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                              </div>
+                                        
+                                     </div>
+                                     <div class="blank"></div>
+                                     <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:7:8; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                             <span class="col-lg-1 col-md-1 col-sm-1"></span>
+                                             <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">(b) Asthma, chronic cough, pneumonia, shortness of breath,tuberculosis (TB) or other respiratory or lung disorders?</label>
+                                                    
+                                              <div *ngIf ="question.id=='IsHavingLungDisorder'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                  <div class="checkbox" >
+                                                      <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                     <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                 </div>
+                                               </div>
+                                                    
+                                             <div  *ngIf ="question.id=='IsHavingLungDisorder'&& question.isYesNo=='Y'" >
+                                              <div *ngFor="let details of question.details; let j=index">
+                                               <table class="table table-bordered">
+                                                    <thead >
+                                                      <tr>
+                                                        <th rowspan="2">Question Exact Diagnosis and
+                                                            No.</th>
+                                                        <th rowspan="2">Exact Diagnosis and
+                                                            details of current symptoms</th>
+                                                        <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                            List of medication being consumed currently
+                                                            </th>
+                                                        <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                        
+                                                      </tr>
+                                                      <tr>
+                                                          <th>Date of Diagnosis</th>
+                                                          <th>Date of last Consultation</th>
+                                                        
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>1.</td>
+                                                        <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                        <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                       <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                        <td>{{details.dOLastConsult|date : 'dd/MM/yyyy'}}</td>
+                                                       
+                                                      </tr>
+                                                     
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                                </div>
+                                               </div>
+                                               <div class="blank"></div>
+                                               <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:8:9; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                               <span class="col-lg-1 col-md-1 col-sm-1"></span>
+                                               <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">(c) Diabetes / elevated blood sugar or sugar in the urine?</label>
+                                                      
+                                                <div *ngIf = "question.id=='IsDiabetic'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                    <div class="checkbox" >
+                                                        <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                       <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                   </div>
+                                                 </div>
+                                                 <div  *ngIf ="question.id=='IsDiabetic'&& question.isYesNo=='Y'" >
+                                                        <div *ngFor="let details of question.details; let j=index">
+                                                         <table class="table table-bordered">
+                                                              <thead >
+                                                                <tr>
+                                                                  <th rowspan="2">Question Exact Diagnosis and
+                                                                      No.</th>
+                                                                  <th rowspan="2">Exact Diagnosis and
+                                                                      details of current symptoms</th>
+                                                                  <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                      List of medication being consumed currently
+                                                                      </th>
+                                                                  <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                  
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Date of Diagnosis</th>
+                                                                    <th>Date of last Consultation</th>
+                                                                  
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody>
+                                                                <tr>
+                                                                  <td>1.</td>
+                                                                  <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                  <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                 <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                                  <td>{{details.dOLastConsult |date : 'dd/MM/yyyy'}}</td>
+                                                                 
+                                                                </tr>
+                                                               
+                                                              </tbody>
+                                                            </table>
+                                                          </div>
+                                                          </div>
+                                                       
+                                                 </div>
+                                                 <div class="blank"></div>
+                                                 <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:10:11; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                                 <span class="col-lg-1 col-md-1 col-sm-1"></span>
+                                                 <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">(d) Ulcer, colitis, chronic diarrhoea, hepatitis or jaundice or other liver or any gastrointestinal disorders?</label>
+                                                        
+                                                  <div *ngIf = "question.id=='IsHavingDigestiveDisorder'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                      <div class="checkbox" >
+                                                          <label><input  [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                         <label><input  [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                     </div>
+                                                   </div>
+                                                   <div  *ngIf ="question.id=='IsHavingDigestiveDisorder'&& question.isYesNo=='Y'" >
+                                                        <div *ngFor="let details of question.details; let j=index">
+                                                         <table class="table table-bordered">
+                                                              <thead >
+                                                                <tr>
+                                                                  <th rowspan="2">Question Exact Diagnosis and
+                                                                      No.</th>
+                                                                  <th rowspan="2">Exact Diagnosis and
+                                                                      details of current symptoms</th>
+                                                                  <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                      List of medication being consumed currently
+                                                                      </th>
+                                                                  <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                  
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Date of Diagnosis</th>
+                                                                    <th>Date of last Consultation</th>
+                                                                  
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody>
+                                                                <tr>
+                                                                  <td>1.</td>
+                                                                  <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                  <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                  <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                                  <td>{{details.dOLastConsult |date : 'dd/MM/yyyy'}}</td>
+                                                                 
+                                                                </tr>
+                                                               
+                                                              </tbody>
+                                                            </table>
+                                                          </div>
+                                                          </div>
+                                            
+                                                   </div>
+                                                   <div class="blank"></div>
+                                                   <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:11:12; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                                   <span class="col-lg-1 col-md-1 col-sm-1"></span>
+                                                   <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">(e) Cancer, tumour, abnormal growth, cyst, enlarged glands or enlarged lymph nodes?</label>
+                                                          
+                                                    <div *ngIf = "question.id=='IsHavingThyroidDisorder'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                        <div class="checkbox" >
+                                                            <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                           <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                       </div>
+                                                     </div>
+                                                     
+                                                   <div  *ngIf ="question.id=='IsHavingThyroidDisorder'&& question.isYesNo=='Y'" >
+                                                        <div *ngFor="let details of question.details; let j=index">
+                                                         <table class="table table-bordered">
+                                                              <thead >
+                                                                <tr>
+                                                                  <th rowspan="2">Question Exact Diagnosis and
+                                                                      No.</th>
+                                                                  <th rowspan="2">Exact Diagnosis and
+                                                                      details of current symptoms</th>
+                                                                  <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                      List of medication being consumed currently
+                                                                      </th>
+                                                                  <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                  
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Date of Diagnosis</th>
+                                                                    <th>Date of last Consultation</th>
+                                                                  
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody>
+                                                                <tr>
+                                                                  <td>1.</td>
+                                                                  <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                  <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                  <td>{{details.dODiagnosis|date : 'dd/MM/yyyy'}}</td>
+                                                                  <td>{{details.dOLastConsult|date : 'dd/MM/yyyy'}}</td>
+                                                                 
+                                                                </tr>
+                                                               
+                                                              </tbody>
+                                                            </table>
+                                                          </div>
+                                                          </div>
+                                                     </div>
+                                                     <div class="blank"></div>
+                                                     <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:13:14; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                                     <span class="col-lg-1 col-md-1 col-sm-1"></span>
+                                                     <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">(f) Dizziness / fainting spells, epilepsy, paralysis, stroke, mental/psychiatric disorder or any other neurological disorder?</label>
+                                                            
+                                                      <div *ngIf = "question.id=='IsHavingNervousDisorder'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                          <div class="checkbox" >
+                                                              <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                             <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                         </div>
+                                                       </div>
+                                                       <div  *ngIf ="question.id=='IsHavingNervousDisorder'&& question.isYesNo=='Y'" >
+                                                            <div *ngFor="let details of question.details; let j=index">
+                                                             <table class="table table-bordered">
+                                                                  <thead >
+                                                                    <tr>
+                                                                      <th rowspan="2">Question Exact Diagnosis and
+                                                                          No.</th>
+                                                                      <th rowspan="2">Exact Diagnosis and
+                                                                          details of current symptoms</th>
+                                                                      <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                          List of medication being consumed currently
+                                                                          </th>
+                                                                      <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                      
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Date of Diagnosis</th>
+                                                                        <th>Date of last Consultation</th>
+                                                                      
+                                                                    </tr>
+                                                                  </thead>
+                                                                  <tbody>
+                                                                    <tr>
+                                                                      <td>1.</td>
+                                                                      <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                      <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                       <td>{{details.dODiagnosis|date : 'dd/MM/yyyy'}}</td>
+                                                                      <td>{{details.dOLastConsult|date : 'dd/MM/yyyy'}}</td>
+                                                                     
+                                                                    </tr>
+                                                                   
+                                                                  </tbody>
+                                                                </table>
+                                                              </div>
+                                                              </div>
+                                                     
+                                                       </div>
+                                                       <div class="blank"></div>
+                                                       <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:14:15; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                                       <span class="col-lg-1 col-md-1 col-sm-1"></span>
+                                                       <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">(g) Kidney, urinary, bladder, reproductive organ, prostate or any genitourinary disorders?</label>
+                                                              
+                                                        <div *ngIf = "question.id=='IsKidneyDisorder'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                            <div class="checkbox" >
+                                                                <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                               <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                           </div>
+                                                          </div>
+                                                          <div  *ngIf ="question.id=='IsKidneyDisorder'&& question.isYesNo=='Y'" >
+                                                                <div *ngFor="let details of question.details; let j=index">
+                                                                 <table class="table table-bordered">
+                                                                      <thead >
+                                                                        <tr>
+                                                                          <th rowspan="2">Question Exact Diagnosis and
+                                                                              No.</th>
+                                                                          <th rowspan="2">Exact Diagnosis and
+                                                                              details of current symptoms</th>
+                                                                          <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                              List of medication being consumed currently
+                                                                              </th>
+                                                                          <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                          
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Date of Diagnosis</th>
+                                                                            <th>Date of last Consultation</th>
+                                                                          
+                                                                        </tr>
+                                                                      </thead>
+                                                                      <tbody>
+                                                                        <tr>
+                                                                          <td>1.</td>
+                                                                          <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                          <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                          <td>{{details.dODiagnosis|date : 'dd/MM/yyyy'}}</td>
+                                                                          <td>{{details.dOLastConsult|date : 'dd/MM/yyyy'}}</td>
+                                                                         
+                                                                        </tr>
+                                                                       
+                                                                      </tbody>
+                                                                    </table>
+                                                                  </div>
+                                                                  </div>
+                                                         
+                                                          </div>
+                                                          <div class="blank"></div>
+                                                          <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:15:16; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                                          <span class="col-lg-1 col-md-1 col-sm-1"></span>
+                                                          <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">(h) Arthritis, gout or joint pain, muscle disorder, bone fracture or any other musculoskeletal disorders?</label>
+                                                                 
+                                                           <div *ngIf = "question.id=='IsArthritisOrBoneDisorder'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                               <div class="checkbox" >
+                                                                   <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                                  <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                              </div>
+                                                            </div>
+                                                            <div  *ngIf ="question.id=='IsArthritisOrBoneDisorder'&& question.isYesNo=='Y'" >
+                                                                    <div *ngFor="let details of question.details; let j=index">
+                                                                     <table class="table table-bordered">
+                                                                          <thead >
+                                                                            <tr>
+                                                                              <th rowspan="2">Question Exact Diagnosis and
+                                                                                  No.</th>
+                                                                              <th rowspan="2">Exact Diagnosis and
+                                                                                  details of current symptoms</th>
+                                                                              <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                                  List of medication being consumed currently
+                                                                                  </th>
+                                                                              <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                              
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Date of Diagnosis</th>
+                                                                                <th>Date of last Consultation</th>
+                                                                              
+                                                                            </tr>
+                                                                          </thead>
+                                                                          <tbody>
+                                                                            <tr>
+                                                                              <td>1.</td>
+                                                                              <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                              <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                              <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                                              <td>{{details.dOLastConsult |date : 'dd/MM/yyyy'}}</td>
+                                                                             
+                                                                            </tr>
+                                                                           
+                                                                          </tbody>
+                                                                        </table>
+                                                                      </div>
+                                                                      </div>
+                                                             
+                                                            </div>
+                                                            <div class="blank"></div>
+                                                            <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:18:19; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                                            <span class="col-lg-1 col-md-1 col-sm-1"></span>
+                                                            <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">(i) Disorder of eyes (such as cataract, glaucoma etc.) or throat or ears?</label>
+                                                                   
+                                                             <div *ngIf = "question.id=='IsHavingEyeDisorder'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                                 <div class="checkbox" >
+                                                                     <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                                    <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                                </div>
+                                                              </div>
+                                                              <div  *ngIf ="question.id=='IsHavingEyeDisorder'&& question.isYesNo=='Y'" >
+                                                                    <div *ngFor="let details of question.details; let j=index">
+                                                                     <table class="table table-bordered">
+                                                                          <thead >
+                                                                            <tr>
+                                                                              <th rowspan="2">Question Exact Diagnosis and
+                                                                                  No.</th>
+                                                                              <th rowspan="2">Exact Diagnosis and
+                                                                                  details of current symptoms</th>
+                                                                              <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                                  List of medication being consumed currently
+                                                                                  </th>
+                                                                              <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                              
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Date of Diagnosis</th>
+                                                                                <th>Date of last Consultation</th>
+                                                                              
+                                                                            </tr>
+                                                                          </thead>
+                                                                          <tbody>
+                                                                            <tr>
+                                                                              <td>1.</td>
+                                                                              <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                              <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                              <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                                              <td>{{details.dOLastConsult |date : 'dd/MM/yyyy'}}</td>
+                                                                             
+                                                                            </tr>
+                                                                           
+                                                                          </tbody>
+                                                                        </table>
+                                                                      </div>
+                                                                      </div>
+                                                             
+                                                              </div>
+                                                              <div class="blank"></div>
+                                                              <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:19:20; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                                              <span class="col-lg-1 col-md-1 col-sm-1"></span>
+                                                              <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">(k) Any other illness, surgery, ailment or injury which is specifically not mentioned above?</label>
+                                                                     
+                                                               <div  *ngIf = "question.id=='IsHavingOtherSurgeryOrInjury'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                                   <div class="checkbox" >
+                                                                       <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                                      <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                                  </div>
+                                                                </div>
+                                                                <div  *ngIf ="question.id=='IsHavingOtherSurgeryOrInjury'&& question.isYesNo=='Y'" >
+                                                                        <div *ngFor="let details of question.details; let j=index">
+                                                                         <table class="table table-bordered">
+                                                                              <thead >
+                                                                                <tr>
+                                                                                  <th rowspan="2">Question Exact Diagnosis and
+                                                                                      No.</th>
+                                                                                  <th rowspan="2">Exact Diagnosis and
+                                                                                      details of current symptoms</th>
+                                                                                  <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                                      List of medication being consumed currently
+                                                                                      </th>
+                                                                                  <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                                  
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <th>Date of Diagnosis</th>
+                                                                                    <th>Date of last Consultation</th>
+                                                                                  
+                                                                                </tr>
+                                                                              </thead>
+                                                                              <tbody>
+                                                                                <tr>
+                                                                                  <td>1.</td>
+                                                                                  <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                                  <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                                  <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                                                  <td>{{details.dOLastConsult |date : 'dd/MM/yyyy'}}</td>
+                                                                                 
+                                                                                </tr>
+                                                                               
+                                                                              </tbody>
+                                                                            </table>
+                                                                          </div>
+                                                                          </div>
+                                                                 
+                                                                </div>
+                                                                <div class="blank"></div>
+                                                                <div *ngFor="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                                                <p for="paymethod" style="font-size: 12px;" class="col-lg-9 col-md-9 col-sm-9">
+                                                             If any of question is answered as Yes, please submit the appropriate questionnaire.</p>
+                                                      </div>
+                                                      
+                                                      <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:20:21; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                    
+                                                          <span class="col-lg-1 col-md-1 col-sm-1">iv)&nbsp;&nbsp;</span>
+                                                          <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">Do you have any congenital anomaly/disorder, physical defects, impairment, deformities and/or any condition affecting mobility,
+                                                              sight and/or hearing?</label>
+                                                                             
+                                                          <div *ngIf = "question.id=='IsPhysicalyDeformed'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                              <div class="checkbox" >
+                                                                  <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                                 <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                             </div>
+                                                           </div>
+                                                           <div  *ngIf ="question.id=='IsPhysicalyDeformed'&& question.isYesNo=='Y'" >
+                                                                <div *ngFor="let details of question.details; let j=index">
+                                                                 <table class="table table-bordered">
+                                                                      <thead >
+                                                                        <tr>
+                                                                          <th rowspan="2">Question Exact Diagnosis and
+                                                                              No.</th>
+                                                                          <th rowspan="2">Exact Diagnosis and
+                                                                              details of current symptoms</th>
+                                                                          <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                              List of medication being consumed currently
+                                                                              </th>
+                                                                          <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                          
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Date of Diagnosis</th>
+                                                                            <th>Date of last Consultation</th>
+                                                                          
+                                                                        </tr>
+                                                                      </thead>
+                                                                      <tbody>
+                                                                        <tr>
+                                                                          <td>1.</td>
+                                                                          <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                          <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                          <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                                          <td>{{details.dOLastConsult |date : 'dd/MM/yyyy'}}</td>
+                                                                         
+                                                                        </tr>
+                                                                       
+                                                                      </tbody>
+                                                                    </table>
+                                                                  </div>
+                                                                  </div>
+                                                         
+                                                           </div>
+                                                           <div class="blank"></div>
+                                                           <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:22:23; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                                              <span class="col-lg-1 col-md-1 col-sm-1">v)&nbsp;&nbsp;</span>
+                                                              <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">Have you or your spouse received any medical advice, testing or treatment for any sexually transmitted disease or HIV Infection / AIDS
+                                                                  or Hepatitis B or C?</label>
+                                                                                 
+                                                              <div *ngIf = "question.id=='IsSpouseUndergoneHIVTest'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                                  <div class="checkbox" >
+                                                                      <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                                     <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                                 </div>
+                                                               </div>
+                                                               <div  *ngIf ="question.id=='IsSpouseUndergoneHIVTest'&& question.isYesNo=='Y'" >
+                                                                    <div *ngFor="let details of question.details; let j=index">
+                                                                     <table class="table table-bordered">
+                                                                          <thead >
+                                                                            <tr>
+                                                                              <th rowspan="2">Question Exact Diagnosis and
+                                                                                  No.</th>
+                                                                              <th rowspan="2">Exact Diagnosis and
+                                                                                  details of current symptoms</th>
+                                                                              <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                                  List of medication being consumed currently
+                                                                                  </th>
+                                                                              <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                              
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Date of Diagnosis</th>
+                                                                                <th>Date of last Consultation</th>
+                                                                              
+                                                                            </tr>
+                                                                          </thead>
+                                                                          <tbody>
+                                                                            <tr>
+                                                                              <td>1.</td>
+                                                                              <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                              <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                             <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                                              <td>{{details.dOLastConsult |date : 'dd/MM/yyyy'}}</td>
+                                                                             
+                                                                            </tr>
+                                                                           
+                                                                          </tbody>
+                                                                        </table>
+                                                                      </div>
+                                                                      </div>
+                                                             
+                                                               </div>
+                                                               <div class="blank"></div>
+                                                               <div *ngFor="let question of proposalInput.secInsured.medicalQuestions| slice:21:22; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                    
+                                                                    <span class="col-lg-1 col-md-1 col-sm-1">vi)&nbsp;&nbsp;</span>
+                                                                    <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">Do you have any health symptoms or complaints for which a physician has not been consulted or treatment received?
+                                                                    (persistent fever, unexplained weight loss, loss of appetite, pain, swelling etc.)</label>
+                                                                                       
+                                                                    <div *ngIf = "question.id=='IsHavingPhysicalHealthSymptoms'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                                        <div class="checkbox" >
+                                                                            <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                                           <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                                       </div>
+                                                                     </div>
+                                                                     <div  *ngIf ="question.id=='IsHavingPhysicalHealthSymptoms'&& question.isYesNo=='Y'" >
+                                                                          <div *ngFor="let details of question.details; let j=index">
+                                                                           <table class="table table-bordered">
+                                                                                <thead >
+                                                                                  <tr>
+                                                                                    <th rowspan="2">Question Exact Diagnosis and
+                                                                                        No.</th>
+                                                                                    <th rowspan="2">Exact Diagnosis and
+                                                                                        details of current symptoms</th>
+                                                                                    <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                                        List of medication being consumed currently
+                                                                                        </th>
+                                                                                    <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                                    
+                                                                                  </tr>
+                                                                                  <tr>
+                                                                                      <th>Date of Diagnosis</th>
+                                                                                      <th>Date of last Consultation</th>
+                                                                                    
+                                                                                  </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                  <tr>
+                                                                                    <td>1.</td>
+                                                                                    <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                                    <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                                    <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                                                    <td>{{details.dOLastConsult |date : 'dd/MM/yyyy'}}</td>
+                                                                                   
+                                                                                  </tr>
+                                                                                 
+                                                                                </tbody>
+                                                                              </table>
+                                                                            </div>
+                                                                            </div>
+                                                                   
+                                                                     </div>
+                                                               
+                                                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  
+                                                                      <span class="col-lg-1 col-md-1 col-sm-1">vii)&nbsp;&nbsp;</span>
+                                                                      <span class="col-lg-3 col-md-3 col-sm-3">For female lives only:</span>
+                                                                  </div>
+                                                                  <div *ngFor="let question of proposalInput.secInsured.femaleHealthQuestions| slice:0:1; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                                                      <span class="col-lg-1 col-md-1 col-sm-1">&nbsp;&nbsp;</span>
+                                                                                          
+                                                                      <div *ngIf = "question.id=='IsPregnant'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                                          <div class="checkbox" >
+                                                                              <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                                             <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                                         </div>
+                                                                       </div>
+                                                                       <div class="col-lg-12 col-md-12 col-sm-12" *ngFor="let details of question.details; let k=index">
+                                                                            <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                                                                            <label  for="paymethod" class="col-lg-9 col-md-9 col-sm-9">1) Are you pregnant?  If Yes, number of weeks:<span>{{details.Nopregnacyweek}}</span></label>
+                                                                            </div>
+                                                                       <div *ngIf ="question.isYesNo=='Y'" class="col-lg-12 col-md-12 col-sm-12">
+                                                                        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                                                                        <div *ngFor="let details of question.details; let j=index" class="col-lg-9 col-md-9 col-sm-9">
+                                                                         <input type="text" class="col-lg-12 col-md-12 col-sm-12 textboxmargin textboxline"  id="exampleInputEmail1" value="diagnosis details:{{details.diagnosisDetails}}&nbsp;hospitalization details:{{details.hospitalizationDetails}}&nbsp;">
+                                                                         <input type="text" class="col-lg-12 col-md-12 col-sm-12 textboxmargin textboxline"  id="exampleInputEmail1" value="doctor contact:{{details.doctorContact}}&nbsp;doctor name:{{details.doctorName}}&nbsp;doctor qualification:{{details.doctorQualification}}&nbsp;last consulted:{{details.dOLastConsult}}">
+                                                                          
+                                                                          </div>
+                                                                       </div> 
+                                                                      
+                                                                      
+                                                                       </div>
+                                                                       <div class="blank"></div>
+
+                                                                       <div *ngFor="let question of proposalInput.secInsured.femaleHealthQuestions| slice:1:2; let i=index" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                                                          <span class="col-lg-1 col-md-1 col-sm-1">&nbsp;&nbsp;</span>
+                                                                          <label for="paymethod" class="col-lg-9 col-md-9 col-sm-9">2) Have you suffered from or do you have any gynaecological problems or illness related to uterus / ovaries or breasts?</label>
+                                                                                             
+                                                                          <div *ngIf ="question.id=='IsSufferingGynaecologicalPrblms'" class="col-lg-2 col-md-2 col-sm-2 form-check">
+                                                                              <div class="checkbox" >
+                                                                                  <label><input [checked]="question.isYesNo=='Y'" onclick="return false" type="checkbox">Yes</label>
+                                                                                 <label><input [checked]="question.isYesNo=='N'" onclick="return false" type="checkbox" >No</label>
+                                                                             </div>
+                                                                           </div>
+                                                                           <div  *ngIf ="question.id=='IsSufferingGynaecologicalPrblms'&& question.isYesNo=='Y'" >
+                                                                                <div *ngFor="let details of question.details; let j=index">
+                                                                                 <table class="table table-bordered">
+                                                                                      <thead >
+                                                                                        <tr>
+                                                                                          <th rowspan="2">Question Exact Diagnosis and
+                                                                                              No.</th>
+                                                                                          <th rowspan="2">Exact Diagnosis and
+                                                                                              details of current symptoms</th>
+                                                                                          <th rowspan="2">Details of treating Doctor / Surgeon<br/>(Name, Qualification, Contact No.) and<br/>
+                                                                                              List of medication being consumed currently
+                                                                                              </th>
+                                                                                          <th colspan="2">Details and date of hospitalization and surgery done</th>
+                                                                                          
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <th>Date of Diagnosis</th>
+                                                                                            <th>Date of last Consultation</th>
+                                                                                          
+                                                                                        </tr>
+                                                                                      </thead>
+                                                                                      <tbody>
+                                                                                        <tr>
+                                                                                          <td>1.</td>
+                                                                                          <td>{{details.diagnosisDetails}}{{details.hospitalizationDetails}}</td>
+                                                                                          <td>Contact Number:{{details.doctorContact}}<br/>Name:{{details.doctorName}}<br/>Qualification:{{details.doctorQualification}}</td>
+                                                                                          <td>{{details.dODiagnosis |date : 'dd/MM/yyyy'}}</td>
+                                                                                          <td>{{details.dOLastConsult |date : 'dd/MM/yyyy'}}</td>
+                                                                                         
+                                                                                        </tr>
+                                                                                       
+                                                                                      </tbody>
+                                                                                    </table>
+                                                                                  </div>
+                                                                                  </div>
+                                                                                  <div class="blank"></div>
+                                                                                  <div class="blank"></div>
+                                                                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                                                                      <div class="textbar" style="height:56px !important;">
+                                                                                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                                                                          <div>7&nbsp;DECLARATION BY THE LIFE to be INSURED (and PROPOSER if not the Life to be Insured)
+                                                                                             These declarations would apply to the application for insurance and the details as contained in the application for insurance duly filled
+                                                                                             and signed by the Life to be insured and proposer if not the life to be insured, through this common application form and
+                                                                                             aforementioned supplementary application form (s).</div>
+                                                                                          </div>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                                                                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                                                                     <p style="text-align:justify"><span style="font-weight: bold">I (we) understand and agree  &nbsp;</span>  that all common application details as mentioned in the aforementioned common application / retirement solutions form will be used to process this joint life addendum for insurance / annuity under the given product details,  in addition to the product specific details as mentioned in this joint life addendum. I (we) confirm that the information as submitted in the Common Application / Retirement Solutions form will be legally binding and would be a part of the contractual obligation.</p>
+                                                                                    <p style="text-align:justify"> <span style="font-weight: bold">I (we) &nbsp;</span> are not involved in any criminal proceedings nor have any history of conviction in India or abroad.</p>
+                                                                                      
+                                                                                    <p style="text-align:justify"><span style="font-weight: bold">I (we) understand and agree&nbsp;</span>that all implied and explicity agreed declarations duly signed under the common application / retirement solutions form no. as mentioned above are applicable to this joint life addendum and can be made enforcable as and when required under this joint life addendum for insurance / annuity. </p>
+                                                                                    <p style="text-align:justify"> <span style="font-weight: bold">I (we) &nbsp;</span> that this joint life addendum is in conjunction with and forms a part of the  common application / retirement solutions form ( as cited above).</p>   
+                                                                                    <p style="text-align:justify"><span style="font-weight: bold">I (we) confirm&nbsp;</span>that the premiums have not been and will not be generated from proceeds of crime related to any of the offences listed in the Prevention of Money Laundering Act 2002 and any other applicable statutory provisions as may be in force from time to time. 
+                                                                                       abroad.</p>
+                                                                                    <p style="text-align:justify"><span style="font-weight: bold">I (we) understand and agree&nbsp;</span> that in case of any fraud or misrepresentation, the policy shall be treated in accordance with Section 45 of the Insurance Act, 1938 as amended from time to time.</p>  
+                                                                
+                                                                                    <p style="text-align:justify"> <span style="font-weight: bold">I (we) hereby declare&nbsp;</span> that the contents of this application for insurance / annuity have been fully explained to me including the significance of the proposed contract of insurance.</p>
+                                                                                    
+                                                                                     <p style="text-align:justify"><span style="font-weight: bold">Lastly,I  (we) hereby declare&nbsp;</span>that all statements and answers made in this application (proposal for insurance / annuity) including contact details or provided in connection with this application and addendum, if any, are true and complete to the best of my (our) knowledge and belief.
+                                                                                     </p>
+                                                                                    
+                                                                                   </div>
+                                                                                 </div>
+                                                                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                                                                     <div class="">
+                                                                                         <label for="bdate" class="col-lg-1 col-md-1 col-sm-1">Date</label>
+                                                                                         <div class="col-lg-3 col-md-3 col-sm-3">
+                                                                                          
+                                                                                          <input readonly type="text" class="form-control textboxmargin" id="bdate" value="{{applicationDate| date : 'dd/MM/yyyy'}}">
+                                                                                         </div>
+                                                                                       </div>
+                                                                                      
+                                                                                         <div class="">
+                                                                                                 <label for="plc" class="col-lg-1 col-md-1 col-sm-1">Place</label>
+                                                                                                 <div  *ngFor = "let addTag of proposalInput.secInsured.address| slice:0:1; let i=index" class="col-lg-3 col-md-3 col-sm-3">
+                                                                                                  <input readonly type="text" class="textboxmargin textboxline" id="plc"  value="{{addTag.city}}">
+                                                                                                 </div>
+                                                                                               </div>
+                                                                                         <div class="">
+                                                                                             <label for="brokerca" class="col-lg-2 col-md-2 col-sm-2">IA/Broker/SP of CA Code:</label>
+                                                                                             <div class="col-lg-2 col-md-2 col-sm-2">
+                                                                                              <input readonly type="text" class="form-control textboxmargin" id="brokerca" value="{{proposalInput.advisor.SPCodeCA}}">
+                                                                                             </div>
+                                                                                           </div>
+                                                                                           <div class="">
+                                                                                              
+                                                                                               <div class="col-lg-6 col-md-7 col-sm-7">
+                                                                                                <input readonly type="text" class="textboxmargin textboxline" id="plc" >
+                                                                                                 <label>Signature or Thumb Impression of the SECONDARY LIFE to be INSURED / ANNUITAN</label>
+                                                                                               </div>
+                                                                                             </div>
+                                                                                             <div class="">
+                                                                                                    <div class="col-lg-6 col-md-5 col-sm-5">
+                                                                                                  <input readonly type="text" class="textboxmargin textboxline" id="plc" >
+                                                                                                   <label>Name of IA / Broker / SP of CA Code</label>
+                                                                                                 </div>
+                                                                                               </div>
+                                                                                               <div class="">
+                                                                                                 
+                                                                                                   <div class="col-lg-6 col-md-7 col-sm-7">
+                                                                                                    <input readonly type="text" class="textboxmargin textboxline" id="plc" >
+                                                                                                     <label>Signature or Thumb Impression of the PRIMARY LIFE to be INSURED / ANNUITANT</label>
+                                                                                                   </div>
+                                                                                                 </div>
+                                                                                                 <div class="">
+                                                                                                    
+                                                                                                     <div class="col-lg-6 col-md-5 col-sm-5">
+                                                                                                      <input readonly type="text" class="textboxmargin textboxline" id="plc" >
+                                                                                                       <label>Signature of IA / Broker / SP of CA Code</label>
+                                                                                                     </div>
+                                                                                                   </div>
+
+
+                                                                                   
+                                                                                 </div>
+                                                                                 
+                                     </div>
+
+
+                                     <div class="blank"></div>
+                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                         <h6 style="border-bottom: 1px solid black;font-weight: bold;">VERNACULAR DECLARATION</h6>
+                                     
+                                                     <div class="">
+                                                             <label for="fmname" class="col-lg-2 col-md-2 col-sm-2">I, (full name of declarant)</label>
+                                                             <div class="col-lg-3 col-md-3 col-sm-3">
+                                                              <input readonly type="text" class="textboxmargin textboxline" id="fmname" value="" >
+                                                             </div>
+                                                             <label for="fmname" class="col-lg-7 col-md-7 col-sm-7">hereby declare that I have explained the contents of the proposal form to the Secondary Life to be Insured/Annuitant 
+                                                                <br/></label>
+                                                            
+                                                           
+                                                             <label class="col-lg-1 col-md-1 col-sm-1">in</label>
+                                                             <div class="col-lg-5 col-md-5 col-sm-5">
+                                                                    <input readonly type="text" class="textboxmargin textboxline" id="fmname" value="">
+                                                             </div> 
+                                                             <span class="col-lg-6 col-md-6 col-sm-6">language and that I have read out to the answers to the questions
+                                                                dictated by me to the Secondary</span>
+                                                              <span class="col-lg-12 col-md-12 col-sm-12">Life to be Insured/Annuitant and that the Secondary Life to be Insured/Annuitant has/have put his/her thumb impression after fully understanding the contents thereof.</span>
+                                                        
+                                                            
+                                                
+                                                         </div>
+                                     </div>
+
+                                     
+                                     
+                                        <div class="col-lg-5 col-md-5 col-sm-5" style="float: right;
+                                        text-align: center;">
+                                              <input readonly type="text" class="textboxmargin textboxline" id="plc" >
+                                               <label>Name & Signature of Declarant</label>
+                                             </div>
+                                             <div class="blank"></div>
+                                             <div class="col-lg-12 col-md-12 col-sm-12 nopadding">
+                                             <label for="fmname1" class="col-lg-1 col-md-1 col-sm-1">I,</label>
+                                             <div class="col-lg-4 col-md-4 col-sm-4">
+                                              <input readonly type="text" class="textboxmargin textboxline" id="fmname" value="{{proposalInput.secInsured.firstName}} {{proposalInput.secInsured.middleName}} {{proposalInput.secInsured.lastName}}">
+                                             </div>
+                                             <label for="fmname" class="col-lg-7 col-md-7 col-sm-7">(Secondary Life to be Insured / Annuitant)hereby declare that I have understood the terms & condition of the policy as explained by the declarant.</label>
+                                              
+                                         </div>
+                                    
+
+                            </form>
+                                            
+                         </div>
+                            
+                             
+                        </div>
+         
+                </div>
+                                   
+                         
+
+               
+  
+  
+
+
+  

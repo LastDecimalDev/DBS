@@ -1,0 +1,324 @@
+{
+  "result": [
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "HOSP",
+      "coverName": "Hospitalization",
+      "mandatory": "Y",
+      "recommended": "E",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "ACCHOSP",
+      "coverName": "Accident Hospitalization",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "ADB",
+      "coverName": "Accidental Death Benefit",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "AMBUL",
+      "coverName": "Ambulance",
+      "mandatory": "N",
+      "recommended": "N",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "AYUR",
+      "coverName": "Ayurveda Treatment Cover",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "AYUSH",
+      "coverName": "Ayush Cover",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "CBB",
+      "coverName": "Cumulative Bonus Booster",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "CI",
+      "coverName": "Critical illness",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "Y"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "COM",
+      "coverName": "Companion",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "Y"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "CONVAL",
+      "coverName": "Convalescence",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "Y"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "CP10",
+      "coverName": "10% Co Pay",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "CP20",
+      "coverName": "20% Co Pay",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "DCP",
+      "coverName": "Day Care Procedure",
+      "mandatory": "N",
+      "recommended": "N",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "DEN",
+      "coverName": "Dental care",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "DOM",
+      "coverName": "Domiciliary Hospitalization",
+      "mandatory": "N",
+      "recommended": "N",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "DON",
+      "coverName": "Donor Expenses",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "EAR",
+      "coverName": "Hearing Aid",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "HC",
+      "coverName": "Health Check",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "HOC",
+      "coverName": "Hospital Cash",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "Y"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "MA",
+      "coverName": "Maternity",
+      "mandatory": "N",
+      "recommended": "N",
+      "seperateSi": "N",
+      "display": "Y"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "NB",
+      "coverName": "New Born Baby",
+      "mandatory": "N",
+      "recommended": "N",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "NC",
+      "coverName": "Nursing Care",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "OPD",
+      "coverName": "OPD treatment",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "Y"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "PA",
+      "coverName": "Personal Accident",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "POST",
+      "coverName": "Post-Hospitalization",
+      "mandatory": "N",
+      "recommended": "N",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "PRE",
+      "coverName": "Pre-Hospitalization",
+      "mandatory": "N",
+      "recommended": "N",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "RESSI",
+      "coverName": "Restore Sum Insured",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "Y"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "SIG",
+      "coverName": "Sight",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "N"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "VAC",
+      "coverName": "Vaccination",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "Y"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "WCP",
+      "coverName": "Waiver of Co-Pay",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "Y"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "WWEMER",
+      "coverName": "Worldwide Emergency Hospitalization",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "Y"
+    },
+    {
+      "lob": "Health",
+      "producttype": "FF",
+      "coverid": "WWHOSP",
+      "coverName": "Include US / Canada for International Treatment / Worldwide Hospitalization",
+      "mandatory": "N",
+      "recommended": "C",
+      "seperateSi": "N",
+      "display": "Y"
+    }
+  ]
+}

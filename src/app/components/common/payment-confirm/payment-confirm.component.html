@@ -1,0 +1,86 @@
+<div>
+  <div class="rootCus">
+      <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+      <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+      <input type="checkbox" id="show-menu" role="button">
+      <ul id="menu">
+        <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+        <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+        <li><a routerLink="../../home/myActivities" style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+        <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+      </ul>  
+    </div>
+<div id="dbs">
+  <div class="zerogrid" style="width: 100%;" *ngIf="!loading">
+      <div class="content searchheaderpanel proposal_form" id="cignaPanel" style="margin-bottom: 2%;">
+          <div class="col-xs-12  cf-title clearfix">
+            <!--  <div class="back-to-results" (click)="history.go(-1)" ><span class = "glyphicon glyphicon-menu-left"></span>Back to results</div>-->
+                <div class="proposal_heading">
+                  <span>Payment Details</span>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-3 pnone">
+                <div class="insurer-img">
+                  <img class="img-responsive" src = "{{imagePath}}/image/ilogo/i{{requestData.insurerId}}.png">
+                  
+                </div>
+              </div>
+
+              <div class="col-xs-8 col-sm-9 pnone" style="border-left:1px solid #eaeaea;">
+                <div *ngIf="paymentResults.status=='Success'" class="pol-name" style="color: green;">Payment Success</div>
+                <div *ngIf="paymentResults.status=='Error'" class="pol-name" style="color:red;">Payment Failure</div>
+                
+                <div class="pol-val"  *ngIf="paymentResults.status=='Error'">
+                    <span>Your payment couldn't be processed due to the following error: </span>
+                    <span style="color:red;">{{paymentResults.msg}}</span>
+                    <div class= "clear"></div>
+                    <span *ngFor = "let item of paymentResults.attributes">
+                        <label class="control-label label-highlight">{{item.name}}:</label>
+                        <span>{{item.value}} </span>
+                   </span>
+                    <br class="visible-xs visible-sm">
+                </div> 
+                
+                <div class="pol-val"  *ngIf="paymentResults.status=='Success'">
+                    <span> Thanks for purchase. Your payment has been received by the insurer. Below are the payment details</span>
+                </div> 
+            </div>
+
+
+      </div>
+      </div>
+      </div>
+      <div id="loader"></div>
+		<div id="stage_data" *ngIf="!loading">
+			<div class="col-sm-12" *ngIf="paymentResults.status=='Success'">
+        	<div class= "clear"></div>
+				<!--<div><span> Thanks for purchase. Your payment has been received by the insurer. Below are the payment details</span><br><br></div>-->
+				<div class="col-sm-6" *ngFor = "let item of paymentResults.attributes">
+					<label class="control-label label-highlight">{{item.name}}:</label>
+					<span>{{item.value}} </span>
+				</div>
+				<div class= "clear"></div>
+				<br>
+				<div><br><br><span> A copy of your Policy document has been emailed to you at the email address provided by you in the proposal form.</span></div>
+			<div class= "clear"></div>												
+			</div>
+			<div class= "clear"></div>
+			
+		<!--	<div class="col-sm-12"  *ngIf="paymentResults.status=='Error'">
+				<div><span>Your payment couldn't be processed due to the following error:</span></div>
+				<div class= "clear"></div>
+				<div><span>{{paymentResults.msg}}</span></div>
+				<div class= "clear"></div>
+				<div class="col-sm-6" *ngFor = "let item of paymentResults.attributes">
+					<label class="control-label label-highlight">{{item.name}}:</label>
+					<span>{{item.value}} </span>
+				</div>
+				<div class= "clear"></div>
+				<br>											
+			</div>
+			<div class= "clear"></div>-->
+			
+			<div *ngIf = "paymentResults.policyUrl"><br><br><span> Please click on to download <a href="{{paymentResults.policyUrl}}">Policy document</a></span></div>
+			<div class= "clear"></div>
+		</div>
+    </div>

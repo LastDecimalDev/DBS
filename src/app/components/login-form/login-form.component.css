@@ -1,0 +1,1442 @@
+/*
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+*/
+ /* reset */
+ .form-control {
+	display: block;
+	width: 75% !important;
+	height: 34px;
+	padding: 6px -1px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.forgotPass{
+	float: right;
+	margin-right: 20%;
+}
+
+ .go_btn {
+	cursor: pointer;
+	width: 80px;
+	height: 80px;
+	margin: 2% 0 30% 42%;
+	padding: 0px 0 0 0;
+	float: left;
+	-webkit-border-radius: 50px;
+	background-color: #cc0000;
+	border: 2px #4d4d4d solid;
+	text-decoration: none;
+}
+
+ .go_btn[disabled]
+ {
+		 cursor: not-allowed;
+		 filter: alpha(opacity=65);
+		 box-shadow: none;
+		 opacity: .65;
+ }
+
+
+/*24-09-2018*/
+.modal-content{
+	max-width: 58%;
+	margin: 0 0 0 -67px;
+}
+.modal-body{
+	width: 95%;
+}
+
+/*end reset*/
+div.loginBody{
+	font-family: 'Rokkitt', serif;
+	font-size:100%;
+	/*background: url(../../../assets/images/bg.png) no-repeat;*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+   /* padding-top: 5%;
+    padding-bottom: 5%;*/
+}
+.wrap{
+	width: 50%;
+	margin: 0 auto;
+}
+.selectassure{
+     margin-top: -4%;
+    margin-left: 20%;
+}
+.modal{
+	margin-left: 26%;
+	margin-top: 1%;
+}
+/*start-contact-form*/
+/*.contact_form {
+	width: 55%;
+	background: url("../../../assets/images/border.png") no-repeat 331px 77px;
+	float: left;
+	position: relative;
+}*/
+.contact-form{
+	/*background:#fff;*/
+	background-color: #ebebeb;
+	padding: 1% 0% 6%;
+	width: 51%;
+	height:auto;
+	margin-top: 18%;
+	margin-left: 22%;
+	position: relative;
+	-webkit-border-radius: 12px;
+	border: 2px solid lightgrey;
+}
+.contact-form h1{
+	font-size: 1.7em;
+	color:#474646;
+}
+.contact_form ul {
+    list-style-type:none;
+	list-style-position:outside;
+	margin:0px;
+	padding:0px;
+    margin-left: -268%;
+}
+.contact_form li{
+	position:relative;
+} 
+	/* form element visual styles */
+	.contact_form li{ 
+		float: left;
+		outline: none;
+		border: 1px solid #DDDDDD;
+		font-size: 1.2em;
+		color: #B6B6B6;
+		width: 78.5%;
+		font-weight: 600;
+		margin-top: 8%;
+		position: relative;
+		height: 42px;
+		border-radius: 2px;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-o-border-radius: 2px;
+		transition: all 0.5s ease-out;
+		-webkit-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+		-ms-transition: all 0.5s ease-out;
+		-o-transition: all 0.5s ease-out;
+	}
+	.contact_form li:hover{ 
+		border: 1px solid #79B42B;
+		color:#79B42B;
+	}
+	.contact_form input {
+		border-radius: inherit;
+		float: left;
+		font-size: 16px;
+		font-family: 'Rokkitt', serif;
+		padding: 7px 14px;
+		width: 62%;
+		border: none;
+		outline: none;
+		color:#666;
+		margin: 0 10% 3% 24%;
+		border: 1px solid #cbcbcb;
+	}
+	.contact_form p {
+		float: right;
+		padding: 8px 7px;
+		width: 9.3%;
+		cursor: pointer;
+	}
+	.contact_form input[type="submit"] {
+		border: none;
+		outline: none;
+		cursor: pointer;
+		color: #fff;
+		background: #79B42B;
+		width: 79%;
+		padding: 12px;
+		font-size: 1.3em;
+		letter-spacing:1px;
+		margin: 132px 0 30px;
+		transition: all 0.5s ease-out;
+		-webkit-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+		-ms-transition: all 0.5s ease-out;
+		-o-transition: all 0.5s ease-out;
+		border-radius: 2px;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-o-border-radius: 2px;
+	}	
+.contact_form input[type="submit"]:hover {
+	background:#88C470;
+}	
+.contact_form input[type="checkbox"] {
+	width: 21px;
+	vertical-align: middle;
+	padding: 5px;
+	float:left;
+}
+.contact_form i{
+	font-size: 1.2em;
+	color:#B6B6B6;
+	width: 40%;
+	float: left;
+}
+.forgot{
+	float: right;
+	margin-right: 77px;
+	width: 35%;
+	margin-top: 4px;
+}
+.forgot a{
+	color:#B6B6B6;
+	font-size: 1.1em;
+    transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.forgot a:hover{
+	color:#79B42B;
+}
+/* === Form hints === */
+.form_hint {
+	color: #fff;
+	text-align: center;
+	background:#79B42B;
+	border-radius: 3px 3px 3px 3px;
+	font-size:1.2em;
+	margin-left: 8px;
+	padding: 6px 23px;
+	z-index: 999;
+	position: absolute;
+	right:-224px;
+	bottom: 3px;
+	font-weight:100;
+	display: none;
+}
+.form_hint::before {
+	content: '';
+	position: absolute;
+	bottom: 9px;
+	left: -9px;
+	width: 0;
+	height: 0;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #79B42B;
+	border-top: 10px solid transparent;
+}
+.contact_form input:focus + .form_hint {display: inline;}
+.contact_form input:required:valid + .form_hint {color: #000;
+	background: #79B42B;}
+.contact_form input:required:valid + .form_hint::before {color:#28921f;}
+/*end-contact-form*/
+/*start-account*/
+.account{
+	float:right;
+	width: 45%;
+	margin-top: -6%;
+}
+#signup_block{
+	overflow: hidden;
+}
+#signIn_block{
+	float: right;
+	margin-right: 7px;
+}
+.account h2 a{
+	color:#71B8E4;
+	display: block;
+	font-size: 1.3em;
+	font-weight: 400;
+	text-align:right;
+	margin-top: 3px;
+    margin-right: 8%;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.account h2 a:hover{
+	color:#79B42B;
+}
+.span {
+	margin-top: 10.4%;
+	display: block;
+	width: 100%;
+	background: #3B5998;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.span img {
+	background:#354F88;
+	padding: 7px;
+	float: left;
+}
+.span i {
+	color: #fff;
+	padding: 9px 14px;
+	float: left;
+	font-size: 1.6em;
+	font-weight: 400;
+}
+.span:hover {
+	background:#354F88;
+}
+.span1 {
+	margin-top: 9%;
+	width: 100%;
+	background: #45B0E3;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.span1 img {
+	background: #40A2D1;
+	padding: 7px;
+	float: left;
+}
+.span1 i {
+	color: #fff;
+	padding: 9px 20px;
+	float: left;
+	font-size: 1.6em;
+	font-weight: 400;
+}
+.span1:hover {
+	background:#40A2D1;
+}
+.span2 {
+	margin-top: 9%;
+	width: 100%;
+	background: #DE4C34;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.span2 img {
+	background: #CE3E26;
+	padding: 7px;
+	float: left;
+}
+.span2 i {
+	color: #fff;
+	padding: 9px 17px;
+	float: left;
+	font-size: 1.6em;
+	font-weight: 400;
+}
+.span2:hover {
+	background: #CE3E26;
+}
+.span3 {
+	margin-top: 9%;
+	width: 100%;
+	background: #02bd7e;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.span3 img {
+	background: #09865c;
+	padding: 12px;
+	float: left;
+}
+.span3 i {
+	color: #fff;
+	padding: 9px 17px;
+	float: left;
+	font-size: 1.6em;
+	font-weight: 400;
+}
+.span3:hover {
+	background: #09865c;
+}
+/*end-account*/
+/*start-footer*/
+.footer p{
+	color:#fff;
+	display: block;
+	font-size: 1.3em;
+	font-weight: 400;
+	text-align:center;
+	padding: 2em 0 1em;
+}
+.footer p a{
+	color:#68B74A;
+    transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.footer p a:hover{
+	color:#fff;
+}
+/*end-footer*/
+/*start-checkbox*/
+.checkbox {
+	margin-bottom: 4px;
+	padding-left: 27px;
+	font-size: 1.1em;
+	line-height: 27px;
+	color: #B6B6B6;
+	cursor: pointer;
+}
+ .checkbox:last-child {
+	margin-bottom: 0;
+}
+.checkbox input {
+	position: absolute;
+	left: -9999px;
+}
+
+.checkbox i {
+	position: absolute;
+	bottom: 9px;
+	left: 0;
+	display: block;
+	width: 13px;
+	height: 13px;
+	outline: none;
+	border: 2px solid #DDDDDD;
+	background: #DDDDDD;
+}
+.checkbox input + i:after {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.1s;
+	-o-transition: opacity 0.1s;
+	-ms-transition: opacity 0.1s;
+	-moz-transition: opacity 0.1s;
+	-webkit-transition: opacity 0.1s;
+}
+.checkbox input + i:after {
+	content: '';
+	background: url("../../../assets/images/mark.png") no-repeat 3px 2px;
+	top: -1px;
+	left: -1px;
+	width: 15px;
+	height: 15px;
+	font: normal 12px/16px FontAwesome;
+	text-align: center;
+}
+
+.checkbox input:checked + i:after {
+	opacity: 1;
+}
+.checkbox {
+	float: left;
+	margin-right: 30px;
+}
+.checkbox:last-child {
+	margin-bottom: 4px;
+}
+/*end-checkbox*/
+/*-----start-responsive-design------*/
+@media only screen and (max-width: 1440px){
+	.wrap{
+		width:56%;
+	}
+	.span i {
+		font-size: 1.4em;
+	}
+	.span1 i {
+		font-size: 1.4em;
+	}
+	.span2 i {
+		font-size: 1.4em;
+	}
+	.contact_form p {
+		padding: 8px 7px;
+	}
+}
+@media only screen and (max-width: 1366px){
+	.wrap{
+		width:59%;
+	}
+	.span i {
+		font-size: 1.4em;
+	}
+	.span1 i {
+		font-size: 1.4em;
+	}
+	.span2 i {
+		font-size: 1.4em;
+	}
+	.contact_form p {
+		padding: 8px 3px;
+	}
+}
+@media only screen and (max-width: 1280px){
+	.wrap{
+		width:63%;
+	}
+	.span i {
+		font-size: 1.3em;
+	}
+	.span1 i {
+		font-size: 1.3em;
+	}
+	.span2 i {
+		font-size: 1.3em;
+	}
+}
+@media (max-width : 1024px) and (min-width : 768px) and (orientation: portrait) {
+.rememberMe{
+    margin-left: 16% !important;
+}	
+.modal-dialog{
+	width: 75% !important;
+}
+.modal-content{
+	max-width: 74% !important;
+}
+	#signIn_block  {
+			margin-left: 0% !important;
+	}
+	.contact-form{
+			margin-top: 18%;
+	}
+	.account h2 a{
+		margin-right: 0%;
+	}
+
+	div .selectassure img{
+		margin: 5px 0 0 -21px !important;
+
+	}
+
+	.go_btn{
+    margin: 2% 0 30% 38% !important;
+	}
+
+	.formtwo {
+    /* width: 35%; */
+    font-family: Lato;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    color: #666;
+    line-height: 8px;
+    margin: 4% 0% -1% 13% !important;
+    padding: 1% 0 0% 0;
+    float: left;
+}
+}
+@media (max-width : 1024px) and (min-width : 768px) and (orientation: landscape) {
+	.rememberMe{
+    margin-left: 20% !important;
+}
+	.modal-content{
+		max-width: 69% !important;
+	}
+	.contact-form{
+			margin-top: 16%;
+	}
+	.go_btn{
+    margin: 2% 0 30% 42% !important	}
+
+		#signIn_block{
+			float: right;
+			margin-right: 21px !important;
+		}
+		
+}
+@media only screen and (max-width: 1024px){
+	.wrap{
+		width:79%;
+	}
+	.contact_form input {
+		width: 60%;
+	}
+	.span i {
+		font-size: 1.2em;
+		padding: 13px 14px;
+	}
+	.span1 i {
+		font-size: 1.2em;
+		padding: 13px 14px;
+	}
+	.span2 i {
+		font-size: 1.2em;
+		padding: 13px 14px;
+	}
+	.checkbox {
+		margin-right: 0px;
+	}
+}
+@media only screen and (max-width: 800px){
+	.wrap{
+		width:95%;
+	}
+	.span i {
+		padding: 14px 12px;
+		font-size: 1.2em;
+	}
+	.span1 i {
+		font-size: 1.2em;
+		padding: 13px 20px;
+	}
+	.span2 i {
+		font-size: 1.2em;
+		padding: 13px 20px;
+	}
+	.contact_form {
+		background: url("../../../assets/images/border.png") no-repeat 313px 77px;
+	}
+	.forgot {
+		margin-right: 65px;
+		width: 38%;
+	}
+	.checkbox {
+		margin-right: 0px;
+	}
+}
+@media only screen and (max-width: 640px){
+	.wrap{
+		width:95%;
+	}
+	.contact-form h1 {
+		font-size: 1.3em;
+	}
+	.contact_form li {
+		height: 37px;
+		margin-top: 7.3%;
+	}
+	.contact_form input {
+		font-size: 1em;
+		padding: 5px 14px;
+	}
+	.contact_form input[type="submit"] {
+		font-size: 1.2em;
+		padding: 10px;
+		margin: 22px 0 30px;
+	}
+	
+	.forgot a {
+		font-size: 1em;
+	}
+	.span i {
+		padding: 11px 6px;
+		font-size: 1em;
+	}
+	.span img {
+		padding: 2px;
+	}
+	.span1 img {
+		padding: 2px;
+	}
+	.span1 i {
+		padding: 11px 6px;
+		font-size: 1em;
+	}
+	.span2 img {
+		padding: 2px;
+	}
+	.span2 i {
+		padding: 11px 6px;
+		font-size: 1em;
+	}
+	.contact_form {
+		background: url("../../../assets/images/border.png") no-repeat 247px 41px;
+	}
+	.forgot {
+		margin-right: 27px;
+		width: 39%;
+		margin-top: 6px;
+	}
+	.account h2 a {
+		font-size: 0.9em;
+	}
+	.checkbox i {
+		bottom: 10px;
+	}
+
+}
+@media only screen and (max-width: 480px){
+	.wrap{
+		width:56%;
+	}
+	.contact_form {
+		width: 100%;
+		background:none;
+	}
+	.contact_form li {
+		width: 99.5%;
+	}
+	.contact_form input[type="submit"] {
+		width: 100%;
+		margin: 22px 0 13px;
+	}
+	.forgot {
+		width: 82%;
+		margin-top: 7px;
+		margin-right: 41px;
+	}
+	.account {
+		width: 100%;
+	}
+	.account h2 a {
+		text-align: left;
+		margin-top: 15px;
+	}
+	.span {
+		margin-top: 3.4%;
+	}
+	.form_hint {
+		font-size: 0.8em;
+		padding: 6px 5px;
+		right: -128px;
+		bottom: 6px;
+	}
+	.form_hint::before {
+		bottom: 5px;
+	}
+	.checkbox i {
+		bottom: 34px;
+	}
+	.footer p {
+		font-size: 1.1em;
+	}
+}
+@media only screen and (max-width: 320px){
+	.wrap{
+		width:85%;
+	}
+	.contact_form {
+		width: 100%;
+		background:none;
+	}
+	.contact_form li {
+		width: 99.5%;
+	}
+	.contact_form input[type="submit"] {
+		width: 100%;
+		margin: 22px 0 13px;
+	}
+	.forgot {
+		width: 82%;
+		margin-top: 7px;
+		margin-right: 41px;
+	}
+	.account {
+		width: 100%;
+	}
+	.account h2 a {
+		text-align: left;
+		margin-top: 15px;
+	}
+	.span {
+		margin-top: 3.4%;
+	}
+	.form_hint {
+		font-size: 0.8em;
+		padding: 6px 5px;
+		right: -128px;
+		bottom: 6px;
+	}
+	.form_hint::before {
+		bottom: 5px;
+	}
+	.checkbox i {
+		bottom: 34px;
+	}
+	.footer p {
+		font-size: 1em;
+	}
+}
+
+/*
+ * Copyright 2016 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the
+ * License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ * express or implied. See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * CSS for FirebaseUI Javascript widget.
+ * All selectors should begin with a "firebaseui-" prefix to avoid conflicts.
+ */
+.firebaseui-container {
+  background-color: #fff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  direction: ltr;
+  font: 16px Roboto, arial, sans-serif;
+  margin: 0 auto;
+  max-width: 360px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.firebaseui-card-header {
+  padding: 24px 24px 0 24px;
+}
+
+
+.firebaseui-card-content {
+  padding: 0 24px;
+}
+
+.firebaseui-card-footer {
+  padding: 0 24px;
+}
+
+.firebaseui-card-actions {
+  box-sizing: border-box;
+  display: table;
+  font-size: 14px;
+  padding: 8px 24px 24px 24px;
+  text-align: left;
+  width: 100%;
+}
+
+.firebaseui-form-links {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.firebaseui-form-actions {
+  display: table-cell;
+  text-align: right;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.firebaseui-title,
+.firebaseui-subtitle {
+  color: rgba(0, 0, 0, 0.87);
+  direction: ltr;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.firebaseui-title {
+  padding-bottom: 20px;
+}
+
+.firebaseui-subtitle {
+  margin: 16px 0;
+}
+
+.firebaseui-text {
+  color: rgba(0, 0, 0, 0.87);
+  direction: ltr;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.firebaseui-text-emphasis {
+  font-weight: 700;
+}
+
+.firebaseui-error {
+  color: #dd2c00;
+  direction: ltr;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+  text-align: left;
+}
+
+.firebaseui-text-input-error {
+  /* Set a negative margin, as MDL text inputs have a large bottom margin. */
+  margin: -16px 0 16px;
+}
+
+
+.firebaseui-error-wrapper {
+  min-height: 16px;
+}
+
+
+.firebaseui-list-item {
+  direction: ltr;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.firebaseui-hidden {
+  display: none;
+}
+
+.firebaseui-relative-wrapper {
+  position: relative;
+}
+
+.firebaseui-label {
+  color: rgba(0, 0, 0, 0.54);
+  direction: ltr;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Override MDL floating text field label color. */
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label {
+  color: #757575;
+}
+
+.firebaseui-input,
+.firebaseui-input-invalid {
+  border-radius: 0; /** iOS puts rounded corners on text inputs. */
+  color: rgba(0, 0, 0, 0.87);
+  direction: ltr;
+  font-size: 16px;
+  width: 100%;
+}
+
+input.firebaseui-input,
+input.firebaseui-input-invalid{
+  direction: ltr;
+  text-align: left;
+}
+
+.firebaseui-input-invalid {
+  border-color: #dd2c00;
+}
+
+.firebaseui-textfield {
+  width: 100%;
+}
+
+/* Override MDL's error handling with our own.  */
+.firebaseui-textfield.mdl-textfield .firebaseui-input {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
+  background-color: #3f51b5;
+}
+
+.firebaseui-textfield-invalid.mdl-textfield .firebaseui-input {
+  border-color: #dd2c00;
+}
+
+.firebaseui-textfield-invalid.mdl-textfield .firebaseui-label::after {
+  background-color: #dd2c00;
+}
+
+.firebaseui-button {
+  display: inline-block;
+  height: 36px;
+  margin-left: 8px;
+  min-width: 88px;
+}
+
+.firebaseui-link {
+  color: #4285f4;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.firebaseui-link:hover {
+  text-decoration: underline;
+}
+
+.firebaseui-indent {
+  margin-left: 1em;
+}
+
+.firebaseui-tos {
+  color: #757575;
+  direction: ltr;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 24px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.firebaseui-page-provider-sign-in {
+  background: inherit;
+}
+
+.firebaseui-idp-list {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.firebaseui-idp-button {
+  direction: ltr;
+  font-weight: 500;
+  height: auto;
+  line-height: normal;
+  max-width: 220px;
+  min-height: 40px;
+  padding: 8px 16px;
+  text-align: left;
+  width: 100%;
+}
+
+.firebaseui-idp-list > .firebaseui-list-item {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.firebaseui-idp-icon-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.firebaseui-idp-icon {
+  border: none;
+  display: inline-block;
+  height: 18px;
+  vertical-align: middle;
+  width: 18px;
+}
+
+.firebaseui-idp-favicon {
+  border: none;
+  display: inline-block;
+  height: 14px;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 14px;
+}
+
+.firebaseui-idp-text {
+  color: #fff;
+  display: table-cell;
+  font-size: 14px;
+  padding-left: 16px;
+  text-transform: none;
+  vertical-align: middle;
+}
+
+.firebaseui-idp-text.firebaseui-idp-text-long {
+  display: table-cell;
+}
+
+.firebaseui-idp-text.firebaseui-idp-text-short {
+  display: none;
+}
+
+/* 220px for button + 2x24 for margin = 268px */
+@media (max-width: 268px) {
+  .firebaseui-idp-text.firebaseui-idp-text-long {
+    display: none;
+  }
+
+  .firebaseui-idp-text.firebaseui-idp-text-short {
+    display: table-cell;
+  }
+}
+
+/* Resize reCAPTCHA container on narrow mobile devices. */
+@media (max-width: 320px) {
+  .firebaseui-recaptcha-container > div > div {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+}
+
+.firebaseui-idp-password,
+.firebaseui-idp-password:hover,
+.mdl-button.firebaseui-idp-password:active,
+.mdl-button.firebaseui-idp-password:focus {
+  background-color: #db4437;
+}
+
+.firebaseui-idp-phone,
+.firebaseui-idp-phone:hover,
+.mdl-button.firebaseui-idp-phone:active,
+.mdl-button.firebaseui-idp-phone:focus {
+  background-color: #02bd7e;
+}
+
+.firebaseui-idp-google,
+.firebaseui-idp-google:hover,
+.mdl-button.firebaseui-idp-google:active,
+.mdl-button.firebaseui-idp-google:focus {
+  background-color: #ffffff;
+}
+
+.firebaseui-idp-google > .firebaseui-idp-text {
+  color: #757575;
+}
+
+.firebaseui-idp-github,
+.firebaseui-idp-github:hover,
+.mdl-button.firebaseui-idp-github:active,
+.mdl-button.firebaseui-idp-github:focus {
+  background-color: #333333;
+}
+
+.firebaseui-idp-facebook,
+.firebaseui-idp-facebook:hover,
+.mdl-button.firebaseui-idp-facebook:active,
+.mdl-button.firebaseui-idp-facebook:focus {
+  background-color: #3b5998;
+}
+
+.firebaseui-idp-twitter,
+.firebaseui-idp-twitter:hover,
+.mdl-button.firebaseui-idp-twitter:active,
+.mdl-button.firebaseui-idp-twitter:focus {
+  background-color: #55acee;
+}
+
+.firebaseui-info-bar {
+  background-color: #f9edbe;
+  border: 1px solid #f0c36d;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  left: 10%;
+  padding: 8px 16px;
+  position: absolute;
+  right: 10%;
+  text-align: center;
+  top: 0;
+}
+
+.firebaseui-info-bar-message {
+  font-size: 12px;
+  margin: 0;
+}
+
+.firebaseui-dialog {
+  box-sizing: border-box;
+  /* We need to set these properties again since dialogs are not contained in
+   * the main FirebaseUI container. */
+  color: rgba(0, 0, 0, 0.87);
+  font: 16px Roboto, arial, sans-serif;
+  /* If we do not set height here, the default Safari dialog settings make the
+   * dialog too tall. */
+  height: auto;
+  padding: 24px;
+  text-align: left;
+}
+
+.firebaseui-dialog-icon-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.firebaseui-dialog-icon {
+  float: left;
+  height: 40px;
+  margin-right: 24px;
+  width: 40px;
+}
+
+.firebaseui-progress-dialog-message {
+  display: table-cell;
+  font-size: 16px;
+  font-weight: 400;
+  min-height: 40px;
+  vertical-align: middle;
+}
+
+.firebaseui-progress-dialog-loading-icon {
+  height: 28px;
+  margin: 6px 30px 6px 6px;
+  width: 28px;
+}
+
+.firebaseui-icon-done {
+  background-image: url("https://www.gstatic.com/images/icons/material/system/2x/done_googgreen_36dp.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 36px 36px;
+}
+
+.firebaseui-phone-number {
+  display: flex;
+}
+
+.firebaseui-country-selector {
+  /* TODO: Use 2x for HD displays. */
+  background-image: url('https://www.gstatic.com/images/icons/material/system/1x/arrow_drop_down_grey600_18dp.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 18px auto;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.87);
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: normal;
+  height: initial;
+  line-height: normal;
+  margin: 20px 24px 20px 0;
+  padding: 4px 20px 4px 0;
+  width: 90px;
+}
+
+.firebaseui-country-selector-flag {
+  display: inline-block;
+  margin-right: 1ex;
+}
+
+.firebaseui-flag {
+  background-image: url("https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/flags_sprite_2x.png");
+  background-size: 100% auto;
+  /* Set a drop shadow so white flags are more distinct. */
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.54));
+  height: 14px;
+  width: 24px;
+}
+
+.firebaseui-list-box-dialog {
+  max-height: 90%;
+  overflow: auto;
+  padding: 8px 0 0 0;
+}
+
+.firebaseui-list-box-actions {
+  padding-bottom: 8px;
+}
+
+.firebaseui-list-box-icon-wrapper {
+  display: table-cell;
+  padding-right: 24px;
+  vertical-align: top;
+}
+
+.firebaseui-list-box-label-wrapper {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.firebaseui-list-box-dialog-button {
+  color: rgba(0, 0, 0, 0.87);
+  direction: ltr;
+  font-size: 16px;
+  font-weight: normal;
+  height: initial;
+  line-height: normal;
+  min-height: 48px;
+  padding: 14px 24px;
+  text-align: left;
+  text-transform: none;
+  width: 100%;
+}
+
+.firebaseui-phone-number-error {
+  /* Align this with the national number input. Add a margin of
+   * button width (90px) + button margin (24px). */
+  margin-left: 114px;
+}
+
+.firebaseui-busy-indicator {
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 55px;
+  width: 100%;
+}
+
+.firebaseui-callback-indicator-container .firebaseui-busy-indicator {
+  top: 0px;
+}
+
+.firebaseui-callback-indicator-container {
+  height: 120px;
+}
+
+.firebaseui-new-password-component {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.firebaseui-input-floating-button {
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  height: 24px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 24px;
+}
+
+.firebaseui-input-toggle-on {
+  background-image: url("https://www.gstatic.com/images/icons/material/system/1x/visibility_black_24dp.png");
+}
+
+.firebaseui-input-toggle-off {
+  background-image: url("https://www.gstatic.com/images/icons/material/system/1x/visibility_off_black_24dp.png");
+}
+
+.firebaseui-input-toggle-focus {
+  opacity: 0.87;
+}
+
+.firebaseui-input-toggle-blur {
+  opacity: 0.38;
+}
+
+.firebaseui-recaptcha-wrapper {
+  display: table;
+  margin: 0 auto;
+  padding-bottom: 8px;
+}
+
+.firebaseui-recaptcha-container {
+  display: table-cell;
+}
+
+.firebaseui-recaptcha-error-wrapper {
+  caption-side: bottom;
+  display: table-caption;
+}
+
+.firebaseui-change-phone-number-link {
+  display: block;
+}
+
+.firebaseui-resend-container {
+  direction: ltr;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.firebaseui-id-resend-countdown {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+/**
+ * This div holds the invisible reCAPTCHA badge. The float property is needed
+ * as it messes up the cancel and submit buttons to align vertically when they
+ * should horizontally.
+ */
+.firebaseui-id-page-phone-sign-in-start .firebaseui-form-actions div {
+  float: left;
+}
+
+@media (max-width: 480px) {
+  .firebaseui-container {
+    box-shadow: none;
+    max-width: none;
+    width: 100%;
+  }
+
+  .firebaseui-card-header {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 16px;
+    padding: 16px 24px 0 24px;
+  }
+
+  .firebaseui-title {
+    padding-bottom: 16px;
+  }
+
+  .firebaseui-card-actions {
+    padding-right: 24px;
+  }
+
+  .firebaseui-busy-indicator {
+    top: 0px;
+  }
+}
+
+/*
+ * Bootstrap applies styles to all <label> elements, so override those styles.
+ */
+.mdl-textfield__label {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+
+.zerogrid {
+	width: 1024px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.selectassure {
+	width: 60%;
+	height: auto;
+	margin: 5% 20% 0 20%;
+	padding: 0 0 0 0;
+	text-align: center;
+	float: left;
+	position: relative;
+}
+.loginDBS {
+	width: 40%;
+	height: auto;
+	margin: 3% 30% 0 30%;
+	padding: 4% 0 4% 0;
+	text-align: left;
+	font-family: Lato;
+	font-size: 14px;
+	color: #ffffff;
+	font-style: normal;
+	background-color: #ebebeb;
+	border: 2px solid #CCC;
+	float: left;
+	z-index: 1;
+}
+.go_btn {
+	cursor: pointer;
+	width: 80px;
+	height: 80px;
+	margin: 0% 0 30% 42%;
+	padding: 0px 0 0 0;
+	float: left;
+	-webkit-border-radius: 50px;
+	background-color: #cc0000;
+	border: 2px #4d4d4d solid;
+	text-decoration: none;
+}
+.rememberMe{
+	margin-left: 22%;
+}
+.checkMe{
+	display: inline-block !important;
+}
+#pwd{
+	-webkit-text-security:disc;
+}

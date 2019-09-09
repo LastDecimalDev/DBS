@@ -1,0 +1,1868 @@
+<div>
+  <div class="rootCus">
+    <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+    <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="menu">
+      <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+      <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+      <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+      <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+    </ul>  
+  
+  </div>     
+<div id="dbs">
+        <div class="zerogrid" style="width: 100%;" *ngIf="!loading">
+            <div class="content searchheaderpanel proposal_form" id="sPanel">
+                <div class="col-xs-12  cf-title clearfix">
+                    <!--<div class="back-to-results" (click)="history.go(-1)" ><span class = "glyphicon glyphicon-menu-left"></span>Back to results</div>-->
+                      <div class="proposal_heading">
+                            <div style="padding:5px 0px 0px;">Buy Car Insurance</div>
+                      </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-3 pnone">
+                      <div class="insurer-img">
+                        <img class="img-responsive" src = "{{imagePath}}/image/ilogo/i{{proposalInput.insurerId}}.png">
+                        
+                      </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-9 pnone" style="border-left:1px solid #eaeaea;">
+                        <div class="pol-name">
+                                    <span>{{proposalInput.insurerName}}  {{proposalInput.productName}}</span>
+                                    <span> - {{proposalInput.vehicle.vehicleName}}</span>
+                        </div>
+                        <div class="pol-val">
+                          <span>Sum Insured</span>
+                          <span class="value">{{proposalInput.vehicle.idv | currency: 'INR':true}}</span>
+                          <br class="visible-xs visible-sm">
+                          <span>Annual Premium</span>
+                          <span class="value">{{proposalInput.policy.premiumPayable | currency: 'INR':true}}</span>
+                          <span class="val-typ" style="font-size: 12px;">(Includes 18.0% Goods and Services Tax)*</span>
+                        </div>
+                    </div>
+            </div>
+            <div  *ngIf="loading" class="loading col-sm-10 col-md-10 col-lg-10">
+                <div class="ctralign"><img src = "../../../../../assets/images/loading.gif"></div>
+            </div>
+
+            <!--<div id="stage_data" *ngIf="!loading">
+                    <ul class="nav nav-pills nav-wizard extraSpace" id="tabs">
+                      <li class="active"><a href="#panel1" data-toggle="tab">Policy<span *ngIf="tabStatus.firstComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+                      <li id="SecondTab" class="tabdisable"><a href="#panel2" data-toggle="tab">Proposer<span *ngIf="tabStatus.secondComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+
+                        <li class="tabdisable"><a href="#panel3" data-toggle="tab">Vehicle</a></li>
+                        <li class="tabdisable"><a href="#panel4" data-toggle="tab">Previous policy</a></li>
+                        <li class="tabdisable"><a href="#panel5" data-toggle="tab">Contact Info.</a></li>
+                        <li class="tabdisable"><a href="#panel6" data-toggle="tab">Cover</a></li>
+                        <li class="tabdisable"><a href="#panel7" data-toggle="tab"> T & C </a></li>
+                    </ul>
+                    </div>-->
+
+                    <div id="stage_data" *ngIf="!loading">
+                      <ul class="nav nav-pills nav-wizard extraSpace" id="tabs">
+                          <li class="active"><a href="#panel1" data-toggle="tab">Policy<span *ngIf="tabStatus.firstComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+                          <li id="SecondTab" class="tabdisable"><a href="#panel2" data-toggle="tab">Proposer<span *ngIf="tabStatus.secondComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+                          <li id="thirdTab" class="tabdisable"><a href="#panel3" data-toggle="tab">Vehicle<span *ngIf="tabStatus.thirdComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+                          <li id="forthTab" class="tabdisable"><a href="#panel4" data-toggle="tab">Previous policy<span *ngIf="tabStatus.fourthComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+                          <li id="fifthTab" class="tabdisable"><a href="#panel5" data-toggle="tab">Contact Info.<span *ngIf="tabStatus.fifthComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+                          <li id="sixthTab" class="tabdisable"><a href="#panel6" data-toggle="tab">Cover<span *ngIf="tabStatus.sixthComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+                          <li id="seventhTab" class="tabdisable"><a href="#panel7" data-toggle="tab">T & C <span *ngIf="tabStatus.seventhComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+                      </ul>
+                      </div>       
+<div class="tab-content">
+    <div class="tab-pane fade in active content searchheaderpanel" id="panel1">                
+        <form id="royalS-policy-form" class="form-horizontal" #policyform = "ngForm" autocomplete="off" novalidate >
+                <div class="form-panel ">     
+                    <div class="heads">Policy</div>
+                        <div class = "clear"></div>
+                        <div class="body">
+                            <div class="main-section">
+                            <div class="proposer-process">
+                                <div class="define">
+                                <img src="../../../../../assets/images/info.png">
+                                <span>About Your Policy</span>
+                                </div>
+        <div class="row mnone">
+                <div class="col-sm-10" style="margin-bottom:10px;">
+                    
+                    <div class="col-sm-4">
+                        <div class="form-group required">
+                        <label class="control-label">Policy Start Date</label>
+                        <span class="input-group">
+                            <input type="text" class="form-control datePick" [(ngModel)]="proposalInput.policy.policyStartdate" name="startDate" readonly required>
+                        <span class="input-group-btn">
+                                <button type="button" class="btn btn-primary btn_prim " (click)="open('policyStartDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                        </span>
+                        <span class="has-error">{{policyStartDateError}}</span>
+                        </div>
+                        </div>
+                        <div class="col-sm-4">
+                        <div class="form-group policyDate required">
+                        <label class="control-label">Policy End Date</label>
+                        <span class="input-group">
+                        <input type="text" class="form-control datePick" [(ngModel)]="proposalInput.policy.policyEnddate" name="endDate" readonly required>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-primary btn_prim " (click)="open('policyEndDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </span>   
+                        </div>
+                        </div>
+                        <div class = "clear"></div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+            </div>
+            <div class = "clear"></div>
+            <div class="foot">
+                    <div class="clearfix">
+                      <div class="cf-pull-right">
+                        <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="policyform.invalid" (click)="nextSection('1')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                      </div>
+                    </div>
+                </div> 
+            </div>
+    </form>
+
+    </div>
+
+
+    <!-- start of second section-->
+    <div class="tab-pane fade content searchheaderpanel" id="panel2">
+        <form id="royalS-policy-form" class="form-horizontal" #proposerForm = "ngForm" autocomplete="off" novalidate>
+            <div class = "clear"></div>
+        <div class="form-panel "> 
+            <div class="heads">Proposer</div>
+            <div class = "clear"></div>
+            <div class="body">
+                <div class="main-section">
+                  <div class="proposer-process">
+                    <div class="define">
+                        <img src="../../../../../assets/images/info.png">
+                        <span>The person who is paying for the policy</span>
+                    </div>
+
+                    <div class="row mnone">
+                        <div class="col-sm-11" style="margin-bottom:10px;">
+                            <div class="col-sm-4 col-md-4 col-lg-4 list-item-proposer">
+                                <div class="form-group required">
+                                  <label class="control-label  label-block">This Vehicle Belongs To</label>
+                                  <br>
+                                  <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-primary" name="secinsuGender" [ngClass]="{'active':proposalInput.proposer.custType=='I'}"  (click)="proposalInput.proposer.custType='I'" id="proposerI" [(ngModel)]="proposalInput.proposer.custType" required ngDefaultControl>Individual</label>
+                                      <label class="btn btn-primary" name="secinsuGender" [ngClass]="{'active':proposalInput.proposer.custType=='O'}" (click)="proposalInput.proposer.custType='O'" id="proposerO"  [(ngModel)]="proposalInput.proposer.custType" required ngDefaultControl>Company</label>
+                                  </div> 
+                                </div>
+                              </div>
+                              <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.custType=='I'">
+                                  <div class="form-group required">
+                                    <label class="control-label">Title </label>
+                                    <select class="form-control field" [(ngModel)]="proposalInput.proposer.title" name="title" required>
+                                      <option value="" disabled>Select</option>
+                                      <option value="{{title.id}}" *ngFor="let title of insurerMaster.Title">{{title.value}}</option>
+
+                                    </select>
+                                  </div>
+                                 </div>
+                                 <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.custType=='O'">
+                                    <div class="form-group " [ngClass]="{'has-error':org.invalid && !org.pristine}">
+                                      <label class="control-label"><span>Company Name</span></label>
+                                      <input type="text" class="form-control" name="org" #org="ngModel" [(ngModel)]="proposalInput.proposer.orgName" required pattern="^[a-zA-Z ]*$">
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.custType=='O'">
+                                    <div class="form-group required" [ngClass]="{'has-error':ContactfirstName.invalid && ! ContactfirstName.pristine}">
+                                      <label class="control-label">Contact First Name</label>
+                                       <input type="text" name="ContactfirstName" #ContactfirstName="ngModel" minlength="3" class="form-control" [(ngModel)]="proposalInput.proposer.firstName" pattern="^[a-zA-Z ]*$" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.custType=='I'">
+                                    <div class="form-group required" [ngClass]="{'has-error':firstName.invalid && ! firstName.pristine}">
+                                      <label class="control-label">First Name</label>
+                                       <input type="text" name="firstName" #firstName="ngModel" minlength="3" class="form-control" [(ngModel)]="proposalInput.proposer.firstName" pattern="^[a-zA-Z ]*$" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.custType=='I'">
+                                    <div class="form-group" [ngClass]="{'has-error':middlename.invalid && ! middlename.pristine}">
+                                      <label class="control-label optional-label"><span>Middle Name</span></label>
+                                      <input type="text" class="form-control" name="middlename" #middlename="ngModel" [(ngModel)]="proposalInput.proposer.middleName"  pattern="^[a-zA-Z ]*$" required>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.custType=='O'">
+                                    <div class="form-group required"  [ngClass]="{'has-error':ContactlastName.invalid && ! ContactlastName.pristine}">
+                                      <label class="control-label">Contact Last Name</label>
+                                        <input type="text" name="ContactlastName" #ContactlastName="ngModel" minlength="3" #lastName="ngModel" class="form-control" [(ngModel)]="proposalInput.proposer.lastName" pattern="^[a-zA-Z ]*$" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.custType=='I'">
+                                    <div class="form-group required"  [ngClass]="{'has-error':lastName.invalid && ! lastName.pristine}">
+                                      <label class="control-label">Last Name</label>
+                                        <input type="text" name="lastName" minlength="3" #lastName="ngModel" class="form-control" [(ngModel)]="proposalInput.proposer.lastName" pattern="^[a-zA-Z ]*$" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.custType=='I'">
+                                    <!--<div class="form-group required">
+                                      <label class="control-label">Gender</label>
+                                      <div class="clear"></div>
+                                      <div class="btn-group">
+                                        <label class="btn btn-primary btn_prim"  (click)="proposalInput.proposer.gender=='M'"  [ngClass]="{'active':proposalInput.proposer.gender=='M'}" [(ngModel)]="proposalInput.proposer.gender" id="Mprop" name="genderprop" required ngDefaultControl>Male</label>
+                                          <label class="btn btn-primary btn_prim" (click)="proposalInput.proposer.gender=='F'" [ngClass]="{'active':proposalInput.proposer.gender=='F'}"    [(ngModel)]="proposalInput.proposer.gender" id="Fprop" name="genderprop" required ngDefaultControl>Female</label>
+                                      </div>
+                                    </div>-->
+
+                                    <div class="form-group required">
+                                        <label class="control-label  label-block">Gender</label>
+                                        <br>
+                                        <div class="btn-group" data-toggle="buttons">
+                                          <label class="btn btn-primary" name="genderprop" [ngClass]="{'active':proposalInput.proposer.gender=='M'}"  (click)="proposalInput.proposer.gender='M'" id="genderpropM" [(ngModel)]="proposalInput.proposer.gender" ngDefaultControl required>Male</label>
+                                            <label class="btn btn-primary" name="genderprop" [ngClass]="{'active':proposalInput.proposer.gender=='F'}" (click)="proposalInput.proposer.gender='F'" id="genderpropF"  [(ngModel)]="proposalInput.proposer.gender" ngDefaultControl required>Female</label>
+                                        </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-sm-4" *ngIf="proposalInput.proposer.custType=='I'">
+                                    <div class="form-group required">
+                                      <label class="control-label">Proposer DOB</label>
+                                      <span class="input-group">
+                                      <input type="date" class="form-control" name="dob"   [(ngModel)]="proposalInput.proposer.proposerDob" min="{{adultDobOptions.minDate | date: 'yyyy-MM-dd'}}" max="{{adultDobOptions.maxDate | date: 'yyyy-MM-dd'}}" required />
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-primary btn_prim "  (click)="open('proposerDob')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                            </span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-4 list-item-proposer" *ngIf="proposalInput.proposer.custType=='I'">
+                                    <div class="form-group required">
+                                    <label class="control-label">Marital Status</label>
+                                    <select class="form-control" [(ngModel)]="proposalInput.proposer.maritalStatus" name="maritalStatus" required>
+                                      <option value="" disabled>Select</option>
+                                      <option value="S">Single</option>
+                                      <option value="M">Married</option>
+                                    </select>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-4"  *ngIf="proposalInput.proposer.custType=='I'">
+                                    <div class="form-group required">
+                                      <label class="control-label">Occupation Type</label>
+                                      <select class="form-control" [(ngModel)]="proposalInput.proposer.occupationType" name="occupation" required>
+                                        <option value="" disabled>--Select--</option>
+                                        <option value="{{occupation.id}}" *ngFor="let occupation of insurerMaster.Occupation">{{occupation.value}}</option>
+                                      </select>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-4">
+                                    <div class="form-group required">
+                                      <label class="control-label">Driving Experience</label>
+                                      <select class="form-control" [(ngModel)]="proposalInput.proposer.drivingExp" name="drivingExp" required>
+                                        <option value="" disabled>--Select--</option>
+                                        <option value="{{item.id}}" *ngFor="let item of insurerMaster.DrivingExp">{{item.value}}</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-sm-4">
+                                    <div class="form-group required"  [ngClass]="{'has-error':proEmail.invalid && ! proEmail.pristine}">
+                                      <label class="control-label">Email</label>
+                                      <input type="text" class="form-control field" name="proEmail" #proEmail="ngModel" [(ngModel)]="proposalInput.proposer.email" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  required>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-sm-4">
+                                    <div class="form-group required"  [ngClass]="{'has-error':proMobile.invalid && ! proMobile.pristine}">
+                                      <label class="control-label">Mobile</label>
+                                      <span class="input-group">
+                                          <span class="input-group-addon">+91</span>
+                                      <input type="text" name="proMobile" #proMobile="ngModel" class="form-control field" [(ngModel)]="proposalInput.proposer.mobile"  maxlength="10" minlength="10" pattern="^[7-9]{1}[0-9]{9}$" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" required>
+                                    </span>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <div class="form-group required"  [ngClass]="{'has-error':pan.invalid && ! pan.pristine}">
+                                      <label class="control-label">Pan</label>
+                                      <input type="text" name="pan" #pan="ngModel" class="form-control" [(ngModel)]="proposalInput.proposer.pan" pattern="^[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}$"maxlength="10"  required>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-sm-4 col-md-4 col-lg-4" *ngIf="proposalInput.proposer.custType=='I'">
+                                    <div class="form-group required"  [ngClass]="{'has-error':aadhar.invalid && !aadhar.pristine}">
+                                      <label class="control-label">Aadhar</label>
+                                      <input type="text" name="aadhar" #aadhar="ngModel" class="form-control" [(ngModel)]="proposalInput.proposer.aadhar" placeholder="9999-9999-9999" maxlength="14" pattern="^[1-9]{4}-[0-9]{4}-[0-9]{4}$"  required>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-4 col-md-4 col-lg-4"  *ngIf="proposalInput.proposer.custType=='O'">
+                                    <div class="form-group required" [ngClass]="{'has-error':gstn.invalid && ! gstn.pristine}">
+                                      <label class="control-label">GSTN</label>
+                                      <input type="text" name="gstn" #gstn="ngModel" class="form-control" [(ngModel)]="proposalInput.proposer.gstn" pattern="^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[A-Z1-9]Z[0-9]$"  required>
+                                    </div>
+                                  </div>
+
+                                  <div class= "clear"></div>
+								                    <div class="col-sm-4">
+								                   
+                                  <div class="form-group required">
+                                      <label class="control-label  label-block">Are you a Automobile Association Member?</label>
+                                      <br>
+                                      <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary" name="ismembe" [ngClass]="{'active':proposalInput.proposer.isAAMember=='Y'}"  (click)="proposalInput.proposer.isAAMember='Y'" id="ismembeY" [(ngModel)]="proposalInput.proposer.isAAMember" required ngDefaultControl>Yes</label>
+                                          <label class="btn btn-primary" name="ismembe" [ngClass]="{'active':proposalInput.proposer.isAAMember=='N'}" (click)="proposalInput.proposer.isAAMember='N'" id="ismembeN"  [(ngModel)]="proposalInput.proposer.isAAMember" required ngDefaultControl>No</label>
+                                      </div>
+                                    </div>
+                                </div>
+                                
+                                <div *ngIf="proposalInput.proposer.isAAMember=='Y'">
+                                  <div class="col-sm-4">
+                                     <div class="form-group required"  [ngClass]="{'has-error':aanumber.invalid && ! aanumber.pristine}">
+                                       <label class="control-label">Automobile Association Number</label>
+                                       <input type="text" name="aanumber" #aanumber="ngModel" class="form-control field" minlength = "5" [(ngModel)]="proposalInput.proposer.aaNumber" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"  required>
+                                     </div>
+                                  </div>	
+                               </div>
+
+                               <div class="col-sm-4" *ngIf="proposalInput.proposer.isAAMember=='Y'">
+                                <div class="form-group required">
+                                  <label class="control-label">Membership Expiry Date</label>
+                                  <span class="input-group">
+                                  <input type="date" class="form-control" name="aaExpiryDate" [(ngModel)]="proposalInput.proposer.aaExpiryDate" min="{{futureDateOptions.minDate | date: 'yyyy-MM-dd'}}" max="{{futureDateOptions.maxDate | date: 'yyyy-MM-dd'}}" required />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-primary btn_prim "  (click)="open('aaExpiryDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div class="clear"></div>
+    											    							
+    							          <div class="col-sm-4">
+    								          <div class="form-group required" [ngClass]="{'has-error':nomineename.invalid && ! nomineename.pristine}">
+	    								          <label class="control-label">Nominee Name</label>
+	    								          <input type="text" class="form-control" name="nomineename" #nomineename="ngModel" [(ngModel)]="proposalInput.proposer.nomineeName" ng-pattern="^[a-zA-Z ]*$" required>
+    								          </div>
+    						          	</div>
+                            <div class="col-sm-4">
+                              <div class="form-group required">
+                                <label class="control-label">Nominee DOB</label>
+                                <span class="input-group">
+                                <input type="date" class="form-control" name="nomineeDob"  [(ngModel)]="proposalInput.proposer.nomineeDob" (change)="calculateAge(proposalInput.proposer.nomineeDob)" min="{{nomineeDobOptions.minDate | date: 'yyyy-MM-dd'}}" max="{{nomineeDobOptions.maxDate | date: 'yyyy-MM-dd'}}" required />
+                                      <span class="input-group-btn">
+                                          <button type="button" class="btn btn-primary btn_prim "  (click)="open('nomineeDob')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                      </span>
+                                </span>
+                             </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="form-group required">
+                              <label class="control-label">Nominee Relation</label>
+                              <select class="form-control field" [(ngModel)]="proposalInput.proposer.nomineeRel" name="nomineeRel" required>
+                                <option value="" disabled>Select</option>
+                                <option value="{{item.id}}" *ngFor="let item of insurerMaster.NomineeRel">{{item.value}}</option>
+                              </select>
+                              </div>
+                            </div>
+                            
+                            <div class="col-sm-12 col-md-12 col-lg-12" *ngIf="proposalInput.proposer.nomineeAge<18">
+                              <div class="col-sm-4" >	
+                                <div class="form-group required" [ngClass]="{'has-error':AppFName.invalid && ! AppFName.pristine}">
+                                  <label class="control-label">Appointee  First Name </label>
+                                  <input type="text" class="form-control field" name="AppFName" #AppFName="ngModel" minlength="3" maxlength="40" [(ngModel)]="proposalInput.proposer.appointeeName" pattern="^[a-zA-Z ]*$" required>
+                                </div>
+                              </div>
+                              <div class="col-sm-4" >
+                                <div class="form-group required"  [ngClass]="{'has-error':AppLName.invalid && ! AppLName.pristine}">
+                                <label class="control-label">Appointee Last Name </label>
+                                <input type="text" class="form-control field" name="AppLName" #AppLName="ngModel" minlength="3" maxlength="40" [(ngModel)]="proposalInput.proposer.appointeeLastName" pattern="^[a-zA-Z ]*$" required>
+                                </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-group required">
+                                <label class="control-label">Appointee Relation </label>
+                                <select class="form-control field" [(ngModel)]="proposalInput.proposer.appointeeRel" name="appointeeRel" required>
+                                  <option value="" disabled>--Select--</option>
+                                  <option value="{{item.id}}" *ngFor="let item of insurerMaster.AppointeeRel">{{item.value}}</option>
+                                </select>
+                                </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-group required">
+                                  <label class="control-label">Appointee DOB</label>
+                                  <span class="input-group">
+                                   <input type="date" class="form-control" name="appointeeDob"  [(ngModel)]="proposalInput.proposer.appointeeDOB"  required />
+                                   <span class="input-group-btn">
+                                            <button type="button" class="btn btn-primary btn_prim " (click)="open('appointeeDOB')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                 </span>
+                              </div>
+                              </div>
+                            </div>
+                            <div class = "clear"></div>
+                            <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;" ></p>   
+                                  
+                          </div>
+                      </div>
+
+                    </div>
+                    </div>
+                    </div>
+                   
+                    <div class = "clear"></div>
+            
+                    <div class="foot">
+                      <div class="clearfix">
+                        <div class="cf-pull-right">
+                           <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('2')">
+                             <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+                       </button>
+                          <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="proposerForm.invalid"  (click)="nextSection('2')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                        </div>
+                      </div>
+                    </div> 
+          </div>
+          </form>
+      </div>
+          <!-- end of second section-->
+
+              <!-- start of third section-->
+    <div class="tab-pane fade content searchheaderpanel" id="panel3">
+      <form id="royalS-policy-form" class="form-horizontal" #vehicleForm = "ngForm" autocomplete="off" novalidate>
+          <div class = "clear"></div>
+          <div class="form-panel">
+            <div class = "clear"></div>
+           <div class="heads">Vehicle</div>
+           <div class = "clear"></div>
+           <div class="body">
+              <div class="main-section">
+                  <div class="proposer-process">
+                      <div class="define">
+                          <img src="../../../../../assets/images/info.png">
+                          <span>Tell us about the vehicle you want to Insure</span>
+                        </div>
+                        <div class = "clear"></div>
+                        <div class="row mone">
+                            <div class="col-sm-11">
+                                <div class="col-sm-6" *ngIf="proposalInput.policy.typeOfBusiness == 'Rollover'">
+                        
+                                    <div class="form-group required">
+                                        <label class="control-label  label-block">Has Vehicle Ownership changed in Last 12 months?</label>
+                                        <br>
+                                        <div class="btn-group" data-toggle="buttons">
+                                          <label class="btn btn-primary" name="isOwnership" [ngClass]="{'active':proposalInput.vehicle.isOwnershipChanged=='Y'}"  (click)="proposalInput.vehicle.isOwnershipChanged='Y'" id="isOwnershipY" [(ngModel)]="proposalInput.vehicle.isOwnershipChanged" required ngDefaultControl>Yes</label>
+                                            <label class="btn btn-primary" name="isOwnership" [ngClass]="{'active':proposalInput.vehicle.isOwnershipChanged=='N'}" (click)="proposalInput.vehicle.isOwnershipChanged='N'" id="isOwnershipN"  [(ngModel)]="proposalInput.vehicle.isOwnershipChanged" required ngDefaultControl>No</label>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="clear"></div>
+                                  <div class="col-sm-4">
+                                      <div class="form-group required" [ngClass]="{'has-error':rto.invalid && ! rto.pristine}">
+                                        <label class="control-label">RTO</label>
+                                        <input type="text" name="rto" #rto="ngModel" class="form-control" [(ngModel)]="proposalInput.vehicle.rto" readonly required>
+                                      </div>
+                                     </div>
+                                     
+                                     <div class="col-sm-4" *ngIf="proposalInput.policy.typeOfBusiness=='New Business'">
+                                       <div class="form-group"  [ngClass]="{'has-error':regNumber.invalid && !regNumber.pristine}">
+                                       <label class="control-label">Registration Number</label>
+                                       <input type="text" class="form-control"  name="regNumber" #regNumber="ngModel" [(ngModel)]="proposalInput.vehicle.vehicleRegno" pattern="^[A-Za-z]{2}(-)[0-9]{2}[C]?(-)[A-Z]{1,3}(-)[0-9]{4}$" required>
+                                       </div>
+                                     </div>
+                                     
+                                     <div class="col-sm-4" *ngIf="proposalInput.policy.typeOfBusiness=='Rollover'" >
+                                       <div class="form-group required"  [ngClass]="{'has-error':regNumber.invalid && !regNumber.pristine}">
+                                       <label class="control-label">Registration Number</label>
+                                       <input type="text" class="form-control" name="regNumber" #regNumber="ngModel" placeholder="MH-01-AR-1234" [(ngModel)]="proposalInput.vehicle.vehicleRegno" pattern="^[A-Za-z]{2}(-)[0-9]{2}[C]?(-)[A-Z]{1,3}(-)[0-9]{4}$"  required>
+                                       </div>
+                                     </div>
+
+                                     <div class="col-sm-4">
+                                        <div class="form-group required">
+                                          <label class="control-label">Registration Date</label>
+                                          <input type="text" class="form-control" name="vehicleOfReg" [(ngModel)]="proposalInput.vehicle.vehicleRegistrationDate" readonly/>
+                                        </div>	
+                                     </div> 
+                                     <div class="col-sm-4">
+                                      <div class="form-group required"   [ngClass]="{'has-error':engineNo.invalid && ! engineNo.pristine}">
+                                        <label class="control-label">Engine No</label>
+                                        <input type="text" name="engineNo" #engineNo="ngModel" class="form-control field" pattern="^[a-zA-Z0-9]{6,20}$" [(ngModel)]="proposalInput.vehicle.engineNo" required>
+                                      </div>
+                                     </div>
+                                     
+                                     <div class="col-sm-4">
+                                     <div class="form-group required"   [ngClass]="{'has-error':chassisNo.invalid && ! chassisNo.pristine}">
+                                       <label class="control-label">Chassis  No</label>
+                                       <input type="text" name="chassisNo" #chassisNo="ngModel" class="form-control field" pattern="^[a-zA-Z0-9]{6,20}$"  [(ngModel)]="proposalInput.vehicle.chassisNo" required>
+                                     </div>
+                                     </div>
+
+                                     <div class="col-sm-4">
+                                        <div class="form-group"   [ngClass]="{'has-error':dob.invalid && ! dob.pristine}">
+                                          <label class="control-label">Youngest Driver DOB</label>
+                                          
+                                          <span class="input-group">
+                                              <input type="date" class="form-control" name="dob"  #dob="ngModel" [(ngModel)]="proposalInput.vehicle.youngestDriverDob" min="{{adultDobOptions.minDate | date: 'yyyy-MM-dd'}}" max="{{adultDobOptions.maxDate | date: 'yyyy-MM-dd'}}" required />
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-primary btn_prim "  (click)="open('youngestDriverDob')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                                    </span>
+                                              </span>
+                                        </div>
+                                      </div>
+                                    
+                                       <div class="col-sm-4">
+                                          <div class="form-group">
+                                            <label class="control-label">No Of Drivers</label>
+                                            <select class="form-control" name="noOfDrivers" #noOfDrivers="ngModel" [(ngModel)]="proposalInput.vehicle.noOfDrivers" required>
+                                              <option value="" disabled>--Select--</option>
+                                              <option value="1">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                            </select>
+                                          
+                                          </div>
+                                       </div>
+
+                                       <div class="col-sm-4">
+                                          <div class="form-group required">
+                                           <label class="control-label">Mostly Driven On</label>
+                                           <select class="form-control field" name = "roadType" #roadType="ngModel" [(ngModel)]="proposalInput.vehicle.roadTypeCodes" required>
+                                            <option value="" disabled>--Select--</option>
+                                             <option value="City roads">City roads</option>
+                                             <option value="Highways">Highways</option>
+                                             <option value="Hilly areas">Hilly areas</option>
+                                             <option value="Village roads">Village roads</option>
+                                             <option value="Others">Others</option>
+                                           </select>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-4">
+                                           <div class="form-group required"   [ngClass]="{'has-error':annualMilleage.invalid && ! annualMilleage.pristine}">
+                                             <label class="control-label">Monthly Mileage</label>
+                                             <div class="clear"></div>
+                                             <input type="text" class="form-control" maxlength="5" minlength="4" [(ngModel)]="proposalInput.vehicle.annualMilleage" name="annualMilleage"  #annualMilleage="ngModel"  (change)="checkAnualMilage(proposalInput.vehicle.annualMilleage)" required>
+                                           </div>
+                                           <span style="color: red;">{{premiumMilageError}}</span>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group" >
+                                             <label class="control-label">Voluantary Deductible</label>
+                                             <div class="clear"></div>
+                                              <select class="form-control field" name="volDeductible" [(ngModel)]="proposalInput.vehicle.volDeductible" required>
+                                                  <option value="" disabled>--Select--</option>
+                                                <option value="0">0</option>
+                                                <option value="1500">1500</option>
+                                                <option value="2500">2500</option>
+                                                <option value="5000">5000</option>
+                                                <option value="7500">7500</option>
+                                                <option value="10000">10000</option>
+                                                <option value="15000">15000</option>
+                                              </select>
+                                            </div>
+                                         </div>
+                                        <div class= "clear"></div>
+                                        <div class="col-sm-6">
+                                          <div class="form-group required">
+                                              <label class="control-label">Is there is a loan on the vehicle?</label>
+                                              <div class="clear"></div>
+                                              <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-primary" name="hasLoan" [ngClass]="{'active':proposalInput.vehicle.hasLoan=='Y'}"  (click)="proposalInput.vehicle.hasLoan='Y'" id="hasLoanY" [(ngModel)]="proposalInput.vehicle.hasLoan" required ngDefaultControl>Yes</label>
+                                                  <label class="btn btn-primary" name="hasLoan" [ngClass]="{'active':proposalInput.vehicle.hasLoan=='N'}" (click)="proposalInput.vehicle.hasLoan='N'" id="hasLoanN"  [(ngModel)]="proposalInput.vehicle.hasLoan" required ngDefaultControl>No</label>
+                                              </div>
+                                              
+                                            </div>
+                                        </div>
+                                        <div class= "clear"></div>
+                                        <div *ngIf="proposalInput.vehicle.hasLoan=='Y'">
+                                            <div class="col-sm-4">
+                                               <div class="form-group required"   [ngClass]="{'has-error':loantype.invalid && !loantype.pristine}">
+                                                <label class="control-label">Type of Finance</label>
+                                                <div class="clear"></div>
+                                                 <select class="form-control field" name="loantype" #loantype="ngModel" [(ngModel)]="proposalInput.vehicle.loanType" required>
+                                                    <option value="" disabled>--Select--</option>
+                                                  <option value="Hypothecation">Hypothecation</option>
+                                                   <option value="Hire purchase">Hire purchase</option>
+                                                   <option value="Lease">Lease</option>
+                                                 </select>
+                                               </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                               <div class="form-group"   [ngClass]="{'has-error':loanvalue.invalid && ! loanvalue.pristine}">
+                                                  <label class="control-label">Loan Value</label>
+                                                  <input type="text" class="form-control" maxlength="9" minlength="5" maxvalue="10000000" [(ngModel)]="proposalInput.vehicle.loanValue" name="loanvalue" #loanvalue="ngModel" required>
+                                               </div>
+                                            </div>
+                                                  
+                                            <div class="col-sm-4">
+                                               <div class="form-group required"  [ngClass]="{'has-error':bankname.invalid && ! bankname.pristine}">
+                                                 <label class="control-label">Bank Name</label>
+                                                 <input type="text" name="bankname" minlength="5" maxlength="50"  #bankname="ngModel" class="form-control field" [(ngModel)]="proposalInput.vehicle.bankName" required>
+                                               </div>
+                                            </div>					    							
+                                         </div>
+                                         <div class= "clear"></div>
+                                          <div class="col-sm-4">
+                                          <div class="form-group required">
+                                          <label class="control-label">Anti Theft</label>
+                                          <div class="clear"></div>
+                                          
+                                          <div class="btn-group" data-toggle="buttons">
+                                              <label class="btn btn-primary" name="antiTheft" [ngClass]="{'active':proposalInput.vehicle.antiTheft=='Y'}"  (click)="proposalInput.vehicle.antiTheft='Y'" id="antiTheftY" [(ngModel)]="proposalInput.vehicle.antiTheft" required ngDefaultControl>Yes</label>
+                                                <label class="btn btn-primary" name="antiTheft" [ngClass]="{'active':proposalInput.vehicle.antiTheft=='N'}" (click)="proposalInput.vehicle.antiTheft='N'" id="antiTheftN"  [(ngModel)]="proposalInput.vehicle.antiTheft" required ngDefaultControl>No</label>
+                                            </div>
+                                          </div>
+                                        </div>					    							
+                                        <div class="col-sm-4">
+                                          <div class="form-group required">
+                                          <label class="control-label">is Bi Fuel Kit Present?</label>
+                                          <div class="clear"></div>
+                                          
+                                          <div class="btn-group" data-toggle="buttons">
+                                              <label class="btn btn-primary" name="lpgcngKit" [ngClass]="{'active':proposalInput.vehicle.lpgcngKit=='Y'}"  (click)="proposalInput.vehicle.lpgcngKit='Y'" id="lpgcngKitY" [(ngModel)]="proposalInput.vehicle.lpgcngKit" required ngDefaultControl>Yes</label>
+                                                <label class="btn btn-primary" name="lpgcngKit" [ngClass]="{'active':proposalInput.vehicle.lpgcngKit=='N'}" (click)="proposalInput.vehicle.lpgcngKit='N'" id="lpgcngKitN"  [(ngModel)]="proposalInput.vehicle.lpgcngKit" required ngDefaultControl>No</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-4" *ngIf = "proposalInput.vehicle.lpgcngKit=='Y'">
+                                          <div class="form-group required">
+                                          <label class="control-label">Externally fitted?</label>
+                                          <div class="clear"></div>
+                                          <div class="btn-group" data-toggle="buttons">
+                                              <label class="btn btn-primary" name="biKitType" [ngClass]="{'active':proposalInput.vehicle.biKitType=='E'}"  (click)="proposalInput.vehicle.biKitType='E'" id="biKitTypeY" [(ngModel)]="proposalInput.vehicle.biKitType" required ngDefaultControl>Yes</label>
+                                                <label class="btn btn-primary" name="biKitType" [ngClass]="{'active':proposalInput.vehicle.biKitType=='I'}" (click)="proposalInput.vehicle.biKitType='I'" id="biKitTypeN"  [(ngModel)]="proposalInput.vehicle.biKitType" required ngDefaultControl>No</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-4" *ngIf = "proposalInput.vehicle.lpgcngKit=='Y' && proposalInput.vehicle.biKitType=='E'">
+                                          <div class="form-group required" [ngClass]="{'has-error':kitvalue.invalid && !kitvalue.pristine}">
+                                          <label class="control-label">Bi Fuel Kit Value</label>
+                                                <input type="number" class="form-control" min="500" max="1000000" minlength="3" [(ngModel)]="proposalInput.vehicle.biKitValue" name="kitvalue" #kitvalue="ngModel" required>
+                                          </div>
+                                        </div>
+                                        <div class = "clear"></div>	
+                                        <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;border-top:1px dashed #dadada;" ></p>						
+                                        
+                                        <br>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                              <label class="control-label"> Do you want to add Electrical Accessory?</label>
+                                             <area class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-primary" name="electricalAccessoryFlag" [ngClass]="{'active':proposalInput.vehicle.electricalAccessoryFlag=='Y'}"  (click)="proposalInput.vehicle.electricalAccessoryFlag='Y'" id="electricalAccessoryFlagY" [(ngModel)]="proposalInput.vehicle.electricalAccessoryFlag" required ngDefaultControl>Yes</label>
+                                                  <label class="btn btn-primary" name="electricalAccessoryFlag" [ngClass]="{'active':proposalInput.vehicle.electricalAccessoryFlag=='N'}" (click)="proposalInput.vehicle.electricalAccessoryFlag='N'" id="electricalAccessoryFlagN"  [(ngModel)]="proposalInput.vehicle.electricalAccessoryFlag" required ngDefaultControl>No</label>
+                                              </div>
+                                            <div *ngIf="proposalInput.vehicle.electricalAccessoryFlag=='Y'">
+                                              <div class = "separator"></div>
+                                              <div>
+                                                <span class="ibspan panel-heading">Electrical Accessory List</span>
+                                                <span><button class="btn btn-primary pull-right" (click)="addEditAccessory('Elec','Add', 99,Accessoryform)">Add</button></span>
+                                              </div>
+                                              <div class="clear"></div>																
+                                              <div class="form-group">
+                                                <div class="col-sm-12 col-md-12 col-lg-12" style="margin: 8px 0 0 0;">
+                                                  <div class="table-responsive">
+                                                    <table *ngIf = "proposalInput.vehicle.electricalAccList.length>0" class="table table-bordered">
+                                                      <thead>
+                                                        <tr>
+                                                            <th>Make</th>
+                                                            <th>Name</th>
+                                                            <th>Value</th>								    
+                                                            <th>&nbsp;</th>
+                                                        </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                          <tr *ngFor = "let item of proposalInput.vehicle.electricalAccList; let i = index">
+                                                            <td>{{item.make}}</td>
+                                                            <td>{{item.name}}</td>
+                                                            <td>{{item.value}}</td>
+                                                          <td><span class="glyphicon glyphicon-trash" (click)="addEditAccessory('Elec','Delete', i,Accessoryform)"></span></td>
+                                                          </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </div>
+                                                </div>
+                                              </div>		
+                                            </div>
+                                             <div class = "clear"></div>						    								
+                                            </div>
+                                            <div class="col-sm-6">
+                                              <div class="form-group">
+                                                <label class="control-label"> Do you want to add Non-Electrical Accessory?</label>
+
+                                                 <area class="btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-primary" name="nonElectricalAccessoryFlag" [ngClass]="{'active':proposalInput.vehicle.nonElectricalAccessoryFlag=='Y'}"  (click)="proposalInput.vehicle.nonElectricalAccessoryFlag='Y'" id="electricalAccessoryFlagY" [(ngModel)]="proposalInput.vehicle.nonElectricalAccessoryFlag" required ngDefaultControl>Yes</label>
+                                                      <label class="btn btn-primary" name="nonElectricalAccessoryFlag" [ngClass]="{'active':proposalInput.vehicle.nonElectricalAccessoryFlag=='N'}" (click)="proposalInput.vehicle.nonElectricalAccessoryFlag='N'" id="electricalAccessoryFlagN"  [(ngModel)]="proposalInput.vehicle.nonElectricalAccessoryFlag" required ngDefaultControl>No</label>
+                                                  </div>
+
+                                                <div  *ngIf="proposalInput.vehicle.nonElectricalAccessoryFlag=='Y'">
+                                                  <div class = "separator"></div>
+                                                  <div class = "clear"></div>	
+                                                  <div>
+                                                    <span class="ibspan panel-heading">Non Electrical Accessory List</span>
+                                                    <span><button class="btn btn-primary pull-right" (click)="addEditAccessory1('NonElec','Add', 99,NonAccessoryform)">Add</button></span>
+                                                  </div>
+                                                 
+
+                                                  <div class = "clear"></div>																	
+                                                  <div class="form-group">
+                                                    <div class="col-sm-12 col-md-12 col-lg-12" style="margin: 8px 0 0 0;">
+                                                      <div class="table-responsive">
+                                                        <table *ngIf = "proposalInput.vehicle.nonElectricalAccList.length>0" class="table table-bordered">
+                                                          <thead>
+                                                            <tr >
+                                                                <th>Make</th>
+                                                                <th>Name</th>
+                                                                <th>Value</th>								    
+                                                                <th>&nbsp;</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            <tr *ngFor = "let item of proposalInput.vehicle.nonElectricalAccList let j= index">
+                                                              <td>{{item.make}}</td>
+                                                              <td>{{item.name}}</td>
+                                                              <td>{{item.value}}</td>
+                                                            <td><span class="glyphicon glyphicon-trash" (click)="addEditAccessory1('NonElec','Delete', j,NonAccessoryform)"></span></td>
+                                                            </tr>
+                                                          </tbody>
+                                                        </table>
+                                                      </div>
+                                                    </div>
+                                                  </div>		
+                                                </div>		    								
+                                                <div class = "clear"></div>	
+                                              </div>
+                                              <div class = "clear"></div>	
+
+
+                                          </div>
+                                          <div class = "clear"></div>	
+
+                              </div>
+                          </div>
+                          <div class = "clear"></div>
+
+                    </div>
+          </div>
+            </div>
+            <div class = "clear"></div>
+
+           <div class="foot">
+            <div class="clearfix">
+              <div class="cf-pull-right">
+                 <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('3')">
+                   <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+             </button>
+                <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="vehicleForm.invalid" (click)="nextSection('3')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+              </div>
+              <div class = "clear"></div>
+
+            </div>
+            <div class = "clear"></div>
+
+          </div> 
+          <div class = "clear"></div>
+
+        </form>
+        </div>
+              <!-- end of third section-->
+            
+            <!-- start of forth section-->
+            <div class="tab-pane fade content searchheaderpanel" id="panel4">
+                <form id="royalS-policy-form" class="form-horizontal" #previouspolicyForm = "ngForm" autocomplete="off" novalidate>
+                    <div class = "clear"></div>
+                    <div class="form-panel">
+                    <div class = "clear"></div>
+                    <div class="heads">Previous policy</div>
+                     <div class = "clear"></div>
+                     <div class="body">
+                        <div class="main-section">
+                          <div class="Nominee-process">
+                              <div class="define">
+                                  <img src="../../../../../assets/images/info.png">
+                                  <span>Tell us about your existing policy</span>
+                               </div>
+                               <div class="row mnone">
+                                  <div class="col-sm-10" *ngIf="proposalInput.policy.typeOfBusiness=='Rollover'">
+                                      <div class="col-sm-4">
+                                          <div class="form-group required">
+                                          <label class="control-label">Type of Existing Policy</label>
+                                          <div class="clear"></div>
+                                          <div class="btn-group" data-toggle="buttons">
+                                              <label class="btn btn-primary" name="prevPolicytype" [ngClass]="{'active':proposalInput.prevpolicy.previousPolicyType=='C'}"  (click)="proposalInput.prevpolicy.previousPolicyType='C';" id="previousPolicyTypeY" [(ngModel)]="proposalInput.prevpolicy.previousPolicyType" required ngDefaultControl>Comprehensive</label>
+                                                <label class="btn btn-primary" name="prevPolicytype" [ngClass]="{'active':proposalInput.prevpolicy.previousPolicyType=='L'}"  (click)="proposalInput.prevpolicy.previousPolicyType='L'; " id="previousPolicyTypeN"  [(ngModel)]="proposalInput.prevpolicy.previousPolicyType" required ngDefaultControl>Third Party Only</label>
+                                            </div>
+                                            <br>
+                                            
+                                          <span class="has-error" *ngIf="proposalInput.prevpolicy.previousPolicyType=='L'">Renewal of Liability only policy online is not allowed</span>
+                                          </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                          <div class="form-group required">
+                                          <label class="control-label">Existing Policy start date </label>
+                                          
+                                         <span class="input-group">
+                                            <input type="date" class="form-control" name="prevPolicyStartDate"   [(ngModel)]="proposalInput.prevpolicy.prePolicystartdate" min="{{pastDateOptions.minDate | date: 'yyyy-MM-dd'}}" max="{{pastDateOptions.maxDate | date: 'yyyy-MM-dd'}}" required readonly/>
+                                                  <span class="input-group-btn">
+                                                      <button type="button" class="btn btn-primary btn_prim "  (click)="open('prePolicystartdate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                                  </span>
+                                            </span>
+                                         <!-- <span class="has-error">{{previousPolicyDate}}</span>-->
+                                          </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group required">
+                                              <label class="control-label"> Existing Policy last date</label>
+                                              <span class="input-group">
+                                                  <input type="date" class="form-control" name="prePolicyenddate"   [(ngModel)]="proposalInput.prevpolicy.prePolicyenddate" min="{{pastDateOptions.minDate | date: 'yyyy-MM-dd'}}" max="{{pastDateOptions.maxDate | date: 'yyyy-MM-dd'}}" required readonly/>
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-primary btn_prim "  (click)="open('prePolicyenddate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                                        </span>
+                                                  </span>
+                                            </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                             <div class="form-group required">
+                                               <label class="control-label">Existing Policy number</label>
+                                               <input type="text" class="form-control field" name="prePolicynumber" [(ngModel)]="proposalInput.prevpolicy.prePolicynumber" required>
+                                             </div>
+                                            </div>
+                                            
+                                            <div class="col-sm-4">
+                                              <div class="form-group required">
+                                              <label class="control-label">Existing Insurer</label>
+                                              <select class="form-control filed" name="preInsurercode" [(ngModel)]="proposalInput.prevpolicy.preInsurercode" required>
+                                                <option value="" disabled>--Select--</option>
+                                                <option value="{{preInsurercode.id}}" *ngFor="let preInsurercode of insurerMaster.Insurer">{{preInsurercode.value}}</option>
+                                              </select>
+                                              </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                            <div class="form-group required" [ngClass]="{'has-error':policyPremium.invalid && ! policyPremium.pristine}">
+                                            <label class="control-label">Policy Premium</label>
+                                            <input type="text" class="form-control" name="policyPremium" #policyPremium="ngModel" minlength="4" maxlength="7" [(ngModel)]="proposalInput.prevpolicy.policyPremium"  (input)="checkPolicyPremium(previouspolicyForm,proposalInput.prevpolicy.policyPremium)" required>
+                                            <span class="has-error">{{policyPremiumError}}</span>
+                                            </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group required">
+                                                <label class="control-label">Previous Claim</label>
+                                                <div class="clear"></div>
+                                                  <div class="btn-group" data-toggle="buttons">
+                                                      <label class="btn btn-primary" name="previousclaim" [ngClass]="{'active':proposalInput.prevpolicy.previousClaim=='Y'}"  (click)="proposalInput.prevpolicy.previousClaim='Y'" id="previousClaimY" [(ngModel)]="proposalInput.prevpolicy.previousClaim" ngDefaultControl>Yes</label>
+                                                      <label class="btn btn-primary" name="previousclaim" [ngClass]="{'active':proposalInput.prevpolicy.previousClaim=='N'}" (click)="proposalInput.prevpolicy.previousClaim='N'" id="previousClaimN"  [(ngModel)]="proposalInput.prevpolicy.previousClaim" ngDefaultControl>No</label>
+                                                    </div>
+                                                </div>
+                                               </div>
+                                               <div *ngIf="proposalInput.prevpolicy.previousClaim =='Y'">
+                                                  <div class="col-sm-4">
+                                                  <div class="form-group required">
+                                                    <label class="control-label">Number Claims</label>
+                                                    <select class="form-control" name="numberClaims" [(ngModel)]="proposalInput.prevpolicy.numberClaims"  required>
+                                                      <option value="" disabled>Select</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                      <option value="5">5</option>
+                                                    </select>
+                                                  </div>
+                                                   
+                                                 </div>
+                                                 <div class="col-sm-4">
+                                                  <div class="form-group required" [ngClass]="{'has-error':claimAmount.invalid && ! claimAmount.pristine}">
+                                                    <label class="control-label">Claim Amount</label>
+                                                    <input type="text" class="form-control" name="claimAmount" #claimAmount="ngModel" minlength="3" maxlength="7" [(ngModel)]="proposalInput.prevpolicy.claimAmount" required>
+                                                  </div>
+                                                 </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="col-sm-4">
+                                                 <div class="form-group required" [ngClass]="{'has-error':insurerAddress.invalid && ! insurerAddress.pristine}">
+                                                   <label class="control-label">Existing Insurer Address</label>
+                                                   <textarea class="form-control field" rows="5" name="insurerAddress" #insurerAddress="ngModel" minlength="5" [(ngModel)]="proposalInput.prevpolicy.insurerAddress" required></textarea>
+                                                 </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-sm-10" *ngIf="proposalInput.policy.typeOfBusiness=='New Business'">
+                                                  <div class="col-sm-4">
+                                                    <div class="form-group required" [ngClass]="{'has-error':currncb.invalid && ! currncb.pristine}">
+                                                    <label class="control-label">Applicable Ncb</label>
+                                                    <input type="text" class="form-control field" name="currncb" #currncb="ngModel" minlength="1" [(ngModel)]="proposalInput.prevpolicy.currNcb" readonly>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col-sm-4">
+                                                    <div class="form-group required" [ngClass]="{'has-error':pvsncb.invalid && ! pvsncb.pristine}">
+                                                    <label class="control-label">Current Ncb</label>
+                                                    <input type="text" class="form-control field"  name="pvsncb" #pvsncb="ngModel" minlength="1" [(ngModel)]="proposalInput.prevpolicy.previousNcb" readonly>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div> 
+                                            </div>
+                                          </div>
+
+                            
+                            </div>
+                            <div class = "clear"></div>
+                            <div class="foot">
+                                <div class="clearfix">
+                                  <div class="cf-pull-right">
+                                     <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('4')">
+                                       <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+                                 </button>
+                                    <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="previouspolicyForm.invalid" (click)="nextSection('4')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                                  </div>
+                                </div>
+                              </div>
+                               <div class = "clear"></div>
+
+                      </div>
+                </form>
+                </div>
+
+           <!-- end of forth section-->
+
+           <!-- start of fifth section-->
+           <div class="tab-pane fade content searchheaderpanel" id="panel5">
+              <form id="royalS-policy-form" class="form-horizontal" #contactInfo = "ngForm" autocomplete="off" novalidate>
+                  <div class = "clear"></div>
+                  <div class="form-panel">
+                  <div class = "clear"></div>
+                  <div class="heads">Registration Address and Contact Address</div>
+                  <div class = "clear"></div>
+                   <div class="body">
+                      <div class="main-section">
+                        <div class="Nominee-process">
+                            <div class="define">
+                                <img src="../../../../../assets/images/info.png">
+                                <span>Tell us about where to send the policy Document</span>
+                              </div>
+                              <div class="row mnone">
+                                  <div class="col-sm-12 col-md-12 col-lg-12">
+                                      <div class="form-group required">
+                                       <label class="control-label">Are the Policy and Registration Address the same?</label>
+                                       
+                                       <div class="btn-group" data-toggle="buttons">
+                                          <label class="btn btn-primary" name="policyRegAddressSame" [ngClass]="{'active':proposalInput.proposer.policyRegAddressSame=='Y'}"  (click)="proposalInput.proposer.policyRegAddressSame='Y'" id="policyRegAddressSameY"  [(ngModel)]="proposalInput.proposer.policyRegAddressSame" required  ngDefaultControl>Yes</label>
+                                            <label class="btn btn-primary" name="policyRegAddressSame" [ngClass]="{'active':proposalInput.proposer.policyRegAddressSame=='N'}" (click)="proposalInput.proposer.policyRegAddressSame='N'" id="policyRegAddressSameN"   [(ngModel)]="proposalInput.proposer.policyRegAddressSame" required ngDefaultControl>No</label>
+                                        </div> 
+                                        
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="clear"></div>
+                                    <div class="col-sm-6 add-borde"> 
+                                        <h3><img src="../../../../../assets/images/mail.png">&nbsp;&nbsp;Registration Address</h3>
+                                        <div class="col-sm-12">
+                                            <div class="form-group required" [ngClass]="{'has-error':policyAddone.invalid && ! policyAddone.pristine}">
+                                              <label class="control-label">Flat/House No, Street</label>
+                                              <input type="text" name="policyAddone" #policyAddone="ngModel" class="form-control field" [(ngModel)]="proposalInput.proposer.policyAddress1" minlength="5" required>
+                                            </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                              <div class="form-group required" [ngClass]="{'has-error':policyAddtwo.invalid && ! policyAddtwo.pristine}">
+                                              <label class="control-label">Area/Locality</label>
+                                              <input type="text" name="policyAddtwo" #policyAddtwo="ngModel" class="form-control field" [(ngModel)]="proposalInput.proposer.policyAddress2" minlength="5"  required>
+                                              </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                              <div class="form-group required" [ngClass]="{'has-error':policyAddthree.invalid && ! policyAddthree.pristine}">
+                                              <label class="control-label">Landmark</label>
+                                              <input type="text" class="form-control field" name="policyAddthree" #policyAddthree="ngModel" [(ngModel)]="proposalInput.proposer.policyAddress3" minlength="5"  required>
+                                              </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                               
+                                                <div class="col-sm-6">
+                                                    <div class="form-group required">
+                                                      <label class="control-label">State</label>
+                                                      <select class="form-control field" [(ngModel)]="policyState" name="polState" (change)="getCity(policyState,'Registration')" required>
+                                                        <option value="" disabled>--Select--</option>   
+                                                        <option *ngFor="let state of insurerMaster.State" [ngValue]="state.id">{{state.value}}</option>
+                                                      </select>
+                                                   </div>
+                                                    </div>
+
+                                                <div class="col-sm-6">
+                                                    <div class="form-group  required">
+                                                      <label class="control-label">City</label>
+                                                      <select class="form-control field" [(ngModel)]="proposalInput.proposer.policyCity" name="polCity" (change)="cityChange(proposalInput.proposer.policyCity, 'Registration')">
+                                                          <option value="" disabled>--Select--</option>      
+                                                        <option value="{{polCity.id}}" *ngFor="let polCity of polCities" >{{polCity.value}}</option>
+                                                             <!--<div ng-bind-html="polCity.value | highlight: $select.search"> </div>-->
+                                                          
+                                                      </select>
+                                                         </div>
+                                                    </div>
+
+                                                
+                                                <div class="col-sm-6">
+                                                    <div class="form-group required" [ngClass]="{'has-error':pincode.invalid && !pincode.pristine}">
+                                                      <label class="control-label label-block">Pincode</label>
+                                                      <input type="text" name="pincode" #pincode="ngModel" minlength="6" [(ngModel)]="proposalInput.proposer.policyPincode" (blur)="getPincode($event)" class="form-control" pattern="^[1-9][0-9]{5}$" maxlength="6" required>
+                                                      <span id="errorCall" class="has-error">{{errMessage}}</span>
+
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                
+                                      </div>
+                                      <form id="" class="form-horizontal" #contactDetail = "ngForm" autocomplete="off" novalidate>
+                                        
+                                      <div *ngIf="proposalInput.proposer.policyRegAddressSame=='N'" class="col-sm-6 add-borde">
+                                          <h3><img src="../../../../../assets/images/mail.png">&nbsp;&nbsp;Contact Address</h3>
+                                          <div class="col-sm-12">
+                                              <div class="form-group required" [ngClass]="{'has-error':contactAddone.invalid && ! contactAddone.pristine}">
+                                                <label class="control-label">Flat/House No, Street</label>
+                                                <input type="text" name="contactAddone" #contactAddone="ngModel" class="form-control field" [(ngModel)]="proposalInput.proposer.corrAddress1" minlength="5" required>
+                                              </div>
+                                              </div>
+                                              
+                                              <div class="col-sm-12">
+                                                  <div class="form-group required" [ngClass]="{'has-error':contactAddtwo.invalid && ! contactAddtwo.pristine}">
+                                                  <label class="control-label">Area/Locality</label>
+                                                  <input type="text" name="contactAddtwo" #contactAddtwo="ngModel" class="form-control field" [(ngModel)]="proposalInput.proposer.corrAddress2" minlength="5"  required>
+                                                  </div>
+                                                </div>
+                                              <div class="col-sm-12">
+                                                  <div class="form-group required" [ngClass]="{'has-error':contactAddthree.invalid && ! contactAddthree.pristine}">
+                                                      <label class="control-label">Landmark</label>
+                                                <input type="text" class="form-control field" name="contactAddthree" #contactAddthree="ngModel" [(ngModel)]="proposalInput.proposer.corrAddress3" minlength="5"  required>
+                                                </div>
+                                              </div>
+                                              <div class="col-sm-12">
+                                               
+                                                  <div class="col-sm-6">
+                                                      <div class="form-group required">
+                                                        <label class="control-label">State</label>
+                                                        <select class="form-control field" [(ngModel)]="corrState" name="corState" (change)="getCity(corrState,'Mailing')" required>
+                                                          <option value="" disabled>--Select--</option>   
+                                                          <option *ngFor="let state of insurerMaster.State" [ngValue]="state.id">{{state.value}}</option>
+                                                        </select>
+                                                     </div>
+                                                      </div>
+  
+                                                  <div class="col-sm-6">
+                                                      <div class="form-group  required">
+                                                        <label class="control-label">City</label>
+                                                        <select class="form-control field" [(ngModel)]="proposalInput.proposer.corrCity" name="corCity" (change)="cityChange(proposalInput.proposer.corrCity, 'Mailing')">
+                                                            <option value="" disabled>--Select--</option>      
+                                                          <option value="{{City.id}}" *ngFor="let City of corCities" >{{City.value}}</option>
+                                                        </select>
+                                                           </div>
+                                                      </div>
+  
+                                                  
+                                                  <div class="col-sm-6">
+                                                      <div class="form-group required" [ngClass]="{'has-error':pincode.invalid && !pincode.pristine}">
+                                                        <label class="control-label label-block">Pincode</label>
+                                                        <input type="text" name="corrpincode" #pincode="ngModel" minlength="6" [(ngModel)]="proposalInput.proposer.corrPincode" (blur)="getPincode($event)" class="form-control" pattern="^[1-9][0-9]{5}$" maxlength="6" required>
+                                                        <span id="errorCall" class="has-error">{{errMessage}}</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+                                       
+                                        </div>
+                                      </form>
+
+
+                                </div>
+
+
+                             </div>
+                             </div>
+                             </div>
+                             <div class = "clear"></div>
+                            <div class="foot">
+                                <div class="clearfix">
+                                  <div class="cf-pull-right">
+                                     <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('5')">
+                                       <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+                                 </button>
+                                    <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="contactInfo.invalid" (click)="nextSection('5')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                                  </div>
+                                </div>
+                                <div class = "clear"></div>
+                              </div>
+                               <div class = "clear"></div>
+                             </div>
+                             </form>
+                             </div>
+                             <!--end of fifth section-->
+
+<!-- start of sixth section-->
+<div class="tab-pane fade content searchheaderpanel" id="panel6">
+  <form id="royalS-policy-form" class="form-horizontal" #coverForm = "ngForm" autocomplete="off" novalidate>
+      <div class = "clear"></div>
+      <div class="form-panel">
+      <div class = "clear"></div>
+      <div class="heads">Cover</div>
+      <div class = "clear"></div>
+       <div class="body">
+          <div class="main-section">
+            <div class="Nominee-process">
+                <div class="define">
+                    <img src="../../../../../assets/images/info.png">
+                    <span>Would you like any of these covers</span>
+                  </div>
+                  <div class="row mnone conditional-question">
+                    <div class="col-sm-12" style="margin-bottom:10px;"  *ngFor="let cover of covers">
+                      <!-- {{cover}} -->
+                      <div class="col-xs-4">{{cover.displayName}}</div>
+                      <div class="col-xs-4">{{cover.premium| currency:"&#8377;": 0 }}</div>
+                      <div class="col-xs-4">
+                        
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-primary" name="isSelected" [ngClass]="{'active':cover.isSelected=='Y'}"  (click)="cover.isSelected='Y'" id="isSelectedY" [(ngModel)]="cover.isSelected" ngDefaultControl>Yes</label>
+                            <label class="btn btn-primary" name="isSelected" [ngClass]="{'active':cover.isSelected=='N'}" (click)="cover.isSelected='N'" id="isSelectedN"  [(ngModel)]="cover.isSelected" ngDefaultControl>No</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                   <div class = "clear"></div>
+                  </div>
+
+                 </div>
+                 </div>
+                 </div>
+                 <div class = "clear"></div>
+                 <div class="foot">
+                     <div class="clearfix">
+                       <div class="cf-pull-right">
+                          <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('6')">
+                            <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+                      </button>
+                         <button class="btn cf-btn btn-lg btn-default btn-grn"  (click)="nextSection('6')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                       </div>
+                     </div>
+                     <div class = "clear"></div>
+                   </div>
+      </div>
+  </form>
+</div> 
+   <!-- end of sixth section-->
+       
+<!-- start of seventh section-->
+<div class="tab-pane fade content searchheaderpanel" id="panel7">
+    <form id="royalS-policy-form" class="form-horizontal" #summaryForm = "ngForm" autocomplete="off" novalidate>
+        <div class = "clear"></div>
+        <div class="form-panel">
+        <div class = "clear"></div>
+        <div class="heads">T &amp; C </div>     		
+        <div class = "clear"></div>
+         <div class="body">
+            <div class="main-section">
+                <div id="summary-wrapper">
+                    <div class="summary-stage">
+                        <p>The information provided by me in this document is True to the best of my knowledge.</p>
+                        <p>This proposal will be the basis of any insurance policy that We may issue. You must disclose all facts relevant to all persons proposed to be insured that may affect Our decision to issue a policy or its price, terms, conditions and exclusions. Non-compliance may result in the avoidance of the Policy. If there is insufficient space for you to provide information whether as requested or otherwise, please attach a separate sheet. If you are in any doubt, please seek the advice of your insurance advisor. We are under no obligation to accept any proposal for insurance. If We accept a proposal for insurance, it shall be subject to the Policy terms and conditions and We shall have no liability to make any payment under the Policy if premium is not received by Us in full and in time, or is not realised or non-fullfillment of pre-policy check-up.</p>
+                      </div>
+                      
+                      <div class="summary-stage">
+                          <div class="title">
+                            <h4>Policy </h4>
+                              <span class="btn btn-primary" (click)="editFields('1', '7')">Edit</span>
+                          </div>
+                          <div class="stage-body">
+                            <div class="col-sm-10" style="margin-bottom:10px;">
+                           <div class="col-sm-6 list-item-proposer">
+                             <label class="control-label label-highlight">Policy Start Date:</label>
+                             <span>{{proposalInput.policy.policyStartdate | date : "dd MMM yyyy"}}</span>
+                           </div>
+                             <div class="col-sm-6 list-item-proposer">
+                             <label class="control-label label-highlight">Policy End Date:</label>
+                             <span>{{proposalInput.policy.policyEnddate | date : "dd MMM yyyy"}}</span>
+                           </div>
+                           </div>
+                          </div>
+                        </div>
+                        <div class="clear"></div>
+                        <br>
+                        <br>
+                        <div class="summary-stage">
+                          <div class="title">
+                            <h3>Proposer </h3>
+                            <span class="btn btn-primary" (click)="editFields('2', '7')">Edit</span>
+                          </div>
+                            <div class="stage-body">
+                              <div class="col-sm-10" style="margin-bottom:10px;">
+                                      <label class="control-label label-highlight">This Vehicle Belongs To</label>
+                                      <span *ngIf = "proposalInput.proposer.custType=='I'">Individual</span>
+                                      <span *ngIf = "proposalInput.proposer.custType=='O'">Company</span> 
+                             <div class="col-sm-6 list-item-proposer">
+                               <label class="control-label label-highlight">Name:</label>
+                               <span>{{proposalInput.proposer.title}} </span>
+                               <span *ngIf = "proposalInput.proposer.custType=='I'">{{proposalInput.proposer.firstName}} </span>
+                               <span *ngIf = "proposalInput.proposer.custType=='O'">{{proposalInput.proposer.orgName}} </span>
+                               <span *ngIf = "proposalInput.proposer.custType=='I'">{{proposalInput.proposer.middleName}} </span>
+                               <span *ngIf = "proposalInput.proposer.custType=='I'">{{proposalInput.proposer.lastName}} </span>
+                             </div>
+                             <div class="col-sm-6 list-item-proposer">
+                                <label class="control-label label-highlight">Gender:</label>
+                                <span *ngIf = "proposalInput.proposer.gender=='M'">Male</span>
+                                <span *ngIf = "proposalInput.proposer.gender=='F'">Female</span>
+                              </div>
+                             <div class="col-sm-6 list-item-proposer">
+                               <label class="control-label label-highlight">Proposer DOB</label>
+                               <span *ngIf = "proposalInput.proposer.custType=='I'">{{proposalInput.proposer.proposerDob| date : "dd MMM yyyy"}}</span>
+                             </div>
+                             
+                             <div class="col-sm-6 list-item-proposer">
+                               <label class="control-label label-highlight">Occupation Type</label>
+                               <span>{{getMasterValue('Occupation', proposalInput.proposer.occupationType)}}</span>
+                              </div>
+                             <div class="col-sm-6 list-item-proposer">
+                               <label class="control-label label-highlight">Pan:</label>
+                               <span>{{proposalInput.proposer.pan}} </span>
+                             </div>
+                             <div class="col-sm-6 list-item-proposer">
+                               <label class="control-label label-highlight">Nominee Name:</label>
+                               <span>{{proposalInput.proposer.nomineeName}}</span>
+                             </div>
+                             <div class="col-sm-6 list-item-proposer">
+                               <label class="control-label label-highlight">Nominee DOB:</label>
+                               <span>{{proposalInput.proposer.nomineeDob | date : "dd MMM yyyy"}}</span>
+                             </div>
+                             <div class="col-sm-6 list-item-proposer">
+                               <label class="control-label label-highlight">Nominee Relation:</label>
+                               <span>{{getMasterValue('NomineeRel', proposalInput.proposer.nomineeRel)}}</span>
+                             </div>
+                             <div class="col-sm-6 list-item-proposer">
+                               <label class="control-label label-highlight">Marital Status:</label>
+                               <span *ngIf = "proposalInput.proposer.maritalStatus=='S'">Single</span>
+                               <span *ngIf = "proposalInput.proposer.maritalStatus=='M'">Married</span>
+                            </div>
+                             <div class="col-sm-6 list-item-proposer">
+                               <label class="control-label label-highlight">Driving Experience:</label>
+                               <span>{{proposalInput.proposer.drivingExp}}</span>
+                             </div>
+                             
+                             <div class="clear"></div>
+                             <div class="col-sm-6 list-item-proposer" *ngIf = "proposalInput.proposer.nomineeAge<18 || proposalInput.proposer.nomineeAge==''">
+                               <label class="control-label label-highlight">Appointee  First Name:</label>
+                               <span>{{proposalInput.proposer.appointeeName}} </span>
+                             </div>
+                             <div class="col-sm-6 list-item-proposer" *ngIf = "proposalInput.proposer.nomineeAge<18 || proposalInput.proposer.nomineeAge==''">
+                                <label class="control-label label-highlight">Appointee Last Name</label>
+                               <span>{{proposalInput.proposer.appointeeLastName}}</span>
+                             </div>
+                             <div class="col-sm-6 list-item-proposer" *ngIf = "proposalInput.proposer.nomineeAge<18 || proposalInput.proposer.nomineeAge==''">
+                                <label class="control-label label-highlight">Appointee Relation:</label>
+                               <span>{{proposalInput.proposer.appointeeLastName}}</span>
+                             </div>
+                             <div class="col-sm-6 list-item-proposer" *ngIf = "proposalInput.proposer.nomineeAge<18 || proposalInput.proposer.nomineeAge==''">
+                                <label class="control-label label-highlight">DOB:</label>
+                               <span>{{proposalInput.proposer.appointeeDOB}}</span>
+                             </div>
+                            </div>                                   
+
+
+                             </div>
+                        </div>
+                        <div class="clear"></div>
+                        <br>
+                        <br>
+                        <div class="summary-stage">
+                          <div class="title">
+                              <h3>Vehicle </h3>
+                              <span class="btn btn-primary" (click)="editFields('3', '7')">Edit</span>
+                          </div>
+                          <div class="stage-body">
+                            <div class="col-sm-10" style="margin-bottom:10px;">
+                           <div class="col-sm-6 list-item-proposer">
+                             <label class="control-label label-highlight">Vehicle Regno:</label>
+                             <span>{{proposalInput.vehicle.vehicleRegno}}</span>
+                           </div>
+                             <div class="col-sm-6 list-item-proposer">
+                             <label class="control-label label-highlight">Vehicle Registration Date:</label>
+                             <span>{{proposalInput.vehicle.vehicleRegistrationDate | date : "dd MMM yyyy"}}</span>
+                           </div>
+                           <div class="col-sm-6 list-item-proposer">
+                            <label class="control-label label-highlight">Engine No:</label>
+                            <span>{{proposalInput.vehicle.engineNo}}</span>
+                          </div>
+                          <div class="col-sm-6 list-item-proposer">
+                            <label class="control-label label-highlight">Chassis No:</label>
+                            <span>{{proposalInput.vehicle.chassisNo}}</span>
+                          </div>
+                          <div class="col-sm-6 list-item-proposer">
+                            <label class="control-label label-highlight">Price:</label>
+                            <span>{{proposalInput.vehicle.price}}</span>
+                          </div>
+                          <div class="col-sm-6 list-item-proposer">
+                            <label class="control-label label-highlight">RTO:</label>
+                            <span>{{proposalInput.vehicle.rto}}</span>
+                          </div>
+
+                          <div class="col-sm-6 list-item-proposer">
+                            <label class="control-label label-highlight">Electrical accesories:</label>
+                            <span>{{proposalInput.vehicle.electricalAcc}}</span>
+                          </div>
+
+                          <div class="col-sm-6 list-item-proposer">
+                            <label class="control-label label-highlight">Non-electrical accessories:</label>
+                            <span>{{proposalInput.vehicle.nonElectricalAcc}}</span>
+                          </div>
+                          <div class="col-sm-6 list-item-proposer">
+                            <label class="control-label label-highlight">Lpg/CNG kit fitted:</label>
+                            <span *ngIf = "proposalInput.vehicle.lpgcngKit=='Y'">Yes</span>
+                            <span *ngIf = "proposalInput.vehicle.lpgcngKit=='N'">No</span>
+                               </div>
+                               <div class="col-sm-6 list-item-proposer">
+                                <label class="control-label label-highlight">Is Bi Fuel Kit:</label>
+                                <span *ngIf = "proposalInput.vehicle.lpgcngKit=='Y'">Yes</span>
+                                <span *ngIf = "proposalInput.vehicle.lpgcngKit=='N'">No</span>
+                                   </div>
+                                   <div class="col-sm-6 list-item-proposer">
+                                    <label class="control-label label-highlight">vehicle Mostly Driven On:</label>
+                                    <span>{{proposalInput.vehicle.roadTypeCodes}}</span>
+                                  </div>
+                                  <div class="col-sm-6 list-item-proposer">
+                                    <label class="control-label label-highlight">Date of Birth:</label>
+                                    <span>{{proposalInput.vehicle.youngestDriverDob | date : "dd MMM yyyy"}}</span>
+                                  </div>
+                                  <div class="col-sm-6 list-item-proposer">
+                                    <label class="control-label label-highlight">No Of Drivers:</label>
+                                    <span>{{proposalInput.vehicle.noOfDrivers}}</span>
+                                  </div>
+                                  <div class="col-sm-6 list-item-proposer">
+                                    <label class="control-label label-highlight">Anti Theft:</label>
+                                    <span *ngIf = "proposalInput.vehicle.antiTheft=='Y'">Yes</span>
+                                    <span *ngIf = "proposalInput.vehicle.antiTheft=='N'">No</span>
+                                      </div>
+                                      <div class="col-sm-6 list-item-proposer">
+                                        <label class="control-label label-highlight">Annual Milleage:</label>
+                                        <span>{{proposalInput.vehicle.annualMilleage}}</span>
+                                      </div>
+                                </div>
+                          </div>
+                        </div>  
+                        <div class="clear"></div>
+                        <br>
+                        <br>
+                        <div class="summary-stage">
+                          <div class="title">
+                            <h4>Previous policy</h4>
+                            <span class="btn btn-primary" (click)="editFields('4', '7')">Edit</span>
+                          </div>
+                          <div class="stage-body">
+                            <div class="col-sm-10" style="margin-bottom:10px;">
+                           <div class="col-sm-6 list-item-proposer">
+                             <label class="control-label label-highlight">Previous Policy Start Date:</label>
+                             <span>{{proposalInput.prevpolicy.prePolicystartdate | date : "dd MMM yyyy"}}</span>
+                           </div>
+                             <div class="col-sm-6 list-item-proposer">
+                             <label class="control-label label-highlight">Previous Policy End Date:</label>
+                             <span>{{proposalInput.prevpolicy.prePolicyenddate | date : "dd MMM yyyy"}}</span>
+                           </div>
+                           <div class="col-sm-6 list-item-proposer">
+                            <label class="control-label label-highlight">Previous Policy Number:</label>
+                            <span>{{proposalInput.prevpolicy.prePolicynumber}}</span>
+                          </div>
+                          <div class="col-sm-6 list-item-proposer">
+                            <label class="control-label label-highlight">Previous Insurer Code:</label>
+                            <span>{{proposalInput.prevpolicy.preInsurercode}}</span>
+                          </div>
+                          <div class="col-sm-6 list-item-proposer">
+                            <label class="control-label label-highlight">Previous Claim:</label>
+                            <span *ngIf = "proposalInput.prevpolicy.previousClaim=='Y'">Yes</span>
+                            <span *ngIf = "proposalInput.prevpolicy.previousClaim=='N'">No</span>
+                              </div>
+                              <div class="col-sm-6 list-item-proposer" *ngIf = "proposalInput.prevpolicy.previousClaim=='Y'">
+                                <label class="control-label label-highlight">Number Claims:</label>
+                                <span>{{proposalInput.prevpolicy.numberClaims}}</span>
+                              </div>
+                              <div class="col-sm-6 list-item-proposer">
+                                <label class="control-label label-highlight">Policy Premium:</label>
+                                <span>{{proposalInput.prevpolicy.policyPremium}}</span>
+                              </div>
+                              <div class="col-sm-6 list-item-proposer" *ngIf = "proposalInput.prevpolicy.previousClaim=='Y'">
+                                <label class="control-label label-highlight">Claim Amount:</label>
+                                <span>{{proposalInput.prevpolicy.claimAmount}}</span>
+                              </div>
+                              
+                              <div class="col-sm-6 list-item-proposer">
+                                <label class="control-label label-highlight">Current Ncb:</label>
+                                <span>{{proposalInput.prevpolicy.currNcb}}</span>
+                              </div>
+                              <div class="col-sm-6 list-item-proposer">
+                                <label class="control-label label-highlight">Previous Ncb:</label>
+                                <span>{{proposalInput.prevpolicy.previousNcb}}</span>
+                              </div>
+                              <div class="col-sm-6 list-item-proposer">
+                                <label class="control-label label-highlight">Insurer Address:</label>
+                                <span>{{proposalInput.prevpolicy.insurerAddress}}</span>
+                              </div>
+
+                           </div>
+                          </div>
+                        </div>
+                        <div class="clear"></div>
+                        <br>
+                        <br>
+
+                        <div class="summary-stage">
+                          <div class="title">
+                            <h3>Contact Info. </h3>
+                            <span class="btn btn-primary" (click)="editFields('5', '7')">Edit</span>
+                          </div>
+                          <div class="stage-body">
+                            <div class="row mnone">
+                                <div class="col-sm-12 add-borde"> 
+                                    <h3><img src="../../../../../assets/images/mail.png">&nbsp;&nbsp;Contact Details</h3>
+                                    <div class="col-sm-6 list-item-proposer">
+                                        <label class="control-label label-highlight">Mailing Address:</label><br>
+                                        <span>{{proposalInput.proposer.policyAddress1}}</span><br>
+                                        <span>{{proposalInput.proposer.policyAddress2}} </span><br>
+                                        <span>{{proposalInput.proposer.policyAddress3}} </span><br>
+                                        <span>{{proposalInput.proposer.policyCity}} </span><br>
+                                        <span>{{getMasterValue('State', proposalInput.proposer.policyStatecode)}} </span><br>
+                                        <span>{{proposalInput.proposer.policyPincode}} </span><br>
+                                      </div>
+                                      <div class="col-sm-6 list-item-proposer">
+                                          <label class="control-label label-highlight">Contact Address:</label><br>
+                                          <span>{{proposalInput.proposer.corrAddress1}}</span><br>
+                                          <span>{{proposalInput.proposer.corrAddress2}} </span><br>
+                                          <span>{{proposalInput.proposer.corrAddress3}} </span><br>
+                                          <span>{{proposalInput.proposer.corrCity}} </span><br>
+                                          <span>{{getMasterValue('State', proposalInput.proposer.corrStatecode)}}  </span><br>
+                                          <span>{{proposalInput.proposer.corrPincode}} </span><br>
+                                        </div>
+                                  </div>
+                                  <div class="col-sm-12 add-borde">
+                                      <h3><img src="../../../../../assets/images/phone.png">&nbsp;&nbsp;Contact Details</h3>
+
+                                      <div class="col-sm-6 list-item-proposer">
+                                          <span>{{proposalInput.proposer.email}}</span><br>
+                                          <span>{{proposalInput.proposer.mobile}} </span><br>
+
+                                        </div>
+                                    </div>
+
+                              </div>
+                          </div>
+                        </div>
+                        <div class="clear"></div>
+                        <br>
+                        <br>
+                        <div class="summary-stage">
+                            <div class="title">
+                              <h3>Covers </h3>
+                                <span class="btn btn-primary" (click)="editFields('6', '7')">Edit</span>
+                            </div>
+                            <div class="stage-body">
+                              <div class="col-sm-12" style="margin-bottom:10px;" *ngFor="let cover of covers">
+                             <div class="col-sm-6 list-item-proposer">
+                               <label class="control-label label-highlight">Display Name</label>
+                               <span>{{cover.displayName}}</span>
+                             </div>
+                             <div class="col-sm-6 list-item-proposer">
+                                <label class="control-label label-highlight">Is Selected</label>
+                                <span  *ngIf="cover.isSelected=='Y'">Yes</span>
+                                <span  *ngIf="cover.isSelected=='N'">No</span>
+
+                              </div>
+                              
+                             </div>
+                            </div>
+                          </div>
+                          <div class="clear"></div>
+                          <br>
+                          <br>
+                          <div class="summary-stage">
+                              <div class="title">
+                                <h4>DECLARATION</h4>
+                              </div>
+                              <div class = "clear"></div>
+                              <div class="agree-field">            
+                                            <label id="chkSiDetailsL" class="control-label label-block" style="padding-top: 0px;">&nbsp;Please read the <a data-toggle="modal" data-target="#termsCondModal">Terms &amp; Conditions</a> &nbsp;<span> and provide your consent</span></label>           
+                                         </div>
+                                         <div class = "clear"></div>
+                            </div>
+                          <div class="summary-stage">
+                              <div class="title">
+                                <h3>SECTION 41 INSURANCE ACT (PROHIBITION OF REBATES)</h3>
+                              </div>
+                              <div class="stage-body">
+                                <p>1) No person shall allow or offer to allow, either directly or indirectly, as an inducement to any person to take or renew or continue an insurance in respect of any kind of risk relating to lives or property in India, any rebate of the whole or part of the commission payable or any rebate of premium shown on the policy, nor shall any person taking out or renewing or continuing a policy accept any rebate, except such rebate as may be allowed in accordance with the prospectus or tables of the insurers.</p>
+                                <p>2) Any person making default in complying with the provisions of this section shall be punishable with fine which may extend to five hundred rupees.</p>
+                              </div>
+                            </div>
+                            <div class="row mnone" style="position:relative">
+                                              
+                                <div class="summary-stage">
+                                <div class="col-sm-12">
+                          <div class="agree-box">
+                                      <div class="item">        
+                                        <div class="agree-field">            
+                                          <span style="color:red">{{proposalError.key}}
+                                            <ol>
+                                              <li style="color:red;" *ngFor="let errorPirnts of proposalError.errorPirnt">{{errorPirnts}}</li>
+                                            </ol>
+                                          </span>
+                                        </div>            
+                                       </div>              
+                                   </div>    
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="foot">
+                                <div class="clearfix">
+                                  <div class="cf-pull-right">
+                                     <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('7')">
+                                       <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
+                                 </button>
+                                    <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="!tcAgree" (click)="makePayment()">Make Payment <img src="../../../../../assets/images/arrow-right.png"> </button>
+                                  </div>
+                                </div>
+                              </div> 
+
+
+        </div>
+      </div>
+      </div>
+      </div>
+    </form>
+    </div>
+
+
+
+</div>
+        </div>
+        </div>
+        <!--declaration modal starts here-->
+        <div data-backdrop="static" data-keyboard="false" id="termsCondModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Declaration/ Terms and Conditions</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                <div class="modal-body">
+                    <h4>Declaration & Authorization*:</h4>
+                    <ul>
+                      
+                      <li>I/We hereby declare, on my behalf and on behalf of all persons proposed to be insured, that the above statements, answers and/ or particulars given by me are true and complete in all respects to the best of my knowledge and that I/We am/are authorized to propose on behalf of these other persons.
+                  
+                      </li><li>I understand that the information provided by me will form the basis of the insurance policy, is subject to the Board approved underwriting policy of the insurance company and that the policy will come into force only after full receipt of the premium chargeable.
+                  
+                      </li><li>I/We further declare that I/We will notify in writing any change occurring in the occupation or general health of the life to be insured/proposer after the proposal has been submitted but before communication of the risk acceptance by the company
+                  
+                      </li><li>I/We declare and consent to the company seeking medical information from any doctor or from a hospital who at anytime has attended on the life to be insured/proposer or from any past or present employer concerning anything which affects the physical or mental health of the life to be assured/proposer and seeking information from any insurance company to which an application for insurance on the life to be assured/proposer has been made for the purpose of underwriting the proposal and/or claim settlement.
+                  
+                      </li><li>I/We authorize the company to share information pertaining to my proposal including the medical records for the sole purpose of proposal underwriting and/or claims settlement and with any Government and/or Regulatory authority.</li>
+                    </ul>
+                    <h4>Declaration:</h4>
+                    <p>I hereby confirm that all premiums have been/will be paid from genuine sources and no premiums have been/will be paid out of proceeds of crime related to any of the scheduled offences listed in Prevention of Money Laundering Act, 2002. I understand that the Company has the right to call for documents to establish sources of funds. The insurance company has right to cancel the insurance contract in case I am/ have been found guilty by any competent court of law under any of the statutes, directly or indirectly governing the prevention of money laundering in India.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="disagree(disagree)" data-dismiss="modal">I Disagree</button>
+                  <button type="button" class="btn btn-primary" (click)="agreeTC('Y')" data-dismiss="modal">I Agree</button>
+                </div>
+              </div>
+            </div>
+          </div>
+           <!-- ends here-->
+                       <!--New Primium modal starts here-->
+
+           <div id="newPremiumModal" class="modal" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Your Premium has changed</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                  <div class="modal-body">
+                      <form class="form-horizontal">
+                          <div class="modal-body hom_modal_body">
+                            <div class="form-group">	
+                              <div class="col-sm-12">
+                                <div class="col-sm-12 padd0">
+                                  Old premium:{{items.premiumPassed  | currency :'INR': true}}
+                                </div>	
+                                <div class="col-sm-12 padd0">
+                                  New premium:{{items.premiumPayable | currency :'INR': true}}
+                                </div>
+                                <!-- <div class="col-sm-12">
+                                  Do you to want to continue.
+                                </div> -->
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <div class="col-sm-8" style="text-align:left;">Do you to want to continue.</div>
+                            <div class="col-sm-4">
+                            <button type="button" class="btn btn-primary btn_prim" role="button" (click)="submitNewPrem()"><span class="">Yes</span></button>
+                            <button type="button" class=" btn btn-primary btn_prim" role="button" data-dismiss="modal" aria-hidden="true"><span class="">No</span></button>
+                            </div>
+                          </div>
+                          </form>
+            
+            
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--New Primium modal ends here-->
+            <!-- OTP  modal -->
+ <div data-backdrop="static" data-keyboard="false" id="otpModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">OTP</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        <div class="modal-body">
+          <form class="form-horizontal form_horizontal" name="tc">
+            <div class="modal-body">
+              <div *ngIf="successStatus==true"> <p style="text-align: center; color: green;">The OTP has been sent to your mobile number!</p><br>
+              </div>
+              <div *ngIf="ressuccessStatus==true"> <p style="text-align: center; color: green;">The OTP has been sent to your mobile number!</p><br>
+              </div>
+              <div><span> OTP for Quote ID: </span> <span>{{otpInput.appNo}}</span><br><br></div>
+              <div class = "clear"></div>
+              <div class="col-sm-4">
+                <div class="form-group required" >
+                  <label class="control-label">OTP</label>
+                  <input type="text" name="proMobile" class="form-control field" [(ngModel)]="otpInput.otp" maxlength="10" minlength="6" pattern="/^[0-9]{6}$/" required>
+                  <button *ngIf="otpRetires<3" class="btn btn-primary btn_default" (click)="resend()" >ReSend OTP</button>
+            
+                </div>
+              </div>
+              <div class="clear"></div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <span>OTP is required for all online purchase as per IRDAI Directive.</span>
+                </div>
+              </div>
+              <div class="clear"></div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <span *ngIf="otpError" class="has-error" id="insuredError" style="color:red">OTP is incorrect or invalid</span>
+                </div>
+              </div>
+              <div class = "clear"></div>
+            </div>
+            <!-- </div> -->
+          </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" (click)="checkOTP(otpInput.otp)" data-dismiss="modal">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- ends here-->
+   
+            
+<!--accessory Modal starts here-->
+<div  data-backdrop="static" data-keyboard="false" id="AccessoryModel" class="modal" tabindex="-1" role="dialog" style="overflow:auto!important">
+  <div class="modal-dialog extra-large mandate" role="document" >
+   
+    <div class="modal-content">
+      
+        <div class="modal-header">
+            <h5 class="modal-title">Accesory</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      <div class="modal-body">
+          <form class="form-horizontal"  name="Accessory" #Accessoryform = "ngForm" novalidate autocomplete="off">
+            <div class="row">
+            <div class="col-sm-6">
+              <div class="">
+                <label class="control-label">Make/Model</label>
+                <input type="text" name="electricalAcc" class="form-control" [(ngModel)]="accessoryDetails.make" required>
+              </div>
+            </div>
+            
+            <div class="col-sm-6">
+              <div class="">
+                <label class="control-label">Accessories Name</label>
+                <input type="text" name="electricalAcc1" class="form-control" [(ngModel)]="accessoryDetails.name" required >
+              </div>
+            </div>
+          </div>
+           <div class="row"> 
+            <div class="col-sm-6">
+              <div class="">
+                <label class="control-label">Accessories Value</label>
+                <input type="text" name="electricalAcc2" class="form-control" ng-pattern="^[0-9]{1,5}$" [(ngModel)]="accessoryDetails.value" required >
+              </div>
+            </div>
+          </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+          <div class="col-sm-4" style="width: 62%;">
+              <button type="button" class=" btn btn-secondory btn_prim" role="button" data-dismiss="modal" aria-hidden="true" (click)="cancelevent1()"><span class="">Cancel</span></button>
+          <button type="button" class="btn btn-primary btn_prim" role="button" [disabled]="Accessoryform.invalid "  (click)="accessorySubmit('Elec')"><span class="">Submit</span></button>
+          </div>
+            </div>
+    </div>
+  </div>
+</div>
+<!-- Accessory Modal ends here-->
+
+<!--Non accessory Modal starts here-->
+<div  data-backdrop="static" data-keyboard="false" id="NonAccessoryModel" class="modal" tabindex="-1" role="dialog" style="overflow:auto!important">
+  <div class="modal-dialog extra-large mandate" role="document" >
+   
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Non Accesory</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      <div class="modal-body">
+          <form class="form-horizontal"  name="Accessory" #NonAccessoryform = "ngForm" novalidate autocomplete="off">
+            <div class="row">
+            <div class="col-sm-6">
+              <div class="">
+                <label class="control-label">Make/Model</label>
+                <input type="text" name="electricalAcc" class="form-control" [(ngModel)]="accessoryDetails.make" required>
+              </div>
+            </div>
+            
+            <div class="col-sm-6">
+              <div class="">
+                <label class="control-label">Accessories Name</label>
+                <input type="text" name="electricalAcc1" class="form-control" [(ngModel)]="accessoryDetails.name" required >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-sm-6">
+              <div class="">
+                <label class="control-label">Accessories Value</label>
+                <input type="text" name="electricalAcc2" class="form-control" ng-pattern="^[0-9]{1,5}$" [(ngModel)]="accessoryDetails.value" required >
+              </div>
+            </div>
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+          <div class="col-sm-4" style="width: 62%;">
+              <button type="button" class=" btn btn-secondory btn_prim" role="button" data-dismiss="modal" aria-hidden="true" (click)="cancelevent2()"><span class="">Cancel</span></button>
+          <button type="button" class="btn btn-primary btn_prim" role="button" [disabled]="NonAccessoryform.invalid "  (click)="nonAccessorySubmit('NonElec')"><span class="">Submit</span></button>
+          </div>
+            </div>
+    </div>
+  </div>
+</div>
+<!--Non Accessory Modal ends here-->
+<div id="footermain">
+  <div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} &nbsp;
+    
+ </div>
+  <div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
+  
+  <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+</div>
+ <!-- Modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #changePwdForm = "ngForm">
+        <div class="form-group">
+          <label for="Old-Password" class="col-form-label" >Old Password:</label>
+          <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+        </div>
+         <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+        <div class="form-group">
+          <label for="New-Password" class="col-form-label" >New Password:</label>
+          <input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+          <input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
+        </div>
+         <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+               <div *ngIf = "userPassword.invalid; else nomatch">
+                New Password and Confirm Password should match
+                              </div>
+                  <ng-template #nomatch >
+                    New Password and Confirm Password should match
+                  </ng-template>
+              </div>
+       </div> 
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Success or failure modal -->
+<div id="resultModal" class="modal" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-body">
+      <p id="messageTouser"></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- ends here-->
+      <!--Report Issue modal starts here-->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="reportIssueModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel11">Report An Issue</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #reportAnIssue = "ngForm" >
+        <div class="form-group">
+          <label for="cngm-Password" class="col-form-label" style="margin-left: 63px;">Description of the issue:</label>
+          <textarea rows="3" cols="60" type="text" value="" name="issue" id="issueReport" ngModel required style="margin: 0 0 0 -61px;"></textarea>
+        </div>
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="reportIssue(reportAnIssue)" data-dismiss="modal" [disabled]="!reportAnIssue.form.valid" class="btn btn-primary">Report</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+<!--Report Issue modal ends here-->
+
+
+       
+</div>

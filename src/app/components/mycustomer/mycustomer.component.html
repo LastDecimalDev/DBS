@@ -1,0 +1,465 @@
+<div>
+    <div class="rootCus">
+        <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+        <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+        <input type="checkbox" id="show-menu" role="button">
+        <ul id="menu">
+          <li><a routerLink="/" style=" line-height:18px;" ><img style="margin: -3px 0 0 0px;" src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+          <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+          <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+          <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+        </ul>  
+    
+      </div>
+       
+    <div id="dbs">
+      <div class="select_menu">
+
+      <div class="menubox01">
+      <div class="mesel-num"><input type="text" class="sel-num-input" id="cusmNum" [value]="custLength" readonly></div>
+      <div class="mesel-num02"><input type="text" class="sel-num-input" id="consNum" [value]="cusltnLength" readonly></div>
+      <div class="mesel-num03"><input type="text" class="sel-num-input" id="declinedNum" [value]="declLength" readonly></div>
+
+    <div class="menuselect_box">
+      <div class="menuselect" style="cursor: pointer"><img src="../../../assets/images/customers.png" alt=""><br>Customers</div>
+      <div class="menuselect" style="cursor: pointer"><img src="../../../assets/images/consultation.png" alt=""><br>Consultation</div>
+      <div class="menuselect" style="cursor: pointer"><img src="../../../assets/images/decline.png" alt=""><br>Declined</div>
+    </div>
+  </div>
+
+    <div class="menubox02">
+
+    <div class="menuselect02">
+       <div class="slide"><a href="#"><img src="../../../assets/images/AddNewCustomer.png" alt=""><br>Add New</a></div>
+    </div>
+    
+  
+
+    <div class="menuselect02"><div class="slide1"><a href="#"><img src="../../../assets/images/search.png" alt=""><br>Search</a></div></div>
+
+    </div>
+<!-- serach togggle -->
+  <div class="os-tech1">
+      <div class="zerogrid">
+        <button type="button" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      <div class="scroll_box1">&nbsp;</div>
+      <div class="policybox">
+        
+          <input [(ngModel)]="queryString" #search  type="search" name="txtName2" class="admininput" id="txtName1" value="" size="5" maxlength="220" required placeholder="Name of the Customer">
+      </div>
+
+   <!-- <div class="scroll_box3">  
+      <span class="admin01_inpute">
+      <input type="text" name="txtName2" class="admininput" id="txtName2" value="" size="5" maxlength="220" required placeholder="Last Name"></span>
+  </div>-->
+    <div class="scroll_save1">
+      <img src="../../../assets/images/search_menu.png" alt=""></div>
+    </div>
+
+  </div>
+    
+  
+<!-- ends here -->
+
+<!-- Add Cusomer toggle starts here-->
+<form id="saveCustomer" #formCtrl="ngForm" (ngSubmit)="formCtrl.valid && saveCustomer(formCtrl)" autocomplete="off" novalidate>
+  <div class="os-tech">
+    <div class="zerogrid">
+        <span id="sucessStatus"></span>
+        <div id="sucessStatus" style="color: red;margin: -18px 63px 0px 0px;" [hidden]="customEmail.valid || customEmail.untouched">
+          <div  *ngIf="customEmail.errors && customEmail.errors.required">
+              Email is required
+          </div>
+          <div  *ngIf="customEmail.errors && customEmail.errors.pattern">
+              Email is invalid
+          </div>
+      </div>
+      <span id="errorCall1" style="color: red;font-size: 17px;text-align: center;">{{errMessage1}}</span>
+
+     <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="col-sm-12 col-md-12 col-xs-12 padd0">
+
+    <div class="scroll_title"><img src="../../../assets/images/editadd.png" alt="">
+     </div>
+     </div>
+     <div class="col-sm-12 col-md-12 col-xs-12 padd0">
+
+    <div class="scroll_box1"><img src="../../../assets/images/AddNew_IC.png" alt=""></div>
+    <div class="col-sm-8 col-md-8 col-xs-12 padd0">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+        <span class="admin01_inpute">
+    <input type="text" name="txtName2" class="admininput" id="custId" value="" size="5" maxlength="50"  placeholder="ID" disabled>
+  </span>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <span class="admin01_inpute">
+        <input type="email" name="email" class="admininput" #customEmail="ngModel" id="customEmail" value="" size="5" maxlength="50" required placeholder="Email*" ngModel pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+
+    </span>
+    </div>
+    </div>
+    
+    <div class="col-sm-8 col-md-8 col-xs-12 padd0">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+        <span class="admin01_inpute">
+            <input type="text" name="firstName" class="admininput" id="firstName" value="" size="5" maxlength="50" required placeholder="First Name*" ngModel>
+          </span>
+        </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+ 
+    <span class="admin01_inpute">
+    <input type="text" name="lastName" class="admininput" #lastName="ngModel" (input)="lastNameValid($event)"  id="lastName" value="" size="5" maxlength="50" required placeholder="Last Name*"  ngModel>
+    </span>
+    </div>
+    </div>
+    
+
+    <div class="col-sm-8 col-md-8 col-xs-12 padd0">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+        <span class="admin01_inpute">
+            <input type="number"  name="age" class="admininput" id="custmrAge" #custmrAge="ngModel" (input)="custmrAgeValid($event)"  value="" required placeholder="Age*" style="margin:0 0 0 109px;" ngModel>
+          </span>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 genderCls" style="    margin: -74px 0 0 159px;">
+      <span>
+        <input class="css-radioMale" type="radio" value="M" (click)="genderID='M'" name="gender" id="maleID"   required ngModel/> <label for="maleID" class="css-labelMaleIcon"> </label>  
+        <input class="css-radioFemale" type="radio" value="F"(click)="genderID='F'" name="gender" id="femaleID"   required ngModel/> <label for="femaleID" class="css-labelFemaleIcon"> </label>  
+      </span>
+      <!--<a id="maleID" (click)="genderID='M'" ><img src="../../../assets/images/MaleICON.png" alt=""></a>
+    <a id="femaleID" (click)="genderID='F'" ><img src="../../../assets/images/FemaleICON.png" alt=""></a>-->
+    </div> 
+  
+    
+    </div>
+    </div>
+   
+    <div class="scroll_save" >
+        <button type="submit" class="btn btn-primary call-back btn-default" id="saveButton" [disabled]="formCtrl.invalid || formCtrl.sucessStatus ||formCtrl.errorCall1 ||disableButton ||errMessage1"  style="background-color: #2b373f; border-color: #2b373f"><img src="../../../assets/images/SaveICON.png" alt=""></button>
+      </div>
+    </div>
+    <div id="loader"></div>
+    </div>
+  </form>
+  
+<!-- ends here -->
+
+<!--Edit Customer toggle goes here -->
+<form id="updateCustomer" #formCtrl11="ngForm" (ngSubmit)="updateCustomer(formCtrl11)">
+
+ <div class="viewToggle">
+    <div class="zerogrid">
+        <span id="sucessStatus1" style="margin-left: 417px; font-size: 16px;"></span>
+        <span id="errorCall1" style="color: red;font-size: 17px;text-align: center;">{{errMessage1}}</span>
+    
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        
+    <div class="col-sm-12 col-md-12 col-xs-12 padd0">
+    
+        <div class="scroll_title"><img src="../../../assets/images/editadd.png" alt="">
+         </div>
+         </div>
+       
+       
+       <div class="col-sm-12 col-md-12 col-xs-12 padd0">
+    
+        <div class="scroll_box1"><img src="../../../assets/images/AddNew_IC.png" alt=""></div>
+        <div class="col-sm-8 col-md-8 col-xs-12 padd0">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+            <span class="admin01_inpute">
+    <input type="text" name="rmId" class="admininput" id="editRmId" value="" size="5" maxlength="50"  placeholder="ID" required ngModel readonly></span>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <span class="admin01_inpute">
+    <input type="email" name="email" class="admininput" id="editcustomEmail" value="" size="5" maxlength="50"  placeholder="Email" required ngModel>
+    
+        </span>
+        </div>
+    
+        
+        </div>
+        
+        <div class="col-sm-8 col-md-8 col-xs-12 padd0">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+            <span class="admin01_inpute">
+    <input type="text" name="firstName" class="admininput" id="editfirstName" value="" size="5" maxlength="50"  placeholder="First Name*" required ngModel>
+              </span>
+            </div> 
+            <div class="col-md-4 col-sm-4 col-xs-12">
+     
+        <span class="admin01_inpute">
+    <input type="text" name="lastName" class="admininput" id="editlastName" value="" size="5" maxlength="50"  placeholder="Last Name*" required ngModel>
+        </span>
+        </div>
+        </div>
+        
+    
+        <div class="col-sm-8 col-md-8 col-xs-12 padd0">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+            <span class="admin01_inpute">
+    <input type="tel"  name="age" class="admininput" id="editcustmrAge" value=""  placeholder="Age*" (input)="custmrAgeValid($event)" maxlength="3" style="margin:0 0 0 109px;" required ngModel>
+              </span>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 genderCls" style="    margin: -74px 0 0 200px;">
+          <div class=""><a id="maleID"  value="M"  name="gender" (click)="genderID='M'"><img src="../../../assets/images/MaleICON.png" alt="" required></a>
+            <a id="femaleID" value="F" name="gender" class="femaleIcon" (click)="genderID='F'"><img src="../../../assets/images/FemaleICON.png" alt="" required style="margin-left: 19px;"></a>
+            </div>
+          <!--<a id="maleID" (click)="genderID='M'" ><img src="../../../assets/images/MaleICON.png" alt=""></a>
+        <a id="femaleID" (click)="genderID='F'" ><img src="../../../assets/images/FemaleICON.png" alt=""></a>-->
+        </div> 
+      
+        
+        </div>
+        </div>
+       
+    <div class="scroll_save" >
+      <button type="submit" class="btn btn-primary call-back btn-default" [disabled]="disableButton1" style="background-color: #2b373f; border-color: #2b373f"><img src="../../../assets/images/SaveICON.png" alt=""></button>
+    </div>
+      </div>
+</div>
+</form>
+
+
+<!-- ends here -->
+  </div>
+  </div>
+  
+<div class="folder">
+ <div class="contentmain1">
+    <div class="customer_box"><img src="../../../assets/images/myCustomer_ic.png" alt=""></div>
+      <div class="view_box">
+    <div class="view"><input type="radio" [value]="status" name="smoker" id="viewAllCus" (click)= "viewAllCus()"  class="css-radioViewAll" required checked/> <label for="viewAllCus" class="css-labelViewAll"></label></div>
+    <div class="view"><input type="radio" value="status==1" name="smoker" id="withPlanCus" (click)= "withPlanCus()"  class="css-radiowithPlanCus" required /> <label for="withPlanCus" class="css-labelwithPlanCus" ></label></div>
+
+    <div class="view"><input type="radio" value="status==0" name="smoker" id="prospectCus" (click)= "prospectCus()"  class="css-radioprospectCus" required/> <label for="prospectCus" class="css-labelprospectCus"></label></div>
+    <div class="view"><input type="radio" value="status==2" name="smoker" id="declinedCus" (click)= "declinedCus()"  class="css-radiodeclinedCus" required /> <label for="declinedCus" class="css-labeldeclinedCus"></label></div>
+</div>
+
+
+
+<div class="list_box" *ngFor=" let data of data| searchFilter:  search.value | paginate: {id: 'pageId', itemsPerPage: 5, currentPage: p }" >
+   <!-- pager -->
+
+   <div class="name_box"><span id="getFirstName">{{data.firstName}}</span><span style="padding-left: 8px;">{{data.lastName}}</span></div>
+   
+   <div class="status_main">
+<div class="status_box"><div class="editView"><a (click)="editCustomer(data)" [attr.data-index]="i"><img src="../../../assets/images/EditViewICON.svg" alt="" style="margin: 7px 0 0 0;"></a></div></div>
+<div class="status_box"><a (click)="gotoOmp(data)"><img src="../../../assets/images/OneMinutePlanICON.svg" alt=""></a></div>
+<div class="status_box"><img src="{{data.statusImg}}" alt=""></div>
+</div>
+</div>
+<div id="loader1"></div>
+
+<div class="list_box1" style="color: black;text-align: center;font-size: 20px;" id="itemsNotFound" *ngIf="(data | searchFilter:search.value ).length ===0 && hideMessage" >No records found!</div>
+<div class="clear"></div>
+<div class="col-12 justify-content-center">
+  <pagination-controls class="my-pagination" maxSize="5"  id="pageId" (pageChange)="p = $event"></pagination-controls>
+</div>
+
+ </div>
+
+
+<!-- Add Cusomer toggle starts here-->
+ 
+<!-- ends here -->
+</div>
+<div id="footermain">
+  <div class="footer_Pas1">{{firstName}} &nbsp; {{lastNameFtr}} &nbsp;
+    <a>
+     <span *ngIf="isAdmin == '1'" id="settingsIcon" class="glyphicon glyphicon-cog"></span>
+  </a>
+  <span><a routerLink="../../home/manageUserCreation" id="rmCreationId"><b>Manage User</b></a></span>
+  
+ </div>
+  <div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
+  
+  <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+</div>
+ <!-- Modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #changePwdForm = "ngForm">
+        <div class="form-group">
+          <label for="Old-Password" class="col-form-label" >Old Password:</label>
+          <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+        </div>
+         <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+        <div class="form-group" [ngClass]="{'has-error':newPwd.invalid && !newPwd.pristine}">
+          <label for="New-Password" class="col-form-label" >New Password:</label>
+          <input type="password" class="form-control" name="newPwd" #newPwd="ngModel" id="New-Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" ngModel required>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error':confirmPwd.invalid && !confirmPwd.pristine}">
+          <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+          <input type="password" class="form-control" name="confirmPwd"  #confirmPwd="ngModel" id="cngm-Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" ngModel required>
+        </div>
+         <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+               <div *ngIf = "userPassword.invalid; else nomatch">
+                New Password and Confirm Password should match
+                              </div>
+                  <ng-template #nomatch >
+                    New Password and Confirm Password should match
+                  </ng-template>
+              </div>
+       </div> 
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Success or failure modal -->
+<div id="resultModal" class="modal" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-body">
+      <p id="messageTouser"></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- ends here-->
+      <!--Report Issue modal starts here-->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="reportIssueModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel11">Report An Issue</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  #reportAnIssue = "ngForm" >
+        <div class="form-group">
+          <label for="cngm-Password" class="col-form-label" style="margin-left: 63px;">Description of the issue:</label>
+          <textarea rows="3" cols="60" type="text" value="" name="issue" id="issueReport" ngModel required style="margin: 0 0 0 -61px;"></textarea>
+        </div>
+      
+   
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" (click) ="reportIssue(reportAnIssue)" data-dismiss="modal" [disabled]="!reportAnIssue.form.valid" class="btn btn-primary">Report</button>
+    </div>
+    </form>
+     </div>
+  </div>
+</div>
+</div>
+<!--Report Issue modal ends here-->
+
+<!--Manage Settings modal starts here-->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="manageSettingModal" tabindex="-1" role="dialog" aria-labelledby="mangeSetting" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="width: 70%;" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mangeSetting">RM Id Creation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #manageSetting = "ngForm">
+            <div class="row" style="margin-left: 93px;">
+          <div class="col-xs-6">
+              <label for="rmName" class="">RM Name</label>
+                <input type="text" value="" name="rmName" class="form-control" id="rmName" placeholder="RM Name" ngModel/>
+            </div>
+            <div class="col-xs-6">
+                <label for="rmName" class="">UH Name</label>
+                <input type="text" value="" name="uhName" class="form-control" id="uhName" placeholder="Your UH Name" ngModel/>
+              </div>
+            
+            </div>
+
+            <div class="row" style="margin-left: 93px;">
+                <div class="col-xs-6">
+                    <label for="rmName" class="">Email Id</label>
+                    <input type="email" value="" name="MangeEmail" class="form-control" id="MangeEmail" placeholder="Your Email Id" ngModel/>
+                  </div>
+                  <div class="col-xs-6">
+                      <label for="rmName" class="">Designation</label>
+                      <input type="text" value="" name="{{designation}}" class="form-control" id="designation" placeholder="PRM" ngModel readonly/>
+                    </div>
+                  
+                  </div>
+                  <div class="row" style="margin-left: 93px;">
+                      <div class="col-xs-6">
+                          <label for="rmName" class="">DBS Location</label>
+                          <br>
+                          <select class="inpute_text03"  [(ngModel)]="dbsLocation" name="dbsLocation" style="width: 70%;background: #ffffff;">
+                              <option value="Bangalore">Bangalore</option>
+                              <option value="Chennai">Chennai</option>
+                              <option value="Kolkatta"> Kolkatta</option>
+                              <option value="Mumbai">Mumbai</option>
+                              <option value="Nashik"> Nashik</option>
+                              <option value="New Delhi"> New Delhi</option>
+                              <option value="Pune"> Pune</option>
+                              <option value="salem">salem</option>
+
+                            </select>
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="rmName" class="">City Head</label>
+                            <input type="text" value="" name="cityHead" class="form-control" id="cityHead" placeholder="Your City Head" ngModel/>
+                          </div>
+                        
+                        </div>
+          
+                        <div class="row" style="margin-left: 93px;">
+                            <div class="col-xs-6">
+                                <label for="rmName" class="">License code</label>
+                                <input type="text" value="" pattern="^[a-zA-Z]{15}$" maxlength="15" name="licenseCode" class="form-control" id="licenseCode" placeholder="Enter License Head" ngModel/>
+                              </div>
+                              <div class="col-xs-6">
+                                  <label for="rmName" class="">License Expiry Date</label>
+                                  <div [ngClass]="{'has-error':licenseExpDate.invalid && !licenseExpDate.pristine ||licenseExpDate.touched}">
+                                  <input type="date" value="" #licenseExpDate="ngModel" (input)="getToday()" name="licenseExpDate" class="form-control" id="licenseExpDate" placeholder="Enter License Expiry Date" ngModel/></div>
+                                  <div id="errorCall2" style="color: red;font-size: 17px;">{{errMessage3}}</div>
+
+                                </div>
+                              </div>
+                              
+                              <br>
+                              <br>
+                        
+            
+                                                            
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" (click) ="rmCreation()"  class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    </div>
+    </div>
+    </div>
+  </div>
+<!--Manage Settings modal ends here-->
+  
+
+
+
+
+</div>

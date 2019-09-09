@@ -1,0 +1,174 @@
+<div>
+  <div class="rootCus">
+    <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+    <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="menu">
+      <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+      <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+      <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+      <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+    </ul>  
+  
+  </div>
+  <div id="dbs">
+          <div class="zerogrid"> 
+            
+          <!--<div class="content">&nbsp;</div>-->
+          <form #input="ngForm">
+          <div class="contentmain">
+          
+          <div class="profilemain">
+          <div class="onetext"><strong>Finally ……. that’s it</strong><br><br>Your family's net annual expenses in INR (Deduct your own personal expenses incurred in traveling, clothing, food, income tax from the total expenses incurred annually today).
+          This is the amount your family would need to maintain their life style, in the unfortunate event of you not being there.<br>
+          <div class="blank"></div>
+          <br>
+          <div class="formmin1" [ngClass]="{'has-error':monthlyExpense.invalid && !monthlyExpense.pristine ||monthlyExpense.touched}">
+                 
+          <input type="number"  min="0" name="monthlyExpense" [(ngModel)]="termInput.monthlyExpense" #monthlyExpense="ngModel" (input)="getValidmonthlyExpense($event)" class="ins_text" id="monthlyExpense" value="" maxlength="8" required placeholder="Net Expense" ngModel>
+          <div><span id="netExp"></span>  
+          </div>
+          <div id="errorCall" class="has-error" style="">{{errMessage1}}</div>
+          </div>
+          </div>
+          </div>
+          <div class="blank"></div>
+          <div class="profilemain">
+
+          <div class="onetext" style="margin: 0 0 -37px 0;"><strong> Disposable income to invest in long term savings on annual basis</strong></div> 
+            </div>
+          <div class="chek_box2">
+          <div class="boxes">
+          <!--<div class="blank"></div>-->
+          
+          <div class="slidermain"> 
+            <div class="slider"><a (click)="getDisposalIN('200000', '../../../assets/images/1st_slide_R.svg', '500000','1000000','1500000')"><img id="200000" src="../../../assets/images/1st_slide_N.svg"></a></div>
+          
+          <div class="slider1"><a (click)="getDisposalIN('500000', '../../../assets/images/2nd_slide_R.svg', '200000', '1000000','1500000')"><img id="500000" src="../../../assets/images/2nd_slide_N.svg"></a></div>  
+            </div>
+          <div class="slider2">
+            <a  (click)="getDisposalIN('1000000', '../../../assets/images/3rd_slide_R.svg', '200000', '500000', '1500000')"><img id="1000000" src="../../../assets/images/3rd_slide_N.svg"></a> </div>
+           <div class="slider3"> 
+             <a (click)="getDisposalIN('1500000', '../../../assets/images/4th_slide_R.svg', '200000', '500000', '1000000')"><img id="1500000" src="../../../assets/images/4th_slide_N.svg"></a> </div>
+          </div>
+          </div>
+
+          <br>
+          <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <div class="onebutton1"><a (click)="goBack()"><img src="../../../assets/images/previous.png" alt=""></a></div>
+                </div>
+                  <div class="col-md-6 col-sm-6 text-right">
+                    <div class="onebuttonOne" *ngIf="showNext"><a (click)="getMyPlan(input)"> <img src="../../../assets/images/next.png" alt=""></a></div>
+                  </div>
+            </div>
+          </div>
+
+          <!--<div class="custQuePre4"><a (click)="goBack()"><img src="../../../assets/images/previous.png" alt=""> </a></div>
+          <div class="custQueNext4" *ngIf="showNext"><a (click)="getMyPlan(input)" ><img src="../../../assets/images/next.png" alt=""> </a></div> -->
+          </div>
+        </form>
+          </div>
+          
+          </div>
+          <div id="footermain">
+            <div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} &nbsp;
+              
+           </div>
+            <div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
+            
+            <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+          </div>
+           <!-- Modal -->
+          <div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form  #changePwdForm = "ngForm">
+                  <div class="form-group">
+                    <label for="Old-Password" class="col-form-label" >Old Password:</label>
+                    <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+                  </div>
+                   <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+                  <div class="form-group">
+                    <label for="New-Password" class="col-form-label" >New Password:</label>
+                    <input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
+                  </div>
+                  <div class="form-group">
+                    <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+                    <input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
+                  </div>
+                   <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+                         <div *ngIf = "userPassword.invalid; else nomatch">
+                          New Password and Confirm Password should match
+                                        </div>
+                            <ng-template #nomatch >
+                              New Password and Confirm Password should match
+                            </ng-template>
+                        </div>
+                 </div> 
+                
+             
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+              </div>
+              </form>
+               </div>
+            </div>
+          </div>
+          </div>
+          
+          
+          <!-- Success or failure modal -->
+          <div id="resultModal" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <p id="messageTouser"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+              </div>
+            </div>
+          </div>
+          </div>
+          <!-- ends here-->
+                <!--Report Issue modal starts here-->
+          <div data-backdrop="static" data-keyboard="false" class="modal fade" id="reportIssueModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel11">Report An Issue</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form  #reportAnIssue = "ngForm" >
+                  <div class="form-group">
+                    <label for="cngm-Password" class="col-form-label" style="margin-left: 63px;">Description of the issue:</label>
+                    <textarea rows="3" cols="60" type="text" value="" name="issue" id="issueReport" ngModel required style="margin: 0 0 0 -61px;"></textarea>
+                  </div>
+                
+             
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" (click) ="reportIssue(reportAnIssue)" data-dismiss="modal" [disabled]="!reportAnIssue.form.valid" class="btn btn-primary">Report</button>
+              </div>
+              </form>
+               </div>
+            </div>
+          </div>
+          </div>
+          <!--Report Issue modal ends here-->
+          
+
+</div>

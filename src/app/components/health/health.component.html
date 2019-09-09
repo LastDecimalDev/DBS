@@ -1,0 +1,251 @@
+<div>
+  <div class="rootCus">
+    <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+    <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="menu">
+      <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+      <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+      <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+      <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+    </ul>  
+  
+  </div>
+  <div id="dbs">
+  <div class="zerogrid">
+  <div class="contentmain">
+    <div class="profilemain">
+    <span class="ibspan"><img src="../../../assets/images/Health_Hospi_ICON.svg"></span><span><strong style="font-size: 20px;"> Policy For Me > Health > Hospitalisation</strong></span>
+    <div class="oneplan">
+    <div class="onetext"><strong>Help us identify the plans relevant for your need: <i>(All Fields are Mandatory)</i></strong>
+    </div>
+    </div>
+    </div>
+    <form id="health-buy-form" class="form-horizontal" #healthform = "ngForm" autocomplete="off" novalidate >
+     <div class="col-md-12 col-sm-12 col-xs-12">
+	        <div class="insurancebox">
+	         <label class="control-label" style="visibility:hidden">Type of Product Type</label>
+	          <div id="radio5" class="formmin4">
+						<input type="radio" name="productType" class="css-radio1"  [(ngModel)]="healthInput.productType"  value="FF" (click)="healthInput.productType ='FF';getFFIndv(healthInput)" id="productType1"  required/><label for="productType1" class="css-labelTick"></label>Family Floater
+						<input type="radio" name="productType" class="css-radio1"  [(ngModel)]="healthInput.productType" value="INDV" (click)="healthInput.productType ='INDV';getFFIndv(healthInput)" id="productType2"  required/><label for="productType2" class="css-labelTick"></label>Individual
+	           
+	        </div>
+        </div>
+        <div class="clear"></div>
+        	<div class="insurancebox">
+        		<label class="control-label"> Do you want to?</label>
+        		 <div id="radio6" class="formmin4" style="width: 110%">
+						<input type="radio" name="policyType" class="css-radio1" value="new" [(ngModel)]="policyType"    id="policyType11"  required/><label for="policyType11" class="css-labelTick"></label> New Policy
+						<input type="radio" name="policyType" class="css-radio1" value="enhanceExCover" [(ngModel)]="policyType" id='policyType2'  required/><label for="policyType2" class="css-labelTick"></label>Enhance existing cover
+					
+	           
+             </div>
+        </div>
+        <div class="clear"></div>
+        <div class="col-sm-12"><div class="error" style="color:red">{{errorforProdType}}</div></div>
+        <div class="col-sm-4" *ngIf="policyType == 'enhanceExCover'">
+        	<div class="ins_box">
+        		<label class="ins_box">
+        			Existing Amount of Cover
+        		</label>
+        		<select class="inpute_text03"  [(ngModel)]="healthInput.deductibe" name="deductible" required>
+              <option value="" disabled>--Select--</option>
+        			<option value="100000">1 Lakh</option>
+        			<option value="200000">2 Lakh</option>
+        			<option value="300000">3 Lakh</option>
+        			<option value="400000">4 Lakh</option>
+        			<option value="500000">5 Lakh</option>
+        			<option value="1000000">10 Lakh</option>
+        		</select>
+        	</div>
+        </div>
+      </div> 
+
+
+      <div class="blank"></div>
+    <div class="col-12 col-sm-12 col-md-12" *ngFor="let member of healthInput.member; let i=index">
+      <div class="col-md-3 col-sm-4">
+        <div class="ins_box">
+        <label class="ins_box"> RelationShip</label>
+        <select class="inpute_text03" [(ngModel)]="healthInput.member[i].relationship" (change)="checkMember(healthInput.member[i].relationship,i)" name="memberRelationship{{i}}" id="Relationshipvalue{{i}}" required>
+          <option value="" disabled>Select</option>
+          <option value="{{item.id}}" *ngFor="let item of Relationship">{{item.name}}</option>
+        </select>
+        </div>
+      </div>
+
+      <div class="col-sm-4 col-md-3" *ngIf="dobProposer">
+        <div class="blank"></div>
+          <div class="ins_box memDob">Member DOB<b>*</b><br>
+            <input type="date" class="inpute_text" style="width:100%!important"  [(ngModel)]="healthInput.member[i].dob" (input)="ageCount(healthInput.member[i].dob, i)"  onkeydown="return false" name="adultchild{{i}}" id="adultSelect{{i}}" required/>
+          </div>
+      
+          <span *ngIf="errorCall3" id="errorCall3" class="has-error">{{errorforMaxRegdate[i]}}</span>
+          <span *ngIf="errorDobchild" id="errorDobchild{{i}}" class="has-error">{{memberval[i]}}</span>
+          <span *ngIf="errorDobadult" id="errorDobadult{{i}}" class="has-error">{{memberval[i]}}</span>
+   
+        </div>
+   
+      <div class="col-sm-4 col-md-3" *ngIf="healthInput.member[i].relationship=='1'">
+          <div class="blank"></div>
+            <div class="ins_box">Gender <b>*</b>
+            <select class="inpute_text03" [(ngModel)]="healthInput.member[i].gender" name="gender{{i}}" id="gender{{i}}" required>
+                <option value="" disabled>--Select--</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+            </select>
+            </div>
+      </div>
+
+     <!-- <div class="col-3 col-sm-3 col-md-3">
+          <div class="blank"></div>
+            <div class="ins_box">Adult/Child<b>*</b>
+            <select class="inpute_text03" [(ngModel)] ="healthInput.member[i].adultChild" name="childAdult{{i}}" id="childAdult{{i}}" (change)="getAdultChild(healthInput.member[i].adultChild, i)" required>
+              <option value="" disabled>--Select--</option>
+              <option value="Adult" >Adult</option>
+              <option value="Child">Child</option>
+            </select>
+            </div>
+            
+      </div>-->
+      <div class="col-sm-4 col-md-3" *ngIf="healthInput.productType=='FF'">
+        <div class="blank"></div>
+        <p class="" *ngIf="healthInput.member.length<6" id="addmemberid{{i}}" style="text-align:left;padding-bottom:5px;color: #999;margin: 0 0 0 0;"><strong id="addMemberstr{{i}}">Add Member</strong></p>       
+        <a *ngIf="healthInput.member.length< 6" (click)="addMember()" id="anchorId{{i}}"><img id="plusId{{i}}" src="../../../assets/images/ins-plus.png"></a>
+        <button id="buttonId{{i}}" *ngIf="healthInput.member.length>1" (click)="reset(i)">reset</button>
+    </div>
+    </div>
+    
+        <div class="blank"></div>
+       
+    <div class="col-xs-12 col-lg-12 col-sm-12 col-md-12">
+    <div class="col-md-3 col-sm-4">
+        <div class="blank"></div>
+        <div class="ins_box">
+            <label class="ins_box">Sum Insured</label>
+      
+          <select class="inpute_text03" id="suminsured" [(ngModel)]="healthInput.sumInsured" name="sumInsured" required>
+            <option value="" disabled>--Select--</option>
+            <option value="100000">1 Lakh</option>
+            <option value="200000">2 Lakh</option>
+            <option value="300000">3 Lakh</option>
+            <option value="400000">4 Lakh</option>
+            <option value="500000">5 Lakh</option>
+            <option value="1000000">10 Lakh</option>
+            <option value="1500000">15 Lakh</option>
+            <option value="2000000">20 Lakh</option>
+            <option value="25000000">25 Lakh</option>
+            <option value="3000000">30 Lakh</option>
+            <option value="5000000">50 Lakh</option>
+            <option value="10000000">100 Lakh</option>
+            <option value="15000000">150 Lakh</option>
+          </select>
+
+    </div>
+    
+    </div>
+    <div class="col-md-3 col-sm-4" style="padding-left:0px; margin: 0 0 0 14px;">
+        <div class="blank"></div>
+    	<div class="ins_box" [ngClass]="{'has-error':pincodecritical.invalid && !pincodecritical.pristine}" style="margin-left:0px;margin-right:0px;">
+	      <div class="ins_box">Pincode<b>*</b>
+	      <input type="tel" name="Pincode" id="pincodecritical"  #pincodecritical ="ngModel" (blur)="getValidPinCode($event)" class="ins_text" [(ngModel)]="healthInput.Pincode" placeholder="6 digits only" pattern="^[0-9]{6}$" inputmode="numeric" maxlength="6" required>
+       </div>
+       <span *ngIf="errorCall" id="errorCall" class="has-error">{{errMessage}}</span>
+       </div>
+    </div>
+
+    <div class="col-md-3 col-sm-4" style="margin: 0 0 0 -14px;">
+        <div class="blank"></div>
+        <div class="ins_box" [ngClass]="{'has-error':tenure.invalid && !tenure.pristine ||tenure.touched}">
+
+        <div class="ins_box">Tenure<b>*</b>
+          <input type="number" class="ins_text" [(ngModel)]="healthInput.Tenure" #tenure="ngModel" id="tenure" (input)="tenureValid($event)"  min="0" name="tenure" style="width: 101%;" required>
+      </div>
+      <span id="errorCall" class="has-error">{{errMessage3}}</span>
+      </div>
+    </div>
+    </div>
+    <div class="blank"></div>
+     <div class="clear"></div>
+     <div class="col-sm-12"><div class="error" style="color:red">{{error}}</div></div>
+      <div class="col-sm-12"><div class="error" style="color:red">{{errMessage1}}</div></div>
+      <div class="col-sm-12" style="padding-left:35%;"><div class="error" style="color:red">{{errorforAdultChild}}</div></div>
+      <div class="clear"></div>
+      <div class="blank"></div>
+
+     <div class="col-md-3 col-sm-4 col-xs-12" class="comparebutton">
+            <button id="comparebutton" (click)="submitForm(healthform)"   [disabled]="healthform.invalid || errorCall || errorCall3 || errorCall4 || (productType == 'FF' && healthInput.member.length < 2)" style="background-color: #ce0707;margin-left: 42% !important;" class="btn btn-primary call-back btn-default" >COMPARE POLICIES</button>
+        </div>
+    <div class="clear"></div>
+   </form>
+    </div>
+    </div>
+    </div>
+    <div id="footermain">
+      <div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} &nbsp;
+        
+     </div>
+      <div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
+      
+      <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+    </div>
+     <!-- Modal -->
+  <div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form  #changePwdForm = "ngForm">
+            <div class="form-group">
+              <label for="Old-Password" class="col-form-label" >Old Password:</label>
+              <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+            </div>
+             <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+            <div class="form-group">
+              <label for="New-Password" class="col-form-label" >New Password:</label>
+              <input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
+            </div>
+            <div class="form-group">
+              <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+              <input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
+            </div>
+             <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+                   <div *ngIf = "userPassword.invalid; else nomatch">
+                      Passwords need to be match
+                  </div>
+                      <ng-template #nomatch >
+                          Passwords don't match
+                      </ng-template>
+                  </div>
+           </div> 
+          
+       
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+        </div>
+        </form>
+         </div>
+      </div>
+    </div>
+  </div>
+  <!-- Success or failure modal -->
+  <div id="resultModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p id="messageTouser"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- ends here-->
+</div>

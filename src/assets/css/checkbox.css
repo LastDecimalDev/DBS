@@ -1,0 +1,329 @@
+.check{width:87%; float:left; padding:1% 0 0% 0%; color:#666; text-align:center; margin-left: 8%;}
+.checkFisrt{width:87%; float:left; padding:1% 0 0% 0%; color:#666; text-align:center; margin-left: 16%;}
+.checkSec{width:87%; float:left; padding:1% 0 0% 0%; color:#666; text-align:center; margin-left: 14%;}
+.checkCurrentStage{width:87%; float:left; padding:1% 0 0% 0%; color:#666; text-align:center; margin-left: 15%;}
+.chek_box3{width:16%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+.quest{width:100%; float:left; font-family:Lato; font-size:20px; font-weight:700; line-height:24px; padding:6% 0 1% 0; color:#666; text-align:center; }
+.quest1{width:100%; float:left; font-family:Lato; font-size:20px; font-weight:700; line-height:24px; padding:3% 0 2% 0; color:#666; text-align:center; border-top:1px solid #3E3E3E;margin-left: 10px;}
+.quest2{margin: 27px 0px 0 5px;width:100%; float:left; font-family:Lato; font-size:20px; font-weight:700; line-height:24px; padding:3% 0 0% 0; color:#666; text-align:center; border-top:1px solid #3E3E3E;}
+
+.check1{width:100%; float:left; padding:1% 0 0% 0%; color:#666; text-align:center; margin-left: 2%;}
+.checkOne{width:100%; float:left; padding:1% 0 0% 0%; color:#666; text-align:center; margin-left: 2%;}
+
+.check2{width:60%; float:left; padding:1% 0 0% 0%; color:#666; text-align:center; margin-left: 25%;}
+.chek_box4{width:14%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+.chek_boxOne{width:14%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+.chek_box5{width:29%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+.chek_box6{width:20%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+.chek_box7{width:22%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; margin:0% 0 2% 2%; color:#666; text-align:center;}
+.chek_box4a{width:14%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+.chek_boxOnetrunk{width:14%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+
+/*START CHECKBOX1*/	
+input[type=radio].css-checkbox1 {display:none;}
+input[type=radio].css-checkbox1 + label.css-label1{padding-left:5px; height:80px; width:68px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox1:checked + label.css-label1{background-position:0 0px; background-image:url(../images/selectAssure_svg/25Years_Red.svg);}
+label.css-label1{background-image:url(../images/selectAssure_svg/25Years.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/	
+
+/*START CHECKBOX2*/	
+input[type=radio].css-checkbox2 {display:none;}
+input[type=radio].css-checkbox2 + label.css-label2{padding-left:5px; height:80px; width:47px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox2:checked + label.css-label2{background-position:0 0px; background-image:url(../images/selectAssure_svg/26_35_Red.svg);}
+label.css-label2{background-image:url(../images/selectAssure_svg/26_35.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX3*/	
+input[type=radio].css-checkbox3 {display:none;}
+input[type=radio].css-checkbox3 + label.css-label3{padding-left:5px; height:80px; width:49px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox3:checked + label.css-label3{background-position:0 0px; background-image:url(../images/selectAssure_svg/36_45_Red.svg);}
+label.css-label3{background-image:url(../images/selectAssure_svg/36_45.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX4*/	
+input[type=radio].css-checkbox4 {display:none;}
+input[type=radio].css-checkbox4 + label.css-label4{padding-left:5px; height:80px; width:50px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox4:checked + label.css-label4{background-position:0 0px; background-image:url(../images/selectAssure_svg/46_55_Red.svg);}
+label.css-label4{background-image:url(../images/selectAssure_svg/46_55.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX5*/	
+input[type=radio].css-checkbox5 {display:none;}
+input[type=radio].css-checkbox5 + label.css-label5{padding-left:5px; height:80px; width:79px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox5:checked + label.css-label5{background-position:0 0px; background-image:url(../images/selectAssure_svg/56Years_Red.svg);}
+label.css-label5{background-image:url(../images/selectAssure_svg/56Years.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+
+/*START CHECKBOX6*/	
+input[type=radio].css-checkbox6 {display:none;}
+input[type=radio].css-checkbox6 + label.css-label6{ margin:3px 0 0 0; padding-left:0px; height:75px; width:75px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox6:checked + label.css-label6{background-position:0 0px; background-image:url(../images/selectAssure_svg/Single_Working_Red.svg);}
+label.css-label6{background-image:url(../images/selectAssure_svg/Single_Working.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/	
+
+/*START CHECKBOX7*/	
+input[type=radio].css-checkbox7 {display:none;}
+input[type=radio].css-checkbox7 + label.css-label7{padding-left:5px; height:80px; width:90px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox7:checked + label.css-label7{background-position:0 0px; background-image:url(../images/selectAssure_svg/Married_Without_Children_Red.svg);}
+label.css-label7{background-image:url(../images/selectAssure_svg/Married_Without_Children.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX8*/	
+input[type=radio].css-checkbox8 {display:none;}
+input[type=radio].css-checkbox8 + label.css-label8{padding-left:5px; height:80px; width:132px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox8:checked + label.css-label8{background-position:0 0px; background-image:url(../images/selectAssure_svg/Parent_With_Young_Child_Red.svg);}
+label.css-label8{background-image:url(../images/selectAssure_svg/Parent_With_Young_Child.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX9*/	
+input[type=radio].css-checkbox9 {display:none;}
+input[type=radio].css-checkbox9 + label.css-label9{padding-left:5px; height:80px; width:87px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox9:checked + label.css-label9{background-position:0 0px; background-image:url(../images/selectAssure_svg/Parent_With_Grown_Up_Red.svg);}
+label.css-label9{background-image:url(../images/selectAssure_svg/Parent_With_Grown_Up.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX10*/	
+input[type=radio].css-checkbox10 {display:none;}
+input[type=radio].css-checkbox10 + label.css-label10{padding-left:5px; height:75px; width:75px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox10:checked + label.css-label10{background-position:0 0px; background-image:url(../images/selectAssure_svg/Nearing_Retirement_Red.svg);}
+label.css-label10{background-image:url(../images/selectAssure_svg/Nearing_Retirement.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX11*/	
+input[type=radio].css-checkbox11 {display:none;}
+input[type=radio].css-checkbox11 + label.css-label11{padding-left:5px; height:64px; width:94px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;margin: 14px 0 0 -17px;}
+input[type=radio].css-checkbox11:checked + label.css-label11{background-position:0 0px; background-image:url(../images/selectAssure_svg/Retired_R.svg);}
+label.css-label11{background-image:url(../images/selectAssure_svg/Retired.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX12*/	
+input[type=radio].css-checkbox12 {display:none;}
+input[type=radio].css-checkbox12 + label.css-label12{margin: 8px 0 0 0;padding-left:5px; height:70px; width:44px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox12:checked + label.css-label12{background-position:0 0px; background-image:url(../images/selectAssure_svg/Other_Red.svg);}
+label.css-label12{background-image:url(../images/selectAssure_svg/Other.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX13*/	
+input[type=radio].css-checkbox13 {display:none;}
+input[type=radio].css-checkbox13 + label.css-label13{margin: 5px 0 0 0;padding-left:5px; height:75px; width:60px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox13:checked + label.css-label13{background-position:0 0px; background-image:url(../images/selectAssure_svg/Salaried_Red.svg);}
+label.css-label13{background-image:url(../images/selectAssure_svg/Salaried.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX14*/	
+input[type=radio].css-checkbox14 {display:none;}
+input[type=radio].css-checkbox14 + label.css-label14{padding-left:5px; height:80px; width:90px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox14:checked + label.css-label14{background-position:0 0px; background-image:url(../images/selectAssure_svg/Sole_Proprietorship_Red.svg);}
+label.css-label14{background-image:url(../images/selectAssure_svg/Sole_Proprietorship.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX15*/	
+input[type=radio].css-checkbox15 {display:none;}
+input[type=radio].css-checkbox15 + label.css-label15{margin: 7px 0 0 0;padding-left:5px; height:75px; width:80px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox15:checked + label.css-label15{background-position:0 0px; background-image:url(../images/selectAssure_svg/Partnership_red.svg);}
+label.css-label15{background-image:url(../images/selectAssure_svg/Partnership.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX16*/	
+input[type=radio].css-checkbox16 {display:none;}
+input[type=radio].css-checkbox16 + label.css-label16{padding-left:5px; height:80px; width:100px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox16:checked + label.css-label16{background-position:0 0px; background-image:url(../images/selectAssure_svg/Private_Public_Red.svg);}
+label.css-label16{background-image:url(../images/selectAssure_svg/Private_Public.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX17*/	
+input[type=radio].css-checkbox17 {display:none;}
+input[type=radio].css-checkbox17 + label.css-label17{padding-left:5px; height:80px; width:100px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox17:checked + label.css-label17{background-position:0 0px; background-image:url(../images/selectAssure_svg/Self_Employed_Red.svg);}
+label.css-label17{background-image:url(../images/selectAssure_svg/Self_Employed.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX18*/	
+input[type=radio].css-checkbox18 {display:none;}
+input[type=radio].css-checkbox18 + label.css-label18{margin: 8px 0 0 0; padding-left:5px; height:75px; width:90px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox18:checked + label.css-label18{background-position:0 0px; background-image:url(../images/selectAssure_svg/Not_Employed_Red.svg);}
+label.css-label18{background-image:url(../images/selectAssure_svg/Not_Employed.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX19*/	
+input[type=radio].css-checkbox19 {display:none;}
+input[type=radio].css-checkbox19 + label.css-label19{margin: -6px 0 0 0; padding-left:5px; height:100px; width:100px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox19:checked + label.css-label19{background-position:0 0px; background-image:url(../images/selectAssure_svg/Rented_Red.svg);}
+label.css-label19{background-image:url(../images/selectAssure_svg/Rented.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX20*/	
+input[type=radio].css-checkbox20 {display:none;}
+input[type=radio].css-checkbox20 + label.css-label20{padding-left:5px; height:90px; width:100px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox20:checked + label.css-label20{background-position:0 0px; background-image:url(../images/selectAssure_svg/Own_House_Red.svg);}
+label.css-label20{background-image:url(../images/selectAssure_svg/Own_House.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX21*/	
+input[type=radio].css-checkbox21 {display:none;}
+input[type=radio].css-checkbox21 + label.css-label21{padding-left:5px; height:90px; width:90px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=radio].css-checkbox21:checked + label.css-label21{background-position:0 0px; background-image:url(../images/selectAssure_svg/LivingWith_Parents_Red.svg);}
+label.css-label21{background-image:url(../images/selectAssure_svg/LivingWith_Parents.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+
+/*START CHECKBOX22*/	
+input[type=checkbox].css-checkbox22 {display:none;}
+input[type=checkbox].css-checkbox22 + label.css-label22{padding-left:5px; height:80px; width:90px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=checkbox].css-checkbox22:checked + label.css-label22{background-position:0 0px; background-image:url(../images/selectAssure_svg/Car_red.svg);}
+label.css-label22{background-image:url(../images/selectAssure_svg/Car.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX23*/	
+input[type=checkbox].css-checkbox23 {display:none;}
+input[type=checkbox].css-checkbox23 + label.css-label23{padding-left:5px; height:80px; width:100px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=checkbox].css-checkbox23:checked + label.css-label23{background-position:0 0px; background-image:url(../images/selectAssure_svg/Bike_red.svg);}
+label.css-label23{background-image:url(../images/selectAssure_svg/Bike.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX24*/	
+input[type=checkbox].css-checkbox24 {display:none;}
+input[type=checkbox].css-checkbox24 + label.css-label24{margin: -5px 0 0 0; padding-left:5px; height:85px; width:100px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=checkbox].css-checkbox24:checked + label.css-label24{background-position:0 0px; background-image:url(../images/selectAssure_svg/Renter_Lease_Red.svg);}
+label.css-label24{background-image:url(../images/selectAssure_svg/Renter_Lease.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+/*START CHECKBOX25*/	
+input[type=checkbox].css-checkbox28 {display:none;}
+input[type=checkbox].css-checkbox28 + label.css-label28{padding-left:5px; height:80px; width:100px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+input[type=checkbox].css-checkbox28:checked + label.css-label28{background-position:0 0px; background-image:url(../images/selectAssure_svg/Valuables_Red.svg);}
+label.css-label28{background-image:url(../images/selectAssure_svg/Valuables.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/
+
+
+/*Tab*/
+
+p {  margin: 0 0 20px;  line-height: 1.5;}
+main {  width: 80%;  padding: 5px 5% 0 0;  margin: 0 auto;  background: #fff; text-align:center;}
+
+input[type=radio].css-radio25 {display:none;}
+input[type=radio].css-radio25 + label.css-label25{padding-left:0px; height:60px; width:200px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;    margin: 30px 0 0 32px;}
+
+input[type=radio].css-radio25:checked + label.css-label25{background-position:0 0px; background-image:url(../images/selectAssure_svg/LowRisk_Select.svg); background-repeat:no-repeat;}
+label.css-label25{background-image:url(../images/selectAssure_svg/LowRisk.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+
+input[type=radio].css-radio26 {display:none;}
+input[type=radio].css-radio26 + label.css-label26{    margin: 30px 0 0 0;padding-left:0px; height:60px; width:200px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+
+input[type=radio].css-radio26:checked + label.css-label26{background-position:0 0px; background-image:url(../images/selectAssure_svg/MediumRisk_Select.svg); background-repeat:no-repeat;}
+label.css-label26{background-image:url(../images/selectAssure_svg/MediumRisk.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+
+input[type=radio].css-radio27 {display:none;}
+input[type=radio].css-radio27 + label.css-label27{    margin: 30px 0 0 0;padding-left:0px; height:60px; width:200px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+
+input[type=radio].css-radio27:checked + label.css-label27{background-position:0 0px; background-image:url(../images/selectAssure_svg/HighRisk_Select.svg); background-repeat:no-repeat;}
+label.css-label27{background-image:url(../images/selectAssure_svg/HighRisk.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+
+
+section {display: none;  padding:0px 0 0 0;  border-top: 0px solid #ddd; text-align:center; font-family: 'Lato'; font-size: 16px;}
+/*input {
+  display: none;
+}*/
+
+
+
+input:checked + label {  border-bottom: 0px solid #fff; }
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+/*START CHECKBOX6*/	
+input[type=checkbox].css-checkbox29 {display:none;}
+input[type=checkbox].css-checkbox29 + label.css-label29{padding-left:0px; height:100px; width:100%; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;margin-left: -55px !important;}
+input[type=checkbox].css-checkbox29:checked + label.css-label29{background-position:0 0px; background-image:url(../images/No.svg);}
+label.css-label29{background-image:url(../images/Yes.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+/*END CHECKBOX*/	
+
+
+
+/*START slider*/	
+input[type=radio].css-radio30 {display:none;}
+input[type=radio].css-radio30 + label.css-label30{padding-left:0px; height:120px; width:180px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+
+input[type=radio].css-radio30:checked + label.css-label30{background-position:0 0px; background-image:url(../images/1st_slide_R.svg); background-repeat:no-repeat;}
+label.css-label30{background-image:url(../images/1st_slide_N.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+
+
+.slide_quest{width:70%; float:left; padding:0% 6% 0% 0%; margin:10% 0 0 0 ; color:#666; text-align:center; background-image:url(../images/line02.svg); background-repeat:repeat-x; height:120px; background-position:left 15%}
+.slide_qbox1{width:80%; float:left; padding:0% 0 0% 0%; margin:0% 0 0 10% ; }
+
+
+/*START slider*/
+
+
+input[type=radio].css-radio40 {display:none; }
+input[type=radio].css-radio40 + label.css-label40{margin:-10% 0 0 -5%; height:110px; width:160px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;float:left;}
+
+input[type=radio].css-radio40:checked + label.css-label40{background-position:0 0px;  background-image:url(../images/1st_slide_N.svg); background-repeat:no-repeat;}
+label.css-label40{background-image:url(../images/1st_slide_R.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; }
+
+input[type=radio].css-radio41 {display:none;}
+input[type=radio].css-radio41 + label.css-label41{margin:-10% 0 0 -6%; height:110px; width:180px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer; float:left;}
+
+input[type=radio].css-radio41:checked + label.css-label41{background-position:0 0px;  background-image:url(../images/2nd_slide_N.svg); background-repeat:no-repeat;}
+label.css-label41{background-image:url(../images/2nd_slide_R.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+
+
+input[type=radio].css-radio42 {display:none;}
+input[type=radio].css-radio42 + label.css-label42{margin:-10% 0 0 2%;  height:110px; width:180px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer; float:left;}
+
+input[type=radio].css-radio42:checked + label.css-label42{background-position:0 0px;  background-image:url(../images/3rd_slide_N.svg); background-repeat:no-repeat;}
+label.css-label42{background-image:url(../images/3rd_slide_R.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+
+input[type=radio].css-radio43 {display:none;}
+input[type=radio].css-radio43 + label.css-label43{margin:-10% 0 0 0%;  height:110px; width:160px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer; float:left;}
+
+input[type=radio].css-radio43:checked + label.css-label43{background-position:0 0px;  background-image:url(../images/4th_slide_N.svg); background-repeat:no-repeat;}
+label.css-label43{background-image:url(../images/4th_slide_N.svg); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none;}
+
+
+@media screen and (max-width: 768px) {
+  .checkSec{width:87%; float:left; padding:1% 0 0% 0%; color:#666; text-align:center; margin-left: 8%;}
+.chek_box3{width:17%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+
+.check1{width:100%; float:left; padding:1% 0 0% 0%; color:#666; text-align:center;}
+.check2{width:60%; float:left; padding:1% 0 0% 0%; color:#666; text-align:center;}
+.chek_box4{width:16%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+.chek_boxOne{width:14%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+
+.chek_box5{width:29%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+.chek_box6{width:20%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+.chek_box7{width:22%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; margin:0% 0 2% 2%; color:#666; text-align:center;}
+.chek_box4a{width:14%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 0%; color:#666; text-align:center;}
+main {  width: 90%;  padding: 0px 0% 0 0;  margin: 0 auto;  background: #fff;}
+
+
+}
+@media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+  
+  .check1{width:100%; float:left; padding:1% 0 0% 0%; color:#666; text-align:center;}
+.check2{width:60%; float:left; padding:1% 0 0% 20%; color:#666; text-align:center;}
+.chek_box4{width:35%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 2%; color:#666; text-align:center;}
+.chek_box5{width:35%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 2%; color:#666; text-align:center;}
+.chek_box6{width:35%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 2%; color:#666; text-align:center;}
+.chek_box7{width:35%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; margin:0% 0 2% 2%; color:#666; text-align:center;}
+.chek_box4a{width:35%; float:left; font-family:Lato; font-size:14px; font-weight:700; line-height:24px; padding:0% 0 2% 2%; color:#666; text-align:center;}
+
+}

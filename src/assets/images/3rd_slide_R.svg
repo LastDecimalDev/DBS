@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="176px" height="103px" viewBox="0 0 176 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FE6287" offset="0%"></stop>
+            <stop stop-color="#D0021B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page5-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-520.000000, -456.000000)">
+        <g id="Group-5" transform="translate(513.000000, 452.000000)">
+            <text id="INR-5,00,000-to-10,0" font-family="Lato-Bold, Lato" font-size="18" font-weight="bold" fill="#D0021B">
+                <tspan x="79.975" y="18">INR</tspan>
+                <tspan x="7.4665" y="40">5,00,000 to 10,00,000</tspan>
+            </text>
+            <circle id="Oval-2-Copy-2" stroke="#979797" fill="#FFFFFF" cx="95" cy="83" r="23"></circle>
+            <circle id="Oval-2-Copy-4" stroke="#979797" fill="url(#linearGradient-1)" cx="95" cy="83" r="16"></circle>
+        </g>
+    </g>
+</svg>

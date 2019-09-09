@@ -1,0 +1,181 @@
+{
+  "result": [
+    {
+      "question_text": "Age band.",
+      "type": "s",
+      "answers": [
+        {
+          "answer": "Q1A1",
+          "answer_text": "25 years or below",
+          "image_url": "../../../../../assets/images/selectAssure_svg/25Years_Red.svg"
+        },
+        {
+          "answer": "Q1A2",
+          "answer_text": "26-35 years",
+          "image_url": "../../../../../assets/images/selectAssure_svg/26_35_Red.svg"
+        },
+        {
+          "answer": "Q1A3",
+          "answer_text": "36-45 years",
+          "image_url": "../../../../../assets/images/selectAssure_svg/36_45_Red.svg"
+        },
+        {
+          "answer": "Q1A4",
+          "answer_text": "46-55 years",
+          "image_url": "../../../../../assets/images/selectAssure_svg/46_55_Red.svg"
+        },
+        {
+          "answer": "Q1A5",
+          "answer_text": "56 years and above",
+          "image_url": "../../../../../assets/images/selectAssure_svg/56Years_Red.svg"
+        }
+      ]
+    },
+    {
+      "question_text": "Current life stage.",
+      "type": "s",
+      "answers": [
+        {
+          "answer": "Q2A1",
+          "answer_text": "Single and working",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Single_Working_Red.svg"
+        },
+        {
+          "answer": "Q2A2",
+          "answer_text": "Married without children",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Married_Without_Children_Red.svg"
+        },
+        {
+          "answer": "Q2A3",
+          "answer_text": "Parent with young children (Below 13 years)",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Parent_With_Young_Child_Red.svg"
+        },
+        {
+          "answer": "Q2A4",
+          "answer_text": "Parent with grown-up children",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Parent_With_Grown_Up_Red.svg"
+        },
+        {
+          "answer": "Q2A5",
+          "answer_text": "Nearing retirement",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Nearing_Retirement_Red.svg"
+        },
+        {
+          "answer": "Q2A6",
+          "answer_text": "Retired",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Retired_R.svg"
+        },
+        {
+          "answer": "Q2A7",
+          "answer_text": "Others",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Other_Red.svg"
+        }
+      ]
+    },
+    {
+      "question_text": "Please select the option that best describes your occupation?",
+      "type": "s",
+      "answers": [
+        {
+          "answer": "Q3A1",
+          "answer_text": "Salaried",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Salaried_Red.svg"
+        },
+        {
+          "answer": "Q3A2",
+          "answer_text": "Sole proprietorship",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Sole_Proprietorship_Red.svg"
+        },
+        {
+          "answer": "Q3A3",
+          "answer_text": "Partnership",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Partnership_red.svg"
+        },
+        {
+          "answer": "Q3A4",
+          "answer_text": "Private / Public Limited Company",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Private_Public_Red.svg"
+        },
+        {
+          "answer": "Q3A5",
+          "answer_text": "Self-employed / Businessman",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Self_Employed_Red.svg"
+        },
+        {
+          "answer": "Q3A6",
+          "answer_text": "Not Employed",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Not_Employed_Red.svg"
+        }
+      ]
+    },
+    {
+      "question_text": "Please Indicate your risk profile",
+      "type": "s",
+      "answers": [
+        {
+          "answer": "Q4A1",
+          "answer_text": "Low Risk:     My/Our priority is capital preservation and I/we am/are willing to accept minimal risks. In return, I/we understand that  I/we may receive minimal or low returns.",
+          "image_url": "../../../../../assets/images/selectAssure_svg/LowRisk_Select.svg"
+        },
+        {
+          "answer": "Q4A2",
+          "answer_text": "Medium Risk:  I/We am/are willing to accept small/ Moderate \n level of risk (under normal market conditions)  in exchange for higher  potential returns over the medium to long term.",
+          "image_url": "../../../../../assets/images/selectAssure_svg/MediumRisk_Select.svg"
+        },
+        {
+          "answer": "Q4A3",
+          "answer_text": "High Risk:    I/We am/are willing to accept high or significant  risks (under normal market conditions) in order to maximise my/our potential returns over the medium to long term. I/We accept that I/we may lose a significant part or all of my/our capital, and am/are prepared  to make good the losses over and above the principal sum invested in certain cases  (e.g. margin or leveraged investments, which has the potential to multiply profit and/or loss).",
+          "image_url": "../../../../../assets/images/selectAssure_svg/HighRisk_Select.svg"
+        }
+      ]
+    },
+    {
+      "question_text": "You have in your possesion?",
+      "type": "m",
+      "answers": [
+        {
+          "answer": "Q6A1",
+          "answer_text": "Car",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Car_red.svg"
+        },
+        {
+          "answer": "Q6A2",
+          "answer_text": "Bike",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Bike_red.svg"
+        },
+        {
+          "answer": "Q6A3",
+          "answer_text": "Rented/ Leased Property",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Renter_Lease_Red.svg"
+        },
+        {
+          "answer": "Q6A4",
+          "answer_text": "Valuables",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Valuables_Red.svg"
+        }
+      ]
+    },
+    {
+      "question_text": "What is your living Situation?",
+      "type": "s",
+      "answers": [
+        {
+          "answer": "Q5A1",
+          "answer_text": "Living in a rented accomodation",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Rented_Red.svg"
+        },
+        {
+          "answer": "Q5A2",
+          "answer_text": "Living in own house",
+          "image_url": "../../../../../assets/images/selectAssure_svg/Own_House_Red.svg"
+        },
+        {
+          "answer": "Q5A3",
+          "answer_text": "Living with Parents",
+          "image_url": "../../../../../assets/images/selectAssure_svg/LivingWith_Parents_Red.svg"
+        }
+      ]
+    }
+ 
+  ]
+}

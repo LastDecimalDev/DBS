@@ -1,0 +1,34 @@
+.inpute_text03{
+    width: 55%;
+}
+ul {
+    left: 885px !important;
+    
+  }
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait)
+{
+    .zerogrid {
+    width: 100% !important;
+}
+.contentmain{
+    width: 100%
+}
+.btn-primary{
+    margin-left: 387px !important;
+    background-color: #cc0000;
+}
+ul {
+    left: 341px !important;
+    
+  }
+
+}
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape ) {
+    
+    ul {
+        left: 438px !important;
+        
+      }
+    
+}

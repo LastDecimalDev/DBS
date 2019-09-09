@@ -1,0 +1,43 @@
+.extraSpace{
+    margin-top: 19% !important;
+}
+#menu{
+    left: 885px;
+}
+.form-control{
+    width:66% !important;
+}
+.inline_img{
+    display: inline-block !important;
+}
+@media (max-width : 1024px) and (min-width : 768px) and (orientation: portrait) {
+    .extraSpace{
+        margin-top: 39.5% !important;
+        margin-left: 0px !important;
+        width: 68% !important;
+    }
+    #dbs {
+        width: 68% !important;
+        float: left;
+        height: auto;
+    }
+    #menu {
+        left: 340px !important;
+    }
+    .proposal_form {
+        width: 97% !important;
+    }
+    .content{
+        width: 97% !important;
+    }
+}
+@media (min-width : 768px) and (max-width : 1024px) and (orientation : landscape ) {
+    .extraSpace{
+        margin-top:24.5% !important;
+        left: 26px;
+        width: 50% !important;
+    }
+    #menu {
+        left: 460px !important;
+    } 
+}

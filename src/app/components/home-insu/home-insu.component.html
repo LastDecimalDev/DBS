@@ -1,0 +1,357 @@
+<div>
+ 
+    <div class="rootCus">
+        <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+        <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+        <input type="checkbox" id="show-menu" role="button">
+        <ul id="menu">
+          <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+          <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+          <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+          <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+        </ul>  
+      
+      </div>  
+<div id="dbs">
+  <div class="zerogrid">
+  <div class="contentmain">
+    <div class="profilemain1">
+    <span class="ibspan"><img src="../../../assets/images/Home_Insurance_ICON_og.svg"></span><span><strong style="font-size: 20px;"> Policy For Me > Home Insurance</strong></span>
+    <div class="oneplan2">
+    <div class="onetext2"><strong>Help us identify the plans relevant for your need: <i>(All Fields are Mandatory)</i></strong>
+    </div>
+    </div>
+    </div>
+ <form id="health-buy-form" class="form-horizontal" #homeInsuR = "ngForm" autocomplete="off" novalidate >
+    <div class="profilemain1">
+        <div class="oneplan2" [ngClass]="{'has-error':pincodeInsu.invalid && !pincodeInsu.pristine}">
+        <div class="onetext2">Enter the pincode
+        <div class="policybox"><span class="formmin4">
+            <input type="tel" name="Pincode" id="pincodeInsu" [(ngModel)]="homeInput.pincode" #pincodeInsu="ngModel"  (blur)="getValidPinCode($event)" class="inpute_text" placeholder="6 digits only" minlength="6" maxlength="6"  required>
+        </span>
+        <span id="errorCall" class="has-error">{{errMessage3}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+    <div class="profilemain1">
+        <div class="oneplan2">
+        <div class="onetext2" >How do you use this home?
+        <div class="policybox">
+        <input type="radio" value="1" [(ngModel)]="homeInput.policyType" name="usageInsu" id="self" class="css-radio1" (click)="homeContent= true" required/> <label for="self" class="css-labelTick"> </label>Building and Content<br>
+        <input type="radio" value="2" [(ngModel)]="homeInput.policyType" name="usageInsu" id="rented" class="css-radio1" (click)="homeContent= true; valueInsu= true" required/> <label for="rented" class="css-labelTick"> </label>Building Only<br>
+        <input type="radio" value="3" [(ngModel)]="homeInput.policyType" name="usageInsu" id="tenant" class="css-radio1" (click)="homeContent= true; estiMated = true" required/> <label for="tenant" class="css-labelTick"> </label> Content Only
+        
+        </div>
+        </div>
+        </div>
+        </div>
+
+        
+
+
+<div class="profilemain1" *ngIf="homeInput.policyType=='2' || homeInput.policyType=='1'">
+  <div class="oneplan2" [ngClass]="{'has-error':policyTermBuild.invalid && !policyTermBuild.pristine ||policyTermBuild.touched}">
+  <div class="onetext2">Policy Term - Building
+  <div class="policybox"><span class="formmin4">
+      <input type="tel" name="term" id="building" [(ngModel)]="homeInput.bpt" class="inpute_text" #policyTermBuild="ngModel" (input)="policyTermBuildvalid($event)" placeholder="In years" min="0" maxlength="2" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" required>
+  </span>
+  </div>
+  <div id="errorCall" class="has-error" style="margin-left: 452px;">{{errMessage1}}</div>
+  </div>
+  </div>
+  </div>
+  
+
+
+<div class="profilemain1" *ngIf="homeInput.policyType=='2' || homeInput.policyType=='1'">
+  <div class="oneplan2" >
+<div class="onetext2">Estimated cost of re-construction of building:
+<!--<div class="policybox"><span class="formmin4">
+    <select class="inpute_textcrit" name="estimatedCost" id="estimateCost" [(ngModel)]="homeInput.cost" [disabled]="butDisabled" (change)="showCost = false; estiMated= true" required>
+        <option  value="" disabled>--Select here--</option>
+        <option *ngFor="let option of estimatedCost" value="{{option.val}}">{{option.val}} -- {{option.name}}</option>
+    </select>
+    <button type="button" id="estimateButton" (click)="showCost = true; homeInput.cost= 0; estiMated = false" style="background-color: #ce0707" class="btn btn-primary">Help Me Estimate</button>
+
+  </span>
+</div>-->
+</div>
+</div>
+
+<div>
+<form #estimate ="ngForm" autocomplete="off" novalidate>
+<br>
+    <div class="col-xs-12 col-sm-12 col-md-12 padd0">
+      <div class="row">
+    <div class="col-4 col-md-4 col-sm-4" style="padding-left:0px">
+        <div class="blank"></div>
+        
+      <div class="" >
+        <div class="ins_box">Total Sqft Area<b>*</b>
+        <input type="number" name="homesqfeet" id="homesqfeet"   class="ins_text" [(ngModel)]="helpme.homesq" maxlength="6" required>
+       </div>
+       </div>
+    </div>
+  
+    <div class="col-5 col-md-5 col-sm-5" style="padding-left:0px">
+        <div class="blank"></div>
+      <div class="">
+        <div class="ins_box">Cost of Construction per SqFt<b>*</b>
+        <input type="number" name="construcCost" id="construcCost"   class="ins_text" [(ngModel)]="helpme.constrCost" (input)="evaluateCost($event)" required>
+       </div>
+               <div style="color:red">{{errMessage}}</div>
+       </div>
+    </div>
+    <br>
+    <div class="col-3 col-md-3 col-sm-3" style="padding-left:0px">
+        <div class="blank"></div>
+        <div class="ins_box">
+              <button type="button" id="estimateButton" (click)="estimateCostNow(); estiMated = true" [disabled]="estimate.invalid || errMessage || !noerrCost" style="background-color: #ce0707" class="btn btn-primary">Property Sum Insured</button>
+</div>
+</div>
+</div>
+</div>
+  </form>
+  <div class="row justify-content-end">
+      <div class="col-4 col-md-4 col-sm-4">
+      </div>
+      <div class="col-4 col-md-4 col-sm-4">
+        </div>
+      <div class="col-4 col-md-4 col-sm-4">
+  <span id="extimatedCost" style="margin: 0 0 0 65px;">{{helpme.cost  | currency: 'INR':true}}</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1" *ngIf="homeInput.policyType=='1' || homeInput.policyType=='3'">
+<div class="oneplan2">
+<div class="onetext2" >Value of contents to insure:
+<div class="policybox">
+    <select class="inpute_textcrit" name="contentHomeInsu" [(ngModel)]="homeInput.sacont" (change)="valueInsu = true" required>
+        <option value="" disabled>--Select here--</option>
+        <option *ngFor="let option of estimatedCost" value="{{option.val}}">{{option.val}} -- {{option.name}}</option>
+    </select>
+</div>
+
+</div>
+</div>
+</div>
+
+<div *ngIf="homeInput.policyType=='1' || homeInput.policyType=='3'">
+<div *ngFor="let content of homeInput.contentTypes;let i=index"> 
+<div class="profilemain1" >
+<div class="oneplan2">
+<div class="onetext2" >Do you want to insure {{content.displayName}}?
+<div class="policybox">
+<input type="radio" value="1" name="appliances{{i}}" [(ngModel)]="content.isInsured" id="appliYes{{i}}" class="css-radio1" required > <label for="appliYes{{i}}" class="css-labelTick"> </label> Yes 
+<input type="radio" value="0" name="appliances{{i}}" [(ngModel)]="content.isInsured" id="appliNo{{i}}" class="css-radio1" required > <label for="appliNo{{i}}" class="css-labelTick" style="margin:0 0% 2% 15%"> </label> No
+</div> 
+</div>
+</div>
+</div>
+
+<div class="profilemain1" *ngIf = "content.isInsured =='1'">
+<div class="oneplan2">
+<div class="onetext2" >Value of items<b style="color: red">*</b>
+<div class="policybox">
+      <input type="number" name="contentValue" id="contentValueHomeIsu" [(ngModel)]="content.contentValue" class="inpute_text" placeholder="" required>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<!--<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2" >Do you want to cover jewellery?
+<div class="policybox">
+<input type="radio" value="Yes" name="jewellery" id="jewelYes" class="css-radio1"/> <label for="jewelYes" class="css-labelTick"> </label> Yes 
+<input type="radio" value="No" name="jewellery" id="jewelNo" class="css-radio1" /> <label for="jewelNo" class="css-labelTick" style="margin:0 0% 2% 15%"> </label> No
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2" >Do you want to cover mobiles?
+<div class="policybox">
+<input type="radio" value="Yes" name="mobiles" id="mobYes" class="css-radio1"/> <label for="mobYes" class="css-labelTick"> </label> Yes 
+<input type="radio" value="No" name="mobiles" id="mobNo" class="css-radio1" /> <label for="mobNo" class="css-labelTick" style="margin:0 0% 2% 15%"> </label> No
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2" >Do you want to cover Baggage?
+<div class="policybox">
+<input type="radio" value="Yes" name="Baggage" id="baggYes" class="css-radio1"/> <label for="baggYes" class="css-labelTick"> </label> Yes 
+<input type="radio" value="No" name="Baggage" id="baggNo" class="css-radio1" /> <label for="baggNo" class="css-labelTick" style="margin:0 0% 2% 15%"> </label> No
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2" >Do you want to cover cash?
+<div class="policybox">
+<input type="radio" value="Yes" name="cash" id="cashYes" class="css-radio1"/> <label for="cashYes" class="css-labelTick"> </label> Yes 
+<input type="radio" value="No" name="cash" id="cashNo" class="css-radio1" /> <label for="cashNo" class="css-labelTick" style="margin:0 0% 2% 15%"> </label> No
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2" >Do you want to cover personal accidents for your employees?
+<div class="policybox">
+<input type="radio" value="Yes" name="accidents" id="accidYes" class="css-radio1"/> <label for="accidYes" class="css-labelTick"> </label> Yes 
+<input type="radio" value="No" name="accidents" id="accidNo" class="css-radio1" /> <label for="accidNo" class="css-labelTick" style="margin:0 0% 2% 15%"> </label> No
+</div>
+</div>
+</div>
+</div>
+
+<div class="profilemain1">
+<div class="oneplan2">
+<div class="onetext2" >Do you want to cover worker compensation for your employees?
+<div class="policybox">
+<input type="radio" value="Yes" name="compensation" id="compoYes" class="css-radio1"/> <label for="compoYes" class="css-labelTick"> </label> Yes 
+<input type="radio" value="No" name="compensation" id="compoNo" class="css-radio1" /> <label for="compoNo" class="css-labelTick" style="margin:0 0% 2% 15%"> </label> No
+</div>
+</div>
+</div>
+</div>-->
+
+</div> 
+
+<div class="profilemain1" *ngIf="homeInput.policyType=='1' || homeInput.policyType=='3'">
+<div class="oneplan2">
+<div class="onetext2">Policy Term - Content
+<div class="policybox"><span class="formmin4">
+    <input type="tel" name="contPt" id="content" [(ngModel)]="homeInput.pt" (input)="policyTermContentvalid($event)" class="inpute_text" placeholder="In years" min="0" maxlength="2" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" required>
+</span>
+</div>
+<div id="errorCall" class="has-error" style="margin-left: 452px;">{{errMessage2}}</div>
+</div>
+</div>
+</div>
+
+
+    <div class="col-md-3 col-sm-3 col-xs-12" style="padding-top:2%;">
+            <button id="comparebutton" (click)="submitForm(homeInsu)" class="btn btn-primary call-back btn-default" [disabled]="homeInsuR.invalid || errorCall || errorCallCont || errorCallBuild || errMessage1 || !homeContent || !estiMated || !valueInsu" style="background-color: #ce0707;margin-left: 417px;">COMPARE POLICIES</button>
+    </div>
+    </form>
+  </div>
+  </div>
+</div>
+<!-- Estimate Cost modal -->
+
+
+ <!-- ends here-->
+ <div id="footermain">
+    <div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} &nbsp;
+      
+   </div>
+    <div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
+    
+    <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+  </div>
+   <!-- Modal -->
+  <div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form  #changePwdForm = "ngForm">
+          <div class="form-group">
+            <label for="Old-Password" class="col-form-label" >Old Password:</label>
+            <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+          </div>
+           <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+          <div class="form-group">
+            <label for="New-Password" class="col-form-label" >New Password:</label>
+            <input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+            <input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
+          </div>
+           <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+                 <div *ngIf = "userPassword.invalid; else nomatch">
+                  New Password and Confirm Password should match
+                                </div>
+                    <ng-template #nomatch >
+                      New Password and Confirm Password should match
+                    </ng-template>
+                </div>
+         </div> 
+        
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+      </div>
+      </form>
+       </div>
+    </div>
+  </div>
+  </div>
+  
+  
+  <!-- Success or failure modal -->
+  <div id="resultModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p id="messageTouser"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- ends here-->
+        <!--Report Issue modal starts here-->
+  <div data-backdrop="static" data-keyboard="false" class="modal fade" id="reportIssueModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel11">Report An Issue</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form  #reportAnIssue = "ngForm" >
+          <div class="form-group">
+            <label for="cngm-Password" class="col-form-label" style="margin-left: 63px;">Description of the issue:</label>
+            <textarea rows="3" cols="60" type="text" value="" name="issue" id="issueReport" ngModel required style="margin: 0 0 0 -61px;"></textarea>
+          </div>
+        
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" (click) ="reportIssue(reportAnIssue)" data-dismiss="modal" [disabled]="!reportAnIssue.form.valid" class="btn btn-primary">Report</button>
+      </div>
+      </form>
+       </div>
+    </div>
+  </div>
+  </div>
+  <!--Report Issue modal ends here-->
+</div>

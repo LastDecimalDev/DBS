@@ -1,0 +1,628 @@
+<div>
+  <div class="rootCus">
+    <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+    <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="menu">
+      <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+      <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+      <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+      <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+    </ul>  
+  
+  </div>
+<div id="dbs">
+  <div class="zerogrid" style="width: 100%;" *ngIf="!loading  && !errLoad">
+      <div class="content searchheaderpanel proposal_form" id="cignaPanel">
+          <div class="col-xs-12  cf-title clearfix">
+            <!--  <div class="back-to-results" (click)="history.go(-1)" ><span class = "glyphicon glyphicon-menu-left"></span>Back to results</div>-->
+                <div class="proposal_heading">
+                  <span>Buy Life Insurance</span>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-3 pnone">
+                <div class="insurer-img">
+                  <img class="img-responsive" src = "{{imagePath}}/image/ilogo/i{{applicationData.insurerId}}.png">
+                  
+                </div>
+              </div>
+
+              <div class="col-xs-8 col-sm-9 pnone" style="border-left:1px solid #eaeaea;">
+                <div class="pol-name"> 
+                  <span>{{applicationData.displayName}}</span>
+                </div>
+                <div class="pol-val">
+                  <span>Policy for a person of age </span>
+                  <span class="value">{{applicationData.requestParams.age}} Years, </span>
+                  <br class="visible-xs visible-sm">
+                  <span>Gender</span>
+                  <span class="value" *ngIf="applicationData.requestParams.owngender=='M'">Male, </span>
+                  <span class="value" *ngIf="applicationData.requestParams.owngender=='F'">Female, </span>
+                  <br class="visible-xs visible-sm">
+                  <!--<span>Smoker</span>
+                  <span class="value" *ngIf="applicationData.requestParams.rating=='S'">Yes, </span>
+                  <span class="value" *ngIf="applicationData.requestParams.rating=='NS'">No, </span>
+                  <br class="visible-xs visible-sm">-->
+                  <span>Sum Assured</span>
+                  <span class="value">&#8377;{{applicationData.requestParams.sa | number}}, </span>
+                  <br class="visible-xs visible-sm">
+                  <span>Policy Term</span>
+                  <span class="value">{{applicationData.pt}} Years, </span>
+                  <br class="visible-xs visible-sm">
+                  <span>Payment Term</span>
+                  <span class="value">{{applicationData.ppt}} Years, </span>
+                  <!--<span style="color:#475e6e;">Death Benefit:</span>
+                  <span class="value">{{applicationData.requestParams.sa| currency : 'INR': 'symbol'}},</span>-->
+                  <span style="color:#475e6e;">Premium:</span>
+                  <span class="value">&#8377;{{applicationData.totalPremium | number}}</span>
+                </div>
+              </div>
+
+
+      </div>
+      <div id="stage_data" *ngIf="!loading">
+        <ul class="nav nav-pills nav-wizard extraSpace">
+            <li class="active"><a href="#panel1" data-toggle="tab">Purchase Information<span *ngIf="tabStatus.firstComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span></a></li>
+            <li id="SecondTab" class="tabdisable"><a href="#panel2" data-toggle="tab">Review Application<span *ngIf="tabStatus.secondComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span> </a></li>
+            <li id="thirdTab" class="tabdisable"><a href="#panel3" data-toggle="tab">Confirmation<span *ngIf="tabStatus.thirdComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span> </a></li>            
+        </ul>
+        </div>
+  <div class="tab-content">
+    <div class="tab-pane fade in active content searchheaderpanel" id="panel1">
+        <form id="aviva-purchase-form" class="form-horizontal" #purchaseform = "ngForm" autocomplete="off" ngNativeValidate>
+        <div class="form-panel ">
+            <div class="heads"></div>
+            <div class = "clear"></div>     
+                <div class="body">
+                  <div class="main-section">
+                    <div class="proposer-process">
+                      <div class="define">
+                        <img src="../../../../../assets/images/info.png">
+                        <span>Fill in the details to generate Application tracking number.</span>
+                      </div>
+                       
+                      <div class="col-sm-6 col-md-6">
+                          <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':proposarname.invalid && !proposarname.pristine}" >
+                            <label class="control-label label-block" >1. Name of Proposer</label>
+                            <input type="text" name="proposarname" #proposarname = "ngModel" class="form-control field" [(ngModel)]="customerData.ProposerName" pattern="^[a-zA-Z ]*$" minlength="3" maxlength="50" required>
+                          </div>
+                          
+                        </div>
+                                              
+                        <div class="col-sm-6 col-md-6">
+                          <div class="form-group dateInsuSpace" [ngClass]="{'has-error':insuredName.invalid && !insuredName.pristine}">
+                            <label class="control-label label-block">2. Name of Insured</label>
+                            <input type="text" name="insuredName" #insuredName = "ngModel" class="form-control field" [(ngModel)]="customerData.ProposerName" pattern="^[a-zA-Z ]*$" minlength="3" maxlength="50" required>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="form-group dateInsuSpace required">
+                              <label class="control-label label-block" >3. Payment Mode</label>
+                              <input type="text" name="paymentMode" class="form-control field" [(ngModel)]="applicationData.paymentMode" required>
+                            </div>
+                            
+                          </div>
+                                                
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-group dateInsuSpace">
+                              <label class="control-label label-block">4. E-mail </label>
+                              <input type="text" name="emailProposer" class="form-control field" [(ngModel)]="customerData.email" required>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                              <div class="form-group dateInsuSpace required">
+                                <label class="control-label label-block" >5. Reason for selecting this product?</label>
+                                <select class="form-control" name="reason" [(ngModel)]="customerData.purchaseReason" required>
+                                  <option value="" disabled>--Select--</option>
+                                  <option value="Cost Effective Premium">Cost Effective Premium</option>
+                                  <option value="Best Brand">Best Brand</option>
+                                  <option value="Best Claims Track Record">Best Claims Track Record</option>
+                                  <option value="Best Match to my Needs">Best Match to my Needs</option>
+                                  <option value="Closest Match to my Needs">Closest Match to my Needs</option>
+                                  <option value="DBS officer choose for me">DBS officer choose for me</option>
+                                  <option value="Others">Others</option>
+                                </select>
+                              </div>
+                              
+                            </div>
+                                                  
+                            <div class="col-sm-6 col-md-6">
+                              <div class="form-group dateInsuSpace">
+                                <label class="control-label label-block">6. Amount to be Paid</label>
+                                <input type="text" name="amounttoPay" class="form-control field" value="&#8377;{{applicationData.totalPremium | number}}"  disabled required>
+
+                              </div>
+                            </div>
+            </div>
+            </div> 
+            </div>
+            <div class= "clear"></div>	                 
+              <div class="foot">
+                  <div class="clearfix">
+                    <div class="cf-pull-right">
+                      <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="purchaseform.form.invalid" (click)="nextSection('1')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                    </div>
+                  </div>
+              </div>
+              <div class= "clear"></div>
+              <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;" ></p>	   
+            </div>
+            </form>
+            </div>
+      <!--Purchase panel ends here-->      
+      <div class="tab-pane fade content searchheaderpanel" id="panel2">
+          <form id="aviva-review-form" class="form-horizontal" #reviewform = "ngForm" autocomplete="off" ngNativeValidate>
+          <div class="form-panel ">
+              <div class="heads"></div>
+              <div class = "clear"></div>     
+                  <div class="body">
+                    <div class="main-section">
+                      <div class="proposer-process">
+                        <div class="define">
+                          <img src="../../../../../assets/images/info.png">
+                          <span>Proposer’s Chosen Profile</span>
+                        </div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr >
+                                    <th>Customer ID</th>
+                                    <th>Customer Email</th>
+                                    <th>Tracking No</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>{{customerData.customerId}}</td>
+                                <td>{{customerData.email}}</td>
+                                <td></td>
+                              </tr>
+                              </tbody>
+                            </table> 
+                        <div class="panel panel-default content frameSec">
+                          <div class="panel-heading active" role="tab" id="headingOne">
+                              <span class="panel-title selectionSpan">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Proposer’s Chosen Profile 
+                                </a>
+                              </span>
+                          </div>
+                      <div id="collapseOne" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <div class="summary-stage">
+                                
+                                <div class="stage-body">
+                                 <div class="row mnone">
+                                   <div class="col-sm-12" style="margin-bottom:10px;">
+                                    <div class="col-sm-6 list-item-proposer">
+                                      <label class="control-label label-highlight">1. Age band:</label><br>
+                                      <span><img class="img-responsive inline_img" src = "{{this.finalResult[0]}}"></span>
+                                    </div>
+                                   
+                                    <div class="col-sm-6 list-item-proposer">
+                                      <label class="control-label label-highlight">2. Current life stage:</label><br>
+                                      <span><img class="img-responsive inline_img" src = "{{this.finalResult[1]}}"></span>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-sm-12" style="margin-bottom:10px;">
+                                    <div class="col-sm-6 list-item-proposer">
+                                      <label class="control-label label-highlight">3. Please select the option that best describes your occupation?:</label><br>
+                                      <span><img class="img-responsive inline_img" src = "{{this.finalResult[2]}}"></span>
+                                    </div>
+                                   
+                                    <div class="col-sm-6 list-item-proposer">
+                                      <label class="control-label label-highlight">4. Please Indicate your risk profile:</label><br>
+                                      <span><img class="img-responsive inline_img" src = "{{this.finalResult[3]}}"></span>
+                                    </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-12" style="margin-bottom:10px;">
+                                    <div class="col-sm-6 list-item-proposer">
+                                      <label class="control-label label-highlight">5. What is your living Situation?:</label><br>
+                                      <span><img class="img-responsive inline_img" src = "{{this.finalResult[4]}}"></span>
+                                    </div>
+                                    
+                                    <div class="col-sm-6 list-item-proposer">
+                                      <label class="control-label label-highlight">6. You have in your possesion?:</label><br>
+                                      <span><img class="img-responsive inline_img" src = "{{this.finalResult[5]}}"></span>
+                                      <span *ngIf="image_length >=7"><img class="img-responsive inline_img" src = "{{this.finalResult[6]}}"></span>
+                                      <span *ngIf="image_length >=8"><img class="img-responsive inline_img" src = "{{this.finalResult[7]}}"></span>
+                                      <span *ngIf="image_length ==9"><img class="img-responsive inline_img" src = "{{this.finalResult[8]}}"></span>
+                                    </div>
+                            
+          
+                                   </div>
+                                   <!--<p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;border-top:1px dashed #dadada;" ></p>-->
+                                 </div>
+                                 <div class = "clear"></div>
+                                 
+                                </div>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                        <!--proposer choosen panel ends here-->
+                        <div class="panel panel-default content frameSec">
+                          <div class="panel-heading active" role="tab" id="headingTwo">
+                              <span class="panel-title selectionSpan">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                  Selected Product 
+                                </a>
+                              </span>
+                          </div>
+                      <div id="collapseTwo" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <div class="summary-stage">
+                                
+                                <div class="stage-body">
+                                 <div class="row mnone">
+                                   <div class="col-sm-12" style="margin-bottom:10px;">
+                                    <div class="col-sm-6 list-item-proposer">
+                                      <label class="control-label label-highlight">1. Product:</label>
+                                      <span>{{applicationData.displayName}}</span>
+                                    </div>
+                                    <div class="col-sm-6 list-item-proposer">
+                                      <label class="control-label label-highlight">2. Included Riders:</label>
+                                      <span *ngIf="addonCovers.length <= 0">None</span>
+                                      <span *ngIf="addonCovers.length > 0">
+                                          <span *ngFor="let covers of addonCovers; let i=index">
+                                              {{i+1}}) {{covers}} 
+                                          </span>
+                                      </span>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-12" style="margin-bottom:10px;">
+                                    <div class="col-sm-6 list-item-proposer">
+                                      <label class="control-label label-highlight">3. Details:</label>
+                            
+                                        <span>Policy for a person of age </span>
+                                        <span class="value">{{applicationData.requestParams.age}} Years, </span>
+                                        <br class="visible-xs visible-sm">
+                                        <span>Gender</span>
+                                        <span class="value" *ngIf="applicationData.requestParams.owngender=='M'">Male, </span>
+                                        <span class="value" *ngIf="applicationData.requestParams.owngender=='F'">Female, </span>
+                                        <br class="visible-xs visible-sm">
+                                       <!-- <span>Smoker</span>
+                                        <span class="value" *ngIf="applicationData.requestParams.rating=='S'">Yes, </span>
+                                        <span class="value" *ngIf="applicationData.requestParams.rating=='NS'">No, </span>
+                                        <br>-->
+                                        <span>Sum Assured</span>
+                                        <span class="value">&#8377;{{applicationData.requestParams.sa | number}}, </span>
+                                        <br class="visible-xs visible-sm">
+                                        <span>Policy Term</span>
+                                        <span class="value">{{applicationData.pt}} Years, </span>
+                                        <br class="visible-xs visible-sm">
+                                        <span>Payment Term</span>
+                                        <span class="value">{{applicationData.ppt}} Years, </span>
+                                        <!--<span style="color:#333333;">Death Benefit:</span>
+                                        <span class="value">{{applicationData.requestParams.sa| currency : 'INR': 'symbol'}},</span>-->
+                                        <br class="visible-xs visible-sm">
+                                        <span style="color:#333333;">Premium:</span>
+                                        <span class="value">&#8377;{{applicationData.totalPremium | number}}</span>
+                                     
+                                    </div>
+                                   </div>
+                                  <!-- <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;border-top:1px dashed #dadada;" ></p>-->
+                                 </div>
+                                 <div class = "clear"></div>
+                                 
+                                </div>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                        <!--product details panel ends here-->
+                        <div class="panel panel-default content frameSec">
+                          <div class="panel-heading active" role="tab" id="headingThree">
+                              <span class="panel-title selectionSpan">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                  Purchase Information 
+                                </a>
+                              </span>
+                          </div>
+                      <div id="collapseThree" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <div class="summary-stage">
+                                
+                                <div class="stage-body">
+                                 <div class="row mnone">
+                                   <div class="col-sm-12" style="margin-bottom:10px;">
+                                    <div class="col-sm-6 list-item-proposer">
+                                    <label class="control-label label-highlight">1. Name of Proposer:</label>
+                                    <span>{{customerData.ProposerName}}</span>
+                                    </div>
+                                    <div class="col-sm-6 list-item-proposer">
+                                      <label class="control-label label-highlight">2. Name of Insured :</label>
+                                      <span>{{customerData.ProposerName}}</span>
+                                      </div>
+                                    <div class="col-sm-6 list-item-proposer">
+                                    <label class="control-label label-highlight">3. Payment Mode:</label>
+                                    <span>{{applicationData.paymentMode}}</span>
+                                    </div>
+                                    <div class="col-sm-6 list-item-proposer">
+                                    <label class="control-label label-highlight">4. E-mail:</label>
+                                    <span>{{customerData.email}}</span>
+                                    </div>
+                                    <div class="col-sm-6 list-item-proposer">
+                                    <label class="control-label label-highlight">5. Reason for selecting this product?:</label>
+                                    <span>{{customerData.purchaseReason}}</span>
+                                    </div>
+                                    <div class="col-sm-6 list-item-proposer">
+                                    <label class="control-label label-highlight">6. Amount to be Paid:</label>
+                                    <span>&#8377;{{applicationData.totalPremium | number}}</span>
+                                    </div>  
+                                   </div>
+                                   <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;border-top:1px dashed #dadada;" ></p>
+                                 </div>
+                                 <div class = "clear"></div>
+                                 
+                                </div>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                        <!--product details panel ends here--> 
+                       <!-- <div class="panel panel-default content frameSec">
+                          <div class="panel-heading active" role="tab" id="headingFour">
+                              <span class="panel-title selectionSpan">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                  Important Information 
+                                </a>
+                              </span>
+                          </div>
+                      <div id="collapseFour" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingFour">
+                        <div class="panel-body">
+                            <div class="summary-stage">
+                                
+                                <div class="stage-body">
+                                 <div class="row mnone">
+                                   <div class="col-sm-12" style="margin-bottom:10px;">
+                                     
+          
+                                   </div>
+                                   <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;border-top:1px dashed #dadada;" ></p>
+                                 </div>
+                                 <div class = "clear"></div>
+                                 
+                                </div>
+                              </div>
+                          </div>
+                          </div>
+                        </div>-->
+                        <!--Information panel ends here-->       
+                        <div class="panel panel-default content frameSec">
+                          <div class="panel-heading active" role="tab" id="headingFive">
+                              <span class="panel-title selectionSpan">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                  Disclaimer 
+                                </a>
+                              </span>
+                          </div>
+                      <div id="collapseFive" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingFive">
+                        <div class="panel-body">
+                            <div class="summary-stage">
+                                
+                                <div class="stage-body">
+                                 <div class="row mnone">
+                                   <div class="col-sm-12" style="margin-bottom:10px;">
+
+                                    SelectAssure is a comparison tool developed by Last Decimal on behalf of DBS Bank Ltd (Bank). Comparisons of insurance products displayed and part of this document are purely for illustrative purposes.Insurance products offered for selection to the customer are underwritten by the respective insurers. The contract of insurance is between the Insurer and the insured and not between the Bank and the insured.
+                                    For more details on risk factors, terms and conditions, please read the sales brochure of the product carefully before concluding a sale. Tax benefits may be available as per the prevailing tax laws, which are subject to change. Participation by the Bank’s clients in the insurance products is purely on a voluntary basis.
+        
+                                   </div>
+                                   <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;" ></p>
+                                 </div>
+                                 <div class = "clear"></div>
+                                 
+                                </div>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                        <!--Desclaimer panel ends here-->
+
+            </div>
+            </div>
+            </div>
+            <div class="clear"></div>
+            <div class="row mnone" style="position:relative">
+                      
+                 <div class="summary-stage">
+                     <div class="col-sm-12">
+               <div class="agree-box">
+                           <div class="item">        
+                             <div class="agree-field">            
+                               <span style="color:red">{{proposalError.key}}
+                                 <ol>
+                                   <li style="color:red;" *ngFor="let errorPrint of proposalError.errorPrint">{{errorPrint}}; </li>
+                                 </ol>
+                               </span>
+                             </div>            
+                           </div>               
+                        </div>    
+                       </div>
+                   </div>
+         </div>
+         <div class="clear"></div>	                 
+            <div class="foot">
+                <div class="clearfix">
+                  <div class="cf-pull-right">
+                    <button class="btn cf-btn btn-lg btn-default btn-grn"  (click)="nextSection('2')">Submit Application <img src="../../../../../assets/images/arrow-right.png"> </button>
+                  </div>
+                </div>
+            </div>
+            <div class= "clear"></div>
+            <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;" ></p>	
+            </div>
+            </form>
+            </div>
+     <!--Review panel ends here --> 
+     <div class="tab-pane fade content searchheaderpanel" id="panel3">
+        <form id="aviva-confirm-form" class="form-horizontal" #confirmform = "ngForm" autocomplete="off" ngNativeValidate>
+        <div class="form-panel ">
+            <div class="heads"></div>
+            <div class = "clear"></div>     
+                <div class="body">
+                  <div class="main-section">
+                    <div class="proposer-process">
+                      <div class="define">
+                        <img src="../../../../../assets/images/info.png">
+                        <span>Confirmed!</span>
+                      </div>
+                      <table class="table table-bordered">
+                          <thead>
+                              <tr >
+                                  <th>Customer ID</th>
+                                  <th>Customer Email</th>
+                                  <th>Tracking No</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                            <td>{{customerData.customerId}}</td>
+                            <td>{{customerData.email}}</td>
+                            <td>{{purchaseId}}</td>
+                            </tr>
+                            </tbody>
+                        </table> 
+                        <div class="col-sm-6 col-md-6">
+                          <div class="form-group dateInsuSpace">
+                            <label class="control-label label-block optional-label">
+                              Your purchase id is <strong>{{purchaseId}}</strong>. Please quote this number for further queries on your application. 
+
+                            </label>
+                          </div>
+                        </div>
+
+          </div>
+          </div>
+          </div>
+          
+          <div class= "clear"></div>
+          <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;" ></p>	
+          </div>
+          </form>
+          </div>      
+
+    </div>
+
+      </div>
+      </div>
+      <div  *ngIf="loading" class="loading col-sm-10 col-md-10 col-lg-10">
+        <div class="ctralign"><img src = "../../../../../assets/images/loading.gif"></div>
+      </div>
+      <div id="loader" style="margin-top: 7%;"></div>
+       
+      <div id="footermain">
+        <div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} &nbsp;
+          
+       </div>
+        <div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
+        
+        <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+      </div>
+       <!-- Modal -->
+      <div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form  #changePwdForm = "ngForm">
+              <div class="form-group">
+                <label for="Old-Password" class="col-form-label" >Old Password:</label>
+                <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+              </div>
+               <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+              <div class="form-group">
+                <label for="New-Password" class="col-form-label" >New Password:</label>
+                <input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
+              </div>
+              <div class="form-group">
+                <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+                <input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
+              </div>
+               <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+                     <div *ngIf = "userPassword.invalid; else nomatch">
+                      New Password and Confirm Password should match
+                                    </div>
+                        <ng-template #nomatch >
+                          New Password and Confirm Password should match
+                        </ng-template>
+                    </div>
+             </div> 
+            
+         
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+          </div>
+          </form>
+           </div>
+        </div>
+      </div>
+      </div>
+      
+      
+      <!-- Success or failure modal -->
+      <div id="resultModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p id="messageTouser"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- ends here-->
+            <!--Report Issue modal starts here-->
+      <div data-backdrop="static" data-keyboard="false" class="modal fade" id="reportIssueModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel11">Report An Issue</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form  #reportAnIssue = "ngForm" >
+              <div class="form-group">
+                <label for="cngm-Password" class="col-form-label" style="margin-left: 63px;">Description of the issue:</label>
+                <textarea rows="3" cols="60" type="text" value="" name="issue" id="issueReport" ngModel required style="margin: 0 0 0 -61px;"></textarea>
+              </div>
+            
+         
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" (click) ="reportIssue(reportAnIssue)" data-dismiss="modal" [disabled]="!reportAnIssue.form.valid" class="btn btn-primary">Report</button>
+          </div>
+          </form>
+           </div>
+        </div>
+      </div>
+      </div>
+      <!--Report Issue modal ends here-->    
+<!-- failure modal -->
+<div id="resErrorModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p style="color:red;">Cannot access offline form, directly! Please choose the product from Quote page</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- ends here-->
+
+</div>

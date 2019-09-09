@@ -1,0 +1,1021 @@
+<div>
+		<div class="rootCus">
+        <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+        <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
+        <input type="checkbox" id="show-menu" role="button">
+        <ul id="menu">
+          <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+          <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
+		  <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>            
+		  <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+        </ul>      
+      </div>
+
+<div id="dbs">
+<div class="zerogrid" style="width: 100%;">
+	<div class="panel panel-default content frameSec1">
+    <div class="panel-heading active" role="tab" id="headingOne" style="background-color: #ccc;">
+      <span class="panel-title selectionSpan">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: #D0021B;">
+          Refine Search
+        </a>
+      </span>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+					<h4  id="refsearch" *ngIf="refineFilter" style="margin: 0 0 0 50px;">Refine Search</h4>
+					<br>
+
+					<div id="filters" class="ui-buttonset" style="margin: 0 0 0 50px;">
+							<div *ngFor="let filter of filters; let i = index;" style="padding-bottom:15px;">
+								<div class= "ibspan" style="font-size: 16px;">{{filter.displayLabel}}</div>
+								<div class="btn-group" style="color: #666;" *ngFor= "let option of filter.options; let j=index">
+										<!--<button  name="reif{{j+i}}" id="refst{{j+i}}" class="btn btn-primary1 btn-sm" [ngClass]="(option.id)? 'active':''"  [(ngModel)]="filter.selectedId" (click) = "filter.selectedId=option.id;processCoverOptions();" ngDefaultControl >{{option.value}}</button>-->
+										<div *ngIf="option.value != 'Any'">
+										
+										<input  (change) = "filter.selectedId=option.id;processCoverOptions();" value="{{option.id}}" type="radio" class="css-radio1" name="reft{{i+j}}{{filter.key}}" id="{{filter.key}}{{j+1}}" [(ngModel)]="filter.selectedId" >
+										<label  for="{{filter.key}}{{j+1}}" class="css-labelTick"></label>{{option.value}} &nbsp;
+										</div>
+									</div>
+
+									</div>								
+								</div>							
+								<div >
+
+									<h5  id="refsearch" *ngIf="hasAddons" style="margin: 0 0 0 50px;"> Choose Covers</h5>
+									<br>
+								<div id="covershere" class="ui-buttonset" style="margin: 0 0 0 50px;">
+								<span *ngFor="let chooseCover of coverOptions; let i= index;">
+										<input (change) ="processCoverOptions()"  type="checkbox"  class="btn btn-primary1"  id="{{chooseCover.coverid}}" [(ngModel)]="chooseCover.selected"  >
+										<label for="{{chooseCover.coverid}}" [ngClass]="(chooseCover.coverid)? 'active':'' " class="btn btn-primary1" style="margin: 0 0 5px 0;" >{{chooseCover.coverName}}</label>
+								</span>
+									</div>	            		
+								</div>
+      </div>
+    </div>
+	</div>
+	<div class="clear"></div>
+	<button type="button" class="btn btn-info" id="selections" (click)="hideshowSelection()">Show My Selections</button> 
+	<br>
+	<div class="content searchheaderpanel1" id="sPanel" style="display: none">
+      
+		<span class="selectionSpan" style="margin: 0 0 0 50px;">&nbsp;Your Selection: &nbsp;</span>
+		<span class="selectionSpan" style="margin: 0 0 0 0%;color:black;">&nbsp;{{input.needName}} &nbsp;</span>
+	<!--	<span id="searchtext" class="plcriteriatext" >Top Up for {{requestData.adult}} adult(s), {{requestData.children}} children,(oldest member's age: {{requestData.maxAge}} yrs) , Sum Insured: <span class="rssymbol">&#8377;</span><span id="modsatxt">{{requestData.sa}}</span><input id="modsa" style="width: 7em; display: none;" varname="userdata.currentflow.sa" class="ui-autocomplete-input" autocomplete="off"> ,Deductible of <span class="rssymbol">&#8377;</span> {{requestData.deductible}}, Tenure: {{requestData.tenure}} yr(s).</span><br>-->
+		<div id="yourLifeTerm" *ngIf = "input.productType" class="tblflipaxis table1">
+		<div class = " portfoliogoals" *ngIf="lifeSpan==false">
+			<table class ="col-xs-12 col-lg-12 col-sm-12 col-md-12 " style="margin: 0 0 0 50px; width: 90% !important;">
+				<tr>
+					<td *ngFor="let head of portfolioheaders; let i=index" class="col-sm-3 col-md-3">
+						<p class="portfoliogoalinput portfoliogoalinput_header">{{head.label}}</p>
+						</td>
+						</tr>
+						<tr>
+						<td *ngFor="let head of portfolioheaders; let i=index" class="col-sm-3 col-md-3">
+						<p class="portfoliogoalinput " style="color:#555">{{head.value}}
+							<input id="modsa{{i}}" style="width: 7em; display: none;" autocomplete="off">
+						</p>
+					</td>
+				
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="yourLifeTerm" *ngIf = "input.productType" class="tblflipaxis table1">
+			<div class = " portfoliogoals" *ngIf="lifeSpan==true">
+			<table class ="col-xs-12 col-lg-12 col-sm-12 col-md-12 " style="margin: 0 0 0 50px;width: 90% !important;">
+				<tr>
+					<td *ngFor="let head of portfolioheaders1; let i=index" class="col-sm-3 col-md-3">
+						<p class="portfoliogoalinput portfoliogoalinput_header">{{head.label}}</p>
+						</td>
+						</tr>
+						<tr>
+						<td *ngFor="let head of portfolioheaders1; let i=index" class="col-sm-3 col-md-3">
+						<p class="portfoliogoalinput " style="color:#555">{{head.value}}
+							<input id="modsa{{i}}" style="width: 7em; display: none;" autocomplete="off">
+						</p>
+					</td>
+				
+				</tr>
+			</table>
+		</div>
+		</div>
+		<div id="yourLifeTerm" *ngIf = "input.productType=='CIL'"class="tblflipaxis table1">
+			<div class = " portfoliogoals">
+			<table class ="col-xs-12 col-lg-12 col-sm-12 col-md-12 " style="margin: 0 0 0 50px;width: 90% !important;">
+				<tr>
+					<td *ngFor="let head of portfolioheaders2; let i=index" class="col-sm-3 col-md-3">
+						<p class="portfoliogoalinput portfoliogoalinput_header">{{head.label}}</p>
+						</td>
+						</tr>
+						<tr>
+						<td *ngFor="let head of portfolioheaders2; let i=index" class="col-sm-3 col-md-3">
+						<p class="portfoliogoalinput " style="color:#555">{{head.value}}
+							<input id="modsa{{i}}" style="width: 7em; display: none;" autocomplete="off">
+						</p>
+					</td>
+				
+				</tr>
+			</table>
+		</div>
+		</div>
+	<!--	<span>
+<button type="button" id="modify" (click)= "ModifySum()" class="btn btn-primary">Modify Sum Insured</button>
+	  </span>-->
+</div>
+<div class="clear"></div>
+
+ <div class=""> 
+<div class="clear"></div>
+
+<div class="content searchheaderpanel">
+		<div id="" class="has-error" style="text-align: center;font-size: 17px;">{{errMessage1}}</div>
+		<div class="policy_car">
+		<div *ngIf="input.productType=='MI' || input.productType=='Child' || input.productType=='ULIP' || input.productType=='ENDW'" class="refine-rt1">Sort Policies By:
+				<button class="btn btn-outline-secondary sortBtn" id="buttonterm1Yield" (click)="sortingFunction('irr8')" type="button">Yield</button>
+				<button class="btn btn-outline-secondary sortBtn" (click)="sortingFunction('claimsAccepted')" type="button">Claims Settled </button>
+				<button class="btn btn-outline-secondary sortBtn" (click)="sortingFunction('minimumdeathbenefit')" type="button">Death Benefit</button>
+		</div>
+		</div>
+		<div class="policy_car">
+            <div *ngIf="input.productType=='CIL'" id="cilSorting" class="refine-rt1">Sort Policies By:
+                    <button class="btn btn-outline-secondary sortBtn" id="buttonterm1Yield" (click)="sortingFunction('displayPremium')" type="button">Premium</button>
+                    <button class="btn btn-outline-secondary sortBtn" (click)="sortingFunction('claimsAccepted')" type="button">Claims Settled </button>
+            </div>
+        </div>
+		
+		<div class="policy_car">
+				<div *ngIf="input.productType=='Term'" class="refine-rt1">Sort Policies By:
+						<button class="btn btn-outline-secondary sortBtn" id="buttonterm1" (click)="sortingFunction('displayPremium')" type="button">Default</button>
+						<button class="btn btn-outline-secondary sortBtn" id="buttonterm" (click)="sortingFunction('claimsAccepted')" type="button">Claims Settled </button>
+						<button class="btn btn-outline-secondary sortBtn" id="buttonterm" (click)="sortingFunction('minimumdeathbenefit')" type="button">Death Benefit</button>
+				</div>
+			</div>
+				<!--<div class="policy_car">
+					<div *ngIf="input.productType=='Home' || input.productType =='Health' || input.productType =='PC'" style="margin: 0px -156px 0 0;" class="refine-rt1">Sort Policies By:
+							<button class="btn btn-outline-secondary sortBtn" (click)="sortingFunction('displayPremium')" type="button">Default</button>
+							<button class="btn btn-outline-secondary sortBtn" (click)="sortingFunction('claimsAccepted')" type="button">Price</button>
+					</div>
+					</div>--> 
+		<!--<div class="policy_car">
+		<div *ngIf="lifeSpan == false" class="refine-rt">Sort Policies By: <span>
+			<button type="button"  class="btn btn-primary1" (click)="sortingFunction('displayPremium')">Default</button>
+		 <button type="button"  class="btn btn-primary1" (click)="sortingFunction('claimsAccepted')">Claims Settled</button>
+		<button type="button" class="btn btn-primary1" (click)="sortingFunction('minimumdeathbenefit')">Death Benefit</button></span>
+		</div>
+		</div>-->
+		<div class="clear"></div>
+		<div class="policy_car">
+			<div class="refine-lt">Your Results:<a class="preinput">{{displayQuotes?.length}}</a> Polices found: <a class="preinput1">{{allQuotes?.length-displayQuotes?.length}}</a> Ignored due to Refine Search</div>
+			<div class="refine-rt"><button class="btn btn-outline-secondary sortBtn" [disabled]="!compareProd" type="button" (click)="comparePolicy()">Compare Products</button></div>
+			</div>
+
+    <!--<span class="ibspan">
+      <span class="selectionSpan" >&nbsp;Your Results: &nbsp;</span><span> <a class="policiesfound">{{displayQuotes?.length}}</a> Polices found. <a class="policiesfound policiesignored">0</a> Ignored due to Refine Search.</span>
+    </span>
+    <span class="sortcontainer" style="margin: 0 19px 0 0;"><span class="sortpoly"></span>
+      <span class="input-group-append">
+      <button class="btn btn-outline-secondary sortBtn" [disabled]="!compareProd" type="button" (click)="comparePolicy()">Compare Products</button>
+    </span>
+
+    </span>-->
+   
+   <!---starts here-->
+<div id="found" style="display: block;">
+						<div class="col-xs-12 col-sm-12 col-md-12 padd0">
+							<br>
+					 		<div class="plan-card-wrapper" *ngFor="let insurer of recomendations; let i=index">
+					 			<div class="plan-card cf-result-card cubic-trans">
+									<!-- Start of first quote for the insurer -->
+					 				<div class="policyListBF">
+											<!--<div class="row">
+													<div class="col-xs-12 col-md-12 col-sm-12">
+														<div class="refine-rt2">
+															<span *ngIf="lifeSpan==false">
+																	<input (change) ="addCompare(insurer.quotes[0].key,insurer.quotes[0].selectedForCompare)" type="checkbox"  class="css-checkbox" id="{{insurer.quotes[0].key}}" [(ngModel)]="insurer.quotes[0].selectedForCompare" >
+																	<label for="{{insurer.quotes[0].key}}" class="css-label"></label>		 
+																</span>
+																<span class="portfolionamecol" (click)="productDetail(insurer.quotes[0].key)" *ngIf="lifeSpan==false"><a>{{insurer.quotes[0].displayName}}</a></span><br>
+															</div>
+													</div>
+											</div>
+											<div class="row">
+											<div class="col-xs-12 col-md-12 col-sm-12">
+													<div class="refine-rt2">
+											<span *ngIf="lifeSpan==true">
+													<input type="checkbox" (change) ="addCompare(insurer.quotes[0].key,insurer.quotes[0].selectedForCompare)"   class="css-checkbox" id="{{insurer.quotes[0].key}}" [(ngModel)]="insurer.quotes[0].selectedForCompare" >
+													<label for="{{insurer.quotes[0].key}}" class="css-label"></label>		 
+												</span>
+											
+												<span class="portfolionamecol" (click)="productDetail(insurer.quotes[0].key)" *ngIf="lifeSpan==true"><a>{{insurer.quotes[0].displayName}} &nbsp;- Policy Term : {{insurer.quotes[0].pt}} yr(s) &nbsp;- Payment Term : {{insurer.quotes[0].ppt}} yr(s)</a></span><br>
+												</div>
+												</div>
+												</div>-->
+													<br>
+													  <div class="row">
+															<div class="">
+																	<div class="col-3 col-md-3 col-sm-3" style="margin: 0 0 0 30px;">
+																			<div class="insurer-logo">
+																				<h4 class="namelist">{{insurer.quotes[0].insurerName}}</h4><br>
+																				<img class="insure-logos img-responsive" src = "{{imagePath}}/image/ilogo/i{{insurer.insurerId}}.png">
+																			</div>
+																			<br>
+																			<div *ngIf= "insurer.productCount > 1">
+																					<a class="more-link-plan ng-scope" (click)="DisplayMore(i)"><span id="hidenShow{{i}}">More Plans</span></a>
+																			</div>
+																		</div>
+																</div>
+															<div class="col-5 col-md-5 col-sm-5">
+																	<div class="">
+																			<span *ngIf="lifeSpan==false">
+																					<input (change) ="addCompare(insurer.quotes[0].key,insurer.quotes[0].selectedForCompare)" type="checkbox"  class="css-checkbox" id="{{insurer.quotes[0].key}}" [(ngModel)]="insurer.quotes[0].selectedForCompare" >
+																					<label for="{{insurer.quotes[0].key}}" class="css-label"></label>		 
+																				</span>
+																				<span class="portfolionamecol" (click)="productDetail(insurer.quotes[0].key)" *ngIf="lifeSpan==false"><a>{{insurer.quotes[0].displayName}}</a></span><br>
+																			</div>
+																			<div class="">
+																					<span *ngIf="lifeSpan==true">
+																							<input type="checkbox" (change) ="addCompare(insurer.quotes[0].key,insurer.quotes[0].selectedForCompare)"  name="chkOrder" class="css-checkbox" id="{{insurer.quotes[0].key}}" [(ngModel)]="insurer.quotes[0].selectedForCompare" >
+																							<label for="{{insurer.quotes[0].key}}" class="css-label"></label>		 
+																						</span>
+																					
+																						<span class="portfolionamecol" (click)="productDetail(insurer.quotes[0].key)" *ngIf="lifeSpan==true"><a>{{insurer.quotes[0].displayName}} &nbsp;- Policy Term : {{insurer.quotes[0].pt}} yr(s) &nbsp;- Payment Term : {{insurer.quotes[0].ppt}} yr(s)</a></span><br>
+																						</div>
+																						<br>
+																	<div>
+																			<span  style=" font-size: 14px;margin: 0 0 0 35px;">UIN: {{insurer.quotes[0].productId}}</span>
+																	   </div>
+																	   <br>
+																	   
+																	   <table *ngIf="insurer.quotes[0].productType=='ANN'">
+																		<tr  style="background-color: #dfd7d7;">
+																			<th *ngIf="purchagePrice!=undefined">Purchage Price</th>
+																			<th *ngIf="annuityAmt!=undefined">Annuity Amount</th>
+																		</tr>
+																		<tr style="background-color: #dfd7d7;">
+																			<td *ngIf="purchagePrice!=undefined">{{purchagePrice | currency: 'INR':'symbol' : '1.0'}}</td>
+																			<td *ngIf="annuityAmt!=undefined">{{annuityAmt | currency: 'INR':'symbol' : '1.0'}}</td>
+																		</tr>
+
+																	   </table>
+																	   <table *ngIf="lifeSpan==true">
+																			<tr *ngIf="insurer.quotes[0].isGuaranteed == 'N'" style="background-color: #dfd7d7;">
+																				<th></th>
+																				<th *ngIf="insurer.quotes[0].isGuaranteed == 'N'">@4%</th>
+																				<th *ngIf="insurer.quotes[0].isGuaranteed == 'N'">@8%</th>
+																			</tr>
+																			<tr>
+																				<td>Total Premiums Paid</td>
+																				<td>{{insurer.quotes[0].total_ap | currency: 'INR':'symbol' : '1.0'}}</td>
+																				<td *ngIf="insurer.quotes[0].isGuaranteed == 'N'">{{insurer.quotes[0].total_ap | currency: 'INR':'symbol' : '1.0'}}</td>
+							
+																			</tr>
+																			<tr>
+																				<td *ngIf="insurer.quotes[0].isGuaranteed == 'N'">Total Payout of</td>
+																				<td *ngIf="insurer.quotes[0].isGuaranteed == 'Y'">Total Guaranteed Payouts</td>
+																				<td>{{insurer.quotes[0].total_ben4 | currency: 'INR':'symbol' : '1.0'}}</td>
+																				<td *ngIf="insurer.quotes[0].isGuaranteed == 'N'">{{insurer.quotes[0].total_ben8 | currency: 'INR':'symbol' : '1.0'}}</td>
+																			</tr>
+																			<tr>
+																				<td>Guaranteed Payout</td>
+																				<td>{{insurer.quotes[0].ga_ratio4}}%</td>
+																				<td *ngIf="insurer.quotes[0].isGuaranteed == 'N'">{{insurer.quotes[0].ga_ratio8}}%</td>
+																			</tr>
+																		 
+																		</table>		
+																	</div>
+															<div class="col-2 col-md-2 col-sm-2">
+																<br>
+																<br>
+																	<div>
+																
+																			<button type="button" class="btn btn-primary" style="padding:0px 30px 14px 38px;background-color: #4762b9;border-radius: 8px;" [disabled]="insurer.quotes[0].online==false" (click) ="termNCond(insurer.quotes[0])">
+																					
+																							<p class="label" style="margin-right: 20%;">Choose for</p>
+																					
+																					<div>&#8377;{{insurer.quotes[0].displayPremium | number}}&nbsp; <span class=""> &rarr;</span></div>
+																				</button>
+																			</div>
+																			<br>
+																				<div><p class="label"><a (click)="premiumBreakUp(insurer.quotes[0], insurer.quotes[0].key)" style="font-size: 11px;">Premium BreakUp</a></p>
+																				</div>																</div>
+														  </div>
+														
+													  
+										
+                  </div>
+								</div>
+								<div class="col-sm-12"  style="display:none;margin-top:10px;border-left: 1px solid rgb(170, 2, 148);border-right: 1px solid rgb(170, 2, 148);" id="more{{i}}" >
+									 <div  class="plan-card cf-result-card cubic-trans" *ngFor="let quote of insurer.quotes;let i=index">
+											<!-- Start of additional quote for the insurer -->
+											<div *ngIf="i>0">
+														<div class="policyListBF">
+																<!--<div class="row">
+																<div class="col-xs-12 col-md-12 col-sm-12">
+																		<div class="refine-rt2">
+																<span *ngIf="lifeSpan==false">
+																		<input (change) ="addCompare(insurer.quotes[i].key,insurer.quotes[i].selectedForCompare)" type="checkbox"  class="css-checkbox" id="{{insurer.quotes[i].key}}" [(ngModel)]="insurer.quotes[i].selectedForCompare" >
+																		<label for="{{insurer.quotes[i].key}}" class="css-label"></label>	
+																	</span>
+																<span class = "portfolionamecol" *ngIf="lifeSpan==false" (click) = "productDetail(quote.key)"><a>{{quote.displayName}}</a></span><br>
+																</div>
+																</div>
+																</div>
+																<div class="row">
+																<div class="col-xs-12 col-md-12 col-sm-12">
+																		<div class="refine-rt2">
+																<span *ngIf="lifeSpan==true">
+																		<input type="checkbox"  (change) ="addCompare(insurer.quotes[i].key,insurer.quotes[i].selectedForCompare)"  class="css-checkbox" id="{{insurer.quotes[i].key}}" [(ngModel)]="insurer.quotes[i].selectedForCompare" >
+																		<label for="{{insurer.quotes[i].key}}" class="css-label"></label>	
+																	</span>
+																<span class = "portfolionamecol" *ngIf="lifeSpan==true" (click) = "productDetail(quote.key)"><a>{{quote.displayName}} &nbsp;- Policy Term : {{quote.pt}} yr(s) &nbsp;- Payment Term : {{quote.ppt}} yr(s)</a></span><br>
+																</div>
+																</div>
+																</div>-->
+																<br>
+																<div class="row">
+																<div class="">
+																<div class="col-3 col-md-3 col-sm-3" style="margin: 0 0 0 30px;">
+																	<div class="insurer-logo" style="float:left;">
+																		<h4 class="namelist">{{insurer.quotes[0].insurerName}}</h4><br>
+																		<img class="insure-logos img-responsive" src = "{{imagePath}}/image/ilogo/i{{insurer.insurerId}}.png">
+																	</div>
+																	</div>
+																
+														
+														<div class="col-5 col-md-5 col-sm-5">
+																<div class="">
+																		<span *ngIf="lifeSpan==false">
+																				<input (change) ="addCompare(insurer.quotes[i].key,insurer.quotes[i].selectedForCompare)" type="checkbox"  class="css-checkbox" id="{{insurer.quotes[i].key}}" [(ngModel)]="insurer.quotes[i].selectedForCompare" >
+																				<label for="{{insurer.quotes[i].key}}" class="css-label"></label>	
+																			</span>
+																		<span class = "portfolionamecol" *ngIf="lifeSpan==false" (click) = "productDetail(quote.key)"><a>{{quote.displayName}}</a></span><br>
+																		</div>
+																		<div class="">
+																				<span *ngIf="lifeSpan==true">
+																						<input type="checkbox"  (change) ="addCompare(insurer.quotes[i].key,insurer.quotes[i].selectedForCompare)"  class="css-checkbox" id="{{insurer.quotes[i].key}}" [(ngModel)]="insurer.quotes[i].selectedForCompare" >
+																						<label for="{{insurer.quotes[i].key}}" class="css-label"></label>	
+																					</span>
+																				<span class = "portfolionamecol" *ngIf="lifeSpan==true" (click) = "productDetail(quote.key)"><a>{{quote.displayName}} &nbsp;- Policy Term : {{quote.pt}} yr(s) &nbsp;- Payment Term : {{quote.ppt}} yr(s)</a></span><br>
+																				</div>
+																				<br>
+																	<div>
+																	<span *ngIf="insurer.quotes[i].lob=='Life'" style=" font-size: 14px;margin: 0 0 0 35px;">UIN: {{insurer.quotes[i].productId}}</span>
+															</div>
+															<br>
+															<table *ngIf="quote.productType=='ANN'">
+																<tr  style="background-color: #dfd7d7;">
+																	<th *ngIf="purchagePrice!=undefined">Purchage Price</th>
+																	<th *ngIf="annuityAmt!=undefined">Annuity Amount</th>
+																</tr>
+																<tr style="background-color: #dfd7d7;">
+																	<td *ngIf="purchagePrice!=undefined">{{purchagePrice | currency: 'INR':'symbol' : '1.0'}}</td>
+																	<td *ngIf="annuityAmt!=undefined">{{annuityAmt | currency: 'INR':'symbol' : '1.0'}}</td>
+																</tr>
+
+															   </table>
+															<table class ="col-sm-12 col-xs-12" *ngIf="lifeSpan==true">
+																<tr *ngIf="quote.isGuaranteed == 'N'" style="background-color: #dfd7d7;">
+																	<th></th>
+																	<th *ngIf="quote.isGuaranteed == 'N'">@4%</th>
+																	<th *ngIf="quote.isGuaranteed == 'N'">@8%</th>
+																</tr>
+																<tr>
+																	<td>Total Premiums Paid</td>
+																	<td>{{quote.total_ap | currency: 'INR':'symbol' : '1.0'}}</td>
+																	<td *ngIf="quote.isGuaranteed == 'N'">{{quote.total_ap | currency: 'INR':'symbol' : '1.0'}}</td>
+
+																</tr>
+																<tr>
+																	<td *ngIf="quote.isGuaranteed == 'N'">Total Payout of</td>
+																	<td *ngIf="quote.isGuaranteed == 'Y'">Total Guaranteed Payouts</td>
+																	<td>{{quote.total_ben4 | currency: 'INR':'symbol' : '1.0'}}</td>
+																	<td *ngIf="quote.isGuaranteed == 'N'">{{quote.total_ben8 | currency: 'INR':'symbol' : '1.0'}}</td>
+																</tr>
+																<tr>
+																	<td>Guaranteed Payout</td>
+																	<td>{{quote.ga_ratio4}}%</td>
+																	<td *ngIf="quote.isGuaranteed == 'N'">{{quote.ga_ratio8}}%</td>
+																</tr>
+															 
+															</table>
+															
+															</div>
+				
+																
+																<div class="col-2 col-md-2 col-sm-2">
+																	<br>
+																	<br>
+																		<div>
+																		<button type="button" class="btn btn-primary" style="padding:0px 30px 14px 38px;background-color: #4762b9;border-radius: 8px;" [disabled]="quote.online==false" (click) ="termNCond(quote)">
+																						<p class="label" style="margin-right: 20%;">Choose for</p>
+																				
+																				<div>&#8377;{{quote.displayPremium | number }}&nbsp; <span class=""> &rarr;</span></div>
+																			</button>
+																			</div>
+																			<br>
+																			<div><p class="label"><a (click)="premiumBreakUp(quote, quote.key)" style="font-size: 11px;">Premium BreakUp</a></p>
+																			</div>
+																
+														</div>
+														</div>
+														</div>
+																
+													</div>
+											<div class="row" style="margin-left:0px;margin-right:0px;height:auto;">
+												<div class ="split " *ngFor="let display of quote.summaryDisplays" style="display:table-cell">
+													 <span class="spl-label">{{display}}</span>
+													
+												</div>
+											</div>
+										</div>
+											</div>
+									</div>
+								</div>
+				 		
+						
+					</div>
+					<div>
+						<span class="col-xs-12 col-sm-12 col-md-12">
+			        		<span>All prices are inclusive of taxes. Premiums may change based on user selections in proposal form. </span>
+			        <br><br>
+              	</span>
+					</div>
+		    </div>
+   <!-- ends here -->   
+</div>
+<div class="clear"></div>
+
+</div>
+</div>
+</div>
+<div id="footermain">
+	<div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} &nbsp;
+	  
+   </div>
+	<div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
+	
+	<div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+  </div>
+   <!-- Modal -->
+  <div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>
+	  <div class="modal-body">
+		<form  #changePwdForm = "ngForm">
+		  <div class="form-group">
+			<label for="Old-Password" class="col-form-label" >Old Password:</label>
+			<input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+		  </div>
+		   <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+		  <div class="form-group">
+			<label for="New-Password" class="col-form-label" >New Password:</label>
+			<input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
+		  </div>
+		  <div class="form-group">
+			<label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+			<input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
+		  </div>
+		   <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+				 <div *ngIf = "userPassword.invalid; else nomatch">
+				  New Password and Confirm Password should match
+								</div>
+					<ng-template #nomatch >
+					  New Password and Confirm Password should match
+					</ng-template>
+				</div>
+		 </div> 
+		
+	 
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		<button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+	  </div>
+	  </form>
+	   </div>
+	</div>
+  </div>
+  </div>
+  
+  
+  <!-- Success or failure modal -->
+  <div id="resultModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+	<div class="modal-content">
+	  <div class="modal-body">
+		<p id="messageTouser"></p>
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+	  </div>
+	</div>
+  </div>
+  </div>
+  <!-- ends here-->
+	<!--Report Issue modal starts here-->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="reportIssueModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content" style="width: 110% !important;margin: 44px 0 0 92px;" id="reportIssueId">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel11">Report An Issue</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <form  #reportAnIssue = "ngForm" >
+			<div class="form-group">
+			  <label for="cngm-Password" class="col-form-label" style="margin-left: 63px;">Description of the issue:</label>
+			  <textarea rows="3" cols="60" type="text" value="" name="issue" id="issueReport" ngModel required style="margin: 0 0 0 -40px;"></textarea>
+			</div>
+		  
+	   
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <button type="button" (click) ="reportIssue(reportAnIssue)" data-dismiss="modal" [disabled]="!reportAnIssue.form.valid" class="btn btn-primary">Report</button>
+		</div>
+		</form>
+		 </div>
+	  </div>
+	</div>
+	</div>
+  <!--Report Issue modal ends here-->
+
+  
+    <!-- Premium Modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="premiumBrupmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="premiumBrkMoal">
+      <div class="modal-header">
+        <h5 class="modal-title" id="preiumBrupModalLabel">Premium BreakUp</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+			<div *ngIf="coversBrkUp.length > 0">
+					<div class="form-group" *ngFor="let brkUp of coversBrkUp">
+							<label for="Basic-Premium" class="col-form-label" >Addon:</label>
+							<label for="Basic-Premium" class="col-form-label" >{{brkUp.displayName}}</label>
+							<input type="text" class="form-control" value="&#8377;{{brkUp.netPremium | number}}" name="Basic Premium" id="Basic-Premium" disabled>
+					 </div>
+					</div>
+          <div class="form-group">
+            <label for="Basic-Premium" class="col-form-label" >Basic Premium:</label>
+            <input type="text" class="form-control" value="&#8377;{{basicPre | number}}" name="Basic Premium" id="Basic-Premium" disabled>
+          </div>
+          <div class="form-group">
+            <label for="Premium" class="col-form-label" >Net Premium:</label>
+            <input type="text" class="form-control" value="&#8377;{{netPre | number}}" name="Premium" id="Premium" disabled>
+          </div>
+          <div class="form-group">
+            <label for="GST" class="col-form-label">GST:</label>
+            <input type="text" class="form-control" value="&#8377;{{goodSTax | number}}" name="GST" id="GST" disabled>
+          </div>
+           <div class="form-group">
+            <label for="Total-Premium" class="col-form-label">Total Premium:</label>
+            <input type="text" class="form-control" value="&#8377;{{totalPremium | number}}" name="Total Premium" id="Total-Premium" disabled>
+          </div>
+         </div> 
+        
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn btn-primary">Close</button>
+      </div>
+       </div>
+    </div>
+  </div>
+  <!-- Compare Modal goes here -->
+  <div data-backdrop="static" data-keyboard="false" class="modal fade" id="compareProdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="border: 13px solid black;overflow: auto; height: 580px;margin: 10px 0 0 0px;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="preiumBrupModalLabel">Comparison between Products</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="comparePdf">
+
+      <div class="table-responsive">
+		<table class="table table-bordered" style="color: #5d5d5d;">
+		
+			<tbody>
+					<tr *ngIf="input.productType=='Child'" style="background-color:black;cursor:pointer;">
+							<td class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+							<td class="bold" style="color:white" [attr.colspan]="compareSelectedProd.length=='2' ? '2' : '3'">Child Insurance for person of {{requestparam1.activityDesc}}
+								<br>
+								
+							 </td>
+							</tr>
+							<tr *ngIf="input.productType=='Term'" style="background-color:black;cursor:pointer;">
+								<td class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+								<td class="bold" [attr.colspan]="compareSelectedProd.length=='2' ? '2' : '3'" style="color:white" id="TermCol">Term Life Insurance for person of {{requestparam1.activityDesc}}
+									<br>
+									
+								 </td>
+								</tr>
+								<tr *ngIf="input.productType=='CIL'" style="background-color:black;cursor:pointer;">
+									<td class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+									<td class="bold" style="color:white" [attr.colspan]="compareSelectedProd.length=='2' ? '2' : '3'">Critical Illness for person of {{requestparam1.activityDesc}}
+										<br>
+										
+									 </td>
+									</tr>
+									<tr *ngIf="input.productType=='MI'" style="background-color:black;cursor:pointer;">
+										<td class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+										<td class="bold" style="color:white" [attr.colspan]="compareSelectedProd.length=='2' ? '2' : '3'">Regular Income for person of {{requestparam1.activityDesc}}
+											<br>
+											
+										 </td>
+										</tr>
+										<tr *ngIf="input.productType=='ENDW'" style="background-color:black;cursor:pointer;">
+											<td class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+											<td class="bold" style="color:white" [attr.colspan]="compareSelectedProd.length=='2' ? '2' : '3'">Saving Traditional for person of {{requestparam1.activityDesc}}
+												<br>
+												
+											 </td>
+											</tr>
+											<tr *ngIf="input.productType=='ULIP'" style="background-color:black;cursor:pointer;">
+												<td class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+												<td class="bold" style="color:white" [attr.colspan]="compareSelectedProd.length=='2' ? '2' : '3'">Savings Unit Linked for person of {{requestparam1.activityDesc}}
+													<br>
+													
+												 </td>
+												</tr>
+	
+
+				<tr>
+					<th></th>
+					<th *ngFor="let compare_policys of compareSelectedProd" ><p class="comparelogo"> <img src="{{imagePath}}/image/ilogo/i{{compare_policys.insurerId}}.png" class="img-responsive center-block"></p>
+					<span class="insurerclink">{{compare_policys.insurerName}}</span>
+					<span >{{compare_policys.productName}}</span>
+					<span *ngIf="compare_policys.planName">{{compare_policys.planName}}</span>
+					<span *ngIf="compare_policys.pt || compare_policys.ppt">Policy Term : {{compare_policys.pt}} years , Payment Term : {{compare_policys.ppt}} years </span>
+					</th>
+				</tr>
+				<tr>
+				<td class="tablecolumntitleservicing bold">Premium </td>
+				<td class="bold" *ngFor="let compare_policys of compareSelectedProd">&#8377;{{compare_policys.displayPremium | number}}</td>
+				</tr>
+        <tr  style="background-color:#800505;cursor:pointer;">
+					<td [colSpan]="compareSelectedProd.length+1" style="color:white"><span style="font-size:small;" class="green">Covers</span></td>
+					<!-- <td  ng-repeat="compare_policys in compare_policy">&nbsp;</td> -->
+				</tr>
+        <tr *ngFor="let rowItem of compareData.coverDisplay">
+					<td class="tablecolumntitlecover">{{rowItem.cover.name}}</td>
+					<td *ngFor=" let productCover of rowItem.coverData">
+            <span *ngIf="productCover?.exists">
+							<img src="../../../assets/images/checkmark.png"  >
+						</span>
+						
+						<span  *ngIf="!productCover?.exists">
+							<img src="../../../assets/images/red-cross.png"  >
+						</span>
+						<br>
+            <span *ngFor="let name of productCover?.coverLimits['Maximum Claim Amount']">
+							<span class="firstsec">
+								{{name.sublimit}}:<br>
+							<span>{{name.value}}</span>
+							</span><br>
+						</span>	
+          </td>
+				</tr>
+
+        <tr style="background-color:#800505;cursor:pointer;">
+				<td [colSpan]="compareSelectedProd.length+1" style="color:white">
+				<span style="font-size:small;" class="green">Features</span>
+				</td>
+				<!-- <td>&nbsp;</td> -->
+				</tr>
+				<tr *ngFor=" let productattribute of compareData.attributeDisplay;let i=index;">
+												<td>{{productattribute.attribute.name}}</td>
+						<td *ngFor="let attribute of productattribute.attributeData">
+							<span class="word-break" style="word-break: break-word;" [innerHTML]="attribute.value" ></span>	
+							<span *ngIf="!attribute.exists"><img src="../../../assets/images/red-cross.png"></span>
+						</td>
+					</tr>
+					<tr *ngIf="input.productType=='MI' || input.productType=='ULIP' || input.productType=='Child' || input.productType=='ENDW'" style="background-color:#800505;cursor:pointer;">
+							<td [colSpan]="compareSelectedProd.length+1" style="color:white">
+							<span style="font-size:small;" class="green">Payouts</span>
+							</td>
+							<!-- <td>&nbsp;</td> -->
+							</tr>
+							<tr *ngFor="let payouts of displayPayouts">
+									<td>
+										<span *ngFor="let payt of payouts">
+											<span *ngIf="payt.hasOwnProperty('year') && payt.yearShow != null">Year {{payt.year}}</span>
+										</span>
+											<!--<span *ngIf="payt.gapayout>0">Guaranteed Amount of {{payt.gapayout  |  currency: 'INR':true}}</span><br>
+											<span *ngIf="payt.ngapayout4>0">Non - Guaranteed Amount of {{payt.ngapayout4  |  currency: 'INR':true}} &nbsp; @4%</span><br>
+											<span *ngIf="payt.ngapayout8>0">Non - Guaranteed Amount of {{payt.ngapayout8  |  currency: 'INR':true}} &nbsp; @8%</span><br>-->
+									 
+									 </td>
+									 <td *ngFor="let payt of payouts">
+										
+										<span *ngIf="payt.gapayout>0">Guaranteed Amount of {{payt.gapayout  |  currency: 'INR':true}}</span><br>
+										<span *ngIf="payt.ngapayout4>0">Non - Guaranteed Amount of {{payt.ngapayout4  |  currency: 'INR':true}} &nbsp; @4%</span><br>
+										<span *ngIf="payt.ngapayout8>0">Non - Guaranteed Amount of {{payt.ngapayout8  |  currency: 'INR':true}} &nbsp; @8%</span><br>
+								 
+								 </td>
+
+								<!--	<td>
+										<span *ngIf="payouts[0].gapayout>0">Guaranteed Amount of {{payouts[0].gapayout  |  currency: 'INR':true}}</span><br>
+										<span *ngIf="payouts[0].ngapayout4>0">Non - Guaranteed Amount of {{payouts[0].ngapayout4  |  currency: 'INR':true}} &nbsp; @4%</span><br>
+										<span *ngIf="payouts[0].ngapayout8>0">Non - Guaranteed Amount of {{payouts[0].ngapayout8  |  currency: 'INR':true}} &nbsp; @8%</span><br>
+
+									</td>
+								<td><span *ngIf="payouts[1].gapayout>0">Guaranteed Amount of {{payouts[1].gapayout  |  currency: 'INR':true}}</span><br>
+									<span *ngIf="payouts[1].ngapayout4>0">Non - Guaranteed Amount of {{payouts[1].ngapayout4  |  currency: 'INR':true}} &nbsp; @4%</span><br>
+									<span *ngIf="payouts[1].ngapayout8>0">Non - Guaranteed Amount of {{payouts[1].ngapayout8  |  currency: 'INR':true}} &nbsp; @8%</span><br>
+
+								</td>-->
+							</tr>
+
+							
+							
+					<!--<tr *ngFor=" let projection of compareData.projections;let i=index;">
+							<td class="tablecolumntitlefeature">{{projection.year}}th Year</td>
+							<td *ngIf="projection.totalpayout4 > 0">
+								<span *ngIf="projections.totalpayout4 > 0" style="color:#5d5d5d;" class="word-break">Money Back of {{projections.totalpayout4 |  currency: 'INR':true}}</span>
+								<br>
+								<span *ngIf="projection.gapayout > 0" style="color:#5d5d5d;" class="word-break">Guaranteed Amount of {{projection.gapayout |  currency: 'INR':true}}</span>
+								<br>
+								<span *ngIf="projection.ngapayout4 > 0" style="color:#5d5d5d;" class="word-break">Non - Guaranteed Amount of {{projection.ngapayout4 |  currency: 'INR':true}} &nbsp; @4%</span>
+								<br>
+								<span *ngIf="projection.ngapayout8 > 0" style="color:#5d5d5d;" class="word-break">Non - Guaranteed Amount of {{projection.ngapayout8 |  currency: 'INR':true}} &nbsp; @8%</span>
+							</td>
+							
+						</tr>-->
+					<tr style="background-color:#800505;cursor:pointer;">
+							<td [colSpan]="compareSelectedProd.length+1" style="color:white">
+							<span style="font-size:small;" class="green">Servicing</span>
+							</td>
+							<!-- <td>&nbsp;</td> -->
+							</tr>
+			<tr *ngIf="input.productType=='Term' || input.productType=='MI' || input.productType=='ENDW' || input.productType=='ULIP' || input.productType=='Child' || input.productType=='CIL'">
+					<td> % of All Claims Rejected</td>
+			<td *ngFor=" let servicePar of compareData.serviceParams;let i=index;">
+			{{servicePar.claimsRejected*100 | number:'1.2-2'}}%
+			</td>
+		</tr>
+		<tr *ngIf="input.productType=='Term' || input.productType=='MI' || input.productType=='ENDW' || input.productType=='ULIP' || input.productType=='Child' || input.productType=='CIL'">
+				<td>Claims Settlement Ratio (%)	</td>
+		<td *ngFor=" let servicePar of compareData.serviceParams;let i=index;">
+		{{servicePar.claimsAccepted*100}}%
+		</td>
+	</tr>
+		<tr *ngIf="input.productType=='Term' || input.productType=='MI' || input.productType=='ENDW' || input.productType=='ULIP' || input.productType=='Child' || input.productType=='CIL'">
+				<td>Complaints per 10000 Policies	</td>
+		<td *ngFor=" let servicePar of compareData.serviceParams;let i=index;">
+		{{servicePar.complaints}}
+		</td>
+	</tr>
+	<tr *ngIf="input.productType=='FF' || input.productType=='PC' || input.productType=='Health' || input.productType=='INDV'">
+		<td>Complaints per 10000 Claims	</td>
+		<td *ngFor=" let servicePar of compareData.serviceParams;let i=index;">
+		{{servicePar.complaints}}
+		</td>
+	</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="pop-wrap1"><p>  The Product Information shown here is personalized to your previous selections and may change if selection criteria is changed. </p>
+		<p>The Service data is taken from the public disclosures of the respective insurers. The data is current as of End of FY 2018 and is an average of last three years performance from that date.
+			</div>
+
+      </div> 
+        
+      <div class="modal-footer">
+					<button type="button" data-dismiss="modal" class="btn btn-primary" (click)="emailSending()">Email</button>
+					<button type="button" data-dismiss="modal" class="btn btn-primary" (click)="printPdf()">Print</button>
+        <button type="button" data-dismiss="modal" class="btn btn-primary">Close</button>
+      </div>
+       </div>
+    </div>
+  </div>
+
+<!-- Premium Modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="productDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="border: 13px solid black;overflow: auto;height: 580px;    margin: 10px 0 0 0px;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="preiumBrupModalLabel">{{ineachDetail.productName}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+			</div>
+			
+
+
+      <div class="modal-body" id="printPdf1">
+         <div class="table-responsive">
+				<table class="table table-bordered table3" style="color: #5d5d5d;">
+					<tbody>
+							<tr *ngIf="input.productType=='Term'" style="background-color:black;cursor:pointer;">
+									<td  class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+									<td  class="bold" id="TermCol" style="color:white;">Term Life Insurance for person of {{requestparam1.activityDesc}}
+										<br>
+										
+									 </td>
+									</tr>
+									<tr *ngIf="input.productType=='Child'" style="background-color:black;cursor:pointer;">
+											<td class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+											<td class="bold" style="color:white">Child Insurance for person of {{requestparam1.activityDesc}}
+												<br>
+												
+											 </td>
+											</tr>
+											<tr *ngIf="input.productType=='CIL'" style="background-color:black;cursor:pointer;">
+													<td class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+													<td class="bold" style="color:white">Critical Illness for person of {{requestparam1.activityDesc}}
+														<br>
+														
+													 </td>
+													</tr>
+													<tr *ngIf="input.productType=='MI'" style="background-color:black;cursor:pointer;">
+														<td class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+														<td class="bold" style="color:white">Regular Income for person of {{requestparam1.activityDesc}}
+															<br>
+															
+														 </td>
+														</tr>
+														<tr *ngIf="input.productType=='ENDW'" style="background-color:black;cursor:pointer;">
+															<td class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+															<td class="bold" style="color:white">Saving Traditional for person of {{requestparam1.activityDesc}}
+																<br>
+																
+															 </td>
+															</tr>
+															<tr *ngIf="input.productType=='ULIP'" style="background-color:black;cursor:pointer;">
+																<td class="tablecolumntitleservicing bold" style="color:white">Your Selection </td>
+																<td class="bold" style="color:white">Savings Unit Linked for person of {{requestparam1.activityDesc}}
+																	<br>
+																	
+																 </td>
+																</tr>
+							
+					<tr>
+						<th></th>
+						<th><span class="ibspan comparelogo"> <img src="{{imagePath}}/image/ilogo/i{{ineachDetail.insurerId}}.png" class="img-responsive center-block"></span>
+							<br>
+						<div class="insurerclink" style="color: #5d5d5d;" align="center">{{ineachDetail.insurerName}}</div>
+						<div class="productclink" style="color: #5d5d5d;" align="center">{{ineachDetail.productName}}
+							<span *ngIf="ineachDetail.planName">{{ineachDetail.planName}}</span><br>
+							<span *ngIf="ineachDetail.pt || ineachDetail.ppt">Policy Term : {{ineachDetail.pt}} years , Payment Term : {{ineachDetail.ppt}} years </span>
+						</div>	
+					</th>
+					</tr>
+          <tr><td class="tablecolumntitleservicing bold">Premium </td><td class="bold"><span class="rssymbol">Rs.&nbsp;</span>{{ineachDetail.displayPremium | number}}</td></tr>
+					<tr style="background-color: #800505;"><td><span style="font-size:small;color: white !important;">Covers</span></td><td>&nbsp;</td></tr>
+         	<tr *ngFor="let cover of ineachDetail.covers">
+						<td class="tablecolumntitlecover" >{{cover.coverName}}</td>
+						<td>
+							<img src="../../../assets/images/checkmark.png"  ><br>
+							<span *ngFor="let name of cover.coverLimits['Maximum Claim Amount']">
+									<span class="firstsec">
+											{{name.sublimit}}:<br>
+										<span>{{name.value}}</span>
+										</span><br>
+							</span>						
+						</td>
+					</tr>
+          <tr style="background-color: #800505;"><td><span style="font-size:small;color: white !important;">Features</span></td><td>&nbsp;</td></tr>
+					<tr *ngFor="let attribute of CompareArray; let i=index;">
+						<td class="tablecolumntitlefeature">{{attribute.name}}</td>
+						<td><span style="color:#5d5d5d;" class="word-break" [innerHTML]="attribute.value"></span>
+							<span *ngIf="!attribute.exists"><img ng-src="./image/red-cross.png"></span>
+						</td>
+					</tr>
+					
+					<tr *ngIf="lifeSpan == true" style="background-color: #800505;"><td><span style="font-size:small;color: white !important;">Payouts</span></td><td>&nbsp;</td></tr>
+					<tr *ngFor="let projections of ineachDetail.projections">
+							<td *ngIf="projections.totalpayout4 > 0" class="tablecolumntitlefeature">Year {{projections.year}}</td>
+							<td *ngIf="projections.totalpayout4 > 0">
+								<!--<span *ngIf="projections.totalpayout4 > 0" style="color:#5d5d5d;" class="word-break">Money Back of {{projections.totalpayout4 |  currency: 'INR':true}}</span>
+								<br>-->
+								<span *ngIf="projections.gapayout > 0" style="color:#5d5d5d;" class="word-break">Guaranteed Amount of {{projections.gapayout |  currency: 'INR':true}}</span>
+								<br>
+								<span *ngIf="projections.ngapayout4 > 0" style="color:#5d5d5d;" class="word-break">Non - Guaranteed Amount of {{projections.ngapayout4 |  currency: 'INR':true}} &nbsp; @4%</span>
+								<br>
+								<span *ngIf="projections.ngapayout8 > 0" style="color:#5d5d5d;" class="word-break">Non - Guaranteed Amount of {{projections.ngapayout8 |  currency: 'INR':true}} &nbsp; @8%</span>
+							</td>
+							
+						</tr>
+						<tr  style="background-color: #800505;"><td><span style="font-size:small;color: white !important;">Servicing</span></td><td>&nbsp;</td></tr>
+				<tr *ngIf="input.productType=='Term' || input.productType=='MI' || input.productType=='ENDW' || input.productType=='ULIP' || input.productType=='Child' || input.productType=='CIL'" >
+
+						<td class="tablecolumntitlefeature"> % of All Claims Rejected	</td>
+						<td *ngIf="serviceparam.claimsRejected"><span style="color: #5d5d5d;;" class="word-break">{{serviceparam.claimsRejected*100 | number:'1.2-2'}}%</span>
+						</td>
+
+					</tr>
+
+					<tr *ngIf="input.productType=='Term' || input.productType=='MI' || input.productType=='ENDW' || input.productType=='ULIP' || input.productType=='Child' || input.productType=='CIL'">
+							<td class="tablecolumntitlefeature">Claims Settlement Ratio (%)	</td>
+							<td ><span style="color:#5d5d5d;" class="word-break">{{serviceparam.claimsAccepted*100}}%</span>
+							</td>
+						</tr>
+						<tr *ngIf="input.productType=='Term' || input.productType=='MI' || input.productType=='ENDW' || input.productType=='ULIP' || input.productType=='Child' || input.productType=='CIL'">
+								<td class="tablecolumntitlefeature">Complaints per 10000 Policies	</td>
+								<td><span style="color:#5d5d5d;" class="word-break">{{serviceparam.complaints}}</span>
+								</td>
+							</tr>
+							<tr *ngIf="input.productType=='FF' || input.productType=='PC' || input.productType=='Health' || input.productType=='INDV'">
+								<td class="tablecolumntitlefeature">Complaints per 10000 Claims	</td>
+								<td><span style="color:#5d5d5d;" class="word-break">{{serviceparam.complaints}}</span>
+								</td>
+							</tr>		
+					<tr>
+						<td class="tablecolumntitleservicing bold"> </td><td><button class="btn btn-success buy-btn purchaseoptionsdialoglink" (click) ="termNCond(ineachDetail)">BUY THIS POLICY</button></td></tr>
+
+          </tbody>
+          </table>
+					<div class="pop-wrap1"><p>  The Product Information shown here is personalized to your previous selections and may change if selection criteria is changed. </p>
+					<p>The Service data is taken from the public disclosures of the respective insurers. The data is current as of End of FY 2018 and is an average of last three years performance from that date.
+
+						</p>
+				</div>
+          </div> 
+         </div> 
+        
+      <div class="modal-footer">
+					<button type="button" data-dismiss="modal" class="btn btn-primary" (click)="emailSending1()">Email</button>
+         <button type="button" data-dismiss="modal" class="btn btn-primary" (click)="printPdf()">Print</button>
+        <button type="button" data-dismiss="modal" class="btn btn-primary">Close</button>
+      </div>
+       </div>
+    </div>
+  </div>
+
+
+
+
+  <div id="loader"></div>
+     <!-- TC  modal -->
+	 <div data-backdrop="static" data-keyboard="false" id="termsQuoteModal" class="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content" style="overflow:auto;">
+			  <div class="modal-header">
+				  <h5 class="modal-title" id="tataTermsnConditions">Terms and Conditions</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+			<div class="modal-body">
+				
+				<h4>Disclaimer: </h4>
+				<p>SelectAssure is a comparison tool used only for comparing insurance products, which are part of this document. The document is purely for illustrative purposes only.</p>
+			  
+				<p>DBS Bank India Ltd ("DBS"). (IRDA of India Registration Number: CA 0257) having its Registered office at GF: Nos. 11 & 12 & FF - Nos.110 to 115, Capitol Point BKS Marg, Connaught Place, Delhi- 110001 is the Composite Corporate Agent of:</p>
+			   
+				<p>i. Tata AIA Life Insurance Company Limited (IRDA of India Regn. No.110) CIN: U66010MH2000PLC128403 having the Registered office/principal place of business at 14th Floor, Tower A, Peninsula Business Park,
+
+					Senapati Bapat Marg, Lower Parel, Mumbai – 400013,</p>
+			  
+				<p>ii. Aditya Birla Sun Life Insurance Company Limited (IRDA of India Regn.No.109) CIN: U99999MH2000PLC128110 having the Registered office address at One India bulls Centre, Tower 1, 16th Floor, Jupiter Mill
+
+					Compound, 841, Senapati Bapat Marg, Elphinstone Road, Mumbai – 400013 and</p>
+				
+				<p>iii. Royal Sundaram General Insurance Company Limited (IRDA of India Regn.No.102) CIN: U67200TN2000PLC045611 having the Registered office address at No.21, Patullos Road, Chennai – 600 002.</p>
+				
+				<p>iv. Bharti Axa General Insurance Company Limited having its registered office at First Floor Hosto Centre, No. 43, Millers Road, Vasanth Nagar, Bangalore-560052</p>
+				
+				 <br>
+				 <h4>Risk Declaration: </h4>
+				 <p>Insurance products are obligations only of the respective Insurance companies. DBS does not underwrite the risk or act as an Insurer. The Insurance products are offered and underwritten by respective Insurance
+
+					companies.</p>
+				
+				 <p>The contract of insurance is between the Insurer and the Insured and not between DBS and the Insured. DBS does not give any warranty, as to the accuracy and completeness of the policies. DBS does not
+
+					accept any liability or losses attributable to your contract of Insurance. </p>
+				
+				 
+				 <p>Customers are advised to take independent professional advice before participating. All claims under the Insurance policy will be solely decided upon
+
+					by the respective Insurance Company. DBS shall not be responsible for claims, recovery of claims or for processing of or clearing of claims, in any manner whatsoever.</p> 
+					
+					<p>Participation by the DBS’s customers in an insurance product is purely on a voluntary basis.</p>
+					
+					<p>The Policy Details as mentioned in the statement are updated on a periodic basis and is as per the information provided by the respective insurer. Please contact the respective Insurance Company for exact details as
+
+						applicable on the current date.</p>
+				</div>
+			   
+				
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">I Disagree</button>
+			  <button type="button" class="btn btn-secondary" style="background-color: red; color: white;" (click)="agreeTC('agree')" data-dismiss="modal">I Agree</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	   <!-- ends here--> 
+
+</div>  

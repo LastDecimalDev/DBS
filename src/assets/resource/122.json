@@ -1,0 +1,464 @@
+{
+  "ProposerRel": {
+    "BRTHR": "Brother",
+    "BUSIN": "Business",
+    "CHILD": "Child",
+    "EMP": "Employer",
+    "ESTA": "Estate",
+    "FATHR": "Father",
+    "FRIEN": "Friend",
+    "GFTHR": "Grandfather",
+    "GMTHR": "Grandmother",
+    "INSCO": "Insured's Company",
+    "MOTHR": "Mother",
+    "OTHER": "Other",
+    "PAREN": "Parent",
+    "PART": "Partner",
+    "SAME": "Same Person",
+    "SISTR": "Sister",
+    "SPOUS": "Spouse"
+  },
+  "BillingMethod": {
+    "DB": "Direct Bill",
+    "PP": "Pre Authorized Payment (ECS)",
+    "CC": "Credit card",
+    "SP": "Single Premium",
+    "SD": "Salary Deduction",
+    "SI": "Standing instruction"
+  },
+  "Title": {
+    "DR": "Doctor",
+    "MASTER": "MASTER",
+    "MR": "Mr",
+    "MRS": "Mrs",
+    "PROF": "Prof"    
+  },
+  "Gender": {
+    "C": "Company",
+    "F": "Female",
+    "J": "Joint Lives",
+    "M": "Male"
+  },
+  "MaritalStatus": {
+    "D": "Divorced",
+    "M": "Married",
+    "S": "Single",
+    "W": "Widowed"
+  },
+  "State": {
+    "1": "ANDHRA PRADESH",
+    "2": "ARUNACHAL PRADESH",
+    "3": "ASSAM",
+    "4": "BIHAR",
+    "5": "CHHATTISGARH",
+    "6": "DELHI",
+    "7": "GOA",
+    "8": "GUJARAT",
+    "9": "HARYANA",
+    "10": "HIMACHAL PRADESH",
+    "11": "JAMMU & KASHMIR",
+    "12": "JHARKHAND",
+    "13": "KARNATAKA",
+    "14": "KERALA",
+    "15": "MADHYA PRADESH",
+    "16": "MAHARASHTRA",
+    "17": "MANIPUR",
+    "18": "MEGHALAYA",
+    "19": "MIZORAM",
+    "20": "NAGALAND",
+    "21": "ORISSA",
+    "22": "PUNJAB",
+    "23": "RAJASTHAN",
+    "24": "SIKKIM",
+    "25": "TAMIL NADU",
+    "26": "TRIPURA",
+    "27": "UTTAR PRADESH",
+    "28": "UTTARANCHAL",
+    "29": "WEST BENGAL",
+    "31": "ANDAMAN & NICOBAR ISLANDS",
+    "32": "SILVASSA",
+    "33": "CHANDIGARH",
+    "34": "DADRA AND NAGAR HAVELI",
+    "35": "PONDICHERRY",
+    "36": "DIU AND DAMAN",
+    "53": "UTTARAKHAND",
+    "78": "TELANGANA"
+  },
+  "Qualification": {
+    "G": "Graduate",
+    "H": "HSC",
+    "O": "Post Graduate",
+    "P": "Professional",
+    "S": "SSC",
+    "T": "Others"
+  },
+  "AGEPROOF": {
+    "1": "Aadhar Card",
+    "2": "Baptism or Marriage Certificate",
+    "110": "Domicile Certificate",
+    "109": "Driving License",
+    "116": "Govt Employment Certificate",
+    "115": "Nursing Hospital Certificate/Discharge Card",
+    "108": "Pan Card",
+    "107": "Passport",
+    "86": "School Report card/College Certificate"
+  },  
+  "SmokerStatus": {
+    "C": "Combined",
+    "N": "Non-smoker",
+    "S": "Smoker",
+    "U": "Unknown"
+  },
+  "Occupation": {
+    "54": "Professional",
+    "88": "Retired",
+    "89": "Labour/Worker",
+    "90": "Agriculture",
+    "91": "Armed Forces",
+    "92": "Business Owner",
+    "93": "Driver",
+    "94": "Housewife",
+    "95": "Other",
+    "96": "Police",
+    "97": "Service",
+    "98": "Student",
+    "99": "MinorChild"
+  },
+  "OrganizationType": {
+    "NGO": "NON GOVERNMENT ORGANIZATION",
+    "TRU": "TRUST",
+    "CHR": "CHARITIES",
+    "PRO": "PROPRIETORSHIP",
+    "PAR": "PARTNERSHIP",
+    "HUF": "HUF",
+    "PRL": "PRIVATE LTD.",
+    "PUL": "PUBLIC LTD."
+  },
+  "IDPROOF": {
+    "5": "Driving Licence",
+    "244": "Government ID card",
+    "15": "Job Card issued by NREGA",
+    "245": "Letter issued by a Gazette Officer",
+    "17": "Letter issued by UIA",
+    "3": "Pan Card",
+    "2": "Passport",
+    "4": "Voter's Identity Card"
+  },
+  "INCOMEPROOF" :{
+  	"45":"Agricultural Income Certificate",
+	"46":"Agricultural-land details and Income Assesments",
+	"246":"Alternative Income Proof",
+	"41-1":"Appointment/Agreement letter issued within the last one year",
+	"243":"Audited Business Financials of the company for the last 3 years",
+	"47":"Bank statement for last one year",
+	"49":"Bank statement reflecting salary credits",
+	"44":"CA certificate",
+	"41-2":"Employer's Certificate for Income/Regular Pension details",
+	"40-1":"Form 16/16A ( latest)",
+	"40-2":"Form 26AS of last 2 years",
+	"40-3":"Income Tax Returns",
+	"40-4":"ITR for last 2 years",
+	"40-5":"ITR for last 3 years",
+	"40-6":"ITR reflecting income from Dividend",
+	"47-2":"Mutual Fund/portfolio statement for last one year",
+	"44-2":"Professional receipts for one year",
+	"49-1":"Salary Slip/Form 16",
+	"49-2":"Salary slips for 3 months"
+}, 
+  "RESPROOF": {
+    "17-3": "Pension or family PPO by Govt",
+    "21": "Bank Account/Post Office Saving Account Statement",
+    "90": "Utility Bill",
+    "24-1": "Letter of allotment of accomodation",
+    "24-2": "Leave and License agreements",
+    "24-3": "Property of Municipal tax receipt",
+    "2": "Passport",
+    "5": "Driving Licence",
+    "17-2": "Letter issued by UIA",
+    "15": "Job Card issued by NREGA",
+    "17-1": "Documents issued by Government departments",
+    "4": "Voter's Identity Card"
+  },
+  "PaymentMethod": {
+    "PP": "Cheque",
+    "CC": "Credit Card/ Debit Card/ Net Banking"
+  },
+  "PolicyType": {
+    "G": "General",
+    "N": "NRI",
+    "M": "MWP",
+    "H": "HUF",
+    "E": "Employer-Employee",
+    "K": "Key-Man",
+    "P": "Partnership",
+    "A": "Mail Order Business",
+    "O": "Suit Case Selling",
+    "S": "Salary Deduction",
+    "R": "Restrictive Clause"
+  },
+  "BankAccountType": {
+    "CUR": "Current Account",
+    "KEY": "Key Account",
+    "PCA": "Personal Chequing Account",
+    "SAV": "Savings Account",
+    "SCA": "Savings/Chequing Account",
+    "TCA": "True Chequing Account"
+  },
+  "MinorGuardian": {
+    "P": "Parent",
+    "G": "Grandparent",
+    "O": "Others"
+  },
+  "MinorClass": {
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9",
+    "10": "10",
+    "11": "11",
+    "12": "12"
+  },
+  "HealthCode": {
+    "A": "Accidental Death",
+    "C": "Cancer",
+    "D": "DM",
+    "E": "Heart Problems",
+    "H": "Hyper tention",
+    "O": "Ok/Good",
+    "N": "Neourological",
+    "U": "Other"
+  },
+  "Mode": {
+    "1": "Self  Monthly",
+    "3": "Quarterly",
+    "6": "Semi Annually",
+    "12": "Annually"
+  },
+  "Fund": {
+    "I0001": "Protector",
+    "I0002": "Builder",
+    "I0003": "Enhancer",
+    "I0004": "Creator",
+    "I0005": "Magnifier",
+    "I0006": "Assure",
+    "I0007": "Maximiser",
+    "I0008": "Multiplier",
+    "I0009": "Income Advantage",
+    "I0010": "Super 20",
+    "I0011": "Liquid Plus",
+    "I0012": "Pure Equity",
+    "I0013": "Value & Momentum",
+    "I0015": "Capped Nifty Index",
+    "I0016": "Asset Allocation"
+  },
+  "InvestmentOptions": {
+    "A": "Aggressive",
+    "C": "Conservative",
+    "M": "Moderate",
+    "S": "Self Managed",
+    "G": "Guaranteed",
+    "D": "Systematic Transfer",
+    "Blank": "Not Selected"
+  },
+  "Nationality": {
+    "IND": "Indian",
+    "NRI": "NON RESIDENT INDIAN",
+    "PIO": "Person of Indian Origin",
+    "FNIO": "Foreign National Indian Origin",
+    "OTH": "Others"
+  },
+  "Plans": {
+    "BPE": "BSLI Easy Protect Plan",
+    "BWL": "BSLI Vision LifeSecure",
+    "BSP": "BSLI Savings Plan",
+    "BVR": "BSLI Vision Regular Returns",
+    "VEN": "BSLI Vision Endowment (7 Pay & 10 Pay)",
+    "BIV": "BSLI Vision LifeIncome",
+    "BWA": "BSLI Wealth Assure Plan",
+    "BSE": "BSLI Wealth Secure Plan",
+    "WMX": "BSLI Wealth Max Plan",
+    "BES": "BSLI Empower Pension Plan",
+    "BGF": "BSLI Guaranteed Future",
+    "PRE": "BSLI Protect@Ease",
+    "BPP": "BSLI Protector Plus Plan",
+    "BI5": "BSLI Immediate Annuity",
+    "BFE": "BSLI Fortune Elite",
+    "IAS": "BSLI Income Assured Plan",
+    "BVE": "BSLI Vision Endowment Plus Plan",
+    "BVM": "BSLI Vision Money Back Plus Plan",
+    "BVC": "BSLI Vision Star Plan"
+  },
+  "LifeStyleQuestions": {
+    "IsOutsideIndiaVacc180days": "Do you intend to live or travel outside India for a period of more than 180 days? If Yes, submit appropriate questionnaire.",
+    "IsOccupationHazardous": "Are you involved or do you intend to involve in any hazardous occupation or avocation? (for e.g. flying other than a fare-paying passenger, diving, mountaineering, working at heights, underground or offshore, using explosives or any other dangerous activity).",
+    "IsFamilyMemDiagnosedBefore60": "Has any of your parents, brothers or sisters been diagnosed with any hereditary or chronic disorder, heart ailment, high blood pressure, cancer, diabetes prior to age 60?",
+    "IsAnyDeclinedInsurance": "Have you ever had an application for life, accident, medical, health-related insurance or riders refused, withdrawn, declined, postponed or offered with restricted benefits or with an increased premium or made any claim under any such policy of insurance with BSLI or any other insurer in India or abroad? ",
+    "IsAnyConcurrentInsurance": "Is there any concurrent application and/or any existing insurance on your life for Life / Health / Accident / Critical Illness or other riders in effect with BSLI or any other insurer in India or abroad? If Yes, give details.",
+    "IsAlcoholic": "Do You consume alcohol?",
+    "IsTobaccoConsumed": "Do you consume tobacco?",
+    "IsNarcotic": "Do you consume or have you ever consumed any narcotic substance?"
+  },
+  "MedicalQuestions": {
+    "IsSickatWorkfor10Days": "Have you remained absent from place of work on grounds of health for a continuous period of more than 10 days for reasons other than pregnancy, minor fracture, cold or flu?",
+    "IsUdergoneSurgeryPast5yrs": "In the past five years, have you ever undergone any surgical operation at a hospital or clinic or undergone any investigations with other than normal or negative results (including X-rays, ECG, blood tests, biopsies etc.)?",
+    "IsOnDietOrMedicineCourse": "Are you on diet or any other medicine of any kind prescribed by a doctor?",
+    "IsDocConsultedlessthen4yrs": "Within the past 5 years have you: Consulted any doctor or health practitioner except for common cold, influenza lasting less than 4 days?",
+    "IsSubmittedToAnyTest": "Submitted to an ECG, X- rays, blood tests or any other tests?",
+    "IsHospitalized": "Admitted /been advised to be admitted to any hospital or a medical facility for medical management or surgical procedure?",
+    "IsHavingHeartDisorders": "Have you ever sought advice or suffered from Chest pain, high blood pressure, high cholesterol, heart attack, heart murmur or other heart disorders?",
+    "IsHavingLungDisorder": "Have you ever sought advice or suffered from Asthma, chronic cough, pneumonia, shortness of breath, tuberculosis (TB) or other respiratory or lung disorders?",
+    "IsDiabetic": "Have you ever sought advice or suffered from Diabetes / elevated blood sugar or sugar in the urine?",
+    "IsHavingVenerealDisease": "Have you ever sought advice or suffered from Protein (albumin), blood or pus in the urine, sexually transmitted disease (STD) or venereal disease?",
+    "IsHavingDigestiveDisorder": "Have you ever sought advice or suffered from Ulcer, colitis, chronic diarrhea, hepatitis or jaundice or other liver or digestive disorders?",
+    "IsHavingThyroidDisorder": "Have you ever sought advice or suffered from Cancer, tumor, abnormal growth, and thyroid disorder, enlarged glands or enlarged lymph nodes?",
+    "IsAnaemicOrBloodDisorder": "Have you ever sought advice or suffered from Anemia, bleeding or blood disorders?",
+    "IsHavingNervousDisorder": "Have you ever sought advice or suffered from Dizziness / fainting spells, epilepsy, paralysis, stroke, nervous or mental / emotional disorder?",
+    "IsKidneyDisorder": "Have you ever sought advice or suffered from Kidney, urinary, bladder, reproductive organ or prostate disorders?",
+    "IsArthritisOrBoneDisorder": "Have you ever sought advice or suffered from Arthritis, gout or joint pain, muscle disorder, bone fracture or disorders?",
+    "IsHavingAIDS": "Have you ever sought advice or suffered from Acquired Immunodeficiency Syndrome (AIDS) or AIDS related complex?",
+    "IsHIV": "Have you ever sought advice or suffered from A test indicating the presence of HIV (AIDS virus)?",
+    "IsHavingEyeDisorder": "Have you ever sought advice or suffered from Disorder of eyes (such as cataract, glaucoma etc.) or ears?",
+    "IsHavingOtherSurgeryOrInjury": "Have you ever sought advice or suffered from Any other illness, surgery or injury?",
+    "IsPhysicalyDeformed": "Do you have any physical defects, impairment, deformities and / or any condition affecting mobility, sight and / or hearing?",
+    "IsHavingPhysicalHealthSymptoms": "Do you have any health symptoms or complaints for which a physician has not been consulted or treatment received? (Persistent fever, unexplained weight loss, loss of appetite, pain, swelling, etc.)",
+    "IsSpouseUndergoneHIVTest": "Have you or your spouse received any medical advice, testing or treatment for any sexually transmitted disease or HIV Infection?"},
+  "FemaleMedicalQuestions" : {
+    "IsPregnant": "For female lives only: Are you pregnant?",
+    "IsSufferingGynaecologicalPrblms": "Have you suffered from or do you have any gynecological problems or illness related to uterus / ovaries or breasts?",
+    "IsUndergoinTreatment": "Are you currently undergoing or intend to undergo any treatment?",
+    "IsAdvisedSurgicalOperation": "Have you been advised for any surgical operation, procedure or hospital admission?"
+  	},
+  	
+  "MinorQuestions": {
+    "IsMinorAvailedMedical": "Other than normal care at birth, has the minor within the last 5 years received any medical attention from the doctor or any medical treatment by diet, medicine or by any other means or been a patient in a hospital or availed of any other medical services?",
+    "IsMinorAnySurgery": "Has the minor ever been diagnosed with or treated / consulted for heart disorder, rheumatic fever, cancer, tumor, enlarged glands, anemia, bleeding or blood disorder, kidney, urinary or bladder disorder / infection, arthritis, deformity, birth defects, HIV / AIDS or AIDS related complex or undergone a test indicating the presence of HIV (AIDS) virus, any other illness, surgery or injury?",
+    "IsMinorDiagonsed": "Has the minor ever been diagnosed or treated for shortness of breath, asthma, diabetes, sugar in urine, colitis, hepatitis or other liver or digestive disorder, fainting spells, epilepsy, nervous or mental disorder? If Yes, submit appropriate questionnaire.",
+    "IsDocConsultedlessthen4yrs": "Does the minor have any health symptoms or complaints for which a physician has not been consulted or no treatment has been?"
+    },
+  "NomineeRel": {
+    "PAR": "Parent",
+    "GRA": "Grandparent",
+    "SPO": "Spouse",
+    "BRO": "Brother",
+    "SIS": "Sister",
+    "OTHER": "Others",
+    "SON": "Son",
+    "DAU": "Daughter",
+    "CHI": "Children",
+    "RLAT1": "Father",
+    "RLAT3": "Husband",
+    "RLAT2": "Mother",
+    "RLAT4": "Wife"
+  },
+  "PolicyRegion": {
+    "U": "Urban",
+    "R": "Rural",
+    "DM": "DM"
+  },
+  "HowKnown": {
+    "Direct Mail": "Direct Mail",
+    "Existing Customer": "Existing Customer",
+    "Friend": "Friend",
+    "Other": "Other",
+    "Reference / Cold Call": "Reference / Cold Call",
+    "Relative": "Relative"
+  },
+  "InsurancePurpose": {
+    "75": "Risk",
+    "76": "Savings",
+    "77": "Others"
+  },
+  "IR": {
+    "CAMS": "CAMS",
+    "NSDL": "NSDL",
+    "CDSL": "CDSL",
+    "KARVY": "KARVY"
+  },
+  "AlcoholType": {
+    "Beer": "Beer",
+    "HardLiquor": "HardLiquor",
+    "Wine": "Wine"
+  },
+  "TobaccoType": {
+    "Cigarettes": "Cigarettes",
+    "Bidi": "Bidi",
+    "Gutka": "Gutka"
+  },
+  "TransferDate": {
+    "1st": "1st",
+    "8th": "8th",
+    "15th": "15th",
+    "22nd": "22nd"
+  },
+  "DeathCause": {
+    "N": "Normal",
+    "ND": "Natural Death",
+    "A": "Accidental",
+    "U": "Other"
+  },
+  "AddressType": {
+    "R": "Residential",
+    "P": "Permanent",
+    "O": "Office"
+  },
+  "IsFamilyMemDiagnosedBefore60Hdr" : {
+    "member": "Member",
+    "age": "Age",
+    "healthStateDesc": "Health State",
+    "deathCauseDesc": "Death Cause",
+    "deathAge": "Death Age"
+  },
+  "IsTobaccoConsumedHdr" : {
+    "tobaccoType": "Type",
+    "qty": "Quantity",
+    "frequency": "Frequency",
+    "years": "Years"
+  },
+  "IsAlcoholicHdr" : {
+    "alcoholType": "Type",
+    "qty": "Quantity",
+    "qtyType": "Qty Type",
+    "frequency": "Frequency",
+    "years": "Years"
+  },
+  "IsNarcoticHdr" : {
+    "alcoholType": "Type",
+    "qty": "Quantity",
+    "qtyType": "Qty Type",
+    "frequency": "Frequency",
+    "years": "Years"
+  },
+  "IsAnyConcurrentInsuranceHdr" : {
+    "policyNumber": "Policy No",
+    "insurerName": "Insurer",
+    "issueYear": "Issue Year",
+    "sumAssured": "Sum Assured"
+  },
+  "IsAnyDeclinedInsuranceHdr" : {
+    "policyNumber": "Application No",
+    "insurerName": "Insurer",
+    "issueYear": "Issue Year",
+    "sumAssured": "Sum Assured",
+    "Reasons": "Reason"
+  },
+  
+  "PlanCodeMapping":{
+    "109N091V01" : "PRE",
+  	"109N089V03": "IAS",
+  	"109N095V01": "BGF",
+  	"109N088V01": "BSPS",
+  	"109N102V01": "BSP",
+  	"109N092V01": "BVE",
+  	"109N096V01": "BVC",
+  	"109N087V01" : "BWL",
+  	"109L074V02" : "BSE",
+  	"109L100V02" : "WAS",
+  	"109L078V02" : "BES"
+  }
+}

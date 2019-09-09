@@ -1,0 +1,63 @@
+.marginhead
+{
+margin-top: 4% !important;
+}
+
+#menu
+{
+ left: 885px;
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait)
+
+{
+  .extraSpace{
+    width: 100% !important;
+    margin-top: 37% !important;
+    float: left;
+    height: auto;
+}
+    #menu
+    {
+      left: 348px;
+    }
+    .marginhead
+    {
+    margin-top: 172px !important;
+    }
+    #dbs {
+        width: 68% !important;
+        float: left;
+        height: auto;
+     }
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape)
+
+{
+  .extraSpace{
+    width: 100% !important;
+    margin-top: 30% !important;
+    float: left;
+    left: 41px !important;
+    height: auto;
+}
+    #menu
+    {
+    left: 460px;
+    }
+    .marginhead
+    {
+    margin-top: 172px !important;
+    }
+    #dbs {
+        width: 100% !important;
+        float: left;
+        height: auto;
+     }
+}

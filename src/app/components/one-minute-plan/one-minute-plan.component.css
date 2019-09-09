@@ -1,0 +1,105 @@
+ul {
+    left: 885px !important;
+    
+  }
+@media (max-width : 1024px) and (min-width : 768px) and (orientation: portrait) {
+    ul {
+        left: 341px !important;
+        
+      }
+    
+    input[type=checkbox].css-checkbox29 + label.css-label29{padding-left:0px; height:100px; width:100%; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer; margin-top: 32px;}
+    .zerogrid {
+        width: 140% !important;
+    }
+    .onebutton2{
+        margin: -80px -17% 0px 0 !important;
+        width: 74% !important;
+        float: right;
+        font-family: Lato;
+        font-size: 16px;
+        color: #6a6964;
+        text-align: center;
+        padding: 1% 0 0 0;
+        line-height: 24px;
+        font-weight: 700;
+    }
+    .onetext{
+        width: 147% !important;
+
+    }
+    .boxes
+    {
+        padding: 0 0px 0 2px;
+    }
+
+    div.rootCus{
+        width: 100% !important;
+    }
+
+    .chek_box2 {
+        width: 165% !important;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 0% 0 10% 23%;
+        color: #666;
+        margin: 0 -227px 0 4px;
+        }
+
+    #dbs {
+        width: 67% !important;
+        float: left;
+        height: auto;
+    }
+    .contentmain{
+        width: 65% !important;
+    }
+    .onebutton {
+        width: 64%;
+        float: left;
+        font-family: Lato;
+        font-size: 16px;
+        color: #6a6964;
+        text-align: center;
+        padding: 1% 0 0 0;
+        line-height: 24px;
+        font-weight: 700;
+        margin: 0px 0 0 0px;
+    }  
+}
+
+@media (max-width : 1024px) and (min-width : 768px) and (orientation: landscape) {
+    ul {
+        left: 438px !important;
+        
+      }
+      .zerogrid {
+        width: 981px !important;
+    }
+    
+.onebutton2 {
+    width: 46% !important;
+    float: right;
+    font-family: Lato;
+    font-size: 18px;
+    color: #6a6964;
+    text-align: center;
+    margin: 2% -2% 0px 0;
+    line-height: 24px;
+    font-weight: 700;
+}
+.onebutton {
+    width: 40%;
+    float: left;
+    font-family: Lato;
+    font-size: 18px;
+    color: #6a6964;
+    text-align: center;
+    padding: 1% 0 0 0;
+    line-height: 24px;
+    font-weight: 700;
+    margin: 11px 0px 0px 28px;
+}
+}

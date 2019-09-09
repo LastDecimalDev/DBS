@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="104px" height="32px" viewBox="0 0 104 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>consider</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Recomendations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-530.000000, -206.000000)">
+        <g id="Group-2" transform="translate(37.000000, 206.000000)">
+            <g id="Group" transform="translate(203.000000, 0.000000)">
+                <g id="consider" transform="translate(290.000000, 0.000000)">
+                    <g id="ICON-Copy-2">
+                        <path d="M16,0 C7.18222222,0 0,7.14666667 0,16 C0,24.8532593 7.14666667,32 16,32 C24.8534074,32 32,24.8532593 32,16 C32,7.14666667 24.8177778,0 16,0" id="Path" fill="#FFFFFF"></path>
+                        <path d="M3,16.5000376 C3,9.06418801 9.07236446,3 16.5180723,3 C23.9638554,3 30,9.06418801 30,16.5000376 C30,23.9358872 23.9638554,30 16.5180723,30 C9.07236446,30 3,23.9358872 3,16.5000376 Z" id="Path" fill="#F9A33C"></path>
+                        <path d="M8,16.0000223 C8,11.5935929 11.5984382,8 16.0107095,8 C20.4230254,8 24,11.5935929 24,16.0000223 C24,20.4064517 20.4230254,24 16.0107095,24 C11.5984382,24 8,20.4064517 8,16.0000223 Z" id="Path-Copy" stroke="#FFFFFF" stroke-width="2" fill="#F9A33C"></path>
+                    </g>
+                    <text id="Consider" opacity="0.8" font-family="Lato-Regular, Lato" font-size="16" font-weight="normal" letter-spacing="-0.255999982" fill="#333333">
+                        <tspan x="42" y="23">Consider</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

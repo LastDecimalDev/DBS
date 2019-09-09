@@ -1,0 +1,25 @@
+div.headr {
+    background-color: #f1f1f1;
+    padding: 1%;
+}
+    .confirmBtn {
+     padding: 6px 18px;
+      margin-left: 30%;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+    
+    .confirmBtn:hover {background-color: #3e8e41}
+    
+    .confirmBtn:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }

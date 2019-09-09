@@ -1,0 +1,419 @@
+
+.disabled {
+    cursor: not-allowed !important;
+  }
+  #menu{
+    left: 885px;
+}
+  .uploaddocoverflow
+  {
+      width:80%;
+      overflow-y: auto;
+  }
+  .headerill
+  {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  }
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 0px solid #e5e5e5;
+}
+ .downloadvalue{
+    content: "Joe's Task:";
+  }
+.updatestatus
+{
+    color: green;
+    position: relative;
+    left: 150px;
+    top: -27px;
+}
+  label.disabled {
+    color: #fff !important;
+}
+.textboxline {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline:none;
+    box-shadow:none;
+    width: 100%;
+  }
+  .textboxmargin{
+    margin-bottom: 2px !important;
+    }
+
+  
+
+label.css-primaryYes
+      {
+background-color: red;
+      }
+
+
+  
+      input[type=radio].css-radioYes {
+        display:none;
+        
+    }
+    
+     input[type=radio].css-radioYes + label.css-primaryYes  {
+        color: #fff;
+        background-color: #337ab7;
+        border-color:#2e6da4;
+        display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    }
+     input[type=radio].css-radioYes:checked + label.css-primaryYes  {
+        background-position:0 0px;
+        background-color: #286090;
+         
+    }
+
+   .nonmandotorylabel
+    {
+       color: #555 !important;
+        font-weight: bold !important;
+    }
+   
+
+    .textboxline {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #000000;
+        outline:none;
+        box-shadow:none;
+        width: 100%;
+        border-radius: inherit;
+      }
+      .documentupload
+      {
+      margin-left: -996px; margin-top: 12px;
+      }
+      .documentuploadjointlife
+      {
+        margin-left: -994px;margin-top: 18px;
+      }
+
+    .form-panel .nonmandateaadhar
+    {
+     font-weight: 400;
+    margin-bottom: 2px;
+    margin-top: 15px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #555;
+    }
+    .form-horizontal .nonmandateaadhar {
+        text-align: left !important;
+    }
+
+    @media only screen
+   and (max-device-height:769px) and (max-device-width:1024px)
+   {
+    .marginhead
+    {
+        margin-top: 88px;
+    }
+    .documentupload
+    {
+        margin-left: -514px; margin-top: 12px;
+    }
+    .documentuploadjointlife
+      {
+        margin-left: -514px;margin-top: 18px;
+      }
+    .margintophead
+    {
+        margin-top:490px;
+    }
+    .marginheadforincome
+    {
+        margin-top:248px;
+    }
+    }
+
+ @media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait)
+
+{
+   
+    .panelmargin
+    {
+        margin-top: 5px
+    }
+    .documentupload
+    {
+    margin-left: -404px; margin-top: 12px;
+    }
+    .documentuploadjointlife
+    {
+        margin-left: -399px;
+        margin-top: 18px;
+    
+    }
+    .marginhead
+    {
+        margin-top: 172px !important;
+    }
+  
+    .modal-content
+    {
+    margin-left: 0px !important;
+    }
+    .overflowscroll
+    {
+        margin-left: 0px !important; 
+    }
+    .margintophead
+    {
+        margin-top:490px;
+    }
+    .marginheadforincome
+    {
+        margin-top:248px;
+    }
+    .marginofNRI
+    {
+        margin-left: -14px;
+    }
+ }
+    input[type=checkbox] {
+        display: block;
+    }
+
+    
+
+    .margintophead
+    {
+        margin-top:432px;
+    }
+    .labelcolor
+    {
+        color: rgb(110, 101, 101) !important;
+    }
+    .widthofdate
+    {
+        width: 81% !important;
+    }
+    .widthofHazardous
+    {
+        width: 93% !important;
+    }
+    .labelcolor1
+    {
+     color: #666;
+    font-weight: bold;
+    }
+    .marginheadforincome
+    {
+        margin-top:249px;
+    }
+    @media (max-width : 1024px) and (min-width : 768px) and (orientation: portrait) {
+ 
+        #dbs {
+            width: 68% !important;
+            float: left;
+            height: auto;
+        }
+        #menu {
+            left: 340px !important;
+        }
+        .widthofdate
+        {
+            width: 69% !important;
+        }
+        .extraSpace{
+          
+            width: 100% !important;
+            float: left;
+            height: auto;
+        }
+        .mandate{
+            width: 100% !important;
+            position: fixed;
+           
+        }
+        .drivermandate
+        {
+            width: 100% !important;
+            position: fixed;
+        
+        }
+        .travelmandate {
+            width: 100% !important;
+            position: fixed;
+            margin-left: -4px;
+         }
+        .modalwidth
+        {
+            width:100%!important;
+            float: left;
+            height: auto;
+        }
+        .downloadIllu
+        {
+            position: relative;
+            left: 566px !important;
+        }
+        .define {
+            border-bottom: 1px solid rgba(0,0,0,.05);
+            padding: 83px 15px 15px 40px;
+            margin-bottom: 10px;
+            color: #999;
+            position: relative;
+        }
+        .margininsured
+        {
+            padding-top: 1px !important;   
+        }
+        .marginfordriver
+         {
+        margin-left: 11px;
+       
+        }
+        .uploaddocoverflow
+        {
+            width:100%;
+            overflow-y: auto;
+        }
+       }
+        .marginfordriver
+         {
+        margin-left: 11px;
+        width: 66%;
+        }
+       
+   @media (max-width : 1024px) and (min-width : 768px) and (orientation: landscape) {
+   
+     
+
+      
+    #dbs {
+        width: 100% !important;
+        float: left;
+        height: auto;
+     }
+     #menu {
+        left: 460px !important;
+    }
+     .uploaddocoverflow
+     {
+         width:100%;
+         overflow-y: auto;
+     }
+    .documentupload
+    {
+    margin-left: -404px; margin-top: 12px;
+    }
+    .documentuploadjointlife
+    {
+        margin-left: -402px;
+        margin-top: 18px;
+    
+    }
+    .marginhead
+    {
+        margin-top: 142px;
+    }
+  
+    .modal-content
+    {
+    margin-left: 0px !important;
+    }
+    .overflowscroll
+    {
+        margin-left: 0px !important; 
+    }
+    .margintophead
+    {
+        margin-top:490px;
+    }
+    .marginheadforincome
+    {
+        margin-top:248px;
+    }
+    .marginofNRI
+    {
+        margin-left: -14px;
+    }
+
+         
+            .widthofdate
+        {
+            width: 69% !important;
+        }
+        .extraSpace{
+            width: 100% !important;
+            float: left;
+            height: auto;
+        }
+        .mandate{
+            width: 100% !important;
+            position: fixed;
+           
+        }
+        .drivermandate
+        {
+            width: 100% !important;
+            position: fixed;
+        
+        }
+        .travelmandate {
+            width: 100% !important;
+            position: fixed;
+            margin-left: -4px;
+           
+        }
+        .modalwidth
+        {
+            width:100%!important;
+            float: left;
+            height: auto;
+        }
+        .downloadIllu
+        {
+            position: relative;
+            left: 566px !important;
+        }
+        .define {
+            border-bottom: 1px solid rgba(0,0,0,.05);
+            padding: 83px 15px 15px 40px;
+            margin-bottom: 10px;
+            color: #999;
+            position: relative;
+        }
+        .margininsured
+        {
+            padding-top: 1px !important;   
+        }
+        .marginfordriver
+         {
+        margin-left: 11px;
+       
+        }
+
+           }
+       
+   

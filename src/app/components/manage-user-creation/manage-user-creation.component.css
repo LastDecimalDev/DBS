@@ -1,0 +1,255 @@
+html {
+  background-color: #f5f5f5 !important;
+}
+.has-error .form-control{
+  border-color: #ccc !important;
+}
+#activityModl{
+    width: 208% ;
+    margin-left: -320px ;
+  }
+  .col-centered{
+    width: 50% !important;
+    float: none;
+    margin: 0 auto;
+  }
+  .select_menu
+  {
+    background-color: #f5f5f5;
+    margin: 0 0 0 0 !important;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2
+  }
+  .justify-content-center {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  ul {
+    left: 885px !important;
+    
+  }
+  .wrapper input
+  {
+    width: 15%;
+    background-color: transparent;
+    border: 1px solid;
+    font-size: 13px;
+    font-family: Arial;
+    float: left;
+  }
+  
+  .wrapper input:last-child{
+    float: right;
+  }
+  .policybox{
+    width: 14%;
+    margin: 0 460px 0 0;
+  }
+  
+  .my-pagination /deep/  pagination-template .ngx-pagination{
+      position: inherit;
+      display: table;
+      margin-left: 135px;
+      margin-bottom: 1rem;
+      margin-top: 36px;
+    }
+  
+    .my-pagination /deep/  pagination-template .ngx-pagination .current{
+      padding: 1.5rem 4.625rem;
+          background: #cc0000;
+      color: #fefefe;
+      cursor: default;
+      pointer-events: none;
+      border-radius: 20px;
+    }
+    .my-pagination /deep/ pagination-template .ngx-pagination a:hover, .ngx-pagination button:hover {
+      background: #e6e6e6;
+      border-radius: 20px;
+      
+  
+    /*padding: 13px 17px 14px 17px;*/
+    }
+  
+    .my-pagination /deep/ pagination-template .ngx-pagination a, .ngx-pagination button
+    {
+      position: inherit;
+      padding: 13px 0 0 0;
+    }
+  
+  .folder1{
+    width: 100% !important;
+  
+  }
+  
+  .contentmain1{
+    width: 85% !important;
+    margin: -80px 0 0 101px;
+    border-radius: 5px
+    }
+  div.contentmain1.faded{
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: default;
+  }
+    @media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait ) { 
+     .folder1{
+      border: 10px solid #f5f5f5;
+    }
+    .text-right
+    {
+      margin: 0 0 0 -250px !important;
+
+    }
+    .contentmain1{
+      width: 100% !important;
+      margin: 0 0 0 10px !important;
+    }
+    .folder{
+      margin: 41% 0 1% 0 !important;
+    }
+      .row
+     {
+       margin-left: 50px !important;
+     }
+  
+      #activityModl{
+        width: 120% !important;
+        margin-left: -61px !important;
+      }
+      #loader1 {
+        top:50% !important;
+      }
+      
+      ul {
+        left: 341px !important;
+        
+      }
+      
+      .policybox{
+        margin: 0 800px 0 0 !important;
+      }
+      #sucessStatus1{
+        margin-left: 189px !important;
+      }
+      .name_box{
+        margin: -2px 0 0 0 !important;
+  
+      }
+  
+      .my-pagination /deep/  pagination-template .ngx-pagination{
+        position: inherit;
+        display: -webkit-inline-box;
+        margin-left: 60px;
+        margin-bottom: 1rem;
+        margin-top: 36px;
+      }
+    
+      .my-pagination /deep/  pagination-template .ngx-pagination .current{
+        padding: 1.1875rem 2.625rem;
+        background: #cc0000;
+        color: #fefefe;
+        cursor: default;
+        pointer-events: none;
+      }
+    
+      .my-pagination /deep/  pagination-template .ngx-pagination li a {
+        display:block;
+         min-width:60px;
+         height: 50px;
+         text-align: center;
+         line-height: 24px;
+        font-size:14px;
+         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+         color: #333;
+        /*background: #2f3036;
+        */
+         text-decoration: none;
+    }
+    #menu1{
+      margin-left: 0px !important;
+    }
+    .scroll_box2{
+      width: 20% !important;
+      margin: 0 0 0 0% !important;
+    }
+    .scroll_save{
+      width: 70% !important;
+      margin: 0 0 0 -36px !important;
+    }
+    .scroll_box4{
+      width: 15%;
+      /* float: left; */
+      margin: 0 0 0 -2%;
+      text-align: center;
+    }
+    .scroll_box1{
+      width: 8%;
+      /* float: left; */
+      margin: 0 0 0 3%;
+      /* text-align: center; */
+    }
+    .scroll_box3{
+      width: 20%;
+      float: left;
+      margin: 0 0 0 1%;
+      text-align: center;
+    }
+    .scroll_title{
+      margin-left: -196px !important;
+    }
+    #sucessStatus{
+      margin-left: -340px !important;
+    }
+    #errorCall1{
+      margin: 0 0px 0 -193px !important;
+    }
+    div.zerogrid button.close {
+      color: white;
+      padding-right: 6%;
+      margin: 0 0 0 690px;
+      float: left
+  }
+  div.contentmain1.faded{
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: default;}
+    }
+    @media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape ) {
+      #activityModl{
+        width: 163% !important;
+        margin: 0px 0 0 -190px !important;
+      }
+      .contentmain1{
+        width: 92% !important;
+        margin: 0 0 0 42px !important;
+      }
+      #loader1 {
+        top:50% !important;
+      } 
+      
+      ul {
+        left: 438px !important;
+        
+      }
+      
+      .folder1{
+        padding: 11% 0 0% 0 !important;
+      } 
+      .name_box{
+        margin: -3px 0 0 0 !important;
+  
+      }
+      div.contentmain1.faded{
+        opacity: 0.4;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+    @media only screen and (max-width: 768px){
+      .folder {
+    border: 10px solid #f5f5f5 !important;
+    
+}
+}

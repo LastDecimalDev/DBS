@@ -1,0 +1,5 @@
+<form id="payUrlSubmit"  #builderform = "ngForm" (ngSubmit)="onSubmit(builderform)" name="payUrlSubmit" action="{{ formData.url }}" method="{{ formData.method }}">
+    <div *ngFor="let key of formData.params">
+        <input type="hidden" name="{{ key }}" value="{{key }}" />
+    </div>
+  </form>

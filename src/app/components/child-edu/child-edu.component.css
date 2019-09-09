@@ -1,0 +1,40 @@
+ul {
+    left: 885px !important;
+    
+  }
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait ) {
+    .btn-primary{
+        margin-left: 367px !important;
+        background-color: #cc0000;
+    }
+    #dbs {
+        width: 75% !important;
+        float: left;
+        height: auto;
+    }
+    .contentmain{
+        width: 86% !important;
+    }
+    ul {
+        left: 341px !important;
+        
+      }
+      #ConcernMessage2
+      {
+        margin-left: 375px !important;
+      }
+    
+}
+
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape ) {
+    .btn-primary{
+        margin-left: 473px;
+        background-color: #cc0000;
+    }
+    ul {
+        left: 438px !important;
+        
+      }
+    
+}

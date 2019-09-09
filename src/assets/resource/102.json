@@ -1,0 +1,508 @@
+{
+  "Title": [
+    {
+      "id": "Mr",
+      "value": "MR"
+    },
+    {
+      "id": "Mrs",
+      "value": "MRS"
+    },
+    {
+      "id": "Ms",
+      "value": "Ms"
+    },
+    {
+      "id": "Son",
+      "value": "Son"
+    }],
+  
+  "NomineeRel": [
+    {
+      "id": "Spouse",
+      "value": "Spouse"
+    },
+    {
+      "id": "Father",
+      "value": "Father"
+    },
+    {
+      "id": "Mother",
+      "value": "Mother"
+    },
+    {
+      "id": "Son",
+      "value": "Son"
+    },
+    {
+      "id": "Daughter",
+      "value": "Daughter"
+    },
+    {
+      "id": "Brother",
+      "value": "Brother"
+    },
+    {
+      "id": "Sister",
+      "value": "Sister"
+    },
+    {
+      "id": "Grand Son",
+      "value": "Grand Son"
+    },
+    {
+      "id": "Grand Daughter",
+      "value": "Grand Daughter"
+    },
+    {
+      "id": "Grand Father",
+      "value": "Grand Father"
+    },
+    {
+      "id": "Grand Mother",
+      "value": "Grand Mother"
+    },
+    {
+      "id": "Father-in-Law",
+      "value": "Father-in-Law"
+    },
+    {
+      "id": "Mother-in-Law",
+      "value": "Mother-in-Law"
+    },
+    {
+      "id": "Son-in-Law",
+      "value": "Son-in-Law"
+    },
+    {
+      "id": "Daughter-in-Law",
+      "value": "Daughter-in-Law"
+    },
+    {
+      "id": "Brother-in-Law",
+      "value": "Brother-in-Law"
+    },
+    {
+      "id": "Sister-in-Law",
+      "value": "Sister-in-Law"
+    },
+    {
+      "id": "Uncle",
+      "value": "Uncle"
+    },
+    {
+      "id": "Aunt",
+      "value": "Aunt"
+    },
+    {
+      "id": "Cousin",
+      "value": "Cousin"
+    },
+    {
+      "id": "Nephew",
+      "value": "Nephew"
+    },
+    {
+      "id": "Niece",
+      "value": "Niece"
+    },
+    {
+      "id": "Legal Guardian",
+      "value": "Legal Guardian"
+    }
+  ],
+  "Occupation": [
+    {
+      "id": "Armed Forces",
+      "value": "Armed Forces"
+    },
+    {
+      "id": "Business / Sales Profession",
+      "value": "Business / Sales Profession"
+    },
+    {
+      "id": "Central / State Government Employee",
+      "value": "Central / State Government Employee"
+    },
+    {
+      "id": "Corporate Executive",
+      "value": "Corporate Executive"
+    },
+    {
+      "id": "Engineering Profession",
+      "value": "Engineering Profession"
+    },
+    {
+      "id": "Financial Services Profession",
+      "value": "Financial Services Profession"
+    },
+    {
+      "id": "Heads of Government",
+      "value": "Heads of Government"
+    },
+    {
+      "id": "Heads of State",
+      "value": "Heads of State"
+    },
+    {
+      "id": "Home Maker / Housewife",
+      "value": "Home Maker / Housewife"
+    },
+    {
+      "id": "IT Profession",
+      "value": "IT Profession"
+    },
+    {
+      "id": "Medical Profession",
+      "value": "Medical Profession"
+    },
+    {
+      "id": "Musician / Artist",
+      "value": "Musician / Artist"
+    },
+    {
+      "id": "Sports Person",
+      "value": "Sports Person"
+    },
+    {
+      "id": "Student",
+      "value": "Student"
+    },
+    {
+      "id": "Teaching Profession",
+      "value": "Teaching Profession"
+    },
+    {
+      "id": "Political Party Official",
+      "value": "Political Party Official"
+    },
+    {
+      "id": "Politician",
+      "value": "Politician"
+    },
+    {
+      "id": "Senior Government Official",
+      "value": "Senior Government Official"
+    },
+    {
+      "id": "Senior Judicial Official",
+      "value": "Senior Judicial Official"
+    },
+    {
+      "id": "Senior Military Official",
+      "value": "Senior Military Official"
+    },
+    {
+      "id": "State-owned Corporation Official",
+      "value": "State-owned Corporation Official"
+    },
+    {
+      "id": "Others",
+      "value": "Others"
+    }
+  ],
+  "Insurer": [
+    {
+      "id": "BAJAJ ALLIANZ GENERAL INSURANCE COMPANY LTD",
+      "value": "BAJAJ ALLIANZ GENERAL INSURANCE COMPANY LTD"
+    },
+    {
+      "id": "BHARTI AXA GENERAL INSURANCE COMPANY LIMITED",
+      "value": "BHARTI AXA GENERAL INSURANCE COMPANY LIMITED"
+    },
+    {
+      "id": "CHOLAMANDALAM MS GENERAL INSURANCE COMPANY LTD",
+      "value": "CHOLAMANDALAM MS GENERAL INSURANCE COMPANY LTD"
+    },
+    {
+      "id": "FUTURE GENERALI INSURANCE COMPANY LIMITED",
+      "value": "FUTURE GENERALI INSURANCE COMPANY LIMITED"
+    },
+    {
+      "id": "HDFC ERGO GENERAL INSURANCE COMPANY LTD",
+      "value": "HDFC ERGO GENERAL INSURANCE COMPANY LTD"
+    },
+    {
+      "id": "ICICI LOMBARD GENERAL INSURANCE COMPANY LTD",
+      "value": "ICICI LOMBARD GENERAL INSURANCE COMPANY LTD"
+    },
+    {
+      "id": "IFFCO TOKYO GENERAL INSURANCE COMPANY LTD",
+      "value": "IFFCO TOKYO GENERAL INSURANCE COMPANY LTD"
+    },
+    {
+      "id": "MAGMA HDI GENERAL INSURANCE COMPANY LIMITED",
+      "value": "MAGMA HDI GENERAL INSURANCE COMPANY LIMITED"
+    },
+    {
+      "id": "NATIONAL INSURANCE COMPANY LIMITED",
+      "value": "NATIONAL INSURANCE COMPANY LIMITED"
+    },
+    {
+      "id": "LIBERTY VIDEOCON GENERAL INSURANCE COMPANY LIMITED",
+      "value": "LIBERTY VIDEOCON GENERAL INSURANCE COMPANY LIMITED"
+    },
+    {
+      "id": "ORIENTAL INSURANCE COMPANY LTD",
+      "value": "ORIENTAL INSURANCE COMPANY LTD"
+    },
+    {
+      "id": "RAHEJA QBE GENERAL INSURANCE COMPANY LIMITED",
+      "value": "RAHEJA QBE GENERAL INSURANCE COMPANY LIMITED"
+    },
+    {
+      "id": "RELIANCE GENERAL INSURANCE COMPANY LTD",
+      "value": "RELIANCE GENERAL INSURANCE COMPANY LTD"
+    },
+    {
+      "id": "SBI GENERAL INSURANCE COMPANY LTD",
+      "value": "SBI GENERAL INSURANCE COMPANY LTD"
+    },
+    {
+      "id": "TATA AIG GENERAL INSURANCE COMPANY LTD",
+      "value": "TATA AIG GENERAL INSURANCE COMPANY LTD"
+    },
+    {
+      "id": "THE NEW INDIA ASSURANCE COMPANY LTD",
+      "value": "THE NEW INDIA ASSURANCE COMPANY LTD"
+    },
+    {
+      "id": "UNITED INDIA INSURANCE COMPANY LTD",
+      "value": "UNITED INDIA INSURANCE COMPANY LTD"
+    },
+    {
+      "id": "UNIVERSAL SOMPO GENERAL INSURANCE CO. LTD",
+      "value": "UNIVERSAL SOMPO GENERAL INSURANCE CO. LTD"
+    },
+    {
+      "id": "SHRIRAM GENERAL INSURANCE",
+      "value": "SHRIRAM GENERAL INSURANCE"
+    }
+  ],
+  "State": [
+    {
+      "id": "1",
+      "value": "Andaman Nicobar"
+    },
+    {
+      "id": "2",
+      "value": "Andhra Pradesh"
+    },
+    {
+      "id": "3",
+      "value": "Arunachal Pradesh"
+    },
+    {
+      "id": "4",
+      "value": "Assam"
+    },
+    {
+      "id": "5",
+      "value": "Bihar"
+    },
+    {
+      "id": "6",
+      "value": "Chattisgarh"
+    },
+    {
+      "id": "7",
+      "value": "Dadra Nagar Haveli"
+    },
+    {
+      "id": "8",
+      "value": "Daman   Diu"
+    },
+    {
+      "id": "9",
+      "value": "Delhi"
+    },
+    {
+      "id": "10",
+      "value": "Goa"
+    },
+    {
+      "id": "11",
+      "value": "Gujarat"
+    },
+    {
+      "id": "12",
+      "value": "Haryana"
+    },
+    {
+      "id": "13",
+      "value": "Himachal Pradesh"
+    },
+    {
+      "id": "14",
+      "value": "Jammu Kashmir"
+    },
+    {
+      "id": "15",
+      "value": "Jharkhand"
+    },
+    {
+      "id": "16",
+      "value": "Karnataka"
+    },
+    {
+      "id": "17",
+      "value": "Kerala"
+    },
+    {
+      "id": "18",
+      "value": "Madhya Pradesh"
+    },
+    {
+      "id": "19",
+      "value": "Maharashtra"
+    },
+    {
+      "id": "20",
+      "value": "Manipur"
+    },
+    {
+      "id": "21",
+      "value": "Meghalaya"
+    },
+    {
+      "id": "22",
+      "value": "Mizoram"
+    },
+    {
+      "id": "23",
+      "value": "Nagaland"
+    },
+    {
+      "id": "24",
+      "value": "Orissa"
+    },
+    {
+      "id": "25",
+      "value": "Pondicherry"
+    },
+    {
+      "id": "26",
+      "value": "Punjab"
+    },
+    {
+      "id": "27",
+      "value": "Rajasthan"
+    },
+    {
+      "id": "28",
+      "value": "Sikkim"
+    },
+    {
+      "id": "29",
+      "value": "Tamilnadu"
+    },
+    {
+      "id": "30",
+      "value": "Telangana"
+    },
+    {
+      "id": "31",
+      "value": "Tripura"
+    },
+    {
+      "id": "32",
+      "value": "Uttar Pradesh"
+    },
+    {
+      "id": "33",
+      "value": "Uttarakhand"
+    },
+    {
+      "id": "34",
+      "value": "Uttaranchal"
+    },
+    {
+      "id": "35",
+      "value": "West Bengal"
+    }
+  ],"AppointeeRel": [
+    {
+      "id": "Mother",
+      "value": "Mother"
+    },
+    {
+      "id": "Uncle",
+      "value": "Uncle"
+    },
+    {
+      "id": "Aunt",
+      "value": "Aunt"
+    },
+    {
+      "id": "Nephew",
+      "value": "Nephew"
+    },
+    {
+      "id": "Niece",
+      "value": "Niece"
+    },
+    {
+      "id": "Brother",
+      "value": "Brother"
+    },
+    {
+      "id": "Sister",
+      "value": "Sister"
+    },
+    {
+      "id": "Brother-in-Law",
+      "value": "Brother-in-Law"
+    },
+    {
+      "id": "Sister-in-Law",
+      "value": "Sister-in-Law"
+    },
+    {
+      "id": "Cousin",
+      "value": "Cousin"
+    }],
+    "DrivingExp":[
+    	{
+      "id": "1",
+      "value": "One Year"
+    },
+    {
+      "id": "2",
+      "value": "Two Year"
+    },
+    {
+      "id": "3",
+      "value": "Three Year"
+    },
+    {
+      "id": "4",
+      "value": "Four Year"
+    },
+    {
+      "id": "5",
+      "value": "Five Year"
+    },
+    {
+      "id": "6",
+      "value": "Six Year"
+    },
+    {
+      "id": "7",
+      "value": "Seven Year"
+    },
+    {
+      "id": "8",
+      "value": "Eight Year"
+    },
+    {
+      "id": "9",
+      "value": "Nine Year"
+    },
+    {
+      "id": "10",
+      "value": "Ten Year"
+    }
+    ]
+    
+  
+}

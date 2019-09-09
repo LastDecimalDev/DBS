@@ -1,0 +1,226 @@
+ul {
+    left: 885px !important;
+    
+  }
+
+.onebutton1 {
+    width: 80% !important;
+    float: left;
+}
+
+.onebuttonOne {
+    width: 80% !important;
+    float: right;
+    
+}
+
+.onebuttonTwo {
+    width: 80% !important;
+    float: right;
+    
+}
+
+.onebuttonThree {
+    width: 45% !important;
+    float: right;
+    font-family: Lato;
+    font-size: 18px;
+    color: #6a6964;
+    text-align: center;
+    margin: 0% 0% 0px 0 !important;
+    line-height: 24px;
+    font-weight: 700;
+}
+.custQueNext4{
+
+    
+    width: 51%;
+    float: right;
+    font-family: Lato;
+    font-size: 18px;
+    color: #6a6964;
+    text-align: center;
+    margin: -5.5% 7% 0px 0 !important;
+    line-height: 24px;
+    font-weight: 700;
+    padding: 1% 0 0 0;
+    }
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait ) { 
+    ul {
+        left: 341px !important;
+        
+      }
+    
+    .container-fluid
+    {
+        width: 755px !important;
+    }
+    .onebuttonOne {
+        width: 106% !important;
+        margin: 18px 0 0 0;
+            }
+            .onebutton1 {
+                width: 125% !important;
+                float: left;
+            }
+    .onebuttonTwo {
+        
+    }
+    .onebuttonThree {
+        width: 54% !important;
+        float: right;
+        font-family: Lato;
+        font-size: 18px;
+        color: #6a6964;
+        text-align: center;
+        margin: -5% -4% 0px 0 !important;
+        line-height: 24px;
+        font-weight: 700;
+    }
+
+    .custQueNext4 {
+        width: 61% !important;
+        float: right;
+        font-family: Lato;
+        font-size: 18px;
+        color: #6a6964;
+        text-align: center;
+        margin: -7% -8% 0px 0 !important;
+        line-height: 24px;
+        font-weight: 700;
+    }
+    .formmin1 {
+        width: 26%;
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 400;
+        color: #666;
+        line-height: 26px;
+        margin: 0% 0% -1% 0%;
+        padding: 0% 0 0% 0;
+        float: left;
+    }
+
+    #dbs{
+        width: 63% !important;
+    }
+
+    .slidermain {
+        width: 77%;
+        float: left;
+        margin: 16% 0 -12% 6%;
+        background-image: url(/assets/images/line.svg);
+        height: 29px;
+        background-repeat: repeat-x;
+        background-position: center;
+    }
+    .slider {
+        width: 30%;
+        margin: 2% 0 0 0;
+        position: relative;
+        left: -37px;
+        top: -77px;
+    }
+    .slider1 {
+        width: 40%;
+        margin: 2% 0 0 0;
+        position: relative;
+        left: 92px;
+        top: -194px;
+    }
+    .slider2 {
+        width: 30%;
+        margin: 1% 0px 0px 0px;
+        position: relative;
+        left: 310px;
+        top: -17px;
+    }
+    .slider3 {
+        width: 30%;
+        margin: 2% 0 0 0;
+        position: relative;
+        left: 505px;
+        top: -134px;
+    }
+    
+    .quest1{width:100%; float:left; font-family:Lato; font-size:20px; font-weight:700; line-height:24px; padding:3% 0 2% 0; color:#666; text-align:center; border-top:1px solid #3E3E3E;margin-left: 20px;}
+    input[type=radio].css-radio25 + label.css-label25{padding-left:0px; height:60px; width:200px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;margin: 30px 0 0 32px;}
+    input[type=radio].css-radio26 + label.css-label26{    margin: 30px 0 0 0;padding-left:0px; height:60px; width:200px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+    input[type=radio].css-radio27 + label.css-label27{    margin: 30px 0 0 0;padding-left:0px; height:60px; width:200px; display:inline-block; line-height:26px; font-size:14px;background-repeat:no-repeat; background-position: 0 0; vertical-align:middle; cursor:pointer;}
+    .quest2{margin: 27px 0px 0 15px;width:100%; float:left; font-family:Lato; font-size:20px; font-weight:700; line-height:24px; padding:3% 0 0% 0; color:#666; text-align:center; border-top:1px solid #3E3E3E;}
+    .quest{margin:38px 0 11px 0; width:100%; float:left; font-family:Lato; font-size:20px; font-weight:700; line-height:24px; padding:6% 0 1% 0; color:#666; text-align:center; }
+
+    .chek_boxOnetrunk {
+        width: 15%;
+        float: left;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 24px;
+        padding: 0% 0 2% 0%;
+        color: #666;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape ) {
+    ul {
+        left: 438px !important;
+        
+      }
+    
+    .zerogrid {
+        width: 950px !important;
+        height: auto;
+        margin: auto;
+    } 
+    .onebuttonOne {
+        width: 80% !important;
+        float: right;
+        
+    }
+    .onebuttonThree {
+        width: 45% !important;
+        float: right;
+        font-family: Lato;
+        font-size: 18px;
+        color: #6a6964;
+        text-align: center;
+        margin: 1% 0% 0px 0 !important;
+        line-height: 24px;
+        font-weight: 700;
+    }
+    .slider2 {
+        width: 30%;
+        margin: 2% 0px 0px 0px;
+        position: relative;
+        left: 310px;
+        top: 10px;
+    }
+    .slider3 {
+        width: 30%;
+        margin: 2% 0 0 0;
+        position: relative;
+        left: 505px;
+        top: -108px;
+    }
+    .slidermain{
+        width: 65%;
+    }
+    
+
+    .custQueNext4 {
+        width: 49% !important;
+        float: right;
+        font-family: Lato;
+        font-size: 18px;
+        color: #6a6964;
+        text-align: center;
+        margin: -5.5% -2% 0px 0 !important;
+        line-height: 24px;
+        font-weight: 700;
+    }
+}
+

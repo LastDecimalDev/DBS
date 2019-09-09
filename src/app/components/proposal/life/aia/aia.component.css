@@ -1,0 +1,55 @@
+@media (max-width : 1024px) and (min-width : 768px) and (orientation: portrait) {
+#dbs {
+    width: 68% !important;
+    float: left;
+    height: auto;
+}
+#menu {
+    left: 340px !important;
+}
+.extraSpace{
+    width: 100% !important;
+    float: left;
+    height: auto;
+    margin-top: 38% !important;
+}
+div.searchheaderpanel{
+    margin: 10% 0 0% 0%;
+}
+
+}
+@media (min-width : 768px) and (max-width : 1024px) and (orientation : landscape ) {
+div.searchheaderpanel{
+       margin: 5% 0 0% 0% !important;
+    }
+#menu {
+    left: 460px !important;
+}    
+}
+
+.reduceWidth{
+    width: 56%;
+}
+.existingControl{
+    padding: 7px 4px !important;
+    width: 106% !important;
+}
+.disabled {
+    cursor: not-allowed !important;
+  }
+  .extraSpace{
+    margin-top: 19%;
+}
+#menu{
+    left: 885px;
+}
+.extra-modalWidth{
+    width: 70%;
+}
+/*.insurer-img {
+    max-width: 170px;
+    margin: auto;
+    padding-top: 1px !important;
+    padding-bottom: 64px;
+    margin-bottom: -100px;
+}*/

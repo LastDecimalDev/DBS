@@ -1,0 +1,4736 @@
+{
+  "result": [
+    {
+      "productId": "139HL01F02",
+      "insurerId": "139",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Smart Health",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.bharti-axagi.co.in/sites/default/files/pdfs/SHIP-pdfs/SHIP-brochure.pdf",
+      "companyWebsite": "http://www.bharti-axagi.co.in/",
+      "onlinePurchaseLink": "http://www.bharti-axagi.co.in/health-insurance",
+      "offlinePurchaseLink": "http://www.bharti-axagi.co.in/contact-us",
+      "onlineLinkType": "GET",
+      "insurerName": "Bharti AXA",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "1500"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "CI",
+          "coverType": "S",
+          "seperateSi": "Y",
+          "coverName": "Critical illness",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "500000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "COM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Companion",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Beyound 3 days of Hospitalization"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "Daily",
+              "limitType": "Value",
+              "limitValue": "250"
+            },
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "10"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Once every 4 continuous claim free years"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospital Cash",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "payable after 3 days of Hospitalization"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "Daily",
+              "limitType": "Value",
+              "limitValue": "200"
+            },
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "10"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Transportation of Mortal Remains",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "90"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "6"
+        },
+        {
+          "Max_Entry_Age": "65"
+        },
+        {
+          "Min_SI": "200000"
+        },
+        {
+          "Max_SI": "300000"
+        },
+        {
+          "SA_Values": "200000;300000;500000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "2"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "23"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Tenure": "1"
+        },
+        {
+          "SUBL": "(sa>300000?'N':'Y')"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Renewal_Benefit_Type": "NCD"
+        },
+        {
+          "CB_per_Year": "5%"
+        },
+        {
+          "Max_CB": "25%"
+        },
+        {
+          "CB_Reduction": "1"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Online_Criteria": "(sa==300000)"
+        }
+      ],
+      "online": false,
+      "ClaimsLoading": "N",
+      "SUBL": "(sa>300000?'N':'Y')",
+      "key": "139HL01F02",
+      "planName": "Premium",
+      "sumInsured": 500000,
+      "CGST": 601,
+      "SGST": 601,
+      "serviceTax": 1202,
+      "totalPremium": 7883.0,
+      "netPremium": 6681.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "6681",
+            "premium": 6681.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "134HL03F01",
+      "insurerId": "134",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Complete Health Insurance",
+      "effectiveDate": "2015-01-01",
+      "endDate": "9999-12-31",
+      "companyWebsite": "http://www.universalsompo.com",
+      "insurerName": "Universal Sompo",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "2000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "AYUR",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ayurveda Treatment Cover",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "CI",
+          "coverType": "A",
+          "seperateSi": "N",
+          "coverName": "Critical illness",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "CONVAL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Convalescence",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Payable for hospitalization Exceeding 10 days"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "1 claim per person"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "one checkup for Individual and two for Family floater policy for every two continuous years of coverage"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOC",
+          "coverType": "A",
+          "seperateSi": "N",
+          "coverName": "Hospital Cash",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "For adults accompanying an Insured child"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "9000"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "Daily",
+              "limitType": "Value",
+              "limitValue": "300"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "MA",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Maternity",
+          "coverLimits": [
+            {
+              "sublimit": "Caesarean Delivery",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "25000"
+            },
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Payable after 3 years of continuous Coverage"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "Lifetime",
+              "limitType": "Text",
+              "limitValue": "Maximum of 2 Claims"
+            },
+            {
+              "sublimit": "Normal Delivery",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "15000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "NB",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "New Born Baby",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "OPD",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "OPD treatment",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Payable upto 50% of actual expenses after 3 years of continuous Coverage"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PA",
+          "coverType": "A",
+          "seperateSi": "N",
+          "coverName": "Personal Accident",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "30"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "RESSI",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Restore Sum Insured",
+          "coverLimits": [
+            
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "70"
+        },
+        {
+          "Min_SI": "100000"
+        },
+        {
+          "Max_SI": "1000000"
+        },
+        {
+          "SA_Values": "100000;200000;300000;400000;500000;600000;700000;800000;900000;1000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "4"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "1d"
+        },
+        {
+          "Max_Child_Age": "25"
+        },
+        {
+          "Med_Test_Age": "55"
+        },
+        {
+          "Med_fee_Reimbursement": "0"
+        },
+        {
+          "Tenure": "1;2;3"
+        },
+        {
+          "SUBL": "N"
+        },
+        {
+          "Pre_Con_Waiting_Period": "36"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "10%"
+        },
+        {
+          "Max_CB": "50%"
+        },
+        {
+          "CB_Reduction": "0.1"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Freelook": "15 Days"
+        },
+        {
+          "Online_Criteria": "age<=55"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "N",
+      "key": "134HL03F01",
+      "planName": "",
+      "sumInsured": 500000,
+      "CGST": 635,
+      "SGST": 635,
+      "serviceTax": 1270,
+      "totalPremium": 8327.0,
+      "netPremium": 7057.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "7057",
+            "premium": 7057.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "139HL01F01",
+      "insurerId": "139",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Smart Health",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.bharti-axagi.co.in/sites/default/files/pdfs/SHIP-pdfs/SHIP-brochure.pdf",
+      "companyWebsite": "http://www.bharti-axagi.co.in/",
+      "onlinePurchaseLink": "http://www.bharti-axagi.co.in/health-insurance",
+      "offlinePurchaseLink": "http://www.bharti-axagi.co.in/contact-us",
+      "onlineLinkType": "GET",
+      "insurerName": "Bharti AXA",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "1500"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "CI",
+          "coverType": "S",
+          "seperateSi": "Y",
+          "coverName": "Critical illness",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "500000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "COM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Companion",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Beyond 3 days of Hospitalization"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "Daily",
+              "limitType": "Value",
+              "limitValue": "250"
+            },
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "10"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Once every 4 continuous claim free years"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospital Cash",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "payable after 3 days of Hospitalization"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "Daily",
+              "limitType": "Value",
+              "limitValue": "200"
+            },
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "10"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Transportation of Mortal Remains",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "90"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "6"
+        },
+        {
+          "Max_Entry_Age": "65"
+        },
+        {
+          "Min_SI": "200000"
+        },
+        {
+          "Max_SI": "300000"
+        },
+        {
+          "SA_Values": "200000;300000;500000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "2"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "23"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Tenure": "1"
+        },
+        {
+          "SUBL": "(sa>300000?'N':'Y')"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Renewal_Benefit_Type": "NCD"
+        },
+        {
+          "CB_per_Year": "5%"
+        },
+        {
+          "Max_CB": "25%"
+        },
+        {
+          "CB_Reduction": "1"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Online_Criteria": "((sa==200000) && (sa==500000))"
+        }
+      ],
+      "online": false,
+      "ClaimsLoading": "N",
+      "SUBL": "(sa>300000?'N':'Y')",
+      "key": "139HL01F01^Base",
+      "planName": "Base",
+      "sumInsured": 500000,
+      "CGST": 656,
+      "SGST": 656,
+      "serviceTax": 1312,
+      "totalPremium": 8602.0,
+      "netPremium": 7290.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "7290",
+            "premium": 7290.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "102HL03F02",
+      "insurerId": "102",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "LifeLine - Supreme",
+      "effectiveDate": "2015-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "./Brochure/LIFELINE SUPREME BROCHURE.pdf",
+      "companyWebsite": "http://www.royalsundaram.in/",
+      "insurerName": "Royal Sundaram General Insurance Co. Limited",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "AYUSH",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ayush Cover",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "cond": "Treatment in Govt hospitals only",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "500000"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "cond": "Treatment in Pvt Hospital",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "30000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Covered upto Sum Insured"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Covered upto Sum Insured"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOMEVAC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domestic Evacuation",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Covered upto Rs.1 lac"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Covered upto Sum Insured"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "limitType": "Text",
+              "limitValue": "Once every year for Insured Members above 18 years"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOC",
+          "coverType": "A",
+          "seperateSi": "N",
+          "coverName": "Hospital Cash",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Beyond 2 days of hospitalization"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "Daily",
+              "limitType": "Value",
+              "limitValue": "2000"
+            },
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "30 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Key Features",
+              "limitType": "Text",
+              "limitValue": "Minimum 24-hour admittance required.<br>No room rent capping.<br>No Disease specific sub limits."
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Post discharge 90 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Before admittance 60 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "RESSI",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Restore Sum Insured",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Reload upto base SI"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "SECOPN",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "2nd Opinion",
+          "coverLimits": [
+            {
+              "sublimit": "2nd Opinion",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Once every Year"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "VAC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Vaccination",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "cond": "In case of animal bite",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "5000"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "99"
+        },
+        {
+          "Min_SI": "500000"
+        },
+        {
+          "Max_SI": "5000000"
+        },
+        {
+          "SA_Values": "500000;1000000;1500000;2000000;5000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "4"
+        },
+        {
+          "Parents_Allowed": "Y"
+        },
+        {
+          "Extended_Family_Allowed": "Y"
+        },
+        {
+          "Min_Child_Age": "91d"
+        },
+        {
+          "Max_Child_Age": "25"
+        },
+        {
+          "Med_Test_Age": "50"
+        },
+        {
+          "Med_Test_SI": "2000000"
+        },
+        {
+          "Tenure": "1;2;3"
+        },
+        {
+          "SUBL": "N"
+        },
+        {
+          "Pre_Con_Waiting_Period": "36"
+        },
+        {
+          "CB_per_Year": "20%"
+        },
+        {
+          "Max_CB": "100%"
+        },
+        {
+          "ClaimsLoading": "N"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "N",
+      "key": "102HL03F02",
+      "planName": "",
+      "sumInsured": 500000,
+      "CGST": 663,
+      "SGST": 663,
+      "serviceTax": 1326,
+      "totalPremium": 8694.0,
+      "netPremium": 7368.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "7368",
+            "premium": 7368.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          {
+            "netPremium": "1179",
+            "premium": 1179.0,
+            "coverId": "HOC",
+            "displayName": "HOC"
+          }
+        ]
+      }
+    },
+    {
+      "productId": "139HL01F03",
+      "insurerId": "139",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Smart Health",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.bharti-axagi.co.in/sites/default/files/pdfs/SHIP-pdfs/SHIP-brochure.pdf",
+      "companyWebsite": "http://www.bharti-axagi.co.in/",
+      "onlinePurchaseLink": "http://www.bharti-axagi.co.in/health-insurance",
+      "offlinePurchaseLink": "http://www.bharti-axagi.co.in/contact-us",
+      "onlineLinkType": "GET",
+      "insurerName": "Bharti AXA",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "1500"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "CI",
+          "coverType": "S",
+          "seperateSi": "Y",
+          "coverName": "Critical illness",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "500000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "COM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Companion",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Beyound 3 days of Hospitalization"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "Daily",
+              "limitType": "Value",
+              "limitValue": "250"
+            },
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "10"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Once every 4 continuous claim free years"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospital Cash",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "payable after 3 days of Hospitalization"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "Daily",
+              "limitType": "Value",
+              "limitValue": "200"
+            },
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "10"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Transportation of Mortal Remains",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "90"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "6"
+        },
+        {
+          "Max_Entry_Age": "65"
+        },
+        {
+          "Min_SI": "200000"
+        },
+        {
+          "Max_SI": "300000"
+        },
+        {
+          "SA_Values": "200000;300000;500000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "2"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "23"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Tenure": "1"
+        },
+        {
+          "SUBL": "(sa>300000?'N':'Y')"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Renewal_Benefit_Type": "NCD"
+        },
+        {
+          "CB_per_Year": "5%"
+        },
+        {
+          "Max_CB": "25%"
+        },
+        {
+          "CB_Reduction": "1"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Online_Criteria": "((sa==300000) && (sa==500000))"
+        }
+      ],
+      "online": false,
+      "ClaimsLoading": "N",
+      "SUBL": "(sa>300000?'N':'Y')",
+      "key": "139HL01F03^Optimum",
+      "planName": "Optimum",
+      "sumInsured": 500000,
+      "CGST": 666,
+      "SGST": 666,
+      "serviceTax": 1332,
+      "totalPremium": 8734.0,
+      "netPremium": 7402.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "7402",
+            "premium": 7402.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "125HL01F01",
+      "insurerId": "125",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "HEALTH SURAKSHA",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.hdfcergo.com/HealthSuraksha.html",
+      "companyWebsite": "http://www.hdfcergo.com/",
+      "onlinePurchaseLink": "https://netinsure.hdfcergo.com/onlineproducts/HealthOnline/HSP-CIP/HSPCalculatePremium.aspx",
+      "offlinePurchaseLink": "http://www.hdfcergo.com/customer-care/new-customer.html",
+      "onlineLinkType": "GET",
+      "insurerName": "HDFC ERGO",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "2000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "AYUR",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ayurveda Treatment Cover",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "once every 4 continuous claims free years"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "90"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "65"
+        },
+        {
+          "Min_SI": "200000"
+        },
+        {
+          "Max_SI": "5000000"
+        },
+        {
+          "SA_Values": "200000;300000;400000;500000;750000;1000000;1500000;2000000;2500000;5000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "3"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "21"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Med_Test_SI": "200000"
+        },
+        {
+          "Tenure": "1;2"
+        },
+        {
+          "SUBL": "N"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Family_Discount": "10%"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "5%"
+        },
+        {
+          "Max_CB": "50%"
+        },
+        {
+          "CB_Reduction": "0.05"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Freelook": "15 Days"
+        },
+        {
+          "Online_Criteria": "((sa<=1000000) && (sa>300000) &&(ptype=='FF' || (ptype=='INDV'  && Number(adults)+Number(children)==1 )))"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "N",
+      "key": "125HL01F01^Silver",
+      "planName": "Silver",
+      "sumInsured": 500000,
+      "CGST": 671,
+      "SGST": 671,
+      "serviceTax": 1342,
+      "totalPremium": 8793.0,
+      "netPremium": 7452.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "7452",
+            "premium": 7452.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "148HL01F01",
+      "insurerId": "148",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Care",
+      "effectiveDate": "2013-08-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.religarehealthinsurance.com/siteupload/doc/47817Care_-_Health_Insurance_plan_Brochure.pdf",
+      "companyWebsite": "http://www.religarehealthinsurance.com",
+      "onlinePurchaseLink": "https://www.religarehealthinsurance.com/portalui/PortalExtProposal.run",
+      "onlineLinkType": "GET",
+      "insurerName": "Religare Health",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "2000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "100000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "ICU",
+              "period": "DAILY",
+              "limitType": "Text",
+              "limitValue": "No Limit"
+            },
+            {
+              "sublimit": "ROOMRENT",
+              "period": "DAILY",
+              "limitType": "Text",
+              "limitValue": "Single Private Room"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "30 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "RESSI",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Restore Sum Insured",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Available for Future claims once SI and Bonus is exhausted for illness unrelated to previous claims"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "LifeLong"
+        },
+        {
+          "Min_SI": "200000"
+        },
+        {
+          "Max_SI": "6000000"
+        },
+        {
+          "SA_Values": "200000;300000;400000;500000; 700000; 1000000;1500000;2000000;2500000;5000000;6000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "4"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "21"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Tenure": "1;2;3"
+        },
+        {
+          "SUBL": "(sa>400000?'N':'Y')"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "10%"
+        },
+        {
+          "Max_CB": "50%"
+        },
+        {
+          "CB_Reduction": "0.2"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Online_Criteria": "sa>300000 && sa<=6000000"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "(sa>400000?'N':'Y')",
+      "key": "148HL01F01",
+      "planName": "",
+      "sumInsured": 500000,
+      "CGST": 720,
+      "SGST": 720,
+      "serviceTax": 1440,
+      "totalPremium": 9442.0,
+      "netPremium": 8002.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "8002",
+            "premium": 8002.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "125HL06F01",
+      "insurerId": "125",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "HEALTH SURAKSHA Regain",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "https://www.hdfcergo.com/health-insurance/Health-Insurance-Suraksha-Regain.html",
+      "companyWebsite": "http://www.hdfcergo.com/",
+      "onlinePurchaseLink": "https://netinsure.hdfcergo.com/onlineproducts/HealthOnline/HSP-CIP/HSPCalculatePremium.aspx",
+      "offlinePurchaseLink": "http://www.hdfcergo.com/customer-care/new-customer.html",
+      "onlineLinkType": "GET",
+      "insurerName": "HDFC ERGO",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "2000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "AYUR",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ayurveda Treatment Cover",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "once every 4 continuous claims free years"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "90"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "RESSI",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Restore Sum Insured",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "For Future unrelated claims"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Formula",
+              "limitValue": "500000"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "65"
+        },
+        {
+          "Min_SI": "300000"
+        },
+        {
+          "Max_SI": "1000000"
+        },
+        {
+          "SA_Values": "300000;400000;500000;750000;1000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "3"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "21"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Med_Test_SI": "200000"
+        },
+        {
+          "Tenure": "1;2"
+        },
+        {
+          "SUBL": "N"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Family_Discount": "10%"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "5%"
+        },
+        {
+          "Max_CB": "50%"
+        },
+        {
+          "CB_Reduction": "0.05"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Freelook": "15 Days"
+        },
+        {
+          "Online_Criteria": "((sa<=1000000) && (sa>300000) &&(ptype=='FF' || (ptype=='INDV'  && Number(adults)+Number(children)==1 )))"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "N",
+      "key": "125HL06F01^Silver",
+      "planName": "Silver",
+      "sumInsured": 500000,
+      "CGST": 721,
+      "SGST": 721,
+      "serviceTax": 1442,
+      "totalPremium": 9453.0,
+      "netPremium": 8011.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "8011",
+            "premium": 8011.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "106HL03F01",
+      "insurerId": "106",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Health Protector",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.iffcotokio.co.in/health-insurance/family-health-protector-policy",
+      "companyWebsite": "http://www.iffcotokio.co.in/",
+      "onlineLinkType": "GET",
+      "insurerName": "IFFCO TOKIO",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "2500"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "AYUR",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ayurveda Treatment Cover",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "500000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "100000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "once every 4  continuous claim free Years"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospital Cash",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "DAILY",
+              "limitType": "Value",
+              "limitValue": "1000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "ICU",
+              "period": "DAILY",
+              "limitType": "Text",
+              "limitValue": "Class A City- 2.5% of SI <Br>  Rest of the cities- 2.0% of SI"
+            },
+            {
+              "sublimit": "ROOMRENT",
+              "period": "DAILY",
+              "limitType": "Text",
+              "limitValue": "Class A City- 1.5% of SI <Br> Rest of the cities- 1.25% of SI"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60"
+            },
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "0.070000000000000006661338147750939242541790008544921875"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "45"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "65"
+        },
+        {
+          "Min_SI": "50000"
+        },
+        {
+          "Max_SI": "2000000"
+        },
+        {
+          "SA_Values": "50000; 100000;150000;200000;250000;300000;350000;400000;450000;500000;600000;700000;800000;900000;1000000;1100000;1200000;1300000;1400000;1500000;1600000;1700000;1800000;1900000;2000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "6"
+        },
+        {
+          "Max_Child": "4"
+        },
+        {
+          "Parents_Allowed": "Y"
+        },
+        {
+          "Extended_Family_Allowed": "Y"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "23"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Med_Test_SI": "200000"
+        },
+        {
+          "Med_fee_Reimbursement": "0"
+        },
+        {
+          "Tenure": "1"
+        },
+        {
+          "SUBL": "N"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "5%"
+        },
+        {
+          "Max_CB": "50%"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Rating_Basis": "Y"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "N",
+      "key": "106HL03F01",
+      "planName": "",
+      "sumInsured": 500000,
+      "CGST": 812,
+      "SGST": 812,
+      "serviceTax": 1624,
+      "totalPremium": 10008.0,
+      "netPremium": 9024.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "seppremium": "Y",
+            "netPremium": "5469",
+            "premium": 9024.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "148HL01F03",
+      "insurerId": "148",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Care",
+      "effectiveDate": "2013-08-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.religarehealthinsurance.com/siteupload/doc/47817Care_-_Health_Insurance_plan_Brochure.pdf",
+      "companyWebsite": "http://www.religarehealthinsurance.com",
+      "onlinePurchaseLink": "https://www.religarehealthinsurance.com/portalui/PortalExtProposal.run",
+      "onlineLinkType": "GET",
+      "insurerName": "Religare Health",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "2000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "100000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "ICU",
+              "period": "DAILY",
+              "limitType": "Text",
+              "limitValue": "No Limit"
+            },
+            {
+              "sublimit": "ROOMRENT",
+              "period": "DAILY",
+              "limitType": "Text",
+              "limitValue": "Single Private Room"
+            },
+            {
+              "sublimit": "Super Bonus",
+              "limitType": "Text",
+              "limitValue": "50% enhancement of Basic SI for every claim free year subject to a maximum of 100% of Basic SI on top of normal bonus."
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "30 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "RESSI",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Restore Sum Insured",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Available for Future claims once SI and Bonus is exhausted for illness unrelated to previous claims"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "LifeLong"
+        },
+        {
+          "Min_SI": "200000"
+        },
+        {
+          "Max_SI": "6000000"
+        },
+        {
+          "SA_Values": "200000;300000;400000;500000; 700000; 1000000;1500000;2000000;2500000;5000000;6000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "4"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "21"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Tenure": "1;2;3"
+        },
+        {
+          "SUBL": "(sa>400000?'N':'Y')"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "10%"
+        },
+        {
+          "Max_CB": "50%"
+        },
+        {
+          "CB_Reduction": "0.2"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Online_Criteria": "sa>300000 && sa<=6000000"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "(sa>400000?'N':'Y')",
+      "key": "148HL01F03^Unlimited Recharge",
+      "planName": "Unlimited Recharge",
+      "sumInsured": 500000,
+      "CGST": 774,
+      "SGST": 774,
+      "serviceTax": 1548,
+      "totalPremium": 10151.0,
+      "netPremium": 8603.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "8603",
+            "premium": 8603.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "148HL01F02",
+      "insurerId": "148",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Care",
+      "effectiveDate": "2013-08-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.religarehealthinsurance.com/siteupload/doc/47817Care_-_Health_Insurance_plan_Brochure.pdf",
+      "companyWebsite": "http://www.religarehealthinsurance.com",
+      "onlinePurchaseLink": "https://www.religarehealthinsurance.com/portalui/PortalExtProposal.run",
+      "onlineLinkType": "GET",
+      "insurerName": "Religare Health",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "2000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "100000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "ICU",
+              "period": "DAILY",
+              "limitType": "Text",
+              "limitValue": "No Limit"
+            },
+            {
+              "sublimit": "ROOMRENT",
+              "period": "DAILY",
+              "limitType": "Text",
+              "limitValue": "Single Private Room"
+            },
+            {
+              "sublimit": "Super Bonus",
+              "limitType": "Text",
+              "limitValue": "50% enhancement of Basic SI for every claim free year subject to a maximum of 100% of Basic SI on top of normal bonus."
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "30 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "RESSI",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Restore Sum Insured",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "Available for Future claims once SI and Bonus is exhausted for illness unrelated to previous claims"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "LifeLong"
+        },
+        {
+          "Min_SI": "200000"
+        },
+        {
+          "Max_SI": "6000000"
+        },
+        {
+          "SA_Values": "200000;300000;400000;500000; 700000; 1000000;1500000;2000000;2500000;5000000;6000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "4"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "21"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Tenure": "1;2;3"
+        },
+        {
+          "SUBL": "(sa>400000?'N':'Y')"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "10%"
+        },
+        {
+          "Max_CB": "50%"
+        },
+        {
+          "CB_Reduction": "0.2"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Online_Criteria": "sa>300000 && sa<=6000000"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "(sa>400000?'N':'Y')",
+      "key": "148HL01F02^Enhanced NCB",
+      "planName": "Enhanced NCB",
+      "sumInsured": 500000,
+      "CGST": 792,
+      "SGST": 792,
+      "serviceTax": 1584,
+      "totalPremium": 10387.0,
+      "netPremium": 8803.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "8803",
+            "premium": 8803.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "125HL01F02",
+      "insurerId": "125",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "HEALTH SURAKSHA",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.hdfcergo.com/HealthSuraksha.html",
+      "companyWebsite": "http://www.hdfcergo.com/",
+      "onlinePurchaseLink": "https://netinsure.hdfcergo.com/onlineproducts/HealthOnline/HSP-CIP/HSPCalculatePremium.aspx",
+      "offlinePurchaseLink": "http://www.hdfcergo.com/customer-care/new-customer.html",
+      "onlineLinkType": "GET",
+      "insurerName": "HDFC ERGO",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "2000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "AYUR",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ayurveda Treatment Cover",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "100000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "CONVAL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Convalescence",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Hospitalization Exceeds 10 days"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "once every 4 continuous claims free years"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "MA",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Maternity",
+          "coverLimits": [
+            {
+              "sublimit": "LSCS",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "25000"
+            },
+            {
+              "sublimit": "Normal Delivery",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "15000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "NB",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "New Born Baby",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "90"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "65"
+        },
+        {
+          "Min_SI": "200000"
+        },
+        {
+          "Max_SI": "5000000"
+        },
+        {
+          "SA_Values": "200000;300000;400000;500000;750000;1000000;1500000;2000000;2500000;5000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "3"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "21"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Med_Test_SI": "200000"
+        },
+        {
+          "Tenure": "1;2"
+        },
+        {
+          "SUBL": "N"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Family_Discount": "10%"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "5%"
+        },
+        {
+          "Max_CB": "50%"
+        },
+        {
+          "CB_Reduction": "0.05"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Freelook": "15 Days"
+        },
+        {
+          "Online_Criteria": "((sa<=1000000) && (sa>300000) &&(ptype=='FF' || (ptype=='INDV'  && Number(adults)+Number(children)==1 )))"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "N",
+      "key": "125HL01F02^Gold",
+      "planName": "Gold",
+      "sumInsured": 500000,
+      "CGST": 794,
+      "SGST": 794,
+      "serviceTax": 1588,
+      "totalPremium": 10416.0,
+      "netPremium": 8827.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "8827",
+            "premium": 8827.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "129HL07F01",
+      "insurerId": "129",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Family Health Optima",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.starhealth.in/familyhealthoptima.php",
+      "companyWebsite": "http://www.starhealth.in/",
+      "offlinePurchaseLink": "http://www.starhealth.in/office_locator.php#OfficeFocus",
+      "onlineLinkType": "GET",
+      "insurerName": "Star Health",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "750"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "1500"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "ROOMRENT",
+              "cond": "CLASS-B City",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "NB",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "New Born Baby",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "After 16th day of birth."
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "90 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "30 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "RESSI",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Restore Sum Insured",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "500000"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "65"
+        },
+        {
+          "Min_SI": "100000"
+        },
+        {
+          "Max_SI": "1500000"
+        },
+        {
+          "SA_Values": "100000;  200000;  300000;  400000;  500000;  1000000;  1500000"
+        },
+        {
+          "Max_Renewal_Age": "65"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "3"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "16d"
+        },
+        {
+          "Max_Child_Age": "25"
+        },
+        {
+          "Med_Test_Age": "50"
+        },
+        {
+          "Med_Test_SI": "100000"
+        },
+        {
+          "Med_fee_Reimbursement": "1"
+        },
+        {
+          "Tenure": "1"
+        },
+        {
+          "SUBL": "Y"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "25%"
+        },
+        {
+          "Max_CB": "35%"
+        },
+        {
+          "CB_Reduction": "0.5"
+        },
+        {
+          "ClaimsLoading": "N"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "Y",
+      "key": "129HL07F01",
+      "planName": "",
+      "sumInsured": 500000,
+      "CGST": 809,
+      "SGST": 809,
+      "serviceTax": 1618,
+      "totalPremium": 10608.0,
+      "netPremium": 8990.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "8990",
+            "premium": 8990.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "125HL06F02",
+      "insurerId": "125",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "HEALTH SURAKSHA Regain",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "https://www.hdfcergo.com/health-insurance/Health-Insurance-Suraksha-Gold-Regain.html",
+      "companyWebsite": "http://www.hdfcergo.com/",
+      "onlinePurchaseLink": "https://netinsure.hdfcergo.com/onlineproducts/HealthOnline/HSP-CIP/HSPCalculatePremium.aspx",
+      "offlinePurchaseLink": "http://www.hdfcergo.com/customer-care/new-customer.html",
+      "onlineLinkType": "GET",
+      "insurerName": "HDFC ERGO",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "2000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "AYUR",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ayurveda Treatment Cover",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Formula",
+              "limitValue": "100000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "CONVAL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Convalescence",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Hospitalization Exceeds 10 days"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "once every 4 continuous claims free years"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "limitType": "Formula",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "MA",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Maternity",
+          "coverLimits": [
+            {
+              "sublimit": "LSCS",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "25000"
+            },
+            {
+              "sublimit": "Normal Delivery",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "15000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "NB",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "New Born Baby",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "90"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "RESSI",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Restore Sum Insured",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "For Future unrelated claims"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Formula",
+              "limitValue": "500000"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "65"
+        },
+        {
+          "Min_SI": "300000"
+        },
+        {
+          "Max_SI": "1000000"
+        },
+        {
+          "SA_Values": "300000;400000;500000;750000;1000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "3"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "21"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Med_Test_SI": "200000"
+        },
+        {
+          "Tenure": "1;2"
+        },
+        {
+          "SUBL": "N"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Family_Discount": "10%"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "5%"
+        },
+        {
+          "Max_CB": "50%"
+        },
+        {
+          "CB_Reduction": "0.05"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Freelook": "15 Days"
+        },
+        {
+          "Online_Criteria": "((sa<=1000000) && (sa>300000) &&(ptype=='FF' || (ptype=='INDV'  && Number(adults)+Number(children)==1 )))"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "N",
+      "key": "125HL06F02^Gold",
+      "planName": "Gold",
+      "sumInsured": 500000,
+      "CGST": 854,
+      "SGST": 854,
+      "serviceTax": 1708,
+      "totalPremium": 11197.0,
+      "netPremium": 9489.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "9489",
+            "premium": 9489.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "132HL04F01",
+      "insurerId": "132",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Health Total",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.futuregenerali.in/GeneralInsurance/PDF/Health%20Suraksha_Ind%20Brochure.pdf",
+      "companyWebsite": "http://www.futuregenerali.in/GeneralInsurance/Index.aspx",
+      "onlinePurchaseLink": "http://www.futuregenerali.in/GeneralInsurance/RetailProducts/HealthInsurance/HealthSurakshaIndividual.aspx#",
+      "offlinePurchaseLink": "http://www.futuregenerali.in/GeneralInsurance/PDF/Individual_Agents.pdf",
+      "onlineLinkType": "GET",
+      "insurerName": "Future Generali",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DOM",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Domiciliary Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DON",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Donor Expenses",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "MA",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Maternity",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "RESSI",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Restore Sum Insured",
+          "coverLimits": [
+            
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "70"
+        },
+        {
+          "Min_SI": "300000"
+        },
+        {
+          "Max_SI": "1000000"
+        },
+        {
+          "SA_Values": "300000;500000;1000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "4"
+        },
+        {
+          "Parents_Allowed": "Y"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "25"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Med_Test_SI": "200000"
+        },
+        {
+          "Med_fee_Reimbursement": "0.5"
+        },
+        {
+          "Tenure": "1"
+        },
+        {
+          "SUBL": "N"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "10%"
+        },
+        {
+          "Max_CB": "50%"
+        },
+        {
+          "CB_Reduction": "0.1"
+        },
+        {
+          "ClaimsLoading": "Y"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "Y",
+      "SUBL": "N",
+      "key": "132HL04F01",
+      "planName": "",
+      "sumInsured": 500000,
+      "CGST": 907,
+      "SGST": 907,
+      "serviceTax": 1814,
+      "totalPremium": 11287.0,
+      "netPremium": 10078.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "seppremium": "Y",
+            "netPremium": "6719",
+            "premium": 10078.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "113HL01F01",
+      "insurerId": "113",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Health Guard",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.bajajallianz.com/Corp/content/Health%20Pdfs/family_floater_health_guard_v4.pdf",
+      "companyWebsite": "http://www.bajajallianz.com/Corp/health-insurance/health-insurance.jsp",
+      "onlinePurchaseLink": "https://general.bajajallianz.com/Insurance/health/getBasicInfo.do?pid=6001",
+      "offlinePurchaseLink": "http://www.bajajallianz.com/Corp/aboutus/contact-us.jsp",
+      "onlineLinkType": "GET",
+      "insurerName": "Bajaj Allianz",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "1000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "once every 4 Claim Free Years"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Co-Pay",
+              "cond": "Outside network",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "10% of Admisible Claims amount"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "90"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "65"
+        },
+        {
+          "Min_SI": "200000"
+        },
+        {
+          "Max_SI": "1000000"
+        },
+        {
+          "SA_Values": "200000 ;300000 ;400000 ;500000 ;750000 ;1000000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "4"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "25"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Med_Test_SI": "200000"
+        },
+        {
+          "Med_fee_Reimbursement": "1"
+        },
+        {
+          "Tenure": "1;2"
+        },
+        {
+          "SUBL": "N"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "10%"
+        },
+        {
+          "Max_CB": "50%"
+        },
+        {
+          "CB_Reduction": "0.1"
+        },
+        {
+          "ClaimsLoading": "N"
+        },
+        {
+          "Freelook": "15 Days"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "N",
+      "key": "113HL01F01^Gold",
+      "planName": "Gold",
+      "sumInsured": 500000,
+      "CGST": 909,
+      "SGST": 909,
+      "serviceTax": 1818,
+      "totalPremium": 11914.0,
+      "netPremium": 10097.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "10097",
+            "premium": 10097.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    },
+    {
+      "productId": "129HL01F01",
+      "insurerId": "129",
+      "lob": "Health",
+      "productType": "FF",
+      "productName": "Star-Comprehensive",
+      "effectiveDate": "2000-01-01",
+      "endDate": "9999-12-31",
+      "brochureLink": "http://www.starhealth.in/brochure_file/Star%20Comprehensive_45.pdf",
+      "companyWebsite": "http://www.starhealth.in/",
+      "offlinePurchaseLink": "http://www.starhealth.in/office_locator.php#OfficeFocus",
+      "onlineLinkType": "GET",
+      "insurerName": "Star Health",
+      "covers": [
+        {
+          "insuredObject": "Person",
+          "coverId": "AMBUL",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Ambulance",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "2000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DCP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Day Care Procedure",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "DEN",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Dental care",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "once every 3 Years"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Health Check",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "Once every 3 Years"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "5000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOC",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospital Cash",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "after one day of hospitalization"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "DAILY",
+              "limitType": "Value",
+              "limitValue": "500"
+            },
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "7"
+            },
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "120"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "HOSP",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Hospitalization",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "MA",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Maternity",
+          "coverLimits": [
+            {
+              "sublimit": "Caesarean",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "15000"
+            },
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "36 months waiting period"
+            },
+            {
+              "sublimit": "Normal Delivery",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "10000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "NB",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "New Born Baby",
+          "coverLimits": [
+            {
+              "sublimit": "Cover Condition",
+              "limitType": "Text",
+              "limitValue": "36 months waiting period"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "50000"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "OPD",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "OPD treatment",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Amount",
+              "cond": "Other Than Dental and Opthal",
+              "period": "AOH",
+              "limitType": "Value",
+              "limitValue": "300"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "cond": "Dental and Opthal",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "5000"
+            },
+            {
+              "sublimit": "Maximum Claim Amount",
+              "cond": "Other Than Dental and Opthal",
+              "period": "AOY",
+              "limitType": "Value",
+              "limitValue": "1200"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PA",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Personal Accident",
+          "coverLimits": [
+            
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "POST",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Post-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "60 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "PRE",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Pre-Hospitalization",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim Days",
+              "period": "AOH",
+              "limitType": "Text",
+              "limitValue": "30 Days"
+            }
+          ]
+        },
+        {
+          "insuredObject": "Person",
+          "coverId": "RESSI",
+          "coverType": "S",
+          "seperateSi": "N",
+          "coverName": "Restore Sum Insured",
+          "coverLimits": [
+            {
+              "sublimit": "Maximum Claim",
+              "period": "AOY",
+              "limitType": "Text",
+              "limitValue": "1 Claim"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "Min_Entry_Age": "18"
+        },
+        {
+          "Max_Entry_Age": "65"
+        },
+        {
+          "Min_SI": "500000"
+        },
+        {
+          "Max_SI": "2500000"
+        },
+        {
+          "SA_Values": "500000; 750000; 1000000; 1500000;  2000000;  2500000"
+        },
+        {
+          "Max_Renewal_Age": "LifeLong"
+        },
+        {
+          "Max_Members": "6"
+        },
+        {
+          "Max_Adult": "2"
+        },
+        {
+          "Max_Child": "3"
+        },
+        {
+          "Parents_Allowed": "N"
+        },
+        {
+          "Extended_Family_Allowed": "N"
+        },
+        {
+          "Min_Child_Age": "3m"
+        },
+        {
+          "Max_Child_Age": "21"
+        },
+        {
+          "Med_Test_Age": "45"
+        },
+        {
+          "Med_Test_SI": "500000"
+        },
+        {
+          "Tenure": "1"
+        },
+        {
+          "SUBL": "N"
+        },
+        {
+          "Pre_Con_Waiting_Period": "48"
+        },
+        {
+          "Renewal_Benefit_Type": "CB"
+        },
+        {
+          "CB_per_Year": "50%"
+        },
+        {
+          "Max_CB": "100%"
+        },
+        {
+          "CB_Reduction": "0.5"
+        },
+        {
+          "ClaimsLoading": "N"
+        }
+      ],
+      "online": true,
+      "ClaimsLoading": "N",
+      "SUBL": "N",
+      "key": "129HL01F01",
+      "planName": "",
+      "sumInsured": 500000,
+      "CGST": 938,
+      "SGST": 938,
+      "serviceTax": 1876,
+      "totalPremium": 12296.0,
+      "netPremium": 10420.0,
+      "premiumBreakup": {
+        "base": [
+          {
+            "netPremium": "10420",
+            "premium": 10420.0,
+            "coverId": "HOSP",
+            "displayName": "Basic Premium"
+          }
+        ],
+        "addon": [
+          
+        ]
+      }
+    }
+  ],
+  "requestParams": {
+    "doblist": "1987-05-12,1989-05-16",
+    "agelist": "30,28",
+    "pincode": "560030",
+    "tenure": "1",
+    "deductible": 0,
+    "adult": 2,
+    "children": 0,
+    "genderlist": "M,F",
+    "sa": "500000",
+    "productType": "FF"
+  },
+  "requestId": "b8d68933-c943-4ac9-8172-0511c56f375a"
+}

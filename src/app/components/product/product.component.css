@@ -1,0 +1,28 @@
+ul {
+    left: 885px !important;
+    
+  }
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait ) { 
+    ul {
+        left: 341px !important;
+        
+      }
+    .contentpro{
+        width: 68% !important;
+    }
+
+    .contentmain1{
+        width: 69% !important;
+    }
+    #dbs{
+        width: 94% !important;
+    }
+    
+}
+@media (max-width : 1024px) and (min-width : 768px) and (orientation: landscape) {
+    ul {
+        left: 438px !important;
+        
+      }
+    }

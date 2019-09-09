@@ -1,0 +1,394 @@
+ul {
+    left: 885px !important;
+    
+  }
+  .btn :visited{
+    color:blue;
+  }
+  #target1:visited {
+    color: red;
+  }
+.word-break /deep/ .modalUl{
+    display: contents !important;
+}   
+#cilSorting{
+      margin:0 -115px 0 0;
+  }
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+.nav.nav-pills.nav-wizard > li + li{
+    margin-left: -7px !important;
+}
+div.searchheaderpanel{
+    width: 85%;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    float: left;
+    overflow: hidden;
+    height: auto;
+    color: rgb(51, 51, 51);
+    line-height: 18px;
+    text-align: left;
+    text-decoration: none;
+    margin: 0.5% 0px 2% 7%;
+    padding: 2% 0px 1%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+ }
+ div.searchheaderpanel1{
+    width: 95%;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    float: left;
+    overflow: hidden;
+    height: auto;
+    color: rgb(51, 51, 51);
+    line-height: 18px;
+    text-align: left;
+    text-decoration: none;
+    margin: 0.5% 0px 0px 2%;
+    padding: 2% 0px 1%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+ }
+.policy_car {
+    width: 100%;
+    float: left;
+    background-color: #E1E1E1;
+    border-bottom: 1px solid #ccc;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100% !important;
+    color: #a62d00;
+}
+
+
+.refinemain {
+    width: 90%;
+    float: left;
+    padding: 1% 0% 1% 0%;
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 700;
+    color: #666;
+    line-height: 24px;
+    margin: 1% 5% 1% 5%;
+    text-align: left;
+    background-color: #f5e4ff;
+    border-bottom: 1px dashed #999;
+}
+.refine-lt {
+    width: 50%;
+    float: left;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #666;
+    text-align: left;
+    padding: 1% 0 1% 2%;
+}
+.refine-rt {
+    width: 40%;
+    float: right;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #666;
+    text-align: left;
+    padding: 1% 0 1% 2%;
+    margin: 0 -268px 0px 4px;
+}
+.refine-rt2 {
+    width: 60%;
+    float: right;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #666;
+    text-align: left;
+    padding: 1% 0 1% 2%;
+    margin: 0 175px 0px 4px;
+}
+.refine-rt1 {
+    width: 40%;
+    float: right;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #666;
+    text-align: left;
+    padding: 1% 0 1% 2%;
+    margin: 0 -4px 0px 4px;
+}
+.preinput {
+    background-color: #9b00ff;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+    width: 30px;
+    text-align: center;
+    height: 25px;
+    border: 0px solid #B2B1B1;
+    margin: 0% 0 0% 0;
+    padding: 2px 0% 0 0%;
+    border-radius: 50px;
+    display: inline-block;
+}
+.preinput1 {
+    background-color: #f20030;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+    width: 30px;
+    text-align: center;
+    height: 25px;
+    border: 0px solid #B2B1B1;
+    margin: 0% 0 0% 0;
+    padding: 2px 0% 0 0%;
+    border-radius: 50px;
+    display: inline-block;
+}
+.round {
+    border-radius: 50%;
+}
+table{
+    table-layout: fixed
+
+}
+.btn-primary1{
+    color: #fff;
+    background-color: #e05757;
+    border-color: #e05757;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    color: #a62d00;
+}
+
+table.table-bordered
+{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: #a62d00;
+}
+
+td, th {
+    text-align: left;
+    padding: 6px;
+
+}
+input[type=checkbox].btn-primary1:checked + label.btn-primary1{
+    background-color: darkred;
+}
+
+.btn-primary1:focus{
+    color: #fff;
+    background-color: darkred;
+}
+.btn-primary1:active{
+    background-color: darkred; 
+    color:  #fff;
+}
+.btn-primary1:checked{
+    background-color: darkred; 
+    color:  #fff;
+}
+.btn-primary:focus{
+    background-color: #b5b733; 
+}
+.modal-dialog{
+    margin: 0 0 0 225px !important;
+}
+
+
+@media (min-width: 768px){}
+.modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    width: 150%;
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait ) {
+    ul {
+        left: 341px !important;
+        
+      }
+      #reportIssueId{
+        height: auto !important;
+        margin: 44px 0 0 28px !important;
+    }
+    #changePwdid{
+        height: auto !important;
+    }
+      .zerogrid{
+          width: 149% !important;
+      }
+      #premiumBrkMoal
+      {
+          height: auto !important;
+      }
+      #emailMoadll{
+          height: auto !important;
+          width: 90% !important;
+          margin: 400px 0 0 75px !important;
+      }
+    
+    .refine-rt2 {
+        margin: 0 100px 0px 4px !important;
+    }
+    
+    table {
+        width: 110% !important;
+    }
+    .btn{
+        border-radius: 8px !important;
+    }
+    .btn-primary{
+        padding: 0px 20px 14px 10px !important;
+    }
+    .panel-default > .panel-heading
+    {
+        margin: 30px 0 0 0;
+    }
+    .refine-rt1 {
+        width: 68% !important;
+    }
+    .refine-lt {
+        width: 72%;
+        float: left;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        color: #666;
+        text-align: left;
+        padding: 1% 0 1% 2%;
+    }
+    .refine-rt{
+        margin: 0px -85px 0px 0px !important;
+    }
+    div.searchheaderpanel1{
+        width: 98%;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        float: left;
+        overflow: hidden;
+        height: auto;
+        color: rgb(51, 51, 51);
+        line-height: 18px;
+        text-align: left;
+        text-decoration: none;
+        margin: 0.5% 0px 0px 1%;
+        padding: 2% 0px 1%;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(204, 204, 204);
+     }
+    table.table-bordered
+    {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100% !important ;
+        color: #a62d00;
+    }
+    .modal-content {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        width: 119% !important ;
+        height: 850px !important;
+    }
+
+.sortcontainer1
+{
+    float: right !important;
+}
+span.productattributes{
+    margin-left: -17% !important;
+    
+}
+
+    #dbs{
+        width: 67% !important;
+    }
+    div.frameSec{
+        width: 95%;
+        float: right;
+        margin-right: 3%;
+        margin-bottom: 1%;
+        margin-top: 55px !important;  
+      }
+      #selections {
+        margin-top: 4%;
+    }
+    .modal-dialog{
+        margin: 0 0 0 26px !important;
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape ) {
+    ul {
+        left: 438px !important;
+        
+      }
+      #reportIssueId{
+          height: auto !important;
+      }
+      #changePwdid{
+        height: auto !important;
+    }
+      
+      #premiumBrkMoal
+      {
+          height: auto !important;
+      }
+      #emailMoadll{
+        height: auto !important;
+        width: 90% !important;
+        margin: 250px 0 0 0 !important;
+    }
+    .refine-rt1 {
+        width: 51% !important;
+    }
+    .refine-rt{
+        margin: 0px -171px 0px 0px !important;
+    }
+    .refine-lt{
+        width: 55% !important;
+    }
+    .modal-content{
+        margin: 10px 0 0 -80px !important;
+        width: 125% !important;
+        height: 600px !important;
+    }
+    div.policyListBF
+ {
+ }
+ .sortcontainer1
+{
+    float: right !important;
+}
+
+}
+/*.modal-content{
+    margin: 0px 0 0 -214px;
+    width: 170%;
+
+}*/
