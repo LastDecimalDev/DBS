@@ -1,0 +1,75 @@
+.form-panel .heads {
+  margin-top: 5% !important;
+}
+
+#menu
+{
+left: 885px;
+}
+.q-point {
+color: #AEAEAE;
+font-size: 15px;
+font-weight: 700;
+left: 0;
+position: absolute;
+line-height: 20px;
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait)
+{
+.q-point {
+  color: #AEAEAE;
+  font-size: 15px;
+  font-weight: 700;
+  left: 0;
+  position: absolute;
+  line-height: 20px;
+}
+
+#dbs {
+width: 68% !important;
+float: left;
+height: auto;
+}
+.form-panel .heads {
+  margin-top: 25% !important;
+}
+.extraSpace{
+    
+width: 100% !important;
+float: left;
+height: auto;
+margin-top: 34%!important;
+}
+
+
+#menu
+  {
+    left: 348px;
+  }
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape)
+
+{
+.extraSpace {
+  margin-left: 22px !important;
+  margin-top: 28% !important;
+  left: 10px;
+}
+.form-panel .heads {
+  margin-top: 12% !important;
+
+}
+#menu
+{
+left: 458px !important;
+
+}
+}
