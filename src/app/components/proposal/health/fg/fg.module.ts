@@ -2,10 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { keysFGHealth } from '../../../../sharedServices/keyValuePipe';
 
-import { AppHeaderComponent } from '../../../../components/common/app-header/app-header.component';
-import { AppFooterComponent } from '../../../../components/common/app-footer/app-footer.component';
-// containers
 import { HealthfgComponent } from './fg.component';
 
 // routes
@@ -20,9 +18,8 @@ export const ROUTES: Routes = [
     RouterModule.forChild(ROUTES)
   ],
   declarations: [
-    HealthfgComponent,
-    AppHeaderComponent,
-    AppFooterComponent
+    keysFGHealth,
+    HealthfgComponent
   ]
 })
 export class FgHealthModule {}
