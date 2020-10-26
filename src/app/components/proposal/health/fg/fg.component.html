@@ -1,16 +1,15 @@
 <div>
   <div class="rootCus">
-    <div class="brand" *ngIf="router.url !='/'"><p><img src="../../../../assets/images/SelectAssure2.png" class="logo" alt=""></p></div>
+    <div class="brand" ><a routerLink="/"  ><img src="../../../../assets/images/logo.png" class="logo" alt=""></a></div>
     <label for="show-menu" class="show-menu"><img src="../../../../assets/images/menu-btn.png" alt=""></label>
-    <input type="checkbox" id="show-menu" role="button">
-    <ul id="menu">
-      <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
+     <ul id="menu">
+     <!-- <li><a routerLink="/" style=" line-height:18px;" ><img src="../../../../assets/images/HomeICON.png" alt=""></a></li>         
       <li><a routerLink="../../home/mycustomer" style="line-height:18px;"><img src="../../../../assets/images/MyCustomerICON.png" alt=""></a></li>           
-      <li><a routerLink="../../home/myActivities"style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
-      <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    
+      <li><a routerLink="../../home/myActivities" style="line-height:18px;"><img src="../../../../assets/images/My_activities.png" alt=""></a></li>           
+      <li><a (click) ="userSignout()" style=" line-height:18px;"><img src="../../../../assets/images/SignInICON.png" alt=""></a></li>    -->
     </ul>  
-  
-  </div> 
+
+  </div>
     <div id="dbs">
       <div class="zerogrid" style="width: 100%;" *ngIf="!loading">
           <div class="content searchheaderpanel proposal_form" id="cignaPanel">
@@ -29,7 +28,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-xs-8 col-sm-9 pnone" style="border-left:1px solid #eaeaea;">
+                  <div class="col-xs-8 col-sm-9 pnone">
                       <div class="pol-name">{{proposalInput.insurerName}}  {{proposalInput.productName}}</div>
                       <div class="pol-val">
                         <span>Sum Insured</span>
@@ -45,11 +44,11 @@
          
           <div id="stage_data" *ngIf="!loading">
               <ul class="nav nav-pills nav-wizard extraSpace">
-                  <li class="active"><a href="#panel1" data-toggle="tab">Policy<span *ngIf="tabStatus.firstComplete=='done'"><img class="check" src="../../../../../assets/images/checkmark.png"></span> </a></li>
-                  <li id="SecondTab" class="tabdisable"><a href="#panel2" data-toggle="tab">Insured<span *ngIf="tabStatus.secondComplete=='done'"><img class="check" src="../../../../../assets/images/checkmark.png"></span> </a></li>
-                  <li id="thirdTab" class="tabdisable"><a href="#panel3" data-toggle="tab">Medical History<span *ngIf="tabStatus.thirdComplete=='done'"><img class="check" src="../../../../../assets/images/checkmark.png"></span> </a></li>
-                  <li id="forthTab" class="tabdisable"><a href="#panel4" data-toggle="tab">Proposer<span *ngIf="tabStatus.fourthComplete=='done'"><img class="check" src="../../../../../assets/images/checkmark.png"></span> </a></li>
-                  <li id="fifthTab" class="tabdisable"><a href="#panel5" data-toggle="tab">Contact Info<span *ngIf="tabStatus.fifthComplete=='done'"><img class="check" src="../../../../../assets/images/checkmark.png"></span> </a></li>
+                  <li class="active"><a href="#panel1" data-toggle="tab">Policy<span *ngIf="tabStatus.firstComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span> </a></li>
+                  <li id="SecondTab" class="tabdisable"><a href="#panel2" data-toggle="tab">Insured<span *ngIf="tabStatus.secondComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span> </a></li>
+                  <li id="thirdTab" class="tabdisable"><a href="#panel3" data-toggle="tab">Medical History<span *ngIf="tabStatus.thirdComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span> </a></li>
+                  <li id="forthTab" class="tabdisable"><a href="#panel4" data-toggle="tab">Proposer<span *ngIf="tabStatus.fourthComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span> </a></li>
+                  <li id="fifthTab" class="tabdisable"><a href="#panel5" data-toggle="tab">Contact Info<span *ngIf="tabStatus.fifthComplete=='done'"><img class="checkRight" src="../../../../../assets/images/checkmark.png"></span> </a></li>
                   <li id="sixthTab" class="tabdisable"><a href="#panel6" data-toggle="tab">Summary</a></li>
               </ul>
               </div>
@@ -72,12 +71,10 @@
                                                 <div class="col-sm-4">
                                                   <div class="form-group required">
                                                     <label class="control-label">Policy Start Date</label>
-                                                    <span class="input-group">
-                                                        <input type="date" class="form-control" [(ngModel)]="proposalInput.policy.policyStartdate" min="{{policyStartDateOptions.minDate | date: 'yyyy-MM-dd'}}" max="{{policyStartDateOptions.maxDate | date: 'yyyy-MM-dd'}}" (change)="getPolicyEndDate(proposalInput.policy.policyStartdate)" name="startDate" required>
+                                                    <span class="">
+                                                        <input type="date" class="form-control" [(ngModel)]="proposalInput.policy.policyStartdate" min="{{policyStartDateOptions.minDate | date: 'yyyy-MM-dd'}}" max="{{policyStartDateOptions.maxDate | date: 'yyyy-MM-dd'}}" onkeydown="return false" (change)="getPolicyEndDate(proposalInput.policy.policyStartdate)" name="startDate" required>
                                                         <span class="validity"></span>
-                                                        <span class="input-group-btn">
-                                                          <button type="button" class="btn btn-primary btn_prim " ><i class="glyphicon glyphicon-calendar"></i></button>
-                                                         </span>
+                                                       
                                                   </span>
                                                   <span class="has-error">{{policyStartDateError}}</span>
                                                   </div>
@@ -85,11 +82,9 @@
                                                    <div class="col-sm-4">
                                                   <div class="form-group policyDate required">
                                                     <label class="control-label">Policy End Date</label>
-                                                    <span class="input-group">
+                                                    <span class="">
                                                     <input type="date" class="form-control" [(ngModel)]="proposalInput.policy.policyEnddate" name="endDate" readonly required>
-                                                    <span class="input-group-btn">
-                                                        <button type="button" class="btn btn-primary btn_prim " [disabled]="policyform.invalid" ><i class="glyphicon glyphicon-calendar"></i></button>
-                                                       </span>
+                                                   
                                                     </span>   
                                                   </div>
                                                    </div>
@@ -124,13 +119,13 @@
                     <span>Who do you want to Insure?</span>
                   </div>
                   <div  class="row mnone insured_mnone" *ngFor="let insured of proposalInput.insured; let i=index">
-                      <div class="col-sm-2">Insured Person's Details for <span ng-if="insured.type=='A'">Adult</span><span *ngIf="insured.type=='C'">Child</span> DOB: {{insured.dob |date:'yyyy-MM-dd'}}</div>
+                      <div class="col-sm-12">Insured Person's Details for <span ng-if="insured.type=='A'">Adult</span><span *ngIf="insured.type=='C'">Child</span> DOB: {{insured.dob |date:'yyyy-MM-dd'}}</div>
                       <div class="col-sm-10" style="margin-bottom:10px;">
                         
                         <div class="col-sm-4">
-                          <div class="form-group required">
+                          <div class="form-group dateInsuSpace required">
                            <label class="control-label">Title</label>
-                           <div class="col-sm-12 padd0">
+                           <div class="">
                            <select class="form-control" [(ngModel)]="insured.title" name="insuTitle{{i}}" required>
                              <option value="">Select</option>
                              <option value="{{item.id}}" *ngFor="let item of insurerMaster.Title">{{item.value}}</option>
@@ -138,26 +133,26 @@
                          </div>
                        </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" [ngClass]="{'has-error':firstName.invalid && !firstName.pristine}">
                           <div class="form-group dateInsuSpace required">
                            <label class="control-label required">First Name</label>
-                           <input type="text" class="form-control" name="firstName{{i}}" minlength="3" maxlength="40" pattern="/^[a-zA-Z ]*$/" [(ngModel)]="insured.firstName" required>
+                           <input type="text" class="form-control" name="firstName{{i}}" #firstName="ngModel" minlength="3" maxlength="40" pattern="^[a-zA-Z ]*$" [(ngModel)]="insured.firstName" required>
                           </div>
                         </div>
                         
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" [ngClass]="{'has-error':middleName.invalid && !middleName.pristine}">
                           <div class="form-group dateInsuSpace" >
-                            <label class="control-label required">Middle Name</label>
-                            <input type="text" class="form-control" name="middleName{{i}}" pattern="/^[a-zA-Z ]*$/" [(ngModel)]="insured.middleName">
+                            <div class="control-label required">Middle Name</div>
+                            <input type="text" class="form-control" name="middleName{{i}}" #middleName="ngModel" pattern="^[a-zA-Z ]*$" [(ngModel)]="insured.middleName">
                           </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" [ngClass]="{'has-error':lastName.invalid && !lastName.pristine}">
                           <div class="form-group required dateInsuSpace">
                            <label class="control-label">Last Name</label>
-                           <input type="text" class="form-control" name="lastName{{i}}" minlength="3" maxlength="40" pattern="/^[a-zA-Z ]*$/" [(ngModel)]="insured.lastName" required>
+                           <input type="text" class="form-control" name="lastName{{i}}" #lastName="ngModel" minlength="3" maxlength="40" pattern="^[a-zA-Z ]*$" [(ngModel)]="insured.lastName" required>
                           </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" >
                           <div class="form-group dateInsuSpace required">
                            <label class="control-label"> Date of Birth</label>
                            <input type="date" class="form-control" name="insdob{{i}}" [(ngModel)]="insured.dob" readonly>
@@ -185,9 +180,9 @@
                     </div>
                         
                         <div class="col-sm-4">
-                          <div class="form-group required">
+                          <div class="form-group dateInsuSpace required">
                            <label class="control-label">Relationship with Proposer</label>
-                           <div class="col-sm-12 padd0">
+                           <div class="">
                              <select class=" form-control" name="relaInsured{{i}}" [(ngModel)]="insured.relationshipId" (change) = "checkRelationShip()" required>
                              <option value="">Select</option>
                              <option value="{{item.id}}" *ngFor="let item of insurerMaster.Relationship">{{item.value}}</option>
@@ -212,11 +207,7 @@
                       <div class="clear"></div>
                       </div>
                       <div class="clear"></div>
-                      <div class="row">
-                        <div class="col-sm-12">
-                       <span *ngIf="pageErrors.insuredError" class="has-error" id="insuredError" style="color:red">{{pageErrors.insuredErrorText}}</span>
-                     </div>
-                      </div>
+                      
                       <div class="clear"></div>
               </div>
               <div class = "clear"></div>
@@ -224,13 +215,16 @@
               <div class = "clear"></div>
               </div>
               <div class = "clear"></div>
+              <div class="col-sm-12">
+                <span *ngIf="pageErrors.insuredError" class="has-error" id="insuredError" style="color:red">{{pageErrors.insuredErrorText}}</span>
+              </div>
               <div class="foot">
                 <div class="clearfix">
                   <div class="cf-pull-right">
                       <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('2')">
                           <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
                     </button>
-                    <button class="btn cf-btn btn-lg btn-default btn-grn" (click)="nextSection('2')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                    <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="pageErrors.insuredError||insuredform.form.invalid" (click)="nextSection('2')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
                   </div>
                 </div>
             </div>
@@ -305,6 +299,9 @@
                   </div>
                   <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;border-top:1px dashed #dadada;" ></p>
                 </div>
+                <div class="col-sm-12">
+                  <span *ngIf="pageErrors.medicalError" class="has-error" id="medicalError" style="color:red">{{pageErrors.medicalErrorText}}</span>
+                </div>
             <div class = "clear"></div>
             <!--.body -->
                   <div class="foot">
@@ -313,7 +310,7 @@
                             <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('3')">
                                 <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
                           </button>
-                          <button class="btn cf-btn btn-lg btn-default btn-grn" (click)="nextSection('3')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                          <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="pageErrors.medicalError" (click)="nextSection('3')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
                         </div>
                       </div>
                   </div>
@@ -337,9 +334,9 @@
                       <div class="col-sm-11" style="margin-bottom:10px;">
                         
                         <div class="col-sm-4 " >
-                          <div class="form-group required">
+                          <div class="form-group dateInsuSpace required">
                             <label class="control-label">Title </label>
-                            <div class="col-sm-12 padd0" >
+                            <div class="" >
                               <select class="form-control" [(ngModel)]="proposalInput.proposer.title" [disabled] = "isProposerInsured" name="propTitle" required  >
                                 <option value="">Select</option>
                                 <option value="{{item.id}}"  *ngFor="let item of insurerMaster.Title">{{item.value}}</option>
@@ -347,33 +344,34 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-sm-4 ">
+                        
+                        <div class="col-sm-4 " [ngClass]="{'has-error':propfirstName.invalid && !propfirstName.pristine}">
                             <div class="form-group dateInsuSpace required">
                             <label class="control-label">First Name </label>
-                            <input type="text" name="propfirstName" [(ngModel)]="proposalInput.proposer.firstName" minlength="3" maxlength="40" pattern="/^[a-zA-Z ]*$/" class="form-control" [disabled] = "isProposerInsured" required>
+                            <input type="text" name="propfirstName" #propfirstName="ngModel" [(ngModel)]="proposalInput.proposer.firstName" minlength="3" maxlength="40" pattern="^[a-zA-Z ]*$" class="form-control" [disabled] = "isProposerInsured" required>
                             </div>
                           </div>
                           
-                          <div class="col-sm-4 ">
+                          <div class="col-sm-4 " [ngClass]="{'has-error':propmiddtName.invalid && !propmiddtName.pristine}">
                             <div class="form-group dateInsuSpace">
-                            <label class="control-label">Middle Name</label>
-                            <input type="text" name="propmiddtName" class="form-control field" [(ngModel)]="proposalInput.proposer.middleName" [disabled] = "isProposerInsured">
+                            <div class="control-label">Middle Name</div>
+                            <input type="text" name="propmiddtName" #propmiddtName=ngModel class="form-control field" [(ngModel)]="proposalInput.proposer.middleName" [disabled] = "isProposerInsured">
                             </div>
                           </div>
                           
                           <!-- <div class=" clear" ng-if="proposalInput.proposer.isPrimaryInsured=='Y'" ></div> -->
-                          <div class="col-sm-4 ">
+                          <div class="col-sm-4 " [ngClass]="{'has-error':proplastName.invalid && !proplastName.pristine}">
                             <div class="form-group dateInsuSpace required">
                             <label class="control-label">Last Name </label>
-                            <input type="text" name="proplastName" [(ngModel)]="proposalInput.proposer.lastName" class="form-control" minlength="3" maxlength="40" pattern="/^[a-zA-Z ]*$/" [disabled] = "isProposerInsured" required>
+                            <input type="text" name="proplastName" #proplastName="ngModel" [(ngModel)]="proposalInput.proposer.lastName" class="form-control" minlength="3" maxlength="40" pattern="^[a-zA-Z ]*$" [disabled] = "isProposerInsured" required>
                             </div>
                           </div>
-                          <div class="col-sm-4 ">
+                          <div class="col-sm-4"  style="margin-bottom: -20px;">
                               <div class="form-group dateInsuSpace required">
                               <label class="control-label">Date of Birth</label>
                               <div class="input-group">
                                <input type="text" class="form-control" name="proposerdob" min="{{adultDobOptions.minDate | date:'yyyy-MM-dd'}}" max="{{adultDobOptions.maxDate | date:'yyyy-MM-dd'}}"
-                                      [(ngModel)]="proposalInput.proposer.proposerDob" required [disabled] = "isProposerInsured" />
+                                      [(ngModel)]="proposalInput.proposer.proposerDob" required [disabled] = "isProposerInsured" onkeydown="return false"/>
                                       <span class="input-group-btn">
                                         <button type="button" class="btn btn-primary btn_prim " [disabled] = "isProposerInsured" ><i class="glyphicon glyphicon-calendar"></i></button>
                                       </span>
@@ -395,7 +393,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group dateInsuSpace required">
                                    <label class="control-label">Marital Status</label>
-                                   <select class="form-control" [(ngModel)]="proposalInput.proposer.maritalStatus" name="propStatus" required>
+                                   <select class="form-control" [disabled] = "isProposerInsured" [(ngModel)]="proposalInput.proposer.maritalStatus" name="propStatus" required>
                                      <option value="">Select</option>
                                      <option value="{{item.id}}" *ngFor="let item of insurerMaster.MaritalStatus">{{item.value}}</option>
                                    </select>
@@ -405,53 +403,53 @@
                               <div class="col-sm-4">
                                 <div class="form-group dateInsuSpace required">
                                    <label class="control-label">Occupation</label>
-                                   <select class="form-control" [(ngModel)]="proposalInput.proposer.occupationType" name="propOccuType" required>
+                                   <select class="form-control" [disabled] = "isProposerInsured" [(ngModel)]="proposalInput.proposer.occupationType" name="propOccuType" required>
                                      <option value="">Select</option>
                                      <option value="{{item.id}}" *ngFor="let item of insurerMaster.Occupation">{{item.value}}</option>
                                    </select>
                                  </div>
                               </div>
                                
-                               <div class="col-sm-4 ">
+                               <div class="col-sm-4" [ngClass]="{'has-error':proMobile.invalid && !proMobile.pristine}">
                                  <div class="form-group dateInsuSpace required">
                                    <label class="control-label">Mobile</label>
-                                   <input type="text" name="proMobile" class="form-control field" [(ngModel)]="proposalInput.proposer.mobile" pattern="/^[7-9][0-9]{9}$/" required>
+                                   <input type="text" name="proMobile" #proMobile="ngModel" class="form-control field" [(ngModel)]="proposalInput.proposer.mobile" pattern="^[7-9][0-9]{9}$" required>
                                  </div>
                                </div>
 
-                               <div class="col-sm-4 ">
+                               <div class="col-sm-4" [ngClass]="{'has-error':proEmail.invalid && !proEmail.pristine}">
                                   <div class="form-group dateInsuSpace required" >
                                     <label class="control-label">Email</label>
-                                    <input type="text" class="form-control field" name="proEmail" [(ngModel)]="proposalInput.proposer.email" pattern="/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/"  required>
+                                    <input type="text" class="form-control field" name="proEmail" #proEmail="ngModel" [(ngModel)]="proposalInput.proposer.email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"  required>
                                   </div>
                                 </div>
                                 
-                                <div class="col-sm-4 ">
+                                <div class="col-sm-4" [ngClass]="{'has-error':pan.invalid && !pan.pristine}">
                                   <div class="form-group dateInsuSpace">
                                     <label class="control-label" >Pan Number</label>
-                                    <input type="text" name="pan" class="form-control" [(ngModel)]="proposalInput.proposer.pan" pattern="/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/"  required>
+                                    <input type="text" name="pan" #pan="ngModel" class="form-control" [(ngModel)]="proposalInput.proposer.pan" pattern="^[A-Z]{5}[0-9]{4}[A-Z]{1}$"  required>
                                   </div>
                                 </div>
                                 
-                                <div class="col-sm-4 ">
+                                <div class="col-sm-4" [ngClass]="{'has-error':aadhar.invalid && !aadhar.pristine}">
                                   <div class="form-group dateInsuSpace">
                                   <label class="control-label" >Aadhar Number</label>
-                                  <input type="text" placeholder = "9999-9999-9999" name="aadhar" class="form-control" [(ngModel)]="proposalInput.proposer.aadhar" pattern="/^[0-9]{4}\-[0-9]{4}\-[0-9]{4}$/" required>
+                                  <input type="text" placeholder = "9999-9999-9999" name="aadhar" #aadhar="ngModel" class="form-control" [(ngModel)]="proposalInput.proposer.aadhar" pattern="^[0-9]{4}\-[0-9]{4}\-[0-9]{4}$" required>
                                   </div>
                                 </div>
                                 
                                 <div class = "clear"></div>
                                 <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;border-top:1px dashed #dadada;" ></p>
-                            <div class="col-sm-4">
-                              <div class="form-group dateInsuSpace required">
+                            <div class="col-sm-4"  [ngClass]="{'has-error':nomineefName.invalid && !nomineefName.pristine}">
+                              <div class="form-group dateInsuSpace required" >
                                 <label class="control-label">Nominee First Name</label>
-                                <input type="text" name="nomineefName" class="form-control field" minlength="3" maxlength="40" pattern="/^[a-zA-Z ]*$/" [(ngModel)]="proposalInput.proposer.nomineeFirstName" required>
+                                <input type="text" name="nomineefName" #nomineefName="ngModel" class="form-control field" minlength="3" maxlength="40" pattern="^[a-zA-Z ]*$" [(ngModel)]="proposalInput.proposer.nomineeFirstName" required>
                               </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-4"  [ngClass]="{'has-error':nomineelName.invalid && !nomineelName.pristine}">
                               <div class="form-group required dateInsuSpace" >
                                 <label class="control-label">Nominee Last Name</label>
-                                <input type="text" name="nomineelName" minlength="1" maxlength="40" pattern="/^[a-zA-Z ]*$/" class="form-control field" [(ngModel)]="proposalInput.proposer.nomineeLastName" required>
+                                <input type="text" name="nomineelName" #nomineelName="ngModel" minlength="1" maxlength="40" pattern="^[a-zA-Z ]*$" class="form-control field" [(ngModel)]="proposalInput.proposer.nomineeLastName" required>
                               </div>
                             </div>
                           
@@ -469,12 +467,10 @@
                             <div class="col-sm-4">
                                 <div class="form-group required dateInsuSpace">
                                   <label class="control-label">Nominee DOB</label>
-                                    <span class="input-group">
-                                  <input type="date" class="form-control" name="nomineeDob" [(ngModel)]="proposalInput.proposer.nomineeDob" min="{{nomineeDobOptions.minDate | date:'yyyy-MM-dd'}}" max="{{nomineeDobOptions.maxDate | date:'yyyy-MM-dd'}}" (change)="calculateNomineeAge(proposalInput.proposer.nomineeDob)" required/>
+                                    <span class="">
+                                  <input type="date" class="form-control" name="nomineeDob" [(ngModel)]="proposalInput.proposer.nomineeDob" min="{{nomineeDobOptions.minDate | date:'yyyy-MM-dd'}}" max="{{nomineeDobOptions.maxDate | date:'yyyy-MM-dd'}}" (change)="calculateNomineeAge(proposalInput.proposer.nomineeDob)" onkeydown="return false" required/>
                                   <span class="validity"></span>
-                                  <span class="input-group-btn">
-                                           <button type="button" class="btn btn-primary btn_prim "><i class="glyphicon glyphicon-calendar"></i></button>
-                                       </span>
+                                  
                                 </span>
                              </div>
                               </div>
@@ -482,42 +478,40 @@
                                 <div class="form-group required dateInsuSpace">
                                  <label class="control-label">Relationship With Proposer</label>
                                  <select class="form-control field" [(ngModel)]="proposalInput.proposer.nomineeRel" name="mnomineeRel" required>
-                                   <option value="{{relationship.id}}" *ngFor="let relationship of insurerMaster.NomineeRel" [disabled]="relationship.value=='Self'">{{relationship.value}}</option>
+                                   <option value="{{relationship.id}}" *ngFor="let relationship of insurerMaster.NomineeRel" >{{relationship.value}}</option>
                                  </select>
                                </div>	
                               </div>
                               <div class="clear"></div>
                               <div *ngIf="proposalInput.proposer.nomineeAge<18">
-                                  <div class="col-sm-4" >
+                                  <div class="col-sm-4"  [ngClass]="{'has-error':AppFName.invalid && !AppFName.pristine}" >
                                     <div class="form-group dateInsuSpace required">
                                     <label class="control-label">Appointee  First Name </label>
-                                    <input type="text" class="form-control field" name="AppFName" minlength="3" maxlength="40" [(ngModel)]="proposalInput.proposer.appointeeName" required>
+                                    <input type="text" class="form-control field" name="AppFName" #AppFName="ngModel"  minlength="3" maxlength="40" [(ngModel)]="proposalInput.proposer.appointeeName" required>
                                     </div>
                                   </div>
                                   
                                   <div class="col-sm-4" *ngIf="proposalInput.proposer.nomineeAge<18">
-                                    <div class="form-group dateInsuSpace required">
+                                    <div class="form-group dateInsuSpace required" [ngClass]="{'has-error':AppLName.invalid && !AppLName.pristine}">
                                     <label class="control-label">Appointee Last Name </label>
-                                    <input type="text" class="form-control field" name="AppLName" minlength="3" maxlength="40" [(ngModel)]="proposalInput.proposer.appointeeLastName" required>
+                                    <input type="text" class="form-control field" name="AppLName" #AppLName="ngModel" minlength="3" maxlength="40" [(ngModel)]="proposalInput.proposer.appointeeLastName" required>
                                     </div>
                                   </div>
                                    <div class="col-sm-4" *ngIf="proposalInput.proposer.nomineeAge<18">
                                      <div class="form-group dateInsuSpace required">
                                      <label class="control-label">Appointee Relation </label>
                                     <select class="form-control field" [(ngModel)]="proposalInput.proposer.appointeeRel" name="appointeeRel" required>
-                                      <option value="{{relationship.id}}" *ngFor="let relationship of insurerMaster.AppointeeRel">{{relationship.value}}</option>
+                                      <option value="{{relationship.id}}" *ngFor="let relationship of insurerMaster.NomineeRel">{{relationship.value}}</option>
                                     </select>
                                     </div>
                                    </div>
                                   <div class="col-sm-4" *ngIf="proposalInput.proposer.nomineeAge<18">
                                     <div class="form-group dateInsuSpace required">
                                       <label class="control-label">Appointee DOB</label>
-                                       <span class="input-group">
-                                       <input type="date" class="form-control" name="appointeeDob" [(ngModel)]="proposalInput.proposer.appointeeDob" min="{{adultDobOptions.minDate | date:'yyyy-MM-dd'}}" max="{{adultDobOptions.maxDate | date: 'yyyy-MM-dd'}}" required/>
+                                       <span class="">
+                                       <input type="date" class="form-control" name="appointeeDob" [(ngModel)]="proposalInput.proposer.appointeeDob" (input)="calculateappointeeAge(proposalInput.proposer.appointeeDob)" min="{{adultDobOptions.minDate | date:'yyyy-MM-dd'}}" max="{{adultDobOptions.maxDate | date: 'yyyy-MM-dd'}}" onkeydown="return false" required/>
                                        <span class="validity"></span>
-                                       <span class="input-group-btn">
-                                                <button type="button" class="btn btn-primary btn_prim "><i class="glyphicon glyphicon-calendar"></i></button>
-                                            </span>
+                                       
                                      </span>
                                   </div>
                                   </div>
@@ -534,13 +528,14 @@
                   </div>
                   <div class = "clear"></div>
             <!--.body -->
+           
                   <div class="foot">
                       <div class="clearfix">
                         <div class="cf-pull-right">
                             <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('4')">
                                 <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
                           </button>
-                          <button class="btn cf-btn btn-lg btn-default btn-grn" (click)="nextSection('4')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
+                          <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="proposerform.form.invalid" (click)="nextSection('4')">Continue <img src="../../../../../assets/images/arrow-right.png"> </button>
                         </div>
                       </div>
                   </div>
@@ -567,8 +562,8 @@
                       <div class="form-group required">
                        <label class="control-label">Are the Policy and Mailing Address the same?</label>
                        <div class="btn-group">
-                         <label class="btn btn-primary btn_prim" [(ngModel)]="proposalInput.proposer.policyRegAddressSame" (change) = "samePolicyCorrAddress('Y')" [ngClass]="{'active':proposalInput.proposer.policyRegAddressSame=='Y'}"  (click)="proposalInput.proposer.policyRegAddressSame='Y'" id="'Y'" name="polCorAdd" required ngDefaultControl>Yes</label>
-                         <label class="btn btn-primary btn_prim" [(ngModel)]="proposalInput.proposer.policyRegAddressSame" (change) = "samePolicyCorrAddress('N')" [ngClass]="{'active':proposalInput.proposer.policyRegAddressSame=='N'}"  (click)="proposalInput.proposer.policyRegAddressSame='N'" id="'N'" name="polCorAdd" required ngDefaultControl>No</label>
+                         <label class="btn btn-primary btn_prim" [(ngModel)]="proposalInput.proposer.policyRegAddressSame"  [ngClass]="{'active':proposalInput.proposer.policyRegAddressSame=='Y'}"  (click)="proposalInput.proposer.policyRegAddressSame='Y';samePolicyCorrAddress('Y');" id="'Y'" name="polCorAdd" required ngDefaultControl>Yes</label>
+                         <label class="btn btn-primary btn_prim" [(ngModel)]="proposalInput.proposer.policyRegAddressSame"  [ngClass]="{'active':proposalInput.proposer.policyRegAddressSame=='N'}"  (click)="proposalInput.proposer.policyRegAddressSame='N';samePolicyCorrAddress('N');" id="'N'" name="polCorAdd" required ngDefaultControl>No</label>
                        </div>
                       </div>
                   </div>
@@ -576,39 +571,39 @@
  						<br><br>
 	   					<div class="col-sm-6 add-borde"> 
 	   						<h3><img ng-src="./image/mail.png">&nbsp;&nbsp;Policy Address</h3>
-	   						<div class="col-sm-12">
+	   						<div class="col-sm-12"  [ngClass]="{'has-error':policyAdd_one.invalid && !policyAdd_one.pristine}">
 		   						<div class="form-group dateInsuSpace required">
 		   							<label class="control-label">Flat/House No</label>
-		   							<input type="text" name="policyAdd_one" class="form-control field" [(ngModel)]="proposalInput.proposer.policyAddressLine1" minlength="1" maxlength="30"  required>
+		   							<input type="text" name="policyAdd_one" #policyAdd_one="ngModel" class="form-control field" [(ngModel)]="proposalInput.proposer.policyAddressLine1" minlength="1" maxlength="30"  required>
 		   						</div>
 	   						</div>
 	   						<div class="col-sm-12">
-		   						<div class="form-group dateInsuSpace required">
+		   						<div class="form-group dateInsuSpace required" [ngClass]="{'has-error':policyAdd_two.invalid && !policyAdd_two.pristine}">
 		   							<label class="control-label">Building/Street</label>
-		   							<input type="text" placeholder="5-30 Characters" name="policyAdd_one" class="form-control field" [(ngModel)]="proposalInput.proposer.policyAddressLine2" minlength="5" maxlength="30" required>
+		   							<input type="text" placeholder="5-30 Characters" name="policyAdd_two" #policyAdd_two="ngModel" class="form-control field" [(ngModel)]="proposalInput.proposer.policyAddressLine2" minlength="5" maxlength="30" required>
 		   						</div>
 	   						</div>
-		   					<div class="col-sm-12">
-		   							<div class="form-group dateInsuSpace required">
+		   					<div class="col-sm-12" [ngClass]="{'has-error':policyAdd_three.invalid && !policyAdd_three.pristine}">
+		   							<div class="form-group dateInsuSpace required" >
 		   							<label class="control-label">Landmark</label>
-		   							<input type="text" placeholder="5-30 Characters" class="form-control field" name="policyAdd_three" [(ngModel)]="proposalInput.proposer.policyAddressLine3" minlength="5" maxlength="30"   required>
+		   							<input type="text" placeholder="5-30 Characters" class="form-control field" name="policyAdd_three" #policyAdd_three="ngModel" [(ngModel)]="proposalInput.proposer.policyAddressLine3" minlength="5" maxlength="30"   required>
 		   						</div>
 	   						</div>	   						
-   							<div class="col-sm-6">
+   							<div class="col-sm-6"  [ngClass]="{'has-error':pinocdePol.invalid && !pinocdePol.pristine}">
    								<div class="form-group dateInsuSpace required">
    								<label class="control-label">Pincode</label>
-   								<input type="text" class="form-control field" (blur) = "getCityFromPincode('P', proposalInput.proposer.policyPincode)" minlength="6" maxlength="6" name="pinocdePol" [(ngModel)]="proposalInput.proposer.policyPincode"  required>
+   								<input type="text" class="form-control field" name="pinocdePol" #pinocdePol="ngModel" (blur) = "getCityFromPincode('P', proposalInput.proposer.policyPincode)" minlength="6" maxlength="6"  [(ngModel)]="proposalInput.proposer.policyPincode"  required>
    								</div>
    							</div>
    							   							
-	   						<div class="col-sm-6">
+	   						<div class="col-sm-6" [ngClass]="{'has-error':polCity.invalid && !polCity.pristine}">
 	   							<div class="form-group dateInsuSpace required">
 		   							<label class="control-label">City</label>
-                     <input type="text" class="form-control field" [(ngModel)]="proposalInput.proposer.policyCity" name="polCity" readonly required>
+                     <input type="text" class="form-control field" name="polCity" #polCity="ngModel"  [(ngModel)]="proposalInput.proposer.policyCity"  readonly required>
 	   							</div>
 	   						</div>
 							
-							<div class="col-sm-6" style="padding-left:0px;">
+							<div class="col-sm-6" >
 								<div class="form-group required dateInsuSpace">
 									<label class="control-label">State</label>
 									<input type="text" class="form-control field" [(ngModel)]="proposalInput.proposer.policyState" name="polState" readonly required>
@@ -618,40 +613,40 @@
 	   					</div>
                <div *ngIf="proposalInput.proposer.policyRegAddressSame=='N'" class="col-sm-6 add-borde"> 
                 <h3><img src="../../../../../assets/images/mail.png">&nbsp;&nbsp;Contact Address</h3>
-                <div class="col-sm-12">
+                <div class="col-sm-12" [ngClass]="{'has-error':contactAdd_one.invalid && !contactAdd_one.pristine}">
                   <div class="form-group dateInsuSpace required">
                     <label class="control-label">Flat/House No</label>
-                    <input type="text" name="contactAdd_one" class="form-control field" [(ngModel)]="proposalInput.proposer.corrAddressLine1" minlength="1" maxlength="30"  required>
+                    <input type="text" name="contactAdd_one" #contactAdd_one="ngModel" class="form-control field" [(ngModel)]="proposalInput.proposer.corrAddressLine1" minlength="1" maxlength="30"  required>
                   </div>
                 </div>
-                <div class="col-sm-12">
+                <div class="col-sm-12" [ngClass]="{'has-error':contactAdd_two.invalid && !contactAdd_two.pristine}">
                   <div class="form-group dateInsuSpace required">
                     <label class="control-label">Building/ Street</label>
-                    <input type="text" placeholder="5-30 Characters" name="contactAdd_one" class="form-control field" [(ngModel)]="proposalInput.proposer.corrAddressLine2" minlength="5" maxlength="30"  required>
+                    <input type="text" placeholder="5-30 Characters" name="contactAdd_two" #contactAdd_two="ngModel"  class="form-control field" [(ngModel)]="proposalInput.proposer.corrAddressLine2" minlength="5" maxlength="30"  required>
                   </div>
                 </div>
-                <div class="col-sm-12">
+                <div class="col-sm-12" [ngClass]="{'has-error':contactAdd_three.invalid && !contactAdd_three.pristine}">
                   <div class="form-group dateInsuSpace required">
                     <label class="control-label">Landmark</label>
-                    <input type="text" placeholder="5-30 Characters" class="form-control field" name="contactAdd_three" [(ngModel)]="proposalInput.proposer.corrAddressLine3" minlength="5" maxlength="30" required>
+                    <input type="text" placeholder="5-30 Characters" class="form-control field" name="contactAdd_three"  #contactAdd_three="ngModel" [(ngModel)]="proposalInput.proposer.corrAddressLine3" minlength="5" maxlength="30" required>
                   </div>
                </div>	   						
-               <div class="col-sm-6">
+               <div class="col-sm-6" [ngClass]="{'has-error':corrPincode.invalid && !corrPincode.pristine}">
                <div class="form-group dateInsuSpace required">
                  <label class="control-label">Pincode</label>
-                 <input type="text" class="form-control field" name="corrPincode" minlength="6" maxlength="6" [(ngModel)]="proposalInput.proposer.corrPincode" (blur) = "getCityFromPincode('C', proposalInput.proposer.corrPincode)" required>
+                 <input type="text" class="form-control field" name="corrPincode" #corrPincode="ngModel" minlength="6" maxlength="6" [(ngModel)]="proposalInput.proposer.corrPincode" (blur) = "getCityFromPincode('C', proposalInput.proposer.corrPincode)" required>
                  <span class="has-error " *ngIf="showError=='false'">Invalid Pin Code</span>
                </div>
              </div>
                                    
-                <div class="col-sm-6">
+                <div class="col-sm-6" [ngClass]="{'has-error':corCity.invalid && !corCity.pristine}">
                   <div class="form-group dateInsuSpace required">
                     <label class="control-label">City</label>
-                    <input type="text" class="form-control field" [(ngModel)]="proposalInput.proposer.corrCity" name="corCity" readonly required>
+                    <input type="text" class="form-control field" [(ngModel)]="proposalInput.proposer.corrCity" name="corCity" #corCity="ngModel" readonly required>
                   </div>
                 </div>
              
-             <div class="col-sm-6" style="padding-left:0px;">
+             <div class="col-sm-6" style="">
                <div class="form-group required dateInsuSpace">
                  <label class="control-label">State</label>
                  <input type="text" class="form-control field" [(ngModel)]="proposalInput.proposer.corrState" name="corState" readonly required>
@@ -667,6 +662,7 @@
                 <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;border-top:1px dashed #dadada;" ></p>
                 </div>
                 <div class = "clear"></div>
+                
                 <div class="foot">
                     <div class="clearfix">
                       <div class="cf-pull-right">
@@ -700,7 +696,7 @@
                                   <span class="btn btn-primary" (click)="editFields('1', '6')">Edit</span>
                               </div>
                               <div class="stage-body">
-                                <div class="col-sm-10" style="margin-bottom:10px;">
+                                <div class="col-sm-12" style="margin-bottom:10px;">
                                <div class="col-sm-6 list-item-proposer">
                                  <label class="control-label label-highlight">Policy Start Date:</label>
                                  <span>{{proposalInput.policy.policyStartdate| date : "dd MMM yyyy"}}</span>
@@ -718,7 +714,7 @@
                                   <span class="btn btn-primary" (click)="editFields('4', '6')">Edit</span>
                               </div>
                               <div class="stage-body">
-                                <div class="col-sm-10" style="margin-bottom:10px;">
+                                <div class="col-sm-12" style="margin-bottom:10px;">
                                <div class="col-sm-6 list-item-proposer">
                                  <label class="control-label label-highlight">Name:</label>
                                  <span>{{proposalInput.proposer.title}} </span>
@@ -818,14 +814,7 @@
                                    <label class="control-label label-highlight">ID Number:</label>
                                    <span>{{member.idNumber}}</span>
                                  </div>
-                                 <div class="col-sm-6 list-item-proposer">
-                                   <label class="control-label label-highlight">Height:</label>
-                                   <span>{{member.height}} cms </span>
-                                 </div>
-                                 <div class="col-sm-6 list-item-proposer">
-                                   <label class="control-label label-highlight">Weight:</label>
-                                   <span>{{member.weight}} kgs </span>
-                                 </div>
+                                 
                                  </div>
                                  <p style="color:#999999;font-size:12px;padding:15px;margin-top:15px;border-top:1px dashed #dadada;" ></p>
                                </div>
@@ -902,7 +891,6 @@
                                    <span>{{proposalInput.proposer.policyAddressLine1}}</span><br>
                                    <span>{{proposalInput.proposer.policyAddressLine2}} </span><br>
                                    <span>{{proposalInput.proposer.policyAddressLine3}} </span><br>
-                                   <span>{{proposalInput.proposer.policyArea}} </span><br>
                                    <span>{{proposalInput.proposer.policyCity}}, {{proposalInput.proposer.policyState}}  </span><br>
                                    <span>{{proposalInput.proposer.policyPincode}} </span><br>
                                  </div>
@@ -912,7 +900,6 @@
                                    <span>{{proposalInput.proposer.corrAddressLine1}}</span><br>
                                    <span>{{proposalInput.proposer.corrAddressLine2}} </span><br>
                                    <span>{{proposalInput.proposer.corrAddressLine3}} </span><br>
-                                   <span>{{proposalInput.proposer.corrArea}} </span><br>
                                    <span>{{proposalInput.proposer.corrCity}}, {{proposalInput.proposer.corrState}} </span><br>
                                    <span>{{proposalInput.proposer.corrPincode}} </span><br>
                                  </div>
@@ -986,7 +973,7 @@
                                         <button class="btn cf-btn btn-lg btn-gry" (click)="backSection('6')">
                                                          <img src="../../../../../assets/images/arrow-left.png">&nbsp;Back
                                                  </button>
-                                        <button class="btn cf-btn btn-lg btn-default btn-grn" (click)="makePayment()">Make Payment <img src="../../../../../assets/images/arrow-right.png"> </button>
+                                        <button class="btn cf-btn btn-lg btn-default btn-grn" [disabled]="!tcview" (click)="makePayment()">Make Payment <img src="../../../../../assets/images/arrow-right.png"> </button>
                                     </div>
                                 </div>
                                </div>
@@ -995,106 +982,75 @@
            </div>
 </div>
 </div>
-<div *ngIf="loading==true" class="loading col-sm-10 col-md-10 col-lg-10">
+<div  *ngIf="loading" class="loading col-sm-10 col-md-10 col-lg-10">
   <div class="ctralign"><img src = "../../../../../assets/images/loading.gif"></div>
-</div>
+</div>   
+<div id="loader" style="margin-top:10%;"></div>
 <div id="footermain">
-  <div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} &nbsp;
-    
- </div>
-  <div class="footer_R">All Rights Reserved &copy; DBS Bank Limited</div>
-  
-  <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b>Change Password</b></a>&nbsp; &nbsp; <span><a data-toggle="modal" data-target="#reportIssueModel"><b>Report Issue</b></a></span></div>
+  <div class="footer_Pas1">{{firstName}} &nbsp; {{lastName}} </div>
+  <div class="footer_R">All Rights Reserved &copy; mcxtra insurance</div>
+  <div class="footer_Pas2"><a data-toggle="modal" data-target="#exampleModal"><b></b></a></div>
 </div>
- <!-- Modal -->
+<!-- Modal -->
 <div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form  #changePwdForm = "ngForm">
+            <div class="form-group">
+              <label for="Old-Password" class="col-form-label" >Old Password:</label>
+              <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
+            </div>
+             <div ngModelGroup="password" #userPassword="ngModelGroup" required >
+            <div class="form-group">
+              <label for="New-Password" class="col-form-label" >New Password:</label>
+              <input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
+            </div>
+            <div class="form-group">
+              <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
+              <input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
+            </div>
+             <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
+                   <div *ngIf = "userPassword.invalid; else nomatch">
+                      Passwords need to be match
+                  </div>
+                      <ng-template #nomatch >
+                          Passwords don't match
+                      </ng-template>
+                  </div>
+           </div> 
+          
+       
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
+        </div>
+        </form>
+         </div>
+      </div>
     </div>
-    <div class="modal-body">
-      <form  #changePwdForm = "ngForm">
-        <div class="form-group">
-          <label for="Old-Password" class="col-form-label" >Old Password:</label>
-          <input type="password" class="form-control" name="oldPwd" id="Old-Password" required>
-        </div>
-         <div ngModelGroup="password" #userPassword="ngModelGroup" required >
-        <div class="form-group">
-          <label for="New-Password" class="col-form-label" >New Password:</label>
-          <input type="password" class="form-control" name="newPwd" id="New-Password" ngModel required>
-        </div>
-        <div class="form-group">
-          <label for="cngm-Password" class="col-form-label">Confirm Password:</label>
-          <input type="password" class="form-control" name="confirmPwd" id="cngm-Password" ngModel required>
-        </div>
-         <div *ngIf="(userPassword.invalid|| userPassword.value?.newPwd != userPassword.value?.confirmPwd) && (userPassword.touched)" class="alert alert-danger dontmatch">
-               <div *ngIf = "userPassword.invalid; else nomatch">
-                New Password and Confirm Password should match
-                              </div>
-                  <ng-template #nomatch >
-                    New Password and Confirm Password should match
-                  </ng-template>
-              </div>
-       </div> 
-      
-   
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      <button type="button" (click) ="changePass()" [disabled]="!changePwdForm.form.valid" class="btn btn-primary">Change Password</button>
     </div>
-    </form>
-     </div>
-  </div>
-</div>
-</div>
+    <!-- Success or failure modal -->
+    <div id="resultModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p id="messageTouser"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- ends here-->
 
-
-<!-- Success or failure modal -->
-<div id="resultModal" class="modal" tabindex="-1" role="dialog">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-body">
-      <p id="messageTouser"></p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
-    </div>
-  </div>
-</div>
-</div>
-<!-- ends here-->
-      <!--Report Issue modal starts here-->
-<div data-backdrop="static" data-keyboard="false" class="modal fade" id="reportIssueModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel11">Report An Issue</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form  #reportAnIssue = "ngForm" >
-        <div class="form-group">
-          <label for="cngm-Password" class="col-form-label" style="margin-left: 63px;">Description of the issue:</label>
-          <textarea rows="3" cols="60" type="text" value="" name="issue" id="issueReport" ngModel required style="margin: 0 0 0 -61px;"></textarea>
-        </div>
-      
-   
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      <button type="button" (click) ="reportIssue(reportAnIssue)" data-dismiss="modal" [disabled]="!reportAnIssue.form.valid" class="btn btn-primary">Report</button>
-    </div>
-    </form>
-     </div>
-  </div>
-</div>
-</div>
-<!--Report Issue modal ends here-->
 
           <div data-backdrop="static" data-keyboard="false" id="newPremiumModal" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -1144,18 +1100,33 @@
                       </div>
                   <div class="modal-body">
                       <h4>Declaration & Authorization*:</h4>
-                      <ul>
-                        
-                        <li>I/We hereby declare, on my behalf and on behalf of all persons proposed to be insured, that the above statements, answers and/ or particulars given by me are true and complete in all respects to the best of my knowledge and that I/We am/are authorized to propose on behalf of these other persons.
-                    
-                        </li><li>I understand that the information provided by me will form the basis of the insurance policy, is subject to the Board approved underwriting policy of the insurance company and that the policy will come into force only after full receipt of the premium chargeable.
-                    
-                        </li><li>I/We further declare that I/We will notify in writing any change occurring in the occupation or general health of the life to be insured/proposer after the proposal has been submitted but before communication of the risk acceptance by the company
-                    
-                        </li><li>I/We declare and consent to the company seeking medical information from any doctor or from a hospital who at anytime has attended on the life to be insured/proposer or from any past or present employer concerning anything which affects the physical or mental health of the life to be assured/proposer and seeking information from any insurance company to which an application for insurance on the life to be assured/proposer has been made for the purpose of underwriting the proposal and/or claim settlement.
-                    
-                        </li><li>I/We authorize the company to share information pertaining to my proposal including the medical records for the sole purpose of proposal underwriting and/or claims settlement and with any Government and/or Regulatory authority.</li>
-                      </ul>
+                      <div>
+                        <p>I understand that the information provided by me will form the basis of the insurance policy, is subject to the Board approved underwriting policy of the insurance company and that the policy will come into force only after full receipt of the premium chargeable.</p>
+                      
+                      <p>I / We further declare that I / We will notify in writing any change occurring in the occupation or general health of the life to be insured / proposer after the proposal has been submitted but before communication of the risk acceptance by the company.
+                      </p><p>I / We declare and consent to the company seeking medical information from any doctor or from a hospital who at any time has attended on the life to be insured/ proposer or from any past or present employer concerning anything which affects the physical or mental health of the life to be assured / proposer and seeking information from any insurance company to which an application for insurance on the life to be assured / proposer has been made for the purpose of underwriting the proposal and / or claim settlement.
+                      </p><p>I / We authorize the company to share information pertaining to my proposal including the medical records for the sole purpose of proposal underwriting and / or claims settlement and with any Governmental and / or Regulatory authority.
+                      </p><p>I/ We have read and understood the brochure, prospectus, sales literature, terms and conditions of the Policy, Optional Extensions and confirm to abide by the same.
+                      </p><p>Receipt of proposal form by the Company shall not be construed as acceptance of proposal. Commencement of risk under the Policy shall be subject to realization of full premium and acceptance by the Company. The Company at its sole discretion reserves the right to accept or reject or load any proposal. Policy would start from the date as specified in the Policy Certificate.
+                      </p><p>I understand that the Policy Period Start Date as specified in the Policy Certificate shall be from the 00:00 hrs of the next day of the Proposal receipt at branch, proposed policy period start date as opted by me or cheque date, whichever is later.
+                      </p><p>I/we hereby declare that the lives proposed to be insured would submit to medical examinations before the nominated doctors of the Company, or undergo diagnostic or other medical tests, as suggested by the company for its underwriting wherever applicable.
+                      </p><p>I/we authorize the Company to use and disclose any personal information collected or available with the Company in relation to the persons to be insured (whether obtained with this Proposal or otherwise) to other underwriting companies, claim investigation companies/ agencies, service provider, assistance company/ any statutory body and insurance/ re-insurance companies for the purpose of processing of this proposal and providing subsequent services.
+                      </p><p>I consent to provide a valid age proof and identity proof at the time of claims or any other time when required by the Company.
+                      </p><p>I/we understand that the Policy shall become void at the option of the Company, in the event of any untrue or incorrect statement, misrepresentation, non-description or non-disclosure of any material fact in the Proposal form/personal statement, declaration and connected documents, or any material information having been withheld by me/us or anyone acting on my/our behalf.
+                      </p><p>I/We consent to receive information from the Company through physical documents or electronic or telecommunication means from time to time.
+                      </p><p>Bonafide Source of funds for payment.
+                      <div>
+                    <p>I/we hereby confirm that all premiums have been/will be paid from bonafide sources and no premiums have been/will be paid out of proceeds of crime related to any of the offence listed in Prevention of Money Laundering Act, 2002 and applicable laws.
+                    </p><p>I understand that the Company has the right to call for documents to establish sources of funds.
+                    </p><p>The insurance company has right to cancel the insurance contract in case I am/ have been found guilty by any competent court of law under any of the statutes, directly or indirectly governing the prevention of money laundering in India.
+                    </p>
+                  </div>
+                <p>I/We further declare, on my behalf and on behalf of each of the persons proposed to be insured that there is all information which is relevant to this proposal that has been disclosed and not withheld from the Company. I further declare and agree that this declaration and the answers given above shall be held to be promissory and shall be the basis of the contract between me/us and the Company.
+                </p><p>I / We hereby declare, on my behalf and on behalf of all persons proposed to be insured, that the above statements, answers and / or particulars given by me are true and complete in all respects to the best of my knowledge and that I / We am / are authorized to propose on behalf of these other persons.
+                      
+                </p>		
+                      
+              </div>
                       <h4>Declaration:</h4>
                       <p>I hereby confirm that all premiums have been/will be paid from genuine sources and no premiums have been/will be paid out of proceeds of crime related to any of the scheduled offences listed in Prevention of Money Laundering Act, 2002. I understand that the Company has the right to call for documents to establish sources of funds. The insurance company has right to cancel the insurance contract in case I am/ have been found guilty by any competent court of law under any of the statutes, directly or indirectly governing the prevention of money laundering in India.</p>
                   </div>
@@ -1168,7 +1139,7 @@
             </div>
              <!-- ends here-->
             <form *ngIf = "formBuild" id="payUrlSubmit"  #builderform = "ngForm" name="payUrlSubmit" action="{{paymentInput.url}}" method="post">
-              <div *ngFor="let entry of paymentInput.params | keys">
+              <div *ngFor="let entry of paymentInput.params | fgHealthPipe">
                   <input type="hidden" name="{{ entry.key }}" value="{{ entry.value }}" />
                   </div>
             </form>
